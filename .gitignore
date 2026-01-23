@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Hugo
+/public/
+/resources/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# VSCode
+.vscode/
