@@ -1,88 +1,131 @@
+fr:
+  languageName: Français
+  weight: 1
+  title: "Centre des Loisirs de Fatima"
+  params:
+    description: "Description du site"
+    accessibility:
+      skip_text: "Aller au contenu"
+      help_text: "Déclaration d'accessibilité"
+      help_url: "/fr/contact/"
+    main_cta:
+      text: "Nous joindre"
+      link: "/fr/contact/"
+    footer_cta:
+      text: "Nous joindre"
+      link: "/fr/contact/"
+    github_edit: "Modifier cette page sur GitHub"
+  menu:
+    main:
+      - identifier: "accueil"
+        name: "Accueil"
+        url: "/fr/"
+        weight: 1
+      - identifier: "joker"
+        name: "Joker"
+        url: ""
+        weight: 2
+      - identifier: "comment-jouer"
+        name: "Comment jouer"
+        url: "/fr/joker/comment-jouer/"
+        parent: "joker"
+        weight: 1
+      - identifier: "points-de-vente"
+        name: "Points de vente"
+        url: "/fr/joker/points-de-vente/"
+        parent: "joker"
+        weight: 2
+      - identifier: "joker-gagnants"
+        name: "Gagnants"
+        url: "/fr/joker/gagnants/"
+        parent: "joker"
+        weight: 3
+      - identifier: "reglements"
+        name: "Règlements"
+        url: "/fr/joker/reglements/"
+        parent: "joker"
+        weight: 4
+      - identifier: "activites"
+        name: "Activités"
+        url: ""
+        weight: 3
+      - identifier: "activites-a-venir"
+        name: "Activités à venir"
+        url: "/fr/activites/activites-a-venir/"
+        parent: "activites"
+        weight: 1
+      - identifier: "activites-passees"
+        name: "Activités passées"
+        url: "/fr/activites/activites-passees/"
+        parent: "activites"
+        weight: 2
+      - identifier: "gallerie-photos"
+        name: "Galerie Photos"
+        url: "/fr/activites/gallerie-photos/"
+        parent: "activites"
+        weight: 3
+      - identifier: "projets"
+        name: "Projets"
+        url: "/fr/projets/"
+        weight: 4
+      - identifier: "en-cours"
+        name: "Projets en cours"
+        url: "/fr/projets/en-cours/"
+        parent: "projets"
+        weight: 1
+      - identifier: "passes"
+        name: "Projets passés"
+        url: "/fr/projets/passes/"
+        parent: "projets"
+        weight: 2
+      - identifier: "contact"
+        name: "Contact"
+        url: ""
+        weight: 5
+      - identifier: "nous-joindre"
+        name: "Nous joindre"
+        url: "/fr/contact/nous-joindre/"
+        parent: "contact"
+        weight: 1
+      - identifier: "notre_equipe"
+        name: "Notre équipe"
+        url: "/fr/contact/notre-equipe/"
+        parent: "contact"
+        weight: 2
+      - identifier: "reservations"
+        name: "Réservations"
+        url: "/fr/contact/reservations/"
+        parent: "contact"
+        weight: 3
 en:
   languageName: English
-  weight: 1
-  ### copyright (markdown can be used) ###
-  copyright: "Copyright &copy; {{< current_year >}} Company Name. All Rights Reserved. [Dot Org Theme](https://github.com/cncf/dot-org-hugo-theme) for Hugo by [CNCF](https://www.cncf.io)."
+  contentDir: content/en
+  weight: 2
   title: "Site Title"
   params:
     description: "Site Description"
-    ### accessibility ###
     accessibility:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
-      help_url: "/example-page/"
-    ### calls to action ###
+      help_url: "/en/about/"
     main_cta:
       text: "Join"
-      link: "/example-page/"
+      link: "/en/about/"
     footer_cta:
       text: "Join us"
-      link: "/example-page/"
+      link: "/en/about/"
     github_edit: "Edit this page on GitHub"
-  ### example menu showing children ###
   menu:
     main:
-    - identifier: "about"
-      name: "About"
-      url: "/example-page/"
-      weight: 1
-    - identifier: "child-1"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 1
-      post: "Nulla consequat massa quis enim. Donec pede justo."
-      parent: "about"
-    - identifier: "child-2"
-      name: "Example Child Page"
-      url: "/example-page/"
-      weight: 2
-      post: "Aenean commodo ligula get dolor. Aenean massa."
-      parent: "about"
-    - identifier: "child-3"
-      name: "Example External page"
-      url: "https://cncf.io?ref=dot-org"
-      weight: 3
-      post: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo."
-      parent: "about"
-    - identifier: "demo-page"
-      name: "Demo Page"
-      url: "/demo-page/"
-      weight: 2
-    - identifier: "faq"
-      name: "FAQs"
-      url: "/faq/"
-      weight: 3
-    - identifier: "blog"
-      name: "Blog"
-      url: "/blog/"
-      weight: 4
-    - identifier: "example"
-      name: "External"
-      url: "https://cncf.io?ref=dot-org"
-      weight: 5
-es:
-  languageName: Spanish
-  contentDir: content/es
-  weight: 2
-  title: "Título del Sitio"
-  params:
-    description: "Descripción del Sitio"
-  menu:
-    main:
-    - identifier: "about"
-      name: "Acerca de"
-      url: "/example-page/"
-      weight: 1
-    - identifier: "child-1"
-      name: "Página Hija de Ejemplo"
-      url: "/example-page/"
-      weight: 1
-      parent: "about"
-    - identifier: "faq"
-      name: "FAQs"
-      url: "/faq/"
-      weight: 3
-    - identifier: "blog"
-      name: "Blog"
-      url: "/blog/"
-      weight: 2
+      - identifier: "about"
+        name: "About"
+        url: "/en/about/"
+        weight: 1
+      - identifier: "faq"
+        name: "FAQs"
+        url: "/en/faq/"
+        weight: 2
+      - identifier: "blog"
+        name: "Blog"
+        url: "/en/blog/"
+        weight: 3

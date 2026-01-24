@@ -1,29 +1,28 @@
 ######################## custom scripts & styles ####################
 
 # Add custom assets relative to /static or via https
-logo_on_white: "/img/logo-b.svg"
-logo_on_black: "/img/logo-w.svg"
+logo_on_white: "img/Logo.png"
 custom_js: []
 custom_css: []
 
 ######################## custom config ####################
 
 ### default social share image (can also be set per lang) ###
-images: ["/img/social-share.png"]
+images: ["/img/Logo.png"]
 
 github:
-  repo_url: "https://github.com/username/repo/blob/master"
+  repo_url: "https://github.com/miamoto15/centreloisirsdefatima"
   show_edit_link: true
 
 social_links:
   devstats: ""
   discord: ""
-  facebook: ""
+  facebook: "https://www.facebook.com/profile.php?id=61558108406588"
   flickr: ""
-  github: "https://github.com/cncf/dot-org-hugo-theme"
+  github: "https://github.com/miamoto15/centreloisirsdefatima"
   instagram: ""
   landscape: ""
-  linkedin: "https://www.linkedin.com/company/cloud-native-computing-foundation"
+  linkedin: ""
   mastodon: ""
   pinterest: ""
   rss: ""
@@ -37,4 +36,4 @@ social_links:
 # Makes the header sticky on tall screens
 sticky_header: true
 # Enable search in header UI
-show_search: true
+show_search: false
