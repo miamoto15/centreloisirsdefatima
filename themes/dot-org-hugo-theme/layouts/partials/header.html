@@ -49,11 +49,15 @@
             </ul>
 
             <div class="main-menu__cta-language-wrapper">
+
                 {{ with $.Site.Params.main_cta }}
                 {{ if and .text .link }}
                 <a href="{{ .link | absLangURL }}" class="button main-menu-cta">{{ .text }}</a>
                 {{ end }}
                 {{ end }}
+
+                <a href="/don" class="button secondary main-menu-cta" style="margin-left:12px;">Don</a>
+                <a href="/info" class="button tertiary main-menu-cta" style="margin-left:12px;">Info</a>
 
                 {{ with $.Site.Params.show_search }}
                 <div class="main-menu__search-language-wrapper">
