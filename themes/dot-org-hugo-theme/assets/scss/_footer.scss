@@ -151,3 +151,10 @@
 		margin-top: 60px;
 	}
 }
+
+.footer__menu-col {
+    padding-left: 2.5em;
+    @media (max-width: variables.$mobile-max) {
+        padding-left: 0;
+    }
+}

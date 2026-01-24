@@ -2,6 +2,7 @@ fr:
   languageName: Français
   weight: 1
   title: "Centre des Loisirs de Fatima"
+  copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés."
   params:
     description: "Description du site"
     accessibility:
@@ -102,6 +103,7 @@ en:
   contentDir: content/en
   weight: 2
   title: "Site Title"
+  copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved."
   params:
     description: "Site Description"
     accessibility:
