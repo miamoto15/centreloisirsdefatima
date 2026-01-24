@@ -6,20 +6,21 @@
             <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-end; min-width:220px;">
                 <div class="footer__menu" style="display: flex; justify-content: flex-end; gap: 2rem;">
                     {{ with .Site.Menus.main }}
-                        {{ $accueilList := where . "Identifier" "accueil" }}
-                        {{ if gt (len $accueilList) 0 }}
-                            {{ $accueil := index $accueilList 0 }}
+                        {{ $homeId := cond (eq $.Site.Language.Lang "en") "home" "accueil" }}
+                        {{ $homeList := where . "Identifier" $homeId }}
+                        {{ if gt (len $homeList) 0 }}
+                            {{ $home := index $homeList 0 }}
                             <div class="column accueil-col">
-                                <p class="top-menu-item">{{ $accueil.Name }}</p>
+                                <p class="top-menu-item">{{ $home.Name }}</p>
                                 <ul>
                                     <li class="menu-item">
-                                        <a href="{{ $accueil.URL | relLangURL }}" class="menu-link">{{ $accueil.Name }}</a>
+                                        <a href="{{ $home.URL | relLangURL }}" class="menu-link">{{ $home.Name }}</a>
                                     </li>
                                 </ul>
                             </div>
                         {{ end }}
                         {{ range . }}
-                            {{ if and .HasChildren (ne .Identifier "accueil") }}
+                            {{ if and .HasChildren (ne .Identifier $homeId) }}
                                 <div class="column">
                                     <p class="top-menu-item">{{ .Name }}</p>
                                     <ul>
@@ -35,7 +36,7 @@
                         {{ $allItems := . }}
                         {{ $noChildren := slice }}
                         {{ range $allItems }}
-                          {{ if and (not .HasChildren) (ne .Identifier "accueil") }}
+                          {{ if and (not .HasChildren) (ne .Identifier $homeId) }}
                             {{ $noChildren = $noChildren | append . }}
                           {{ end }}
                         {{ end }}
@@ -75,8 +76,20 @@
                                 }
                                 </style>
                 <div class="footer__contact-licence" style="margin-bottom:0.5em; font-size:1.1em;">
-                    <div>Nous joindre : <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a></div>
-                    <div style="margin-top:0.3em;">No de licence RACJ : L-04015</div>
+                    <div>
+                        {{ if eq $.Site.Language.Lang "en" }}
+                            Contact us: <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
+                        {{ else }}
+                            Nous joindre : <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
+                        {{ end }}
+                    </div>
+                    <div style="margin-top:0.3em;">
+                        {{ if eq $.Site.Language.Lang "en" }}
+                            License No. RACJ: L-04015
+                        {{ else }}
+                            No de licence RACJ : L-04015
+                        {{ end }}
+                    </div>
                 </div>
                 <div class="footer__logo-social-wrapper" style="margin-top:0.2em;">
                     {{- partial "footer/social-links.html" . -}}

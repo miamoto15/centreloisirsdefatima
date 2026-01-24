@@ -102,32 +102,100 @@ en:
   languageName: English
   contentDir: content/en
   weight: 2
-  title: "Site Title"
+  title: "Centre des Loisirs de Fatima"
   copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved."
   params:
     description: "Site Description"
     accessibility:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
-      help_url: "/en/about/"
+      help_url: "/en/contact/"
     main_cta:
-      text: "Join"
-      link: "/en/about/"
+      text: "Contact us"
+      link: "/en/contact/"
     footer_cta:
-      text: "Join us"
-      link: "/en/about/"
+      text: "Contact us"
+      link: "/en/contact/"
     github_edit: "Edit this page on GitHub"
   menu:
     main:
-      - identifier: "about"
-        name: "About"
-        url: "/en/about/"
+      - identifier: "home"
+        name: "Home"
+        url: "/en/"
         weight: 1
-      - identifier: "faq"
-        name: "FAQs"
-        url: "/en/faq/"
+      - identifier: "joker"
+        name: "Joker"
+        url: ""
         weight: 2
-      - identifier: "blog"
-        name: "Blog"
-        url: "/en/blog/"
+      - identifier: "how-to-play"
+        name: "How to play"
+        url: "/en/joker/how-to-play/"
+        parent: "joker"
+        weight: 1
+      - identifier: "points-of-sale"
+        name: "Points of sale"
+        url: "/en/joker/points-of-sale/"
+        parent: "joker"
+        weight: 2
+      - identifier: "winners"
+        name: "Winners"
+        url: "/en/joker/winners/"
+        parent: "joker"
+        weight: 3
+      - identifier: "rules"
+        name: "Rules"
+        url: "/en/joker/rules/"
+        parent: "joker"
+        weight: 4
+      - identifier: "activities"
+        name: "Activities"
+        url: ""
+        weight: 3
+      - identifier: "upcoming-activities"
+        name: "Upcoming activities"
+        url: "/en/activities/upcoming-activities/"
+        parent: "activities"
+        weight: 1
+      - identifier: "past-activities"
+        name: "Past activities"
+        url: "/en/activities/past-activities/"
+        parent: "activities"
+        weight: 2
+      - identifier: "photo-gallery"
+        name: "Photo gallery"
+        url: "/en/activities/photo-gallery/"
+        parent: "activities"
+        weight: 3
+      - identifier: "projects"
+        name: "Projects"
+        url: "/en/projects/"
+        weight: 4
+      - identifier: "ongoing-projects"
+        name: "Ongoing projects"
+        url: "/en/projects/ongoing/"
+        parent: "projects"
+        weight: 1
+      - identifier: "past-projects"
+        name: "Past projects"
+        url: "/en/projects/past/"
+        parent: "projects"
+        weight: 2
+      - identifier: "contact"
+        name: "Contact"
+        url: ""
+        weight: 5
+      - identifier: "contact-us"
+        name: "Contact us"
+        url: "/en/contact/contact-us/"
+        parent: "contact"
+        weight: 1
+      - identifier: "our-team"
+        name: "Our team"
+        url: "/en/contact/our-team/"
+        parent: "contact"
+        weight: 2
+      - identifier: "reservations"
+        name: "Reservations"
+        url: "/en/contact/reservations/"
+        parent: "contact"
         weight: 3
