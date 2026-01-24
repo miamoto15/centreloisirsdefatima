@@ -3,48 +3,58 @@
 
         <div class="footer__menu-cta-wrapper">
 
-            <div class="footer__menu">
-                {{/* Store menu items without children in a Scratch */}}
-                {{ $.Scratch.Set "noChildrenItems" slice }}
-
-                {{ with .Site.Menus.main }}
-
-                {{/* First, loop through to filter out items with no children and store them */}}
-                {{ range . }}
-                {{ if not .HasChildren }}
-                {{ $noChildren := $.Scratch.Get "noChildrenItems" }}
-                {{ $.Scratch.Set "noChildrenItems" ($noChildren | append .) }}
-                {{ end }}
-                {{ end }}
-
-                {{/* Render items with children first, each wrapped in its own column */}}
-                {{ range . }}
-                {{ if .HasChildren }}
-                <div class="column">
-                    <p class="top-menu-item">{{ .Name }}</p>
-                    <ul>
-                        {{ range .Children }}
-                        <li class="menu-item">
-                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-                {{ end }}
-                {{ end }}
-                {{/* Render all items without children inside a single column div */}}
-                <div class="column no-children-links">
-                    <p class="top-menu-item">&nbsp;</p>
-                    <ul>
-                        {{ range $.Scratch.Get "noChildrenItems" }}
-                        <li class="menu-item">
-                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-                {{ end }}
-            </div>
+                        <div class="footer__menu" style="display: flex; justify-content: center; gap: 2rem;">
+                                {{ with .Site.Menus.main }}
+                                    {{/* Affiche Accueil dans la première colonne à gauche */}}
+                                    {{ $accueilList := where . "Identifier" "accueil" }}
+                                    {{ if gt (len $accueilList) 0 }}
+                                        {{ $accueil := index $accueilList 0 }}
+                                        <div class="column accueil-col">
+                                            <p class="top-menu-item">{{ $accueil.Name }}</p>
+                                            <ul>
+                                                <li class="menu-item">
+                                                    <a href="{{ $accueil.URL | relLangURL }}" class="menu-link">{{ $accueil.Name }}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    {{ end }}
+                                    {{/* Affiche les autres sections (avec enfants) */}}
+                                    {{ range . }}
+                                        {{ if and .HasChildren (ne .Identifier "accueil") }}
+                                            <div class="column">
+                                                <p class="top-menu-item">{{ .Name }}</p>
+                                                <ul>
+                                                    {{ range .Children }}
+                                                        <li class="menu-item">
+                                                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                                        </li>
+                                                    {{ end }}
+                                                </ul>
+                                            </div>
+                                        {{ end }}
+                                    {{ end }}
+                                    {{/* Affiche les autres liens sans enfants (hors Accueil) */}}
+                                    {{ $allItems := . }}
+                                    {{ $noChildren := slice }}
+                                    {{ range $allItems }}
+                                      {{ if and (not .HasChildren) (ne .Identifier "accueil") }}
+                                        {{ $noChildren = $noChildren | append . }}
+                                      {{ end }}
+                                    {{ end }}
+                                    {{ if $noChildren }}
+                                        <div class="column no-children-links">
+                                            <p class="top-menu-item">&nbsp;</p>
+                                            <ul>
+                                                {{ range $noChildren }}
+                                                    <li class="menu-item">
+                                                        <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                                    </li>
+                                                {{ end }}
+                                            </ul>
+                                        </div>
+                                    {{ end }}
+                                {{ end }}
+                        </div>
 
             {{ with .Site.Params.footer_cta }}
             {{ if and .text .link }}
@@ -56,10 +66,6 @@
         </div>
 
         <div class="footer__logo-social-wrapper">
-            {{ with .Site.Params.logo_on_black }}
-            <a class="logo-link" href="{{ "/" | absLangURL }}">
-                <img loading="lazy" class="logo" width="150" height="40" src="{{ . | absURL }}" alt="{{ $.Site.Title | safeHTMLAttr }}"></a>
-            {{ end }}
 
             {{- partial "footer/social-links.html" . -}}
         </div>
