@@ -1,73 +1,87 @@
 <footer class="footer">
     <div class="container wrap">
 
-        <div class="footer__menu-cta-wrapper">
 
-                        <div class="footer__menu" style="display: flex; justify-content: center; gap: 2rem;">
-                                {{ with .Site.Menus.main }}
-                                    {{/* Affiche Accueil dans la première colonne à gauche */}}
-                                    {{ $accueilList := where . "Identifier" "accueil" }}
-                                    {{ if gt (len $accueilList) 0 }}
-                                        {{ $accueil := index $accueilList 0 }}
-                                        <div class="column accueil-col">
-                                            <p class="top-menu-item">{{ $accueil.Name }}</p>
-                                            <ul>
-                                                <li class="menu-item">
-                                                    <a href="{{ $accueil.URL | relLangURL }}" class="menu-link">{{ $accueil.Name }}</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    {{ end }}
-                                    {{/* Affiche les autres sections (avec enfants) */}}
-                                    {{ range . }}
-                                        {{ if and .HasChildren (ne .Identifier "accueil") }}
-                                            <div class="column">
-                                                <p class="top-menu-item">{{ .Name }}</p>
-                                                <ul>
-                                                    {{ range .Children }}
-                                                        <li class="menu-item">
-                                                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
-                                                        </li>
-                                                    {{ end }}
-                                                </ul>
-                                            </div>
+        <div class="footer__main-row" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 3em; width: 100%; flex-wrap: wrap;">
+            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-end; min-width:220px;">
+                <div class="footer__menu" style="display: flex; justify-content: flex-end; gap: 2rem;">
+                    {{ with .Site.Menus.main }}
+                        {{ $accueilList := where . "Identifier" "accueil" }}
+                        {{ if gt (len $accueilList) 0 }}
+                            {{ $accueil := index $accueilList 0 }}
+                            <div class="column accueil-col">
+                                <p class="top-menu-item">{{ $accueil.Name }}</p>
+                                <ul>
+                                    <li class="menu-item">
+                                        <a href="{{ $accueil.URL | relLangURL }}" class="menu-link">{{ $accueil.Name }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        {{ end }}
+                        {{ range . }}
+                            {{ if and .HasChildren (ne .Identifier "accueil") }}
+                                <div class="column">
+                                    <p class="top-menu-item">{{ .Name }}</p>
+                                    <ul>
+                                        {{ range .Children }}
+                                            <li class="menu-item">
+                                                <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                            </li>
                                         {{ end }}
+                                    </ul>
+                                </div>
+                            {{ end }}
+                        {{ end }}
+                        {{ $allItems := . }}
+                        {{ $noChildren := slice }}
+                        {{ range $allItems }}
+                          {{ if and (not .HasChildren) (ne .Identifier "accueil") }}
+                            {{ $noChildren = $noChildren | append . }}
+                          {{ end }}
+                        {{ end }}
+                        {{ if $noChildren }}
+                            <div class="column no-children-links">
+                                <p class="top-menu-item">&nbsp;</p>
+                                <ul>
+                                    {{ range $noChildren }}
+                                        <li class="menu-item">
+                                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                        </li>
                                     {{ end }}
-                                    {{/* Affiche les autres liens sans enfants (hors Accueil) */}}
-                                    {{ $allItems := . }}
-                                    {{ $noChildren := slice }}
-                                    {{ range $allItems }}
-                                      {{ if and (not .HasChildren) (ne .Identifier "accueil") }}
-                                        {{ $noChildren = $noChildren | append . }}
-                                      {{ end }}
-                                    {{ end }}
-                                    {{ if $noChildren }}
-                                        <div class="column no-children-links">
-                                            <p class="top-menu-item">&nbsp;</p>
-                                            <ul>
-                                                {{ range $noChildren }}
-                                                    <li class="menu-item">
-                                                        <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
-                                                    </li>
-                                                {{ end }}
-                                            </ul>
-                                        </div>
-                                    {{ end }}
-                                {{ end }}
-                        </div>
-
-            {{ with .Site.Params.footer_cta }}
-            {{ if and .text .link }}
-            <div class="footer__cta">
-                <a href="{{ .link | absLangURL }}" class="button tertiary">{{ .text }}</a>
+                                </ul>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
             </div>
-            {{ end }}
-            {{ end }}
-        </div>
-
-        <div class="footer__logo-social-wrapper">
-
-            {{- partial "footer/social-links.html" . -}}
+            <div class="footer__contact-col" style="flex:1; display:flex; flex-direction:column; align-items:flex-end; justify-content:center; text-align:right; min-width:220px;">
+                                <style>
+                                @media (max-width: 900px) {
+                                    .footer__main-row {
+                                        flex-direction: column !important;
+                                        align-items: center !important;
+                                        gap: 1.2em !important;
+                                    }
+                                    .footer__menu-col, .footer__contact-col {
+                                        justify-content: center !important;
+                                        align-items: center !important;
+                                        text-align: center !important;
+                                        width: 100% !important;
+                                        min-width: 0 !important;
+                                    }
+                                    .footer__contact-col {
+                                        margin-top: 0.5em;
+                                    }
+                                }
+                                </style>
+                <div class="footer__contact-licence" style="margin-bottom:0.5em; font-size:1.1em;">
+                    <div>Nous joindre : <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a></div>
+                    <div style="margin-top:0.3em;">No de licence RACJ : L-04015</div>
+                </div>
+                <div class="footer__logo-social-wrapper" style="margin-top:0.2em;">
+                    {{- partial "footer/social-links.html" . -}}
+                </div>
+            </div>
         </div>
 
         <hr class="footer-hr">
@@ -96,7 +110,9 @@
 {{ $js := resources.Get "js/accordion.js" }}
 <script defer src="{{ $js.Permalink }}"></script>
 <script>
-    var stickyHeader = {{ if .Site.Params.sticky_header }}true{{ else }}false{{ end }};
+    // var stickyHeader = {{ if .Site.Params.sticky_header }}true{{ else }}false{{ end }};
+    // Fix: wrap in quotes to ensure valid JS assignment
+    var stickyHeader = "{{ if .Site.Params.sticky_header }}true{{ else }}false{{ end }}" === "true";
   </script>
 {{ end }}
 
