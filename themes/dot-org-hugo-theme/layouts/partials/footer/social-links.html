@@ -1,8 +1,11 @@
 {{ $siteTitle := .Site.Title }}
 {{ $socialLinks := .Site.Params.social_links }}
 {{ with $socialLinks }}
+    {{ $orderedKeys := slice "facebook" "youtube" "github" "devstats" "discord" "flickr" "instagram" "landscape" "linkedin" "mastodon" "pinterest" "rss" "slack" "stackoverflow" "threads" "twitter" "x" }}
     {{ $validLinks := slice }}
-    {{ range $key, $value := . }}
+    {{ range $orderedKeys }}
+        {{ $key := . }}
+        {{ $value := index $socialLinks $key }}
         {{ if $value }}
             {{ $validLinks = $validLinks | append (dict "key" $key "value" $value) }}
         {{ end }}

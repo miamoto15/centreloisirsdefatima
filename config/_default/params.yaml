@@ -15,11 +15,12 @@ github:
   show_edit_link: true
 
 social_links:
+  facebook: "https://www.facebook.com/profile.php?id=61558108406588"
+  youtube: "https://www.youtube.com/"
+  github: "https://github.com/miamoto15/centreloisirsdefatima"
   devstats: ""
   discord: ""
-  facebook: "https://www.facebook.com/profile.php?id=61558108406588"
   flickr: ""
-  github: "https://github.com/miamoto15/centreloisirsdefatima"
   instagram: ""
   landscape: ""
   linkedin: ""
@@ -31,7 +32,6 @@ social_links:
   threads: ""
   twitter: ""
   x: ""
-  youtube: ""
 
 # Makes the header sticky on tall screens
 sticky_header: true
