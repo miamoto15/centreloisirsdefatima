@@ -365,12 +365,22 @@ summary {
 }
 html {
   height: 100%;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
   overscroll-behavior: none;
   min-height: 100%;
-  max-width: 100%;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -383,6 +393,7 @@ body.has-menu-active {
   margin: auto;
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
 }
 @media (min-width: 1250px) {
   .container {
@@ -1265,6 +1276,9 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
   padding-bottom: 25px;
   background-color: var(--black);
   color: var(--footer-link-color);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .footer a {
   color: var(--footer-link-color);
