@@ -413,6 +413,12 @@ body.has-menu-active {
     padding-right: var(--gutter);
   }
 }
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .wrap {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 @media (min-width: 1250px) {
   .wrap {
     padding-left: 0px;
@@ -626,7 +632,6 @@ blockquote p {
 
 .header {
   width: 100%;
-  overflow-x: hidden;
   background: var(--white);
   z-index: 20;
   position: relative;
@@ -663,10 +668,12 @@ blockquote p {
   align-items: center;
   align-content: center;
   height: 60px;
+  overflow-x: hidden;
 }
 @media (min-width: 1000px) {
   .header > .container {
     height: 80px;
+    overflow-x: visible;
   }
 }
 .header .logo {
@@ -1322,7 +1329,10 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
   }
 }
 .footer__menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 1000px) {
   .footer__menu {
@@ -1331,18 +1341,19 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(125px, 200px));
     gap: 8px;
+    text-align: left;
   }
-  .footer__menu a {
-    font-size: 15px;
-    font-weight: 400;
-    text-decoration: none;
-  }
-  .footer__menu .top-menu-item {
-    font-size: 17px;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+}
+.footer__menu a {
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.footer__menu .top-menu-item {
+  font-size: 17px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 @media (min-width: 1000px) {
   .footer__cta {
