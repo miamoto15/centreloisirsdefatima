@@ -20,7 +20,7 @@
   
     
       
-        <link rel="stylesheet" href="/centreloisirsdefatima/css/styles.25c35912c0bad53eeef935be7a5e6d630d13b70d68f6e2d1b903bf5ad1cbdd6cde7ffd73d1bfb03f7f167fe5f1409b6819a82ac39f4c462a5bd87a707bb94728.css" integrity="sha512-JcNZEsC61T7u&#43;TW&#43;el5tYw0Ttw1o9uLRuQO/WtHL3Wzef/1z0b&#43;wP38Wf&#43;XxQJtoGagqw59MRipb2Hpwe7lHKA==" crossorigin="anonymous" media="all">
+        <link rel="stylesheet" href="/centreloisirsdefatima/css/styles.64730ef63d09d0ac6b10e87a930b6459b5bb529f8286a3819e6cb1f384a0589998788da0c20c2b8ea38a1277063c74664abedbf9226250a086018d59e246ae77.css" integrity="sha512-ZHMO9j0J0KxrEOh6kwtkWbW7Up&#43;ChqOBnmyx84SgWJmYeI2gwgwrjqOKEncGPHRmSr7b&#43;SJiUKCGAY1Z4kaudw==" crossorigin="anonymous" media="all">
       
     
   
@@ -340,8 +340,8 @@
 
 
         <div class="footer__main-row" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 3em; width: 100%; flex-wrap: wrap;">
-            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-end; min-width:220px;">
-                <div class="footer__menu" style="display: flex; justify-content: flex-end; gap: 2rem;">
+            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-end;">
+                <div class="footer__menu" style="display: flex; justify-content: flex-end; gap: 2rem; flex-wrap: wrap;">
                     
                         
                         
@@ -460,20 +460,29 @@
                     
                 </div>
             </div>
-            <div class="footer__contact-col" style="flex:1; display:flex; flex-direction:column; align-items:flex-end; justify-content:center; text-align:right; min-width:220px;">
+            <div class="footer__contact-col" style="flex:1; display:flex; flex-direction:column; align-items:flex-end; justify-content:center; text-align:right;">
                                 <style>
-                                @media (max-width: 900px) {
+                                @media (max-width: 999px) {
                                     .footer__main-row {
                                         flex-direction: column !important;
                                         align-items: center !important;
-                                        gap: 1.2em !important;
+                                        gap: 1.5em !important;
                                     }
                                     .footer__menu-col, .footer__contact-col {
                                         justify-content: center !important;
                                         align-items: center !important;
                                         text-align: center !important;
                                         width: 100% !important;
-                                        min-width: 0 !important;
+                                        flex: none !important;
+                                    }
+                                    .footer__menu {
+                                        justify-content: center !important;
+                                        flex-direction: column !important;
+                                        gap: 1rem !important;
+                                        text-align: center !important;
+                                    }
+                                    .footer__menu .column {
+                                        text-align: center !important;
                                     }
                                     .footer__contact-col {
                                         margin-top: 0.5em;
