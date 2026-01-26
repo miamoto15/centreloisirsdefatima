@@ -685,61 +685,6 @@ blockquote p {
   }
 }
 
-.header-mobile-ctas {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
-  margin-right: 18px;
-}
-@media (min-width: 1000px) {
-  .header-mobile-ctas {
-    display: none;
-  }
-}
-
-.main-menu-cta-mobile {
-  padding: 8px !important;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-}
-.main-menu-cta-mobile svg {
-  width: 20px !important;
-  height: 20px !important;
-}
-
-@media (min-width: 1200px) and (max-width: 1350px) {
-  .main-menu {
-    font-size: 0.9em !important;
-    gap: 0.18em !important;
-  }
-  .main-menu > ul {
-    gap: 0.18em !important;
-    padding-left: 0.18em !important;
-    padding-right: 0.18em !important;
-  }
-  .main-menu .menu-item {
-    margin: 0 0.18em !important;
-    padding: 0 0.28em !important;
-  }
-  .main-menu a {
-    font-size: 0.9em !important;
-    padding: 0.42em 0.42em !important;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1350px) {
-  .main-menu {
-    gap: 0.08em !important;
-    font-size: 0.82em !important;
-  }
-  .main-menu .menu-item {
-    margin-right: 0.08em !important;
-    margin-left: 0.08em !important;
-    padding-left: 0.05em !important;
-    padding-right: 0.05em !important;
-  }
-}
 .main-menu {
   background-color: var(--white);
   padding-left: 12px;
@@ -758,19 +703,7 @@ blockquote p {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
-    margin-left: clamp(30px, 3vw, 50px);
-  }
-}
-@media (min-width: 1000px) and (max-width: 1300px) {
-  .main-menu {
-    gap: 0.5em !important;
-    font-size: 0.95em !important;
-  }
-  .main-menu .menu-item {
-    margin-right: 0.5em !important;
-    margin-left: 0.5em !important;
-    padding-left: 0.3em !important;
-    padding-right: 0.3em !important;
+    margin-left: clamp(50px, 5vw, 75px);
   }
 }
 @media (max-width: 999px) {
@@ -778,13 +711,13 @@ blockquote p {
     position: fixed;
     left: -100%;
     top: 60px;
+    bottom: 0;
     z-index: 5;
     width: 100%;
-    height: auto;
-    max-height: calc(100vh - 60px);
-    overflow-y: auto;
-    padding-bottom: 20px;
-    transition: left 0.3s ease-in-out;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 120px;
+    transition: top 0.5s ease-in-out;
     transform-style: preserve-3d;
   }
   .main-menu.is-active {
@@ -866,11 +799,6 @@ blockquote p {
     display: flex;
   }
 }
-@media (max-width: 999px) {
-  .main-menu__cta-language-wrapper {
-    display: none !important;
-  }
-}
 @media (min-width: 1000px) {
   .main-menu__cta-language-wrapper {
     margin-left: auto;
@@ -895,17 +823,7 @@ blockquote p {
 }
 @media (max-width: 999px) {
   .main-menu .main-menu-cta {
-    font-size: 14px !important;
-    padding: 6px 8px !important;
-    margin-left: 0 !important;
-    width: auto;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-  }
-  .main-menu .main-menu-cta svg {
-    width: 20px !important;
-    height: 20px !important;
+    font-size: 18px;
   }
 }
 @media (min-width: 1000px) {
@@ -1339,50 +1257,6 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
   .dropdown-nav li a:hover {
     color: var(--menu-link-color-hover);
   }
-}
-
-.footer__hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 0 auto 1em auto;
-}
-@media (min-width: 1000px) {
-  .footer__hamburger {
-    display: none;
-  }
-}
-
-.footer__menu {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2em;
-  transition: max-height 0.3s ease;
-  max-height: 0;
-  overflow: hidden;
-}
-@media (min-width: 1000px) {
-  .footer__menu {
-    display: grid;
-    flex-direction: unset;
-    align-items: unset;
-    max-height: unset;
-    overflow: unset;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 200px));
-    gap: 8px;
-  }
-}
-
-.footer__menu.is-active {
-  display: flex;
-  max-height: 1000px;
-  overflow: visible;
 }
 
 .footer {
