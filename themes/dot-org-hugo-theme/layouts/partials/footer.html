@@ -14,7 +14,7 @@
                                 <p class="top-menu-item">{{ $home.Name }}</p>
                                 <ul>
                                     <li class="menu-item">
-                                        <a href="{{ $home.URL | relLangURL }}" class="menu-link">{{ $home.Name }}</a>
+                                        <a href="{{ $home.URL }}" class="menu-link">{{ $home.Name }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -26,7 +26,7 @@
                                     <ul>
                                         {{ range .Children }}
                                             <li class="menu-item">
-                                                <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                                <a href="{{ .URL }}" class="menu-link">{{ .Name }}</a>
                                             </li>
                                         {{ end }}
                                     </ul>
@@ -46,7 +46,7 @@
                                 <ul>
                                     {{ range $noChildren }}
                                         <li class="menu-item">
-                                            <a href="{{ .URL | relLangURL }}" class="menu-link">{{ .Name }}</a>
+                                            <a href="{{ .URL }}" class="menu-link">{{ .Name }}</a>
                                         </li>
                                     {{ end }}
                                 </ul>
@@ -104,7 +104,7 @@
 
             <div class="copyright__accessibility-git-wrapper">
                 {{ if .Site.Params.accessibility.help_url }}
-                <a href="{{ .Site.Params.accessibility.help_url }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
                     "Accessibility Statement" }}</a>
                 {{ end }}
 

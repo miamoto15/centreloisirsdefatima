@@ -3,5 +3,5 @@
 
 {{/* Only include Accessibility Statement / Help if set */}}
 {{ if .Site.Params.accessibility.help_url }}
-<a class="skip-link" href="{{ .Site.Params.accessibility.help_url }}">{{ .Site.Params.accessibility.help_text | default "Accessibility help" }}</a>
+<a class="skip-link" href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}">{{ .Site.Params.accessibility.help_text | default "Accessibility help" }}</a>
 {{ end }}
