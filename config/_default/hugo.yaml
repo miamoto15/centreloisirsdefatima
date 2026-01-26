@@ -16,7 +16,7 @@ contentDir: content/fr
 # Set fallback if international version is not available
 defaultContentLanguage: fr
 # Set the default language as the root rather than in folder i.e. don't use /en/
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false
 
 ######################## privacy & speed ####################
 # Enable do not track, no cookies on Video embeds
