@@ -736,12 +736,12 @@ blockquote p {
     position: fixed;
     left: -100%;
     top: 60px;
-    bottom: 0;
     z-index: 5;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    padding-bottom: 120px;
+    height: auto;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-bottom: 20px;
     transition: top 0.5s ease-in-out;
     transform-style: preserve-3d;
   }
