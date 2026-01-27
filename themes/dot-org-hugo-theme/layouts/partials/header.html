@@ -43,13 +43,6 @@
             </a>
         </div>
         
-        {{- /* Tablet language selector - visible between hamburger and tertiary button */ -}}
-        {{ if gt (len $.Site.Languages) 1 }}
-        <div class="header-tablet-language-selector">
-            {{ partial "language-selector.html" $ }}
-        </div>
-        {{ end }}
-        
         <nav class="main-menu">
             {{- /* Mobile language buttons - shown only on mobile inside hamburger menu */ -}}
             {{ if gt (len $.Site.Languages) 1 }}
