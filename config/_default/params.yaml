@@ -3,7 +3,7 @@
 # Add custom assets relative to /static or via https
 logo_on_white: "img/Logo.png"
 custom_js: []
-custom_css: []
+custom_css: ["scss/accessibility-improvements.scss", "scss/accessibility-fixes.scss"]
 
 ######################## custom config ####################
 

@@ -1,0 +1,18 @@
+/* Corrections supplémentaires pour l'accessibilité */
+
+/* Centrage du texte dans les boutons de langue mobile */
+.mobile-lang-btn {
+    text-align: center;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Amélioration du focus pour les boutons de langue mobile */
+.mobile-lang-btn:focus,
+.mobile-lang-btn:focus-visible {
+    outline: 3px solid var(--primary-800);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 1px var(--white), 0 0 0 5px var(--primary-800);
+}

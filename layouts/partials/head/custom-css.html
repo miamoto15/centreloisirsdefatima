@@ -1,0 +1,14 @@
+{{ range .Site.Params.custom_css }}
+	{{ if strings.HasSuffix . ".scss" }}
+		{{ $scss := resources.Get . }}
+		{{ if $scss }}
+			{{ $css := $scss | css.Sass }}
+			{{ $css = $css | resources.Minify | resources.Fingerprint }}
+			<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+		{{ else }}
+			{{ warnf "Custom SCSS file not found: %s" . }}
+		{{ end }}
+	{{ else }}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{ end }}
+{{ end }}
