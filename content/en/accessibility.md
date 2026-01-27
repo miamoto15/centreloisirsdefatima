@@ -69,7 +69,7 @@ The site is designed to work with:
 
 ## Feedback and Support
 
-We welcome your feedback on the accessibility of our website. If you encounter difficulties or accessibility barriers, please contact us by email at **info@centreloisirsfatima.com**.
+We welcome your feedback on the accessibility of our website. If you encounter difficulties or accessibility barriers, please contact us by email at [info@centreloisirsfatima.com](mailto:info@centreloisirsfatima.com).
 
 We will strive to provide you with the information in an accessible format or offer an appropriate alternative.
 
@@ -86,8 +86,8 @@ We are committed to:
 
 To learn more about web accessibility:
 
-- [Government of Canada Accessibility Standards](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/web-accessibility.html)
-- [W3C WCAG 2.1 Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [Government of Canada Web Accessibility Standards](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/web-accessibility.html)
+- [W3C - Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 ---
 
