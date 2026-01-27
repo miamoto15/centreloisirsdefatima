@@ -98,6 +98,18 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/reservations/"
                 />
   </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/accessibilite/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/accessibility/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/accessibilite/"
+                />
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/joker/gagnants/</loc>
     <xhtml:link
                 rel="alternate"
