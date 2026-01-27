@@ -158,6 +158,18 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/points-of-sale/"
                 />
   </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/privacy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/confidentialite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/privacy/"
+                />
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/projects/</loc>
     <xhtml:link
                 rel="alternate"
