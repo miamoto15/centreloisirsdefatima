@@ -16,3 +16,15 @@
     outline-offset: 2px;
     box-shadow: 0 0 0 1px var(--white), 0 0 0 5px var(--primary-800);
 }
+
+/* Centrage vertical (axe Y) des éléments de sous-menu sur desktop */
+@media (min-width: 1000px) {
+    .main-menu .sub-menu__nav .menu-item a {
+        display: flex !important;
+        align-items: center !important; /* Centre VERTICALEMENT (axe Y) */
+        justify-content: flex-start !important; /* Garde à GAUCHE (axe X) */
+        min-height: 44px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
