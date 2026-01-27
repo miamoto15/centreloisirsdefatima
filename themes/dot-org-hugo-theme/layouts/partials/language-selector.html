@@ -1,25 +1,30 @@
-{{ if gt (len .Site.Languages) 1 }} 
+{{- /* Sélecteur de langue - Bonnes pratiques Hugo 2026 */ -}}
+{{- /* Utilise .Translations pour les pages traduites, sinon la page d'accueil de la langue */ -}}
+
+{{ if gt (len .Site.Languages) 1 }}
 <div class="language-selector dropdown">
     <div class="dropdown-current">
-        <span class="dropdown-arrow"><span class="dropdown-selected">{{ .Site.Language.LanguageName }}</span>
+        <span class="dropdown-arrow">
+            <span class="dropdown-selected">{{ .Site.Language.LanguageName }}</span>
         </span>
     </div>
     <nav class="dropdown-nav">
         <ul class="dropdown-group">
-            {{ $currentSiteLanguage := .Site.Language.LanguageName }}
-            {{ range .Site.Languages }}
-            {{ if ne .LanguageName $currentSiteLanguage }}
-            {{ $currentLang := . }}
-            {{ $translatedURL := "" }}
-            {{ range $.Page.AllTranslations }}
-            {{ if eq .Lang $currentLang.Lang }}
-            {{ $translatedURL = .Permalink }}
-            {{ end }}
-            {{ end }}
-            <li><a href="{{ if $translatedURL }}{{ $translatedURL }}{{ else }}/{{ $currentLang.Lang }}/{{ end }}">{{
-                    .LanguageName }}</a></li>
-            {{ end }}
-            {{ end }}
+            {{- /* Parcourir toutes les traductions disponibles de la page courante */ -}}
+            {{- range .Translations }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+            </li>
+            {{- else }}
+            {{- /* Si pas de traduction, afficher les liens vers les pages d'accueil des autres langues */ -}}
+            {{- range $.Site.Languages }}
+            {{- if ne .Lang $.Site.Language.Lang }}
+            <li>
+                <a href="{{ printf "%s/" .Lang | absURL }}">{{ .LanguageName }}</a>
+            </li>
+            {{- end }}
+            {{- end }}
+            {{- end }}
         </ul>
     </nav>
 </div>

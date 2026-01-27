@@ -21,3 +21,6 @@ Thumbs.db
 
 # Hugo build lock file
 .hugo_build.lock
+
+# Hugo stats file
+hugo_stats.json

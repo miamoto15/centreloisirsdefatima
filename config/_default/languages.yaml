@@ -1,10 +1,18 @@
+######################## Configuration des langues ####################
+# URLs relatives avec préfixe de langue - Hugo ajoute le baseURL path automatiquement
+# Format: /fr/... et /en/... - Hugo convertit en /centreloisirsdefatima/fr/...
+
+######################## Français (langue par défaut) ####################
 fr:
   languageName: Français
+  languageCode: fr-CA
   weight: 1
+  contentDir: content/fr
   title: "Centre des Loisirs de Fatima"
   copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés."
+  
   params:
-    description: "Description du site"
+    description: "Centre communautaire dédié aux loisirs et activités à Fatima"
     accessibility:
       skip_text: "Aller au contenu"
       help_text: "Déclaration d'accessibilité"
@@ -16,15 +24,17 @@ fr:
       text: "Nous joindre"
       link: "/fr/contact/"
     github_edit: "Modifier cette page sur GitHub"
+
   menu:
     main:
       - identifier: "accueil"
         name: "Accueil"
         url: "/fr/"
         weight: 1
+
       - identifier: "joker"
         name: "Joker"
-        url: ""
+        url: "#"
         weight: 2
       - identifier: "comment-jouer"
         name: "Comment jouer"
@@ -46,9 +56,10 @@ fr:
         url: "/fr/joker/reglements/"
         parent: "joker"
         weight: 4
+
       - identifier: "activites"
         name: "Activités"
-        url: ""
+        url: "#"
         weight: 3
       - identifier: "activites-a-venir"
         name: "Activités à venir"
@@ -65,6 +76,7 @@ fr:
         url: "/fr/activites/gallerie-photos/"
         parent: "activites"
         weight: 3
+
       - identifier: "projets"
         name: "Projets"
         url: "/fr/projets/"
@@ -79,16 +91,17 @@ fr:
         url: "/fr/projets/passes/"
         parent: "projets"
         weight: 2
+
       - identifier: "contact"
         name: "Contact"
-        url: ""
+        url: "#"
         weight: 5
       - identifier: "nous-joindre"
         name: "Nous joindre"
         url: "/fr/contact/nous-joindre/"
         parent: "contact"
         weight: 1
-      - identifier: "notre_equipe"
+      - identifier: "notre-equipe"
         name: "Notre équipe"
         url: "/fr/contact/notre-equipe/"
         parent: "contact"
@@ -98,14 +111,18 @@ fr:
         url: "/fr/contact/reservations/"
         parent: "contact"
         weight: 3
+
+######################## English ####################
 en:
   languageName: English
-  contentDir: content/en
+  languageCode: en-CA
   weight: 2
+  contentDir: content/en
   title: "Centre des Loisirs de Fatima"
   copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved."
+  
   params:
-    description: "Site Description"
+    description: "Community center dedicated to leisure and activities in Fatima"
     accessibility:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
@@ -117,15 +134,17 @@ en:
       text: "Contact us"
       link: "/en/contact/"
     github_edit: "Edit this page on GitHub"
+
   menu:
     main:
       - identifier: "home"
         name: "Home"
         url: "/en/"
         weight: 1
+
       - identifier: "joker"
         name: "Joker"
-        url: ""
+        url: "#"
         weight: 2
       - identifier: "how-to-play"
         name: "How to play"
@@ -147,9 +166,10 @@ en:
         url: "/en/joker/rules/"
         parent: "joker"
         weight: 4
+
       - identifier: "activities"
         name: "Activities"
-        url: ""
+        url: "#"
         weight: 3
       - identifier: "upcoming-activities"
         name: "Upcoming activities"
@@ -166,6 +186,7 @@ en:
         url: "/en/activities/photo-gallery/"
         parent: "activities"
         weight: 3
+
       - identifier: "projects"
         name: "Projects"
         url: "/en/projects/"
@@ -180,9 +201,10 @@ en:
         url: "/en/projects/past/"
         parent: "projects"
         weight: 2
+
       - identifier: "contact"
         name: "Contact"
-        url: ""
+        url: "#"
         weight: 5
       - identifier: "contact-us"
         name: "Contact us"
