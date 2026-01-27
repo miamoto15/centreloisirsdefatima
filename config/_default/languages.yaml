@@ -17,13 +17,16 @@ fr:
       skip_text: "Aller au contenu"
       help_text: "Déclaration d'accessibilité"
       help_url: "/fr/contact/"
+    privacy:
+      help_text: "Confidentialité"
+      help_url: "/fr/confidentialite/"
     main_cta:
       text: "Nous joindre"
       link: "/fr/contact/"
     footer_cta:
       text: "Nous joindre"
       link: "/fr/contact/"
-    github_edit: "Modifier cette page sur GitHub"
+    github_edit: "Modifier sur GitHub"
 
   menu:
     main:
@@ -127,6 +130,9 @@ en:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
       help_url: "/en/contact/"
+    privacy:
+      help_text: "Privacy Policy"
+      help_url: "/en/privacy/"
     main_cta:
       text: "Contact us"
       link: "/en/contact/"

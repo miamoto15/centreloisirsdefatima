@@ -109,6 +109,11 @@
                     "Accessibility Statement" }}</a>
                 {{ end }}
 
+                {{ if .Site.Params.privacy.help_url }}
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.privacy.help_url | absURL }}" class="nowrap">{{ .Site.Params.privacy.help_text | default
+                    "Privacy Policy" }}</a>
+                {{ end }}
+
                 {{- partial "footer/github.html" . -}}
             </div>
         </div>
