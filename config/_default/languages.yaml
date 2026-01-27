@@ -16,7 +16,7 @@ fr:
     accessibility:
       skip_text: "Aller au contenu"
       help_text: "Déclaration d'accessibilité"
-      help_url: "/fr/contact/"
+      help_url: "/fr/accessibilite/"
     privacy:
       help_text: "Confidentialité"
       help_url: "/fr/confidentialite/"
@@ -129,7 +129,7 @@ en:
     accessibility:
       skip_text: "Skip to content"
       help_text: "Accessibility Statement"
-      help_url: "/en/contact/"
+      help_url: "/en/accessibility/"
     privacy:
       help_text: "Privacy Policy"
       help_url: "/en/privacy/"
