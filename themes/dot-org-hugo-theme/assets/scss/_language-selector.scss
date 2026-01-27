@@ -43,6 +43,8 @@
     }
     @media (max-width: variables.$mobile-max) {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        // Masquer sur mobile car on utilise les boutons carrés maintenant
+        display: none;
     }
     @media (min-width: variables.$min-desktop) {
         margin-top: 0;

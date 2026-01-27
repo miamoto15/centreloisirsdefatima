@@ -43,7 +43,25 @@
             </a>
         </div>
         
+        {{- /* Tablet language selector - visible between hamburger and tertiary button */ -}}
+        {{ if gt (len $.Site.Languages) 1 }}
+        <div class="header-tablet-language-selector">
+            {{ partial "language-selector.html" $ }}
+        </div>
+        {{ end }}
+        
         <nav class="main-menu">
+            {{- /* Mobile language buttons - shown only on mobile inside hamburger menu */ -}}
+            {{ if gt (len $.Site.Languages) 1 }}
+            <div class="mobile-language-buttons">
+                {{ range $.Site.Languages }}
+                <a href="{{ printf "%s/" .Lang | absURL }}" class="mobile-lang-btn{{ if eq .Lang $.Site.Language.Lang }} active{{ end }}">
+                    {{ upper .Lang }}
+                </a>
+                {{ end }}
+            </div>
+            {{ end }}
+            
             <ul class="main-menu__wrapper">
                 {{ range . }}
                 <li class="top-menu-item{{ if .HasChildren }} menu-item-has-children{{ end }}">
