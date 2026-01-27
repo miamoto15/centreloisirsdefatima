@@ -86,8 +86,8 @@ We are committed to:
 
 To learn more about web accessibility:
 
-- [Government of Canada Web Accessibility Standards](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/web-accessibility.html)
-- [W3C - Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [Government of Canada Accessibility Standards](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification/web-accessibility.html)
+- [W3C WCAG 2.1 Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 ---
 

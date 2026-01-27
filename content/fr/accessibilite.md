@@ -69,7 +69,7 @@ Le site est conçu pour fonctionner avec :
 
 ## Retour d'information et assistance
 
-Nous accueillons favorablement vos commentaires sur l'accessibilité de notre site. Si vous rencontrez des difficultés ou des obstacles à l'accessibilité, veuillez nous contacter par courriel à **info@centreloisirsfatima.com**.
+Nous accueillons favorablement vos commentaires sur l'accessibilité de notre site. Si vous rencontrez des difficultés ou des obstacles à l'accessibilité, veuillez nous contacter par courriel à [info@centreloisirsfatima.com](mailto:info@centreloisirsfatima.com).
 
 Nous nous efforcerons de vous fournir l'information dans un format accessible ou de vous proposer une alternative appropriée.
 
