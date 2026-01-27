@@ -1,20 +1,13 @@
 {{ define "main" }}
-{{- /* Check if this section should redirect to first page */ -}}
-{{ if .Params.redirect_to_first }}
-  {{ $pages := .RegularPages }}
-  {{ if gt (len $pages) 0 }}
-    {{ $firstPage := index $pages 0 }}
-    <script>window.location.replace("{{ $firstPage.Permalink }}");</script>
-    <noscript>
-      <meta http-equiv="refresh" content="0; url={{ $firstPage.Permalink }}">
-    </noscript>
-    <style>body { margin: 0; padding: 0; }</style>
-  {{ else }}
-    {{- /* No pages to redirect to, show default list */ -}}
-    {{ .Content }}
-  {{ end }}
+{{- /* Check if this section should show a 404 page */ -}}
+{{ if .Params.show_404 }}
+  <script>window.location.replace("/centreloisirsdefatima/404.html");</script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/centreloisirsdefatima/404.html">
+  </noscript>
+  <style>body { margin: 0; padding: 0; }</style>
 {{ else }}
-  {{- /* Normal section page without redirect */ -}}
+  {{- /* Normal section page */ -}}
   {{ .Content }}
   {{ range .Pages }}
     <article>
