@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{- /* Check if this section should redirect to first page */ -}}
+{{ if .Params.redirect_to_first }}
+  {{ $pages := .RegularPages }}
+  {{ if gt (len $pages) 0 }}
+    {{ $firstPage := index $pages 0 }}
+    <script>window.location.replace("{{ $firstPage.Permalink }}");</script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url={{ $firstPage.Permalink }}">
+    </noscript>
+    <style>body { margin: 0; padding: 0; }</style>
+  {{ else }}
+    {{- /* No pages to redirect to, show default list */ -}}
+    {{ .Content }}
+  {{ end }}
+{{ else }}
+  {{- /* Normal section page without redirect */ -}}
+  {{ .Content }}
+  {{ range .Pages }}
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary | plainify }}</p>
+    </article>
+  {{ end }}
+{{ end }}
+{{ end }}
