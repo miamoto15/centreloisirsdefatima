@@ -1,4 +1,14 @@
 @use "variables";
+// Soulignement uniquement pour la langue active dans le footer
+.footer-lang-link {
+    margin-left: 8px;
+    text-decoration: none !important;
+    font-weight: normal;
+}
+.footer-lang-link.active-lang {
+    text-decoration: underline !important;
+    font-weight: bold;
+}
 
 .dropdown {
     position: relative;
