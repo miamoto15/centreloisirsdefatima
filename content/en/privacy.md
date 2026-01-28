@@ -4,8 +4,6 @@ description: "Privacy policy of Centre des Loisirs de Fatima"
 translationKey: "privacy"
 ---
 
-**Last updated: January 27, 2026**
-
 ## Privacy Commitment
 
 Centre des Loisirs de Fatima, Î.M., INC. is committed to protecting your privacy and complying with applicable privacy laws, including Quebec's Law 25 and the Personal Information Protection and Electronic Documents Act (PIPEDA).
@@ -52,4 +50,5 @@ We reserve the right to modify this privacy policy at any time. Any changes will
 
 ---
 
+**Last updated: January 27, 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved.

@@ -4,8 +4,6 @@ description: "Politique de confidentialité du Centre des Loisirs de Fatima"
 translationKey: "privacy"
 ---
 
-**Dernière mise à jour : 27 janvier 2026**
-
 ## Engagement de confidentialité
 
 Le Centre des Loisirs de Fatima, Î.M., INC. s'engage à protéger votre vie privée et à respecter les lois applicables en matière de protection des renseignements personnels, notamment la Loi 25 du Québec et la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE).
@@ -52,4 +50,5 @@ Nous nous réservons le droit de modifier cette politique de confidentialité à
 
 ---
 
+**Dernière mise à jour : 27 janvier 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés.

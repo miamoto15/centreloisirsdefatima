@@ -116,6 +116,28 @@
 
                 {{- partial "footer/github.html" . -}}
             </div>
+
+            <div class="footer__language-switcher" style="margin-top:1em; text-align:right;">
+                <nav aria-label="Sélection de langue">
+                    {{ range $.Site.Languages }}
+                        {{ if eq .Lang $.Site.Language.Lang }}
+                            {{ $translations := where $.Translations "Language.Lang" .Lang }}
+                            {{ if gt (len $translations) 0 }}
+                                <a href="{{ (index $translations 0).Permalink }}" lang="{{ .Lang }}" style="margin-left:8px; font-weight:bold; text-decoration:underline;" aria-current="page">{{ upper .Lang }}</a>
+                            {{ else }}
+                                <a href="{{ printf "%s/" .Lang | absURL }}" lang="{{ .Lang }}" style="margin-left:8px; font-weight:bold; text-decoration:underline;" aria-current="page">{{ upper .Lang }}</a>
+                            {{ end }}
+                        {{ else }}
+                            {{ $translations := where $.Translations "Language.Lang" .Lang }}
+                            {{ if gt (len $translations) 0 }}
+                                <a href="{{ (index $translations 0).Permalink }}" lang="{{ .Lang }}" style="margin-left:8px;">{{ upper .Lang }}</a>
+                            {{ else }}
+                                <a href="{{ printf "%s/" .Lang | absURL }}" lang="{{ .Lang }}" style="margin-left:8px;">{{ upper .Lang }}</a>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </nav>
+            </div>
         </div>
     </div>
 </footer>

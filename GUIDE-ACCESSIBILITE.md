@@ -1,4 +1,5 @@
 # Guide des bonnes pratiques d'accessibilité
+
 ## Centre des Loisirs de Fatima
 
 Ce document explique les améliorations d'accessibilité mises en place et comment maintenir l'accessibilité lors de l'ajout de nouveau contenu.
@@ -6,9 +7,11 @@ Ce document explique les améliorations d'accessibilité mises en place et comme
 ## ✅ Améliorations implémentées
 
 ### 1. **Styles CSS d'accessibilité personnalisés**
+
 Fichier : `assets/scss/accessibility-improvements.scss`
 
 **Fonctionnalités ajoutées :**
+
 - Indicateurs de focus améliorés (contour de 3px)
 - Contraste de couleurs amélioré (texte #1a1a1a sur fond blanc)
 - Zones cliquables minimales de 44x44 pixels
@@ -17,16 +20,19 @@ Fichier : `assets/scss/accessibility-improvements.scss`
 - Amélioration de la lisibilité (hauteur de ligne, espacement)
 
 ### 2. **Structure HTML sémantique**
+
 - Changement de `<section id="content">` en `<main id="content">`
 - Utilisation appropriée de `<header>`, `<nav>`, `<article>`, `<footer>`
 - Liens "Aller au contenu" déjà présents
 
 ### 3. **Navigation au clavier**
+
 - Tous les éléments interactifs sont accessibles au clavier
 - Indicateurs de focus visibles
 - Ordre de tabulation logique
 
 ### 4. **Contrastes de couleurs**
+
 - Ratios de contraste respectant WCAG 2.1 AA (minimum 4.5:1)
 - Liens soulignés pour une meilleure visibilité
 - Couleurs primaires ajustées pour un meilleur contraste
@@ -34,6 +40,7 @@ Fichier : `assets/scss/accessibility-improvements.scss`
 ## 📝 Bonnes pratiques pour le contenu
 
 ### Images
+
 Toujours ajouter un texte alternatif descriptif :
 
 ```markdown
@@ -41,34 +48,41 @@ Toujours ajouter un texte alternatif descriptif :
 ```
 
 **Bon exemple :**
+
 ```markdown
 ![Groupe d'enfants jouant au soccer au Centre des Loisirs de Fatima](images/soccer-2024.jpg)
 ```
 
 **Mauvais exemple :**
+
 ```markdown
 ![image](image.jpg)
 ```
 
 Pour les images décoratives, utilisez un alt vide :
+
 ```markdown
 ![ ](decoration.png)
 ```
 
 ### Liens
+
 Utilisez des textes de liens explicites :
 
 **Bon :**
+
 ```markdown
 [Consultez notre calendrier d'activités 2026](/activites/)
 ```
 
 **Mauvais :**
+
 ```markdown
 [Cliquez ici](/activites/)
 ```
 
 ### Titres
+
 Respectez la hiérarchie des titres (ne sautez pas de niveaux) :
 
 ```markdown
@@ -82,6 +96,7 @@ Respectez la hiérarchie des titres (ne sautez pas de niveaux) :
 ```
 
 ### Tableaux
+
 Utilisez toujours des en-têtes de colonnes :
 
 ```markdown
@@ -91,6 +106,7 @@ Utilisez toujours des en-têtes de colonnes :
 ```
 
 ### Listes
+
 Utilisez les listes appropriées :
 
 ```markdown
@@ -104,16 +120,20 @@ Utilisez les listes appropriées :
 ```
 
 ### Contenu vidéo
+
 Si vous ajoutez des vidéos :
+
 - Incluez des sous-titres
 - Fournissez une transcription textuelle
 - Utilisez le shortcode YouTube du thème qui est accessible
 
 ### Couleurs
+
 - N'utilisez jamais la couleur seule pour transmettre une information
 - Exemple : "Cliquez sur le bouton vert" → "Cliquez sur le bouton Inscription"
 
 ### Formulaires
+
 Structure recommandée :
 
 ```html
@@ -126,7 +146,7 @@ Structure recommandée :
 
 ## 🔍 Tests d'accessibilité
 
-### Tests manuels à effectuer régulièrement :
+### Tests manuels à effectuer régulièrement
 
 1. **Navigation au clavier**
    - Utilisez uniquement la touche Tab
@@ -143,22 +163,22 @@ Structure recommandée :
    - Mac : VoiceOver (intégré)
    - Vérifiez que le contenu est lu de façon logique
 
-### Outils automatisés recommandés :
+### Outils automatisés recommandés
 
 1. **Extension navigateur : axe DevTools**
    - Analyse automatique des problèmes d'accessibilité
    - Gratuit et facile à utiliser
 
 2. **WAVE Web Accessibility Evaluation Tool**
-   - https://wave.webaim.org/
+   - <https://wave.webaim.org/>
    - Visualisation des problèmes d'accessibilité
 
 3. **Validateur HTML du W3C**
-   - https://validator.w3.org/
+   - <https://validator.w3.org/>
    - Vérifie la validité du HTML
 
 4. **Contrast Checker**
-   - https://webaim.org/resources/contrastchecker/
+   - <https://webaim.org/resources/contrastchecker/>
    - Vérifie les ratios de contraste
 
 ## 🎯 Checklist avant publication
@@ -182,6 +202,7 @@ Structure recommandée :
 ## 💡 Rappel important
 
 L'accessibilité n'est pas une tâche ponctuelle, c'est un processus continu. Chaque fois que vous ajoutez du contenu, pensez aux personnes qui utilisent :
+
 - Des lecteurs d'écran
 - La navigation au clavier uniquement
 - Des outils de grossissement d'écran

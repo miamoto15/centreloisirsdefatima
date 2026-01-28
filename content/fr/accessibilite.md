@@ -4,8 +4,6 @@ description: "Notre engagement envers l'accessibilité web au Centre des Loisirs
 translationKey: "accessibility"
 ---
 
-**Dernière mise à jour : 27 janvier 2026**
-
 ## Notre engagement
 
 Le Centre des Loisirs de Fatima, Î.M., INC. s'engage à rendre son site web accessible au plus grand nombre de personnes possible, incluant les personnes en situation de handicap. Nous nous efforçons continuellement d'améliorer l'accessibilité et l'expérience utilisateur pour tous.
@@ -91,4 +89,5 @@ Pour en savoir plus sur l'accessibilité web :
 
 ---
 
+**Dernière mise à jour : 27 janvier 2026**  
 *Cette déclaration d'accessibilité sera mise à jour régulièrement pour refléter l'état actuel de nos efforts en matière d'accessibilité.*

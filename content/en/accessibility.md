@@ -4,8 +4,6 @@ description: "Our commitment to web accessibility at Centre des Loisirs de Fatim
 translationKey: "accessibility"
 ---
 
-**Last updated: January 27, 2026**
-
 ## Our Commitment
 
 Centre des Loisirs de Fatima, Î.M., INC. is committed to making its website accessible to the widest possible audience, including people with disabilities. We continuously strive to improve accessibility and user experience for everyone.
@@ -91,4 +89,5 @@ To learn more about web accessibility:
 
 ---
 
+**Last updated: January 27, 2026**  
 *This accessibility statement will be updated regularly to reflect the current state of our accessibility efforts.*
