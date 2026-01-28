@@ -31,7 +31,6 @@ Nous n'utilisons pas :
 - Scripts de profilage comportemental
 - Réseaux sociaux intégrés qui collectent des données
 
-
 ## Liens externes et sites tiers
 
 Le site peut contenir des liens ou des boutons menant vers des sites web externes (par exemple, pour des formulaires de dons ou d’inscription). Ces sites tiers peuvent avoir des pratiques différentes en matière de collecte et d’utilisation des renseignements personnels. Nous vous recommandons de consulter leur politique de confidentialité avant de fournir des renseignements personnels sur ces plateformes. Le Centre des Loisirs de Fatima n’est pas responsable des pratiques de ces sites externes.
