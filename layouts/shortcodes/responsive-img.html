@@ -1,0 +1,25 @@
+{{/* Utilise ce shortcode ainsi -> {{< responsive-img src="img/photo.jpg" alt="Description" >}} */}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $sizes := slice 1200 800 400 }}
+{{ $img := resources.Get $src }}
+
+{{ if $img }}
+<picture>
+  {{ range $sizes }}
+    {{ $webp := $img.Resize (printf "%dx webp" .) }}
+    {{ if $webp }}
+      {{ if eq . 1200 }}
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+      {{ else }}
+        <source srcset="{{ $webp.RelPermalink }}" type="image/webp" media="(max-width: {{ . }}px)">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $fallback := $img.Resize "800x" }}
+  <img src="{{ $fallback.RelPermalink }}" alt="{{ $alt }}" loading="lazy" style="width:100%;height:auto;">
+</picture>
+{{ else }}
+<!-- Image not found: {{ $src }} (check that it's in assets/) -->
+{{ end }}
