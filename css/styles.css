@@ -454,13 +454,13 @@ h1,
   color: var(--primary-400);
   text-transform: uppercase;
   line-height: 112.2%;
-  font-size: 44px;
+  font-size: 36px;
 }
 @media (min-width: 1000px) {
   h1,
   .h1 {
     line-height: 115%;
-    font-size: 80px;
+    font-size: 56px;
   }
 }
 
@@ -1178,6 +1178,17 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
 .hamburger-inner::after {
   bottom: -7px;
   transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.footer-lang-link {
+  margin-left: 8px;
+  text-decoration: none !important;
+  font-weight: normal;
+}
+
+.footer-lang-link.active-lang {
+  text-decoration: underline !important;
+  font-weight: bold;
 }
 
 .dropdown {
