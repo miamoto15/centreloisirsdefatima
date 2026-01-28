@@ -42,5 +42,3 @@ Le Centre des loisirs de Fatima est idéalement situé dans un environnement nat
 Le Centre des loisirs de Fatima organise chaque année des spectacles et des événements culturels aux Iles de la Madeleine, dont les fonds récoltés sont utilisés pour financer l’entretien des locaux et le financement des activités. Grâce aux recettes générées, le centre contribue à la rénovation des infrastructures locales, à la préservation de l’environnement et à divers projets communautaires.
 
 Cette initiative permet non seulement de promouvoir la culture locale, mais aussi de garantir la durabilité et la qualité de vie sur les Îles, tout en rassemblant les habitants et visiteurs autour de valeurs de solidarité et de respect de l’environnement.
-
-{{< responsive-img src="img/Logo.png" alt="Description de l'image" >}}
