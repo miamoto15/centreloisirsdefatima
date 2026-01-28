@@ -31,6 +31,11 @@ We do not use:
 - Behavioral profiling scripts
 - Integrated social media platforms that collect data
 
+
+## External Links and Third-Party Sites
+
+This website may contain links or buttons leading to external websites (for example, for donation or registration forms). These third-party sites may have different practices regarding the collection and use of personal information. We recommend that you review their privacy policy before providing any personal information on these platforms. Centre des Loisirs de Fatima is not responsible for the practices of these external sites.
+
 ## Website Hosting
 
 This website is hosted on GitHub Pages. GitHub may collect technical logs for security and infrastructure maintenance purposes. This data is not accessible to Centre des Loisirs de Fatima and is not used to track visitors.

@@ -30,10 +30,10 @@ h1,
     color: var(--primary-400);
     text-transform: uppercase;
     line-height: 112.2%;
-    font-size: 44px;
+    font-size: 36px;
     @media (min-width: variables.$min-desktop) {
         line-height: 115%;
-        font-size: 80px;
+        font-size: 56px;
     }
 }
 

@@ -1,14 +1,3 @@
-{{ with .Site.Params.github }}
-{{ if and .repo_url .show_edit_link }}
-{{ with $.File }}
-{{ $pageRelPath := replace .Path "\\" "/" }}
-{{ $langPrefix := $.Site.LanguageCode }}
-{{ $editURL := printf "%s/content/%s/%s" $.Site.Params.github.repo_url $langPrefix $pageRelPath }}
-
-<a target="_blank" rel="noopener noreferrer" href="{{ $editURL }}" class="nowrap">
-    {{ $.Site.Params.github_edit | default "Edit this page on GitHub" }}
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/miamoto15/centreloisirsdefatima/blob/main/README.md" class="nowrap">
+    Modifier le contenu du site
 </a>
-
-{{ end }}
-{{ end }}
-{{ end }}
