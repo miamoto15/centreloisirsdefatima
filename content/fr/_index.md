@@ -2,21 +2,7 @@
 title: "Accueil"
 description: "Le Centre des Loisirs de Fatima, Îles-de-la-Madeleine, organise des événements communautaires, des activités pour tous et soutient des initiatives de charité locale. Rejoignez-nous pour participer à la vie active et solidaire de notre communauté !"
 translationKey: "home"
-showHeader: false
 ---
-
-{{< responsive-img src="img\Site-Anse-aux-baleiniers.png" alt="Description" >}}
-
-{{< carousel images="img\Logo.png,img\Site-Anse-aux-baleiniers.png" interval="15" >}}
-
-{{< columns >}}
-{{< column >}}
-Column 1
-{{< /column >}}
-{{< column >}}
-Column 2
-{{< /column >}}
-{{< /columns >}}
 
 ## Centre des Loisirs de Fatima
 

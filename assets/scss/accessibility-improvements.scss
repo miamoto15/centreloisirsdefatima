@@ -1,3 +1,49 @@
+@media (max-width: 600px) {
+    h2 {
+        text-align: center;
+    }
+}
+// Styles pour la page Nous joindre
+.contact-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    /* background: #fafbfc; */
+    border-radius: 12px;
+    /* box-shadow: 0 2px 8px #0001; */
+}
+.contact-columns {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.contact-info {
+    flex: 1.1;
+}
+.contact-image {
+    flex: 1.8;
+    /* text-align: right; */
+}
+.contact-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.icon {
+    margin-right: 0.5em;
+}
+@media (max-width: 600px) {
+    .contact-columns {
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+    .contact-image {
+        text-align: center;
+    }
+}
 /* ============================================
    Améliorations d'accessibilité personnalisées
    ============================================ */
