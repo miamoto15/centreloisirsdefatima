@@ -12,7 +12,8 @@ Données ligne 2 col 1|Données ligne 2 col 2|Données ligne 2 col 3
 {{< /custom-table >}}
 */}}
 
-<table class="custom-table">
+<table class="custom-table{{ if eq (.Get "noborder") "true" }} no-border{{ end }}">
+  {{- if or (not (.Get "showHeader")) (ne (.Get "showHeader") "false") }}
   <thead>
     <tr>
       {{- $headers := split (.Get "headers") "," -}}
@@ -26,6 +27,7 @@ Données ligne 2 col 1|Données ligne 2 col 2|Données ligne 2 col 3
       {{- end }}
     </tr>
   </thead>
+  {{- end }}
   <tbody>
     {{- $lines := split .Inner "\n" -}}
     {{- range $lines }}
@@ -42,3 +44,9 @@ Données ligne 2 col 1|Données ligne 2 col 2|Données ligne 2 col 3
     {{- end }}
   </tbody>
 </table>
+<style>
+.custom-table.no-border, .custom-table.no-border th, .custom-table.no-border td {
+  border: none !important;
+  background: transparent !important;
+}
+</style>
