@@ -1,0 +1,44 @@
+{{/*
+  Shortcode custom-table:
+  - headers: En-têtes séparés par des virgules (ex: "Nom,Prénom,Age")
+  - widths: Largeurs des colonnes séparées par des virgules (ex: "50%,30%,20%" ou "200px,150px,100px")
+  - Contenu: Chaque ligne = une ligne du tableau, colonnes séparées par |
+*/}}
+
+{{/* 
+{{< custom-table headers="Colonne 1,Colonne 2,Colonne 3" widths="50%,30%,20%" >}}
+Données ligne 1 col 1|Données ligne 1 col 2|Données ligne 1 col 3
+Données ligne 2 col 1|Données ligne 2 col 2|Données ligne 2 col 3
+{{< /custom-table >}}
+*/}}
+
+<table class="custom-table">
+  <thead>
+    <tr>
+      {{- $headers := split (.Get "headers") "," -}}
+      {{- $widths := split (.Get "widths") "," -}}
+      {{- range $index, $header := $headers }}
+        {{- $width := "" -}}
+        {{- if $widths }}
+          {{- $width = index $widths $index -}}
+        {{- end }}
+        <th{{- if $width }} style="width: {{ $width | trim " " }};"{{- end }}>{{ $header | safeHTML }}</th>
+      {{- end }}
+    </tr>
+  </thead>
+  <tbody>
+    {{- $lines := split .Inner "\n" -}}
+    {{- range $lines }}
+      {{- $line := . | strings.TrimSpace -}}
+      {{- if and (ne $line "") (strings.Contains $line "|") }}
+        <tr>
+          {{- $cols := split $line "|" -}}
+          {{- range $cols }}
+            {{- $cell := . | strings.TrimSpace -}}
+            <td>{{ $.Page.RenderString (printf "%s" $cell) }}</td>
+          {{- end }}
+        </tr>
+      {{- end }}
+    {{- end }}
+  </tbody>
+</table>
