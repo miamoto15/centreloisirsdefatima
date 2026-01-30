@@ -47,6 +47,9 @@ h2,
     font-size: 34px;
     margin-block-start: 50px;
     margin-block-end: 30px;
+    @media (max-width: 499px) {
+        font-size: 26px;
+    }
     @media (min-width: variables.$min-desktop) {
         line-height: 115%;
         font-size: 40px;

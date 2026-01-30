@@ -82,7 +82,7 @@ fr:
 
       - identifier: "projets"
         name: "Projets"
-        url: "/fr/projets/"
+        url: "#"
         weight: 4
       - identifier: "en-cours"
         name: "Projets en cours"
@@ -109,11 +109,6 @@ fr:
         url: "/fr/contact/notre-equipe/"
         parent: "contact"
         weight: 2
-      - identifier: "reservations"
-        name: "Réservations"
-        url: "/fr/contact/reservations/"
-        parent: "contact"
-        weight: 3
 
 ######################## English ####################
 en:
@@ -195,7 +190,7 @@ en:
 
       - identifier: "projects"
         name: "Projects"
-        url: "/en/projects/"
+        url: "#"
         weight: 4
       - identifier: "ongoing-projects"
         name: "Ongoing projects"
@@ -222,8 +217,3 @@ en:
         url: "/en/contact/our-team/"
         parent: "contact"
         weight: 2
-      - identifier: "reservations"
-        name: "Reservations"
-        url: "/en/contact/reservations/"
-        parent: "contact"
-        weight: 3

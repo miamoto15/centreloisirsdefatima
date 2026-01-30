@@ -229,14 +229,29 @@
         if (isAnimating) {
             return;
         }
+        // Toujours empêcher la navigation si href="#" (parent non cliquable)
+        if (e.target.getAttribute('href') === '#') {
+            e.preventDefault();
+            // En mobile, ouvrir/fermer le sous-menu si présent
+            if (isMobile) {
+                const menuItem = e.target.parentNode;
+                menuItem.classList.toggle('is-open');
+                const subMenu = e.target.nextElementSibling;
+                if (subMenu) {
+                    slideToggle(subMenu, animationSpeed);
+                }
+            }
+            return;
+        }
+        // Comportement normal pour les autres liens
         if (isMobile) {
             e.preventDefault();
             const menuItem = e.target.parentNode;
             menuItem.classList.toggle('is-open');
             const subMenu = e.target.nextElementSibling;
-            slideToggle(subMenu, animationSpeed);
-        } else if (e.target.getAttribute('href') === '#') {
-            e.preventDefault();
+            if (subMenu) {
+                slideToggle(subMenu, animationSpeed);
+            }
         }
     };
 
