@@ -13,13 +13,13 @@ showHeader: false
 Rendez-vous dans l’un de nos points de vente officiels et procurez-vous un billet pour seulement 5 $. Chaque billet vous donne une chance de participer au tirage hebdomadaire.
 
 2. **Participez au tirage du mardi**  
-Tous les mardis à 16h00, à la Coop l’Éveil, un billet gagnant est tiré au sort parmi tous les billets vendus dans la semaine. Le détenteur du billet remporte 30 % de la cagnotte hebdomadaire !
+Tous les mardis à 16h00, à la Coop l’Éveil, un billet gagnant est tiré au sort parmi tous les billets vendus dans la semaine. Le détenteur du billet remporte 30 % de la cagnotte hebdomadaire (moins les frais d'administration) !
 
 3. **Répondez rapidement**  
-Si votre billet est tiré, vous serez contacté. Vous avez moins de 24 heures pour répondre et confirmer votre participation, sinon un nouveau tirage sera effectué.
+Si votre billet est tiré, vous serez contacté. Vous avez moins de 24 heures pour répondre et confirmer votre participation, sinon un nouveau tirage pourrait être effectué.
 
 4. **Tentez de trouver le Joker**  
-Le mercredi suivant, le gagnant est invité à venir piger une carte parmi un jeu de 52 cartes… et un Joker ! Si vous trouvez le Joker, vous remportez le gros lot cumulatif (25 % de la cagnotte + le montant accumulé des semaines précédentes). Sinon, la carte pigée est retirée du jeu, augmentant vos chances la semaine suivante !
+Le jour suivant, soit le mercredi, le gagnant est invité à venir piger une carte parmi un jeu de 51 cartes… et un Joker ! Si vous trouvez le Joker, vous remportez le gros lot. Sinon, la carte pigée est retirée du jeu, augmentant vos chances la semaine suivante !
 
 5. **Une cagnotte qui grossit chaque semaine**  
 Tant que le Joker n’est pas trouvé, le gros lot continue de s’accumuler. Plus vous jouez, plus vos chances augmentent !

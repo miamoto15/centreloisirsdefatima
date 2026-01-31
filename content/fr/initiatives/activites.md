@@ -1,5 +1,5 @@
 ---
-title: "Activités à venir"
+title: "Activités"
 description: "Page d'activités à venir du centre des loisirs de Fatima."
 translationKey: "upcoming-activities"
 showHeader: false
