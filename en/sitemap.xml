@@ -18,7 +18,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/activites/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -99,16 +99,6 @@
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/projects/ongoing/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/en-cours/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/ongoing/"
-                />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/contact/our-team/</loc>
     <xhtml:link
@@ -126,7 +116,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/activites/activites-passees/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/participer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/projets/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -135,22 +130,12 @@
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/projects/past/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/passes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/past/"
-                />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/activities/photo-gallery/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/activites/gallerie-photos/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/gallerie-photos/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -183,16 +168,6 @@
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/"
-                />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/rules/</loc>
     <xhtml:link
@@ -222,7 +197,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/activites/activites-a-venir/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/activites/"
                 />
     <xhtml:link
                 rel="alternate"
