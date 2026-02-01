@@ -3,10 +3,26 @@ title: "Gagnants"
 description: "Page des gagnants du Joker du centre des loisirs de Fatima."
 translationKey: "winners"
 ---
-{{< custom-table headers="Gagnant,Photo" widths="55%,45%" showHeader="false" noborder="true" >}}
-**Julie Martin**<br>*Gagnante du 1er tirage (Janvier 2026)*<br><br>A remporté 500 $ lors du premier tirage de l’année.|![Julie Martin](/img/equipe/Personne.png)
-**Marc Lavoie**<br>*Gagnant du 2e tirage (Février 2026)*<br><br>Chanceux du mois, il repart avec un lot de 750 $.|![Marc Lavoie](/img/equipe/Personne.png)
-**Élise Boudreau**<br>*Gagnante du 3e tirage (Mars 2026)*<br><br>A trouvé le Joker et décroché le gros lot de 2 000 $ !|![Élise Boudreau](/img/equipe/Personne.png)
-**Antoine Leblanc**<br>*Gagnant du 4e tirage (Avril 2026)*<br><br>Heureux gagnant d’un lot de 300 $.|![Antoine Leblanc](/img/equipe/Personne.png)
-**Sophie Gagné**<br>*Gagnante du 5e tirage (Mai 2026)*<br><br>A remporté un lot de 450 $ grâce à sa participation.|![Sophie Gagné](/img/equipe/Personne.png)
-{{< /custom-table >}}
+
+{{< winners-table >}}
+{{< winner-row 
+  name="Julie Martin" 
+  subtitle="Gagnante du 1er tirage (28 Janvier 2026)" 
+  description="A remporté 500 $ lors du premier tirage de l'année."
+  youtube="52tpY3gK-M4"
+>}}
+
+{{< winner-row 
+  name="Julie Martin" 
+  subtitle="Gagnante du 2e tirage (21 Janvier 2026)" 
+  description="A remporté 500 $ lors du premier tirage de l'année."
+  youtube="DZ3W7f6GkWU"
+>}}
+
+{{< winner-row 
+  name="Julie Martin" 
+  subtitle="Gagnant du 1er tirage (14 Janvier 2026)" 
+  description="A remporté 500 $ lors du premier tirage de l'année."
+  youtube="NRenffPB7M4"
+>}}
+{{< /winners-table >}}

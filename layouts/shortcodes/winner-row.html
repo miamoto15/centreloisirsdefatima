@@ -1,0 +1,24 @@
+{{ $name := .Get "name" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $description := .Get "description" }}
+{{ $link := .Get "link" }}
+{{ $linktext := .Get "linktext" }}
+{{ $youtube := .Get "youtube" }}
+{{ $image := .Get "image" }}
+
+<tr style="border: none;">
+  <td style="width: 55%; vertical-align: middle; border: none; padding: 20px;">
+    <strong>{{ $name }}</strong><br>
+    {{ if $subtitle }}<em>{{ $subtitle }}</em><br><br>{{ end }}
+    {{ if $description }}{{ $description }}<br>{{ end }}
+    {{ if $link }}<br><a href="{{ $link }}">{{ $linktext | default "En savoir plus" }}</a>{{ end }}
+  </td>
+  <td style="width: 45%; border: none; vertical-align: middle; padding: 20px;">
+    {{ if $youtube }}
+      {{ $yt := printf "youtube_enhanced id=\"%s\" title=\"%s\" autoload=\"false\"" $youtube ($linktext | default "Regardez la vidéo") }}
+      {{ .Page.RenderString (printf "{{< %s >}}" $yt) }}
+    {{ else if $image }}
+      <img src="{{ $image }}" alt="{{ $name }}" style="max-width: 100%;">
+    {{ end }}
+  </td>
+</tr>

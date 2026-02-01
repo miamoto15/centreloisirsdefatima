@@ -2,25 +2,16 @@
 
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
-{{ $sizes := slice 1200 800 400 }}
+{{ $width := .Get "width" | default "200x" }}
+{{ $resize := replace $width "px" "" }}
+{{ if not (or (strings.Contains $resize "x") (strings.Contains $resize "X")) }}
+  {{ $resize = printf "%sx" $resize }}
+{{ end }}
 {{ $img := resources.Get $src }}
 
 {{- if $img -}}
-{{- $html := "" -}}
-{{- $html = printf "<picture>" -}}
-  {{- range $sizes -}}
-    {{- $webp := $img.Resize (printf "%dx webp" .) -}}
-    {{- if $webp -}}
-      {{- if eq . 1200 -}}
-        {{- $html = printf "%s<source srcset=\"%s\" type=\"image/webp\">" $html $webp.RelPermalink -}}
-      {{- else -}}
-        {{- $html = printf "%s<source srcset=\"%s\" type=\"image/webp\" media=\"(max-width: %dpx)\">" $html $webp.RelPermalink . -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-  {{- $fallback := $img.Resize "800x" -}}
-  {{- $html = printf "%s<img src=\"%s\" alt=\"%s\" loading=\"lazy\" style=\"width:100%%;height:auto;\"></picture>" $html $fallback.RelPermalink $alt -}}
-{{ $html | safeHTML }}
+  {{ $resized := $img.Resize (printf "%s webp" $resize) }}
+  <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" loading="lazy">
 {{- else -}}
-<!-- Image not found: {{ $src }} (check that it's in assets/) -->
+  <!-- Image not found: {{ $src }} (check that it's in assets/) -->
 {{- end -}}
