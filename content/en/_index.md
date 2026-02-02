@@ -3,11 +3,10 @@ title: "Home"
 description: "The Centre des Loisirs de Fatima, Îles-de-la-Madeleine, organizes community events, activities for all, and supports local charity initiatives. Join us to participate in the active and supportive life of our community!"
 translationKey: "home"
 showHeader: false
+stickyHeader: true
 ---
 
-<div class="banniere-accueil-full">
-  <img src="/images/Acceuil/Bannière.png" alt="Fatima Community Center">
-</div>
+{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Description" width=100% >}}
 
 ## Fatima Community Center
 

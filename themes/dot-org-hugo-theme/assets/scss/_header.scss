@@ -1,5 +1,12 @@
+
 @use "variables";
 @use "global";
+// Correction sticky parent
+@media (max-width: 1200px) {
+    body, .header, .header.sticky {
+        overflow: visible !important;
+    }
+}
 
 .header {
     width: 100%;
@@ -13,9 +20,17 @@
         top: 0;
         left: 0;
         right: 0;
-        // remove sticky on smaller screens.
-        @media (min-width: 515px) and (max-height: 615px) {
-            position: relative;
+        z-index: 1000;
+        background: var(--white);
+        will-change: position;
+        /* Correction pour écrans portables et zoom */
+        @media (max-width: 1200px) {
+            position: sticky;
+            top: 0;
+        }
+        @media (max-width: 900px) {
+            position: sticky;
+            top: 0;
         }
     }
     &:after {

@@ -49,10 +49,6 @@
 }
 
 .button + .button {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    @media (min-width: variables.$min-desktop) {
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
+    margin-top: 0;
+    margin-bottom: 0;
 }
