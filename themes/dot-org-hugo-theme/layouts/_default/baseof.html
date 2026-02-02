@@ -3,6 +3,14 @@
     {{- partial "head.html" . -}}
     <body class="{{ urlize .Type }} page-{{ .Kind }}">
         {{- partial "accessibility.html" . -}}
+        <!-- Bannière gros lot Joker -->
+        <div style="width:100%;background:linear-gradient(135deg,#ffe066 0%,#ffd700 100%);color:#1a1a1a;text-align:center;padding:0.8em 1em;font-size:1.3em;font-weight:700;letter-spacing:0.03em;box-shadow:0 3px 10px rgba(0,0,0,0.15);position:relative;z-index:9999;">
+            {{ if eq .Site.Language.Lang "en" }}
+            🎉 Joker Jackpot: <span style="color:#c41230;font-size:1.15em;">$115,605.60</span> 🎉
+            {{ else }}
+            🎉 Gros lot du Joker : <span style="color:#c41230;font-size:1.15em;">115&nbsp;605,60&nbsp;$</span> 🎉
+            {{ end }}
+        </div>
         {{- partial "header.html" . -}}
         
         <section id="content" class="container wrap" {{ if .IsPage }}data-pagefind-body{{ end }}>
