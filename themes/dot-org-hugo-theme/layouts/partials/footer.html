@@ -3,8 +3,8 @@
 
 
         <div class="footer__main-row" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 3em; width: 100%; flex-wrap: wrap;">
-            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-end; min-width:220px;">
-                <div class="footer__menu" style="display: flex; justify-content: flex-end; gap: 2rem;">
+            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-start; min-width:220px;">
+                <div class="footer__menu" style="display: flex; justify-content: flex-start; gap: 2rem;">
                     {{ with .Site.Menus.main }}
                         {{ $homeId := cond (eq $.Site.Language.Lang "en") "home" "accueil" }}
                         {{ $homeList := where . "Identifier" $homeId }}
