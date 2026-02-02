@@ -5,9 +5,7 @@ translationKey: "home"
 showHeader: false
 ---
 
-<div class="banniere-accueil-full">
-  <img src="/images/Acceuil/Bannière.png" alt="Centre des Loisirs de Fatima">
-</div>
+{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Description" width=100% >}}
 
 ## Centre des Loisirs de Fatima
 
