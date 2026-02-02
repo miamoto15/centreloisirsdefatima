@@ -2,13 +2,14 @@
 title: "Accueil"
 description: "Le Centre des Loisirs de Fatima, Îles-de-la-Madeleine, organise des événements communautaires, des activités pour tous et soutient des initiatives de charité locale. Rejoignez-nous pour participer à la vie active et solidaire de notre communauté !"
 translationKey: "home"
+showHeader: false
 ---
 
 <div class="banniere-accueil-full">
   <img src="/images/Acceuil/Bannière.png" alt="Centre des Loisirs de Fatima">
 </div>
 
-# Centre des Loisirs de Fatima
+## Centre des Loisirs de Fatima
 
 Le Centre des Loisirs de Fatima, au cœur de l’Île Centrale des Îles de la Madeleine, est un lieu clé de la vie communautaire. Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
 

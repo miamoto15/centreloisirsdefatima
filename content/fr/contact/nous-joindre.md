@@ -11,10 +11,10 @@ showHeader: false
 		<div class="contact-info">
 			<h2>Coordonnées</h2>
 			<p>
-				<span class="icon">📍</span> 146, chemin de l'Hôpital<br>
+				146, chemin de l'Hôpital<br>
 				Fatima, G4T 2K3<br>
 				(Québec, Canada)<br>
-				<span class="icon">✉️</span> <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
+				<a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
 			</p>
 		</div>
 		<div class="contact-image">

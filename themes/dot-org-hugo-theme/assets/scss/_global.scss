@@ -88,3 +88,13 @@ body {
     clip-path: inset(7.5% 0 7.5% 0);
   }
 }
+
+h2 {
+  text-align: left !important;
+}
+
+@media (max-width: 600px) {
+  .contact-info p {
+    text-align: left !important;
+  }
+}
