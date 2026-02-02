@@ -101,6 +101,7 @@ fr:
         weight: 2
 
 ######################## English ####################
+
 en:
   languageName: English
   languageCode: en-CA
@@ -108,7 +109,7 @@ en:
   contentDir: content/en
   title: "Centre des Loisirs de Fatima"
   copyright: "Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved."
-  
+
   params:
     description: "Community center dedicated to leisure and activities in Fatima"
     accessibility:
@@ -158,45 +159,35 @@ en:
         parent: "joker"
         weight: 4
 
+      - identifier: "initiatives"
+        name: "Initiatives"
+        url: "#"
+        weight: 3
       - identifier: "activities"
         name: "Activities"
-        url: "#"
-        weight: 3
-      - identifier: "upcoming-activities"
-        name: "Upcoming activities"
-        url: "/en/activities/upcoming-activities/"
-        parent: "activities"
+        url: "/en/initiatives/activities/"
+        parent: "initiatives"
         weight: 1
-      - identifier: "past-activities"
-        name: "Past activities"
-        url: "/en/activities/past-activities/"
-        parent: "activities"
-        weight: 2
-      - identifier: "photo-gallery"
-        name: "Photo gallery"
-        url: "/en/activities/photo-gallery/"
-        parent: "activities"
-        weight: 3
-
       - identifier: "projects"
         name: "Projects"
-        url: "#"
-        weight: 4
-      - identifier: "ongoing-projects"
-        name: "Ongoing projects"
-        url: "/en/projects/ongoing/"
-        parent: "projects"
-        weight: 1
-      - identifier: "past-projects"
-        name: "Past projects"
-        url: "/en/projects/past/"
-        parent: "projects"
+        url: "/en/initiatives/projects/"
+        parent: "initiatives"
         weight: 2
+      - identifier: "participate"
+        name: "Participate"
+        url: "/en/initiatives/participate/"
+        parent: "initiatives"
+        weight: 3
+      - identifier: "photo-gallery"
+        name: "Photo Gallery"
+        url: "/en/initiatives/photo-gallery/"
+        parent: "initiatives"
+        weight: 4
 
       - identifier: "contact"
         name: "Contact"
         url: "#"
-        weight: 5
+        weight: 4
       - identifier: "contact-us"
         name: "Contact us"
         url: "/en/contact/contact-us/"
