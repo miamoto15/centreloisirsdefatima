@@ -21,8 +21,10 @@
 {{- end -}}
 
 {{- if $img -}}
-  <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}"{{ if $style }} {{ $style | safeHTMLAttr }}{{ end }} loading="lazy">
+  {{/* Convertir en WebP si l'image est dans assets/ */}}
+  {{- $webpImg := $img.Process "webp" -}}
+  <img src="{{ $webpImg.RelPermalink }}" alt="{{ $alt }}"{{ if $style }} {{ $style | safeHTMLAttr }}{{ end }} loading="lazy">
 {{- else -}}
-  {{/* Si l'image n'est pas dans assets/, essayer avec static/ */}}
+  {{/* Si l'image n'est pas dans assets/, utiliser le chemin depuis static/ */}}
   <img src="{{ $src | relURL }}" alt="{{ $alt }}"{{ if $style }} {{ $style | safeHTMLAttr }}{{ end }} loading="lazy">
 {{- end -}}
