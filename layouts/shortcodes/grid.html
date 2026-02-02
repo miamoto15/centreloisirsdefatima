@@ -1,0 +1,35 @@
+{{/*
+  Shortcode grid:
+  - cols: Nombre de colonnes (ex: 2, 3, 4)
+  - width: Largeurs des colonnes séparées par des virgules (ex: "60%,40%" ou "33%,33%,33%")
+  - rows: Nombre de lignes (optionnel, auto par défaut)
+  - gap: Espacement entre les cellules (optionnel, défaut: 20px)
+  
+  Utilisation:
+  {{< grid cols=2 width="60%,40%" >}}
+    {{% cell %}}
+    Contenu markdown
+    {{% /cell %}}
+
+    {{< cell >}}
+    Shortcode
+    {{< /cell >}}
+
+  {{< /grid >}}
+*/}}
+
+{{- $cols := .Get "cols" | default "2" -}}
+{{- $width := .Get "width" -}}
+{{- $rows := .Get "rows" | default "auto" -}}
+{{- $gap := .Get "gap" | default "20px" -}}
+
+{{- $gridColumns := "" -}}
+{{- if $width -}}
+  {{- $gridColumns = replace $width "," " " -}}
+{{- else -}}
+  {{- $gridColumns = printf "repeat(%s, 1fr)" $cols -}}
+{{- end -}}
+
+<div class="custom-grid" style="display: grid; grid-template-columns: {{ $gridColumns }}; {{ if ne $rows "auto" }}grid-template-rows: repeat({{ $rows }}, 1fr);{{ end }} gap: {{ $gap }};">
+  {{ .Inner }}
+</div>

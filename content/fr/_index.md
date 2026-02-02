@@ -57,3 +57,23 @@ Le Centre des loisirs de Fatima organise chaque année des spectacles et des év
 Cette initiative permet non seulement de promouvoir la culture locale, mais aussi de garantir la durabilité et la qualité de vie sur les Îles, tout en rassemblant les habitants et visiteurs autour de valeurs de solidarité et de respect de l’environnement.
 
 {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" >}}
+
+{{< grid cols=2 gap="20px" width="30%,70%" >}}
+  {{% cell %}}
+  ### Titre en markdown
+  Contenu avec **gras** et *italique*
+  {{% /cell %}}
+  
+  {{< cell align="center" >}}
+  {{< carousel images="img/Bâtiment - Anse aux baleiniers.jpg,img/Joker.png,img/Logo.png" interval="5" >}}
+  {{< /cell >}}
+  
+  {{% cell %}}
+  - Liste markdown
+  - Item 2
+  {{% /cell %}}
+  
+  {{% cell valign="middle" %}}
+  Autre contenu centré verticalement
+  {{% /cell %}}
+{{< /grid >}}

@@ -1,0 +1,20 @@
+{{/*
+  Shortcode cell:
+  - align: Alignement du contenu (optionnel: left, center, right)
+  - valign: Alignement vertical (optionnel: top, middle, bottom)
+  
+  Utilisation:
+  {{% cell %}}
+  Contenu markdown, shortcodes, images, etc.
+  {{% /cell %}}
+*/}}
+
+{{- $align := .Get "align" | default "left" -}}
+{{- $valign := .Get "valign" | default "top" -}}
+
+{{- $alignStyles := dict "left" "text-align: left;" "center" "text-align: center;" "right" "text-align: right;" -}}
+{{- $valignStyles := dict "top" "align-self: start;" "middle" "align-self: center;" "bottom" "align-self: end;" -}}
+
+<div class="grid-cell" style="{{ index $alignStyles $align }} {{ index $valignStyles $valign }}">
+  {{ .Inner }}
+</div>
