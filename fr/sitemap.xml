@@ -18,7 +18,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/activities/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -30,7 +30,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/activities/upcoming-activities/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/activities/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -102,7 +102,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/activities/photo-gallery/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/photo-gallery/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -155,7 +155,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/activities/past-activities/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/participate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/projects/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -184,7 +189,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/activities/past-activities/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/participate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/projects/"
                 />
     <xhtml:link
                 rel="alternate"
