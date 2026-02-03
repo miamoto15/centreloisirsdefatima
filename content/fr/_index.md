@@ -9,9 +9,20 @@ showHeader: false
 
 ## Centre des Loisirs de Fatima
 
-Le Centre des Loisirs de Fatima, au cœur de l’Île Centrale des Îles de la Madeleine, est un lieu clé de la vie communautaire. Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
+{{< grid cols=2 width="50%,50%" >}}
 
-Véritable moteur local, le Centre offre un espace inclusif et animé où résidents et visiteurs peuvent se rencontrer, s’amuser et créer des liens durables.
+  {{% cell %}}
+
+  Le Centre des Loisirs de Fatima, au cœur de l’Île Centrale des Îles de la Madeleine. Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
+  
+  Véritable moteur local, le Centre offre un espace inclusif et animé où résidents et visiteurs peuvent se rencontrer, s’amuser et créer des liens durables.
+  {{% /cell %}}
+
+  {{< cell align="center" valign="middle" >}}
+  {{< responsive-img src="img/Baleine-Salle-3.png" alt="Description" width=50% >}}
+  {{< /cell >}}
+
+{{< /grid >}}
 
 ## Un coin de paradis
 
@@ -21,7 +32,7 @@ Situé sur l’Île Centrale, Fatima est l’un des villages les plus peuplés d
 
 ### L’Anse-aux-Baleiniers
 
-Ce site emblématique, récemment réaménagé dans une approche éco-responsable, accueille les festivités de la fête nationale et des spectacles en plein air, dont le populaire Grand Rassemblement en août, mais également des jeux pour enfants.
+Ce site emblématique est un lieu clé de la vie communautaire. Récemment réaménagé dans une approche éco-responsable, il accueille les festivités de la fête nationale et des spectacles en plein air, dont le populaire Grand Rassemblement en août, mais également des jeux pour enfants.
 
 {{< cards count=4 >}}
 {{< card >}}

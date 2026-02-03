@@ -12,9 +12,10 @@
 {{- $align := .Get "align" | default "left" -}}
 {{- $valign := .Get "valign" | default "top" -}}
 
-{{- $alignStyles := dict "left" "text-align: left;" "center" "text-align: center;" "right" "text-align: right;" -}}
-{{- $valignStyles := dict "top" "align-self: start;" "middle" "align-self: center;" "bottom" "align-self: end;" -}}
+{{- /* Flexbox mapping for horizontal and vertical alignment */ -}}
+{{- $justifyMap := dict "left" "flex-start" "center" "center" "right" "flex-end" -}}
+{{- $alignMap := dict "top" "flex-start" "middle" "center" "bottom" "flex-end" -}}
 
-<div class="grid-cell" style="{{ index $alignStyles $align }} {{ index $valignStyles $valign }}">
+<div class="grid-cell" style="display: flex; flex-direction: column; justify-content: {{ index $alignMap $valign }}; align-items: {{ index $justifyMap $align }}; width: 100%; height: 100%;">
   {{ .Inner }}
 </div>
