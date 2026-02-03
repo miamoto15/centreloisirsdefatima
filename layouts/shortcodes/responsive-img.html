@@ -7,6 +7,8 @@
 {{ $img := resources.Get $src }}
 
 {{ $radius := .Get "radius" | default "" }}
+{{ $align := .Get "align" | default "" }}
+{{ $valign := .Get "valign" | default "" }}
 {{- $style := "" -}}
 {{- if or $cssWidth $cssHeight $radius -}}
   {{- $style = "style=\"" -}}
@@ -20,6 +22,12 @@
   {{- end -}}
   {{- if $radius -}}
     {{- $style = printf "%s border-radius: %s;" $style $radius -}}
+  {{- end -}}
+  {{- if eq $align "center" -}}
+    {{- $style = printf "%s display:block; margin-left:auto; margin-right:auto;" $style -}}
+  {{- end -}}
+  {{- if eq $valign "middle" -}}
+    {{- $style = printf "%s vertical-align:middle;" $style -}}
   {{- end -}}
   {{- $style = printf "%s\"" $style -}}
 {{- end -}}

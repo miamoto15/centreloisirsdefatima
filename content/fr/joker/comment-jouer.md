@@ -5,7 +5,8 @@ translationKey: "how-to-play"
 showHeader: false
 ---
 
-<img src="/img/Joker.png" alt="Joker" style="width:10%;max-width:300px;display:block;margin:auto;margin-top:50px;" />
+<!-- <img src="/img/Joker.png" alt="Joker" style="width:10%;max-width:300px;display:block;margin:auto;margin-top:50px;" /> -->
+{{< responsive-img src="img/Joker.png" alt="Description" width="10%" align="center" >}}
 
 ## Envie de tenter votre chance ?
 
