@@ -7,6 +7,8 @@ showHeader: false
 
 {{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Description" width=100% >}}
 
+{{< spacer 80 >}}
+
 ## Centre des Loisirs de Fatima
 
 {{< grid cols=2 width="55%,45%" >}}
@@ -24,15 +26,31 @@ showHeader: false
 
 {{< /grid >}}
 
+{{< spacer 90 >}}
+
 ## Un coin de paradis
 
-### Fatima, cœur vibrant des Îles
+{{< grid cols=2 width="45%,55%" >}}
 
-Situé sur l’Île Centrale, Fatima est l’un des villages les plus peuplés de l’archipel. Il offre une gamme complète de services : école primaire, commerces, épicerie, restaurants, coopérative, garderies, port, camping, et un accès privilégié à la plage.
+  {{< cell align="left" valign="middle" >}}
+  {{< carousel images="img/carousel-fatima/Balcon.jpg,img/carousel-fatima/Boutiques.jpg,img/carousel-fatima/Jeux.jpg,img/carousel-fatima/Plage.jpg,img/carousel-fatima/Sculpture.jpg" interval="10" width="90%" radius="16px" >}}
+  {{< /cell >}}
 
-### L’Anse-aux-Baleiniers
+  {{% cell valign="middle" %}}
 
-Ce site emblématique est un lieu clé de la vie communautaire. Récemment réaménagé dans une approche éco-responsable, il accueille les festivités de la fête nationale et des spectacles en plein air, dont le populaire Grand Rassemblement en août, mais également des jeux pour enfants.
+  ### Fatima, cœur vibrant des Îles
+
+  Situé sur l’Île Centrale, Fatima est l’un des villages les plus peuplés de l’archipel. Il offre une gamme complète de services : école primaire, commerces, épicerie, restaurants, coopérative, garderies, port, camping, et un accès privilégié à la plage.
+
+  ### L’Anse-aux-Baleiniers
+
+  Ce site emblématique est un lieu clé de la vie communautaire. Récemment réaménagé dans une approche éco-responsable, il accueille les festivités de la fête nationale et des spectacles en plein air, dont le populaire Grand Rassemblement en août, mais également des jeux pour enfants.
+
+  {{% /cell %}}
+
+{{< /grid >}}
+
+{{< spacer 90 >}}
 
 {{< cards count=4 >}}
 {{< card >}}
@@ -61,30 +79,21 @@ Le Centre des loisirs de Fatima offre un cadre naturel et paisible, idéal pour 
 {{< /card >}}
 {{< /cards >}}
 
+{{< spacer 90 >}}
+
 ## Événements
 
-Le Centre des loisirs de Fatima organise chaque année des spectacles et des événements culturels aux Iles de la Madeleine, dont les fonds récoltés sont utilisés pour financer l’entretien des locaux et le financement des activités. Grâce aux recettes générées, le centre contribue à la rénovation des infrastructures locales, à la préservation de l’environnement et à divers projets communautaires.
+{{< grid cols=2 width="55%,45%" >}}
 
-Cette initiative permet non seulement de promouvoir la culture locale, mais aussi de garantir la durabilité et la qualité de vie sur les Îles, tout en rassemblant les habitants et visiteurs autour de valeurs de solidarité et de respect de l’environnement.
-
-{{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" >}}
-
-{{< grid cols=2 gap="20px" width="30%,70%" >}}
-  {{% cell %}}
-  ### Titre en markdown
-  Contenu avec **gras** et *italique*
-  {{% /cell %}}
-  
-  {{< cell align="center" >}}
-  {{< carousel images="img/Bâtiment - Anse aux baleiniers.jpg,img/Joker.png,img/Logo.png" interval="5" >}}
-  {{< /cell >}}
-  
-  {{% cell %}}
-  - Liste markdown
-  - Item 2
-  {{% /cell %}}
-  
   {{% cell valign="middle" %}}
-  Autre contenu centré verticalement
+  Le Centre des loisirs de Fatima organise chaque année des spectacles et des événements culturels aux Iles de la Madeleine, dont les fonds récoltés sont utilisés pour financer l’entretien des locaux et le financement des activités. Grâce aux recettes générées, le centre contribue à la rénovation des infrastructures locales, à la préservation de l’environnement et à divers projets communautaires.
+
+  Cette initiative permet non seulement de promouvoir la culture locale, mais aussi de garantir la durabilité et la qualité de vie sur les Îles, tout en rassemblant les habitants et visiteurs autour de valeurs de solidarité et de respect de l’environnement.
+  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" >}}
   {{% /cell %}}
+
+  {{< cell align="center" valign="top" >}}
+  {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.jpg,img/carousel-evenements/Pieuvre.jpg,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.jpg" interval="10" width="90%" radius="16px" >}}
+  {{< /cell >}}
+
 {{< /grid >}}

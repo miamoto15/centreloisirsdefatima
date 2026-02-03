@@ -1,11 +1,12 @@
-{{/* Utilise ce shortcode ainsi -> {{< carousel images="img/photo1.jpg,img/photo2.jpg,img/photo3.jpg" interval="30" >}} */}}
+{{/* Utilise ce shortcode ainsi -> {{< carousel images="img/photo1.jpg,img/photo2.jpg,img/photo3.jpg" interval="30" width="80%" radius="10px" >}} */}}
 
 {{ $images := split (.Get "images") "," }}
 {{ $interval := .Get "interval" | default "5" }}
 {{ $carouselId := printf "carousel-%d" (now.Unix) }}
 {{ $radius := .Get "radius" | default "" }}
+{{ $width := .Get "width" | default "" }}
 
-<div class="carousel-container" id="{{ $carouselId }}">
+<div class="carousel-container" id="{{ $carouselId }}"{{ if $width }} style="max-width:{{ $width }};"{{ end }}>
     <div class="carousel-slides">
         {{ range $index, $imagePath := $images }}
             {{ $img := resources.Get (trim $imagePath " ") }}
