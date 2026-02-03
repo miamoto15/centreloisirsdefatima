@@ -621,6 +621,11 @@ blockquote p {
   padding: 20px;
 }
 
+@media (max-width: 1200px) {
+  body, .header, .header.sticky {
+    overflow: visible !important;
+  }
+}
 .header {
   width: 100%;
   background: var(--white);
@@ -633,10 +638,21 @@ blockquote p {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
+  background: var(--white);
+  will-change: position;
+  /* Correction pour écrans portables et zoom */
 }
-@media (min-width: 515px) and (max-height: 615px) {
+@media (max-width: 1200px) {
   .header.sticky {
-    position: relative;
+    position: sticky;
+    top: 0;
+  }
+}
+@media (max-width: 900px) {
+  .header.sticky {
+    position: sticky;
+    top: 0;
   }
 }
 .header:after {
@@ -1585,14 +1601,8 @@ SCSS-ified, variablified, spin mode default by James Hunt @thetwopct
 }
 
 .button + .button {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-@media (min-width: 1000px) {
-  .button + .button {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 iframe {
@@ -1663,7 +1673,8 @@ hr {
 }
 
 .content > * {
-  max-width: var(--content-width);
+  width: 100%;
+  max-width: 100%;
 }
 .content .full-width,
 .content div,
@@ -1673,6 +1684,10 @@ hr {
 }
 .content img {
   max-width: 100%;
+}
+.content .button {
+  width: auto;
+  max-width: none;
 }
 .content div.highlight {
   max-width: var(--content-width);
