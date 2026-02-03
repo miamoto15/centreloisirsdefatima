@@ -6,8 +6,9 @@
 {{ $cssHeight := .Get "height" | default "" }}
 {{ $img := resources.Get $src }}
 
+{{ $radius := .Get "radius" | default "" }}
 {{- $style := "" -}}
-{{- if or $cssWidth $cssHeight -}}
+{{- if or $cssWidth $cssHeight $radius -}}
   {{- $style = "style=\"" -}}
   {{- if $cssWidth -}}
     {{- $style = printf "%swidth: %s;" $style $cssWidth -}}
@@ -16,6 +17,9 @@
     {{- $style = printf "%s height: %s;" $style $cssHeight -}}
   {{- else if $cssWidth -}}
     {{- $style = printf "%s height: auto;" $style -}}
+  {{- end -}}
+  {{- if $radius -}}
+    {{- $style = printf "%s border-radius: %s;" $style $radius -}}
   {{- end -}}
   {{- $style = printf "%s\"" $style -}}
 {{- end -}}

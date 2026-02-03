@@ -1,3 +1,9 @@
+/* Affichage vertical des colonnes de .custom-grid sur mobile */
+@media (max-width: 767px) {
+    .custom-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
 /* Corrections supplémentaires pour l'accessibilité */
 
 /* Centrage du texte dans les boutons de langue mobile */

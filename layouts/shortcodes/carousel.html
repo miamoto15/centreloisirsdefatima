@@ -3,6 +3,7 @@
 {{ $images := split (.Get "images") "," }}
 {{ $interval := .Get "interval" | default "5" }}
 {{ $carouselId := printf "carousel-%d" (now.Unix) }}
+{{ $radius := .Get "radius" | default "" }}
 
 <div class="carousel-container" id="{{ $carouselId }}">
     <div class="carousel-slides">
@@ -11,7 +12,7 @@
             {{ if $img }}
                 {{ $resized := $img.Resize "1200x webp" }}
                 <div class="carousel-slide {{ if eq $index 0 }}active{{ end }}">
-                    <img src="{{ $resized.RelPermalink }}" alt="Image {{ add $index 1 }}" loading="lazy">
+                    <img src="{{ $resized.RelPermalink }}" alt="Image {{ add $index 1 }}" loading="lazy"{{ if $radius }} style="border-radius: {{ $radius }};"{{ end }}>
                 </div>
             {{ else }}
                 <div class="carousel-slide {{ if eq $index 0 }}active{{ end }}">

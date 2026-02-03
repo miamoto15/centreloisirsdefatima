@@ -9,17 +9,17 @@ showHeader: false
 
 ## Centre des Loisirs de Fatima
 
-{{< grid cols=2 width="50%,50%" >}}
+{{< grid cols=2 width="55%,45%" >}}
 
-  {{% cell %}}
+  {{% cell valign="middle" %}}
 
-  Le Centre des Loisirs de Fatima, au cœur de l’Île Centrale des Îles de la Madeleine. Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
-  
+  Le Centre des Loisirs de Fatima est un organisme à but non lucratif (OBNL) qui joue un rôle central dans la vie communautaire de Fatima.  Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
+
   Véritable moteur local, le Centre offre un espace inclusif et animé où résidents et visiteurs peuvent se rencontrer, s’amuser et créer des liens durables.
   {{% /cell %}}
 
   {{< cell align="center" valign="middle" >}}
-  {{< responsive-img src="img/Baleine-Salle-3.png" alt="Description" width=50% >}}
+  {{< responsive-img src="img/Baleine-Salle-3.png" alt="Description" width=60% radius="16px" >}}
   {{< /cell >}}
 
 {{< /grid >}}
