@@ -5,8 +5,9 @@ translationKey: "how-to-play"
 showHeader: false
 ---
 
-<!-- <img src="/img/Joker.png" alt="Joker" style="width:10%;max-width:300px;display:block;margin:auto;margin-top:50px;" /> -->
-{{< responsive-img src="img/Joker.png" alt="Description" width="10%" align="center" >}}
+{{< responsive-img src="img/Logo-joker.jpg" alt="Logo du Joker" width="20%" align="center" valign="middle" radius="16px" >}}
+
+{{< spacer 15 >}}
 
 ## Envie de tenter votre chance ?
 

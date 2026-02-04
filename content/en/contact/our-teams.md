@@ -1,7 +1,7 @@
 ---
-title: "Our Team"
-description: "Meet our team at the Centre des Loisirs de Fatima."
-translationKey: "our-team"
+title: "Our Teams"
+description: "Meet our teams at the Centre des Loisirs de Fatima."
+translationKey: "our-teams"
 ---
 {{< custom-table headers="Member & bio,Photo" widths="55%,45%" showHeader="false" noborder="true" >}}
 **Guillaume Prince**<br>*Chairman of the Board*<br><br>Passionate about community life and organizing sports events.|![Guillaume Prince](/img/equipe/Personne.png)

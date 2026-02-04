@@ -94,9 +94,9 @@ fr:
         url: "/fr/contact/nous-joindre/"
         parent: "contact"
         weight: 1
-      - identifier: "notre-equipe"
-        name: "Notre équipe"
-        url: "/fr/contact/notre-equipe/"
+      - identifier: "nos-equipes"
+        name: "Nos équipes"
+        url: "/fr/contact/nos-equipes/"
         parent: "contact"
         weight: 2
 
@@ -193,8 +193,8 @@ en:
         url: "/en/contact/contact-us/"
         parent: "contact"
         weight: 1
-      - identifier: "our-team"
-        name: "Our team"
-        url: "/en/contact/our-team/"
+      - identifier: "our-teams"
+        name: "Our teams"
+        url: "/en/contact/our-teams/"
         parent: "contact"
         weight: 2

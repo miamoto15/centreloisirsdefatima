@@ -3,7 +3,7 @@ title: "Règlements"
 description: "Page des règlements du Joker du Centre des Loisirs de Fatima."
 translationKey: "rules"
 ---
-Version imprimable : [Règlements](/static/documents/Règlement%20loterie%20Le%20Joker.pdf)
+Version imprimable : [Règlements](/documents/Règlement%20loterie%20Le%20Joker.pdf)
 
 ## Tirage « Trouvez le Joker »
 
