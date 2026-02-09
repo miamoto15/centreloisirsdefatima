@@ -1,7 +1,7 @@
 ---
 title: "Comment jouer"
 description: "Page qui explique comment jouer au Joker du centre des loisirs de Fatima."
-translationKey: "how-to-play"
+translationKey: "how-to-play-joker"
 showHeader: false
 ---
 
