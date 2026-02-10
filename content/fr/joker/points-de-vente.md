@@ -19,16 +19,17 @@ Vous pouvez acheter vos billets du Joker du Centre des Loisirs de Fatima auprès
 
 **Point de vente par Interac** :
 
-  - Paiement par virement Interac à Auxiles Décoste
-  - Envoyez lui un message texte au 581-887-7495
-  - Veuillez indiquer dans le message :
-    - Combien de billets vous voulez
-    - Votre nom à mettre sur les billets
-    - Votre adresse de résidence si vous le désirez
-    - Le numéro de téléphone pour vous rejoindre
-  - Une photo de vos billets vous sera envoyée par la suite.
+- Paiement par virement Interac à Auxiles Décoste
+- Envoyez lui un message texte au 581-887-7495
+- Veuillez indiquer dans le message :
+  - Combien de billets vous voulez
+  - Votre nom à mettre sur les billets
+  - Votre adresse de résidence si vous le désirez
+  - Le numéro de téléphone pour vous rejoindre
+- Une photo de vos billets vous sera envoyée par la suite.
 
   ***Prenez note qu'uniquement les résidents du Québec peuvent participer à la lotterie.***
+  
   {{% /cell %}}
 
   {{< cell align="center" valign="middle" >}}
@@ -36,8 +37,6 @@ Vous pouvez acheter vos billets du Joker du Centre des Loisirs de Fatima auprès
   {{< /cell >}}
 
 {{< /grid >}}
-
-
 
 ---
 

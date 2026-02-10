@@ -1,10 +1,8 @@
 ---
-title: "Winners"
+title: "Winners 2026"
 description: "Joker winners at the Centre des Loisirs de Fatima."
 translationKey: "winners-joker"
 ---
-Welcome to the winners page of the Centre des Loisirs de Fatima.
-
 
 {{< winners-table >}}
 {{< winner-row 

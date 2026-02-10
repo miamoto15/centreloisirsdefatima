@@ -1,3 +1,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/miamoto15/centreloisirsdefatima/blob/main/README.md" class="nowrap">
-    Modifier le contenu du site
+    {{ if eq .Site.Language.Lang "en" }}
+        Edit the site content
+    {{ else }}
+        Modifier le contenu du site
+    {{ end }}
 </a>
