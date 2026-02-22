@@ -169,16 +169,6 @@
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/photo-gallery/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/initiatives/gallerie-photos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/initiatives/photo-gallery/"
-                />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/points-of-sale/</loc>
     <xhtml:link
@@ -262,6 +252,8 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/tags/"
                 />
   </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/winners/</loc>
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/winners/</loc>
     <xhtml:link
                 rel="alternate"
@@ -272,18 +264,6 @@
                 rel="alternate"
                 hreflang="en-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/winners/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/winners/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/gagnants/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/winners/"
                 />
   </url>
 </urlset>
