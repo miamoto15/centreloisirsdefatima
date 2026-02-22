@@ -74,11 +74,6 @@ fr:
         url: "/fr/bingo/reglements/"
         parent: "bingo-fr"
         weight: 2
-      - identifier: "gagnants-bingo"
-        name: "Gagnants"
-        url: "/fr/bingo/gagnants/"
-        parent: "bingo-fr"
-        weight: 3
 
       - identifier: "initiatives"
         name: "Initiatives"
@@ -99,11 +94,6 @@ fr:
         url: "/fr/initiatives/participer/"
         parent: "initiatives"
         weight: 3
-      - identifier: "gallerie-photos"
-        name: "Galerie Photos"
-        url: "/fr/initiatives/gallerie-photos/"
-        parent: "initiatives"
-        weight: 4
 
       - identifier: "contact"
         name: "Contact"
@@ -193,11 +183,6 @@ en:
         url: "/en/bingo/rules/"
         parent: "bingo-en"
         weight: 2
-      - identifier: "winners-bingo"
-        name: "Winners"
-        url: "/en/bingo/winners/"
-        parent: "bingo-en"
-        weight: 3
 
       - identifier: "initiatives"
         name: "Initiatives"
@@ -218,11 +203,6 @@ en:
         url: "/en/initiatives/participate/"
         parent: "initiatives"
         weight: 3
-      - identifier: "photo-gallery"
-        name: "Photo Gallery"
-        url: "/en/initiatives/photo-gallery/"
-        parent: "initiatives"
-        weight: 4
 
       - identifier: "contact"
         name: "Contact"
