@@ -75,30 +75,45 @@ fr:
         parent: "bingo-fr"
         weight: 2
 
-      - identifier: "initiatives"
-        name: "Initiatives"
+      - identifier: "evenements"
+        name: "Événements"
         url: "#"
         weight: 4
-      - identifier: "activites"
-        name: "Activités"
-        url: "/fr/initiatives/activites/"
-        parent: "initiatives"
+      - identifier: "programmation-2026"
+        name: "Programmation 2026"
+        url: "/fr/evenements/programmation-2026/"
+        parent: "evenements"
         weight: 1
+      - identifier: "commandite-benevolat"
+        name: "Commandite & Bénévolat"
+        url: "/fr/evenements/commandite-benevolat/"
+        parent: "evenements"
+        weight: 2
+
       - identifier: "projets"
         name: "Projets"
-        url: "/fr/initiatives/projets/"
-        parent: "initiatives"
+        url: "#"
+        weight: 5
+      - identifier: "projets-en-cours"
+        name: "Projets en cours"
+        url: "/fr/projets/projets-en-cours/"
+        parent: "projets"
+        weight: 1
+      - identifier: "projets-realises"
+        name: "Projets réalisés"
+        url: "/fr/projets/projets-realises/"
+        parent: "projets"
         weight: 2
-      - identifier: "participer"
-        name: "Participer"
-        url: "/fr/initiatives/participer/"
-        parent: "initiatives"
+      - identifier: "soumettre-une-idee"
+        name: "Soumettre une idée"
+        url: "/fr/projets/soumettre-une-idee/"
+        parent: "projets"
         weight: 3
 
       - identifier: "contact"
         name: "Contact"
         url: "#"
-        weight: 5
+        weight: 6
       - identifier: "nous-joindre"
         name: "Nous joindre"
         url: "/fr/contact/nous-joindre/"
@@ -184,30 +199,45 @@ en:
         parent: "bingo-en"
         weight: 2
 
-      - identifier: "initiatives"
-        name: "Initiatives"
+      - identifier: "events"
+        name: "Events"
         url: "#"
         weight: 4
-      - identifier: "activities"
-        name: "Activities"
-        url: "/en/initiatives/activities/"
-        parent: "initiatives"
+      - identifier: "2026-programming"
+        name: "2026 Programming"
+        url: "/en/events/2026-programming/"
+        parent: "events"
         weight: 1
+      - identifier: "sponsorship-volunteering"
+        name: "Sponsorship & Volunteering"
+        url: "/en/events/sponsorship-volunteering/"
+        parent: "events"
+        weight: 2
+
       - identifier: "projects"
         name: "Projects"
-        url: "/en/initiatives/projects/"
-        parent: "initiatives"
+        url: "#"
+        weight: 5
+      - identifier: "current-projects"
+        name: "Current Projects"
+        url: "/en/projects/current-projects/"
+        parent: "projects"
+        weight: 1
+      - identifier: "completed-projects"
+        name: "Completed Projects"
+        url: "/en/projects/completed-projects/"
+        parent: "projects"
         weight: 2
-      - identifier: "participate"
-        name: "Participate"
-        url: "/en/initiatives/participate/"
-        parent: "initiatives"
+      - identifier: "submit-an-idea"
+        name: "Submit an Idea"
+        url: "/en/projects/submit-an-idea/"
+        parent: "projects"
         weight: 3
 
       - identifier: "contact"
         name: "Contact"
         url: "#"
-        weight: 5
+        weight: 6
       - identifier: "contact-us"
         name: "Contact us"
         url: "/en/contact/contact-us/"

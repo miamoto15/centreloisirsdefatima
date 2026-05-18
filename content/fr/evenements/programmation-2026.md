@@ -1,7 +1,8 @@
 ---
-title: "Activités pour 2026"
+title: "Programmation 2026"
 description: "Page d'activités à venir du centre des loisirs de Fatima."
 translationKey: "upcoming-activities"
+slug: "programmation-2026"
 showHeader: true
 
 ---
@@ -118,6 +119,6 @@ Que vous soyez Madelinot de souche ou visiteur de passage, ce festival est une i
 - 13h00 : Début de l’encan chinois (plusieurs prix à gagner pour une valeur totale de $5000  et plus)
 - 19h30 : Feu de joie avec « Sculpture la mer et le feu ».  
 *Sculpteurs:  Jacques Aucoin, Raynald Chevarie, Jeannot Longuépée, Gilbert Chevarie, Laurent Déraspe, Annie Morin.*
-- 21h00 : Breen, Lebœuf » / Offenback
+- 21h00 : [Breen, Lebœuf / Offenback](https://www.youtube.com/watch?v=DNHR1BwuYIo)
 - 22h00 : MysterAct (show de laser et feux d’artifices)
 - 22h15 : Éric Lapointe
