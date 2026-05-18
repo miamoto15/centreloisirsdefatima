@@ -65,13 +65,13 @@ fr:
         url: "#"
         weight: 3
       - identifier: "comment-jouer-bingo"
-        name: "Comment jouer"
-        url: "/fr/bingo/comment-jouer/"
+        name: "Infos & Règlements"
+        url: "/fr/bingo/infos-reglements/"
         parent: "bingo-fr"
         weight: 1
       - identifier: "reglements-bingo"
-        name: "Règlements"
-        url: "/fr/bingo/reglements/"
+        name: "Les jeux"
+        url: "/fr/bingo/les-jeux/"
         parent: "bingo-fr"
         weight: 2
 
@@ -189,13 +189,13 @@ en:
         url: "#"
         weight: 3
       - identifier: "how-to-play-bingo"
-        name: "How to play"
-        url: "/en/bingo/how-to-play/"
+        name: "Info & Rules"
+        url: "/en/bingo/info-rules/"
         parent: "bingo-en"
         weight: 1
       - identifier: "rules-bingo"
-        name: "Rules"
-        url: "/en/bingo/rules/"
+        name: "The Games"
+        url: "/en/bingo/the-games/"
         parent: "bingo-en"
         weight: 2
 

@@ -1,7 +1,8 @@
 ---
-title: "Comment jouer"
-description: "Page qui explique comment jouer au bingo du centre des loisirs de Fatima."
+title: "Infos & Règlements"
+description: "Page d'informations et règlements du bingo du centre des loisirs de Fatima."
 translationKey: "how-to-play-bingo"
+slug: "infos-reglements"
 ---
 
 1 carte début à 1$
