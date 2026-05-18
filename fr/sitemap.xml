@@ -98,6 +98,18 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/"
                 />
   </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/"
+                />
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/joker/gagnants/</loc>
     <xhtml:link
                 rel="alternate"
@@ -132,18 +144,6 @@
                 rel="alternate"
                 hreflang="fr-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/les-jeux/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/les-jeux/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nos-equipes/</loc>
