@@ -64,14 +64,14 @@ fr:
         name: "Bingo"
         url: "#"
         weight: 3
-      - identifier: "comment-jouer-bingo"
+      - identifier: "infos-reglements"
         name: "Infos & Règlements"
         url: "/fr/bingo/infos-reglements/"
         parent: "bingo-fr"
         weight: 1
-      - identifier: "reglements-bingo"
-        name: "Les jeux"
-        url: "/fr/bingo/les-jeux/"
+      - identifier: "feuillets-couleurs"
+        name: "Feuillets & couleurs"
+        url: "/fr/bingo/feuillets-couleurs/"
         parent: "bingo-fr"
         weight: 2
 
