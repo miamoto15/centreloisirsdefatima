@@ -15,16 +15,27 @@ slug: "infos-reglements"
 
 ## Tarifs
 
+{{< grid cols=2 width="50%,50%"  >}}
+
+{{% cell valign="middle" %}}
+
 - Livret standard de 7 feuilles :
   - Livret 9 faces : 12 $ (achat minimum requis)
   - Livret 12 faces : 15 $
   - Livret 15 faces : 18 $
 - Livret supplémentaire à 6 faces : 6$
-- Carte spéciale de départ (Bonanza) : 1 $
-- Feuille spéciale après la pause (double‑action, 1 feuille de 2 faces) : 4 $ **vérifier si 2 feuilles à 2 faces chaque : 8$**
-- Carte du tour cumulatif : 2 $
-- Carte supplémentaire du gros lot : 3$
+- Bonanza : 1 $
+- Double‑action - 1 feuille de 2 faces : 4 $
+- Feuille du tour cumulatif : 2 $
+- Feuille supplémentaire du gros lot : 3$
 - Moitié‑moitié : 1 $
+{{% /cell %}}
+
+{{< cell valign="middle" align="center" >}}
+{{< responsive-img src="img/bingo/Tarif - Bingo.png" alt="5e tour Rose" width="100%" >}}
+{{< /cell >}}
+
+{{< /grid >}}
 
 ## Déroulement du Bingo
 

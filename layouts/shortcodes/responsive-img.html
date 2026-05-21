@@ -1,42 +1,22 @@
-{{/* Utilise ce shortcode ainsi -> {{< responsive-img src="img/photo.jpg" alt="Description" width="100%" height="80%" >}} */}}
+{{/* Utilise ce shortcode ainsi -> {{< responsive-img src="img/photo.jpg" alt="Description" >}} */}}
 
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
-{{ $cssWidth := .Get "width" | default "" }}
-{{ $cssHeight := .Get "height" | default "" }}
+{{ $width := .Get "width" | default "" }}
 {{ $img := resources.Get $src }}
 
-{{ $radius := .Get "radius" | default "" }}
-{{ $align := .Get "align" | default "" }}
-{{ $valign := .Get "valign" | default "" }}
-{{- $style := "" -}}
-{{- if or $cssWidth $cssHeight $radius -}}
-  {{- $style = "style=\"" -}}
-  {{- if $cssWidth -}}
-    {{- $style = printf "%swidth: %s;" $style $cssWidth -}}
-  {{- end -}}
-  {{- if $cssHeight -}}
-    {{- $style = printf "%s height: %s;" $style $cssHeight -}}
-  {{- else if $cssWidth -}}
-    {{- $style = printf "%s height: auto;" $style -}}
-  {{- end -}}
-  {{- if $radius -}}
-    {{- $style = printf "%s border-radius: %s;" $style $radius -}}
-  {{- end -}}
-  {{- if eq $align "center" -}}
-    {{- $style = printf "%s display:block; margin-left:auto; margin-right:auto;" $style -}}
-  {{- end -}}
-  {{- if eq $valign "middle" -}}
-    {{- $style = printf "%s vertical-align:middle;" $style -}}
-  {{- end -}}
-  {{- $style = printf "%s\"" $style -}}
-{{- end -}}
-
 {{- if $img -}}
-  {{/* Convertir en WebP si l'image est dans assets/ */}}
-  {{- $webpImg := $img.Process "webp" -}}
-  <img src="{{ $webpImg.RelPermalink }}" alt="{{ $alt }}"{{ if $style }} {{ $style | safeHTMLAttr }}{{ end }} loading="lazy">
+  {{- if and $width (not (strings.Contains $width "%")) -}}
+    {{- $resize := replace $width "px" "" -}}
+    {{- if not (or (strings.Contains $resize "x") (strings.Contains $resize "X")) -}}
+      {{- $resize = printf "%sx" $resize -}}
+    {{- end -}}
+    {{- $resized := $img.Resize (printf "%s webp" $resize) -}}
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"{{ if $width }} style="width:{{ $width }};height:auto;"{{ end }} loading="lazy">
+  {{- else -}}
+    {{- $webp := $img.Process "webp" -}}
+    <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}"{{ if $width }} style="width:{{ $width }};height:auto;"{{ end }} loading="lazy">
+  {{- end -}}
 {{- else -}}
-  {{/* Si l'image n'est pas dans assets/, utiliser le chemin depuis static/ */}}
-  <img src="{{ $src | relURL }}" alt="{{ $alt }}"{{ if $style }} {{ $style | safeHTMLAttr }}{{ end }} loading="lazy">
+  <!-- Image not found: {{ $src }} (check that it's in assets/) -->
 {{- end -}}
