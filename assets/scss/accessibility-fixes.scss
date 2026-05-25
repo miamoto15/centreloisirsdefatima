@@ -1,7 +1,28 @@
 /* Affichage vertical des colonnes de .custom-grid sur mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .custom-grid {
         grid-template-columns: 1fr !important;
+    }
+
+    /* Image dans .custom-grid : limiter la hauteur quand empilée */
+    .custom-grid img {
+        max-height: 300px;
+        width: 100% !important;
+        object-fit: contain;
+    }
+}
+
+/* Table responsive : scroll horizontal + padding réduit sur mobile */
+@media (max-width: 768px) {
+    .content table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .content td,
+    .content th {
+        padding: 10px 14px;
     }
 }
 /* Corrections supplémentaires pour l'accessibilité */

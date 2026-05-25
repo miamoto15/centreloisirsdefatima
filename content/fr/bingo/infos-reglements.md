@@ -133,7 +133,7 @@ Chaque couleur correspond à un tour distinct avec ses propres règles et son pr
 {{% /cell %}}
 
 {{< cell valign="middle" align="middle" >}}
-{{< responsive-img src="img/bingo/Cantine.png" alt="Cantine" height="70%" width="90%" >}}
+{{< responsive-img src="img/bingo/Cantine.png" alt="Cantine" width="90%" >}}
 {{< /cell >}}
 
 {{< /grid >}}
