@@ -90,26 +90,6 @@ fr:
         parent: "evenements"
         weight: 2
 
-      - identifier: "projets"
-        name: "Projets"
-        url: "#"
-        weight: 5
-      - identifier: "projets-en-cours"
-        name: "Projets en cours"
-        url: "/fr/projets/projets-en-cours/"
-        parent: "projets"
-        weight: 1
-      - identifier: "projets-realises"
-        name: "Projets réalisés"
-        url: "/fr/projets/projets-realises/"
-        parent: "projets"
-        weight: 2
-      - identifier: "soumettre-une-idee"
-        name: "Soumettre une idée"
-        url: "/fr/projets/soumettre-une-idee/"
-        parent: "projets"
-        weight: 3
-
       - identifier: "contact"
         name: "Contact"
         url: "#"
@@ -213,26 +193,6 @@ en:
         url: "/en/events/sponsorship-volunteering/"
         parent: "events"
         weight: 2
-
-      - identifier: "projects"
-        name: "Projects"
-        url: "#"
-        weight: 5
-      - identifier: "current-projects"
-        name: "Current Projects"
-        url: "/en/projects/current-projects/"
-        parent: "projects"
-        weight: 1
-      - identifier: "completed-projects"
-        name: "Completed Projects"
-        url: "/en/projects/completed-projects/"
-        parent: "projects"
-        weight: 2
-      - identifier: "submit-an-idea"
-        name: "Submit an Idea"
-        url: "/en/projects/submit-an-idea/"
-        parent: "projects"
-        weight: 3
 
       - identifier: "contact"
         name: "Contact"
