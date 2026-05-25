@@ -1,11 +1,11 @@
 {{- /* Sélecteur de langue - Bonnes pratiques Hugo 2026 */ -}}
 {{- /* Utilise .Translations pour les pages traduites, sinon la page d'accueil de la langue */ -}}
 
-{{ if gt (len .Site.Languages) 1 }}
+{{ if gt (len hugo.Sites) 1 }}
 <div class="language-selector dropdown">
     <div class="dropdown-current">
         <span class="dropdown-arrow">
-            <span class="dropdown-selected">{{ .Site.Language.LanguageName }}</span>
+            <span class="dropdown-selected">{{ .Site.Language.Label }}</span>
         </span>
     </div>
     <nav class="dropdown-nav">
@@ -13,14 +13,14 @@
             {{- /* Parcourir toutes les traductions disponibles de la page courante */ -}}
             {{- range .Translations }}
             <li>
-                <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                <a href="{{ .Permalink }}">{{ .Language.Label }}</a>
             </li>
             {{- else }}
             {{- /* Si pas de traduction, afficher les liens vers les pages d'accueil des autres langues */ -}}
-            {{- range $.Site.Languages }}
-            {{- if ne .Lang $.Site.Language.Lang }}
+            {{- range hugo.Sites }}
+            {{- if ne .Language.Lang $.Site.Language.Lang }}
             <li>
-                <a href="{{ printf "%s/" .Lang | absURL }}">{{ .LanguageName }}</a>
+                <a href="{{ printf "%s/" .Language.Lang | absURL }}">{{ .Language.Label }}</a>
             </li>
             {{- end }}
             {{- end }}

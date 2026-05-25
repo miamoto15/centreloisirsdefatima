@@ -120,16 +120,16 @@
 
         <div class="footer__language-switcher" style="margin-top:1em; text-align:right;">
             <nav aria-label="Sélection de langue">
-                {{ range $.Site.Languages }}
-                    {{ if eq .Lang $.Site.Language.Lang }}
-                        {{ $translations := where $.Translations "Language.Lang" .Lang }}
-                        <a href="{{ $.Permalink }}" lang="{{ .Lang }}" class="footer-lang-link active-lang" aria-current="page">{{ upper .Lang }}</a>
+                {{ range hugo.Sites }}
+                    {{ if eq .Language.Lang $.Site.Language.Lang }}
+                        {{ $translations := where $.Translations "Language.Lang" .Language.Lang }}
+                        <a href="{{ $.Permalink }}" lang="{{ .Language.Lang }}" class="footer-lang-link active-lang" aria-current="page">{{ upper .Language.Lang }}</a>
                     {{ else }}
-                        {{ $translations := where $.Translations "Language.Lang" .Lang }}
+                        {{ $translations := where $.Translations "Language.Lang" .Language.Lang }}
                         {{ if gt (len $translations) 0 }}
-                            <a href="{{ (index $translations 0).Permalink }}" lang="{{ .Lang }}" class="footer-lang-link">{{ upper .Lang }}</a>
+                            <a href="{{ (index $translations 0).Permalink }}" lang="{{ .Language.Lang }}" class="footer-lang-link">{{ upper .Language.Lang }}</a>
                         {{ else }}
-                            <a href="{{ printf "%s/" .Lang | absURL }}" lang="{{ .Lang }}" class="footer-lang-link">{{ upper .Lang }}</a>
+                            <a href="{{ printf "%s/" .Language.Lang | absURL }}" lang="{{ .Language.Lang }}" class="footer-lang-link">{{ upper .Language.Lang }}</a>
                         {{ end }}
                     {{ end }}
                 {{ end }}

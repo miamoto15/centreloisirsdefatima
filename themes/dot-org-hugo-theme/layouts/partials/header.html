@@ -45,7 +45,7 @@
         
         <nav class="main-menu">
             {{- /* Mobile language buttons - shown only on mobile inside hamburger menu */ -}}
-            {{ if gt (len $.Site.Languages) 1 }}
+            {{ if gt (len hugo.Sites) 1 }}
             <div class="mobile-language-buttons">
                 {{- /* Afficher la langue actuelle active */ -}}
                 <a href="#" class="mobile-lang-btn active">
@@ -58,10 +58,10 @@
                 </a>
                 {{- else }}
                 {{- /* Si pas de traduction, afficher les liens vers les pages d'accueil des autres langues */ -}}
-                {{- range $.Site.Languages }}
-                {{- if ne .Lang $.Site.Language.Lang }}
-                <a href="{{ printf "%s/" .Lang | absURL }}" class="mobile-lang-btn">
-                    {{ upper .Lang }}
+                {{- range hugo.Sites }}
+                {{- if ne .Language.Lang $.Site.Language.Lang }}
+                <a href="{{ printf "%s/" .Language.Lang | absURL }}" class="mobile-lang-btn">
+                    {{ upper .Language.Lang }}
                 </a>
                 {{- end }}
                 {{- end }}

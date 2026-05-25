@@ -4,8 +4,8 @@
 
 ######################## Français (langue par défaut) ####################
 fr:
-  languageName: Français
-  languageCode: fr-CA
+  label: Français
+  locale: fr-CA
   weight: 1
   contentDir: content/fr
   title: "Centre des Loisirs de Fatima"
@@ -128,8 +128,8 @@ fr:
 ######################## English ####################
 
 en:
-  languageName: English
-  languageCode: en-CA
+  label: English
+  locale: en-CA
   weight: 2
   contentDir: content/en
   title: "Centre des Loisirs de Fatima"
