@@ -3,6 +3,7 @@
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $width := .Get "width" | default "" }}
+{{ $height := .Get "height" | default "" }}
 {{ $img := resources.Get $src }}
 
 {{- if $img -}}
@@ -12,10 +13,10 @@
       {{- $resize = printf "%sx" $resize -}}
     {{- end -}}
     {{- $resized := $img.Resize (printf "%s webp" $resize) -}}
-    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"{{ if $width }} style="width:{{ $width }};height:auto;"{{ end }} loading="lazy">
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"{{ if or $width $height }} style="{{ if $width }}width:{{ $width }};{{ end }}{{ if $height }}height:{{ $height }};{{ else }}height:auto;{{ end }}"{{ end }} loading="lazy">
   {{- else -}}
     {{- $webp := $img.Process "webp" -}}
-    <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}"{{ if $width }} style="width:{{ $width }};height:auto;"{{ end }} loading="lazy">
+    <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}"{{ if or $width $height }} style="{{ if $width }}width:{{ $width }};{{ end }}{{ if $height }}height:{{ $height }};{{ else }}height:auto;{{ end }}"{{ end }} loading="lazy">
   {{- end -}}
 {{- else -}}
   <!-- Image not found: {{ $src }} (check that it's in assets/) -->
