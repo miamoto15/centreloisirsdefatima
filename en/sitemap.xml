@@ -2,236 +2,351 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/2026-programming/</loc>
+    <loc>http://localhost:1313/en/events/</loc>
+    <lastmod>2026-08-29T13:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/programmation-2026/"
+                href="http://localhost:1313/fr/evenements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/events/2026-programming/"
+                href="http://localhost:1313/en/events/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/accessibility/</loc>
+    <loc>http://localhost:1313/en/</loc>
+    <lastmod>2026-08-29T13:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/accessibilite/"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/accessibility/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/</loc>
+    <loc>http://localhost:1313/en/events/entries/grand-rassemblement-2026/</loc>
+    <lastmod>2026-08-29T13:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/"
+                href="http://localhost:1313/fr/evenements/fiches/grand-rassemblement-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/"
+                href="http://localhost:1313/en/events/entries/grand-rassemblement-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/categories/</loc>
+    <loc>http://localhost:1313/en/events/entries/spectacle-acadien-2026/</loc>
+    <lastmod>2026-08-01T20:30:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/categories/"
+                href="http://localhost:1313/fr/evenements/fiches/spectacle-acadien-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/categories/"
+                href="http://localhost:1313/en/events/entries/spectacle-acadien-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/contact/</loc>
+    <loc>http://localhost:1313/en/events/entries/festival-petits-baleineaux-2026/</loc>
+    <lastmod>2026-07-11T11:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/"
+                href="http://localhost:1313/fr/evenements/fiches/festival-petits-baleineaux-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/"
+                href="http://localhost:1313/en/events/entries/festival-petits-baleineaux-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/contact/contact-us/</loc>
+    <loc>http://localhost:1313/en/events/entries/securi-fete-2026/</loc>
+    <lastmod>2026-06-27T13:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nous-joindre/"
+                href="http://localhost:1313/fr/evenements/fiches/securi-fete-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/contact-us/"
+                href="http://localhost:1313/en/events/entries/securi-fete-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/</loc>
+    <loc>http://localhost:1313/en/events/entries/fete-nationale-2026/</loc>
+    <lastmod>2026-06-23T20:45:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/"
+                href="http://localhost:1313/fr/evenements/fiches/fete-nationale-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/events/"
+                href="http://localhost:1313/en/events/entries/fete-nationale-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/</loc>
+    <loc>http://localhost:1313/en/events/2026-programming/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/"
+                href="http://localhost:1313/fr/evenements/programmation-2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/"
+                href="http://localhost:1313/en/events/2026-programming/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/how-to-play/</loc>
+    <loc>http://localhost:1313/en/accessibility/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/comment-jouer/"
+                href="http://localhost:1313/fr/accessibilite/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/how-to-play/"
+                href="http://localhost:1313/en/accessibility/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/info-rules/</loc>
+    <loc>http://localhost:1313/en/bingo/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/infos-reglements/"
+                href="http://localhost:1313/fr/bingo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/info-rules/"
+                href="http://localhost:1313/en/bingo/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/</loc>
+    <loc>http://localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/"
+                href="http://localhost:1313/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/"
+                href="http://localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/contact/our-teams/</loc>
+    <loc>http://localhost:1313/en/projects/completed-projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nos-equipes/"
+                href="http://localhost:1313/fr/projets/projets-realises/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/our-teams/"
+                href="http://localhost:1313/en/projects/completed-projects/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/photo-gallery/</loc>
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/points-of-sale/</loc>
+    <loc>http://localhost:1313/en/contact/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/points-de-vente/"
+                href="http://localhost:1313/fr/contact/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/points-of-sale/"
+                href="http://localhost:1313/en/contact/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/privacy/</loc>
+    <loc>http://localhost:1313/en/contact/contact-us/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/confidentialite/"
+                href="http://localhost:1313/fr/contact/nous-joindre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/privacy/"
+                href="http://localhost:1313/en/contact/contact-us/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/rules/</loc>
+    <loc>http://localhost:1313/en/projects/current-projects/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/reglements/"
+                href="http://localhost:1313/fr/projets/projets-en-cours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/rules/"
+                href="http://localhost:1313/en/projects/current-projects/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/sponsorship-volunteering/</loc>
+    <loc>http://localhost:1313/en/joker/how-to-play/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/commandite-benevolat/"
+                href="http://localhost:1313/fr/joker/comment-jouer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/events/sponsorship-volunteering/"
+                href="http://localhost:1313/en/joker/how-to-play/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/tags/</loc>
+    <loc>http://localhost:1313/en/bingo/info-rules/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/tags/"
+                href="http://localhost:1313/fr/bingo/infos-reglements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/tags/"
+                href="http://localhost:1313/en/bingo/info-rules/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/</loc>
+    <loc>http://localhost:1313/en/joker/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/"
+                href="http://localhost:1313/fr/joker/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/"
+                href="http://localhost:1313/en/joker/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/winners/</loc>
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/winners/</loc>
+    <loc>http://localhost:1313/en/contact/our-teams/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/gagnants/"
+                href="http://localhost:1313/fr/contact/nos-equipes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/winners/"
+                href="http://localhost:1313/en/contact/our-teams/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/events/photo-gallery/</loc>
+  </url><url>
+    <loc>http://localhost:1313/en/joker/points-of-sale/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/joker/points-de-vente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/joker/points-of-sale/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/privacy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/confidentialite/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/privacy/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/projects/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/projets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/projects/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/joker/rules/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/joker/reglements/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/joker/rules/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/events/sponsorship-volunteering/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/evenements/commandite-benevolat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/events/sponsorship-volunteering/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/projects/submit-an-idea/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/projets/soumettre-une-idee/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/projects/submit-an-idea/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/bingo/the-games/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/bingo/feuillets-couleurs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/bingo/the-games/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/bingo/winners/</loc>
+  </url><url>
+    <loc>http://localhost:1313/en/joker/winners/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="http://localhost:1313/fr/joker/gagnants/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="http://localhost:1313/en/joker/winners/"
                 />
   </url>
 </urlset>

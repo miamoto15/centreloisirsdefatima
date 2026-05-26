@@ -1,11 +1,18 @@
 <rss version="2.0">
     <channel>
         <title>Events on Centre des Loisirs de Fatima</title>
-        <link>https://miamoto15.github.io/centreloisirsdefatima/en/events/</link>
+        <link>http://localhost:1313/en/events/</link>
         <description>Recent content in Centre des Loisirs de Fatima</description>
 
          
             
+                 
+                <item>
+                    <title></title>
+                    <link></link>
+                    <pubDate>Sat, 29 Aug 2026 13:00:00 -0300</pubDate>
+                    <description></description>
+                </item>
                 
             
                 
