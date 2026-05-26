@@ -9,6 +9,9 @@ title: "Centre des Loisirs de Fatima"
 # Fuseau horaire
 timeZone: "Canada/Atlantic"
 
+# Les événements ont des dates futures — les inclure dans tous les builds
+buildFuture: true
+
 # Longueur des résumés
 summaryLength: 50
 
