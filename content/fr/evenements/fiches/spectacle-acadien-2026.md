@@ -1,12 +1,12 @@
 ---
-title: "Spectacle acadien"
+title: "Spectacle retrouvailles Akadie 2000"
 date: 2026-08-01T20:30:00
 description: "Venez célébrer la richesse et la chaleur de la culture acadienne : musique entraînante, danse, gastronomie et artistes passionnés — une soirée haute en couleur !"
-lieu: "Fatima"
-prix: ""
-billets_url: ""
+lieu: "L'Anse-aux-Baleiniers, Fatima"
+prix: "35 $"
+billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=fr"
 evenement: true
-translationKey: "spectacle-acadien-2026"
+translationKey: "spectacle-retrouvailles-akadie-2000"
 showHeader: false
 draft: false
 ---

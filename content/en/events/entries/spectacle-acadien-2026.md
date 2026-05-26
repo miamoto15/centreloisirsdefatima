@@ -1,12 +1,12 @@
 ---
-title: "Acadian Show"
+title: "Akadie 2000 Reunion Show"
 date: 2026-08-01T20:30:00
 description: "Celebrate the richness of Acadian culture: infectious music, dance and warm encounters — a vibrant evening bursting with colour and tradition!"
 lieu: "Fatima"
 prix: ""
 billets_url: ""
 evenement: true
-translationKey: "spectacle-acadien-2026"
+translationKey: "spectacle-retrouvailles-akadie-2000"
 showHeader: false
 draft: false
 ---

@@ -2,8 +2,8 @@
 title: "Le Grand rassemblement — 6e édition"
 date: 2026-08-29T13:00:00
 description: "Nichée entre mer et falaises, l'Anse aux Baleiniers vous ouvre ses bras pour un festival vibrant de fin d'été : encan chinois, feux, sculptures et Éric Lapointe en tête d'affiche !"
-lieu: "Anse aux Baleiniers, Fatima"
-prix: ""
+lieu: "L'Anse-aux-Baleiniers, Fatima"
+prix: "55 $"
 billets_url: ""
 evenement: true
 translationKey: "grand-rassemblement-2026"

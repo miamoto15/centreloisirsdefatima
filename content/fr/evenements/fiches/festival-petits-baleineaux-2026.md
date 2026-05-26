@@ -3,8 +3,8 @@ title: "Festival des petits baleineaux"
 date: 2026-07-11T11:00:00
 dateEnd: "2026-07-12"
 description: "Deux journées magiques placées sous le signe du jeu, du rire et de la créativité pour toute la famille — dinosaures, spectacles, jeux gonflables et bien plus !"
-lieu: "Fatima"
-prix: "Gratuit"
+lieu: "L'Anse-aux-Baleiniers, Fatima"
+prix: "5 $"
 billets_url: ""
 evenement: true
 translationKey: "festival-baleineaux-2026"

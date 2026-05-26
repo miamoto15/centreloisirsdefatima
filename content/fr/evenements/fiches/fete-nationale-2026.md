@@ -2,7 +2,7 @@
 title: "Spectacle de la fête nationale à Fatima"
 date: 2026-05-24
 description: "Une soirée festive sous les étoiles avec artistes locaux, feu de joie et feux d'artifices — venez célébrer la fierté d'ici !"
-lieu: "Anse à la Cabane, Fatima"
+lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
 billets_url: ""
 evenement: true
