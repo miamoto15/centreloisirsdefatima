@@ -100,8 +100,8 @@ fr:
         parent: "contact"
         weight: 1
       - identifier: "nos-equipes"
-        name: "Nos équipes"
-        url: "/fr/contact/nos-equipes/"
+        name: "Conseil d'administration"
+        url: "/fr/contact/conseil-administration/"
         parent: "contact"
         weight: 2
 
@@ -204,7 +204,7 @@ en:
         parent: "contact"
         weight: 1
       - identifier: "our-teams"
-        name: "Our teams"
-        url: "/en/contact/our-teams/"
+        name: "Board of Directors"
+        url: "/en/contact/board-of-directors/"
         parent: "contact"
         weight: 2

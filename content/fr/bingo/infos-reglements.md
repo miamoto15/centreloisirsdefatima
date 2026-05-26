@@ -126,7 +126,8 @@ Chaque couleur correspond à un tour distinct avec ses propres règles et son pr
 &emsp;🍫 Chocolat  
 &emsp;🥔 Chips  
 &emsp;💧 Eau  
-&emsp;🥤 Liqueurs
+&emsp;🥤 Liqueur  
+&emsp;☕ Café
 
 🚫 **Aucun alcool** vendu ni permis sur place.  
 🖍 **Marqueurs** vendus sur place — vous pouvez aussi apporter les vôtres.

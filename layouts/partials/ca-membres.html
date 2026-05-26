@@ -1,0 +1,42 @@
+{{/*
+  Partial: ca-membres.html
+  Affiche la liste des membres du CA.
+  Les membres sont des pages .md dans le sous-dossier membres/ avec membre_ca: true.
+  Triés par weight (croissant).
+*/}}
+{{ $lang := .Site.Language.Lang }}
+
+{{ with .Content }}
+<div class="ca-intro">{{ . }}</div>
+{{ end }}
+
+{{ $allMembres := where .Parent.RegularPagesRecursive "Params.membre_ca" true }}
+{{ $membres    := $allMembres.ByWeight }}
+
+{{ if $membres }}
+<ul class="ca-grille" role="list">
+  {{ range $membres }}
+  {{ $membre := . }}
+  <li class="ca-carte">
+    <div class="ca-photo">
+      {{ with .Params.photo }}
+      {{ $img := resources.Get . }}
+      {{ if $img }}
+      <img src="{{ $img.RelPermalink }}" alt="{{ $membre.Params.name }}" width="110" height="110" loading="lazy">
+      {{ else }}
+      <div class="ca-photo-placeholder" aria-hidden="true"></div>
+      {{ end }}
+      {{ else }}
+      <div class="ca-photo-placeholder" aria-hidden="true"></div>
+      {{ end }}
+    </div>
+    <div class="ca-info">
+      <p class="ca-nom">{{ $membre.Params.name }}</p>
+      {{ with $membre.Params.titre }}<p class="ca-titre">{{ . }}</p>{{ end }}
+      {{ with $membre.Params.description }}<p class="ca-description">{{ . }}</p>{{ end }}
+      {{ with $membre.Content }}<div class="ca-bio">{{ . }}</div>{{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
