@@ -1,3 +1,7 @@
 {{ define "main" }}
-  {{ partial "event-single-page.html" . }}
+  {{ if .Params.evenement }}
+    {{ partial "event-single-page.html" . }}
+  {{ else }}
+    {{ .Content }}
+  {{ end }}
 {{ end }}
