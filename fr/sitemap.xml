@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/</loc>
+    <lastmod>2026-05-24T00:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
@@ -13,6 +14,22 @@
                 hreflang="fr-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/"
                 />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/</loc>
+    <lastmod>2026-05-24T00:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/events/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/fiches/fete-nationale-2026/</loc>
+    <lastmod>2026-05-24T00:00:00-03:00</lastmod>
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/</loc>
     <xhtml:link
@@ -84,18 +101,6 @@
                 rel="alternate"
                 hreflang="fr-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/accessibilite/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/events/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/</loc>
@@ -194,42 +199,6 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/programmation-2026/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/projets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/projets/projets-en-cours/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/current-projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/projets-en-cours/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/projets/projets-realises/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/completed-projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/projets-realises/"
-                />
-  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/confidentialite/</loc>
     <xhtml:link
                 rel="alternate"
@@ -252,18 +221,6 @@
                 rel="alternate"
                 hreflang="fr-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/reglements/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/projets/soumettre-une-idee/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/submit-an-idea/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/soumettre-une-idee/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/tags/</loc>
