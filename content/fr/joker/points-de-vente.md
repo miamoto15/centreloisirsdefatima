@@ -1,72 +1,65 @@
----
+﻿---
 title: "Points de vente"
 description: "Page des points de vente du Joker du centre des loisirs de Fatima."
 translationKey: "points-of-sale-joker"
 showHeader: false
 ---
 
-## Acheter vos billets
+## 🎟️ Acheter vos billets
 
-Vous pouvez acheter vos billets du Joker du Centre des Loisirs de Fatima auprès de plusieurs points de vente. Voici les options disponibles :
-
----
-
-### 1. Paiement Interac
-
-{{< grid cols=2 width="60%,40%" >}}
-
-  {{% cell valign="middle" %}}
-
-**Point de vente par Interac** :
-
-- Paiement par virement Interac à Auxiles Décoste
-- Envoyez lui un message texte au 581-887-7495
-- Veuillez indiquer dans le message :
-  - Combien de billets vous voulez
-  - Votre nom à mettre sur les billets
-  - Votre adresse de résidence si vous le désirez
-  - Le numéro de téléphone pour vous rejoindre
-- Une photo de vos billets vous sera envoyée par la suite.
-
-  ***Prenez note qu'uniquement les résidents du Québec peuvent participer à la lotterie.***
-  
-  {{% /cell %}}
-
-  {{< cell align="center" valign="middle" >}}
-  {{< responsive-img src="img/Interact.jpg" alt="Vente interact" width="60%" align="center" valign="middle" radius="16px" >}}
-  {{< /cell >}}
-
-{{< /grid >}}
+Plusieurs façons s'offrent à vous pour vous procurer vos billets du Joker : par virement Interac, directement auprès d'un vendeur officiel ou dans l'un de nos commerces participants aux Îles-de-la-Madeleine. Les billets sont vendus au prix de **5 $ chacun**. Choisissez la méthode qui vous convient le mieux !
 
 ---
 
-### 2. Vendeurs officiels
+### 💸 Paiement Interac
 
-Voici la liste de nos vendeurs officiels :
+{{< interac-contact img="img/Interact.jpg" alt="Logo Interac" name="Auxiles Décoste" phone="581-887-7495" >}}
+Envoyez un message texte en indiquant :
+
+- Combien de billets vous voulez
+- Votre nom complet à mettre sur les billets
+- Votre adresse de résidence (obligatoire pour la validation)
+- Un numéro de téléphone pour vous joindre en cas de question ou si vous gagnez
+
+Une fois le paiement effectué, vous recevrez une confirmation accompagnée d’une photo de vos billets.
+
+***Les groupes sont autorisés, mais un représentant unique doit impérativement être désigné.***
+{{< /interac-contact >}}
+
+{{% callout type="warning" %}}
+Seuls les **résidents du Québec** peuvent participer à la loterie.
+{{% /callout %}}
+
+---
+
+### 👤 Vendeurs officiels
+
+{{% callout type="info" %}}
+Vous pouvez aussi acheter vos billets directement auprès de nos vendeurs :
 
 - Adélina Thorne
-- Aristide Longuépée
 - Claudette Leblanc
 - Héliodore Lapierre
 - Lucie Leblanc
+{{% /callout %}}
 
 ---
 
-### 3. Commerces participants
+### 🏪 Commerces participants
 
-{{< custom-table headers="Commerce,Adresse" widths="60%,40%" >}}
-Dépanneur S Leblanc (Dépanneur du Cap)|380 Rte 199, Havre-Aubert, QC G4T 9B9
-Dépanneur du Village - Boni-Soir|325 Chem. Principal, Cap-aux-Meules, QC G4T 1E2
-Turnbull Carla Grocery (Jay's Grocery Store)|443 Chem. Principal, Grosse-Île, QC G4T 6B2
-Épicerie J.H. Boudreau|236 Chem. Principal, Cap-aux-Meules, QC G4T 1C9
-Stations Déli|1401 Chem. de la Vernière, L'Étang-du-Nord, QC G4T 3G1
-Tissus Johanne|307 Chem. Principal, Cap-aux-Meules, QC G4T 1E1
-{{< /custom-table >}}
+{{< store-grid >}}
+{{< store-card name="Dépanneur S Leblanc (Dépanneur du Cap)" address="380 Rte 199, Havre-Aubert, QC G4T 9B9" >}}
+{{< store-card name="Dépanneur du Village - Boni-Soir" address="325 Chem. Principal, Cap-aux-Meules, QC G4T 1E2" >}}
+{{< store-card name="Turnbull Carla Grocery (Jay's Grocery Store)" address="443 Chem. Principal, Grosse-Île, QC G4T 6B2" >}}
+{{< store-card name="Épicerie J.H. Boudreau" address="236 Chem. Principal, Cap-aux-Meules, QC G4T 1C9" >}}
+{{< store-card name="Stations Déli" address="1401 Chem. de la Vernière, L'Étang-du-Nord, QC G4T 3G1" >}}
+{{< store-card name="Tissus Johanne" address="307 Chem. Principal, Cap-aux-Meules, QC G4T 1E1" >}}
+{{< /store-grid >}}
 
 ---
 
-## Localisation des points de vente
+## 🗺️ Localisation des commerces participants
 
-Retrouvez tous nos points de vente des commerces participants sur la carte ci-dessous :
+Retrouvez tous nos commerces participants sur la carte :
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=15pLWcdx8mcjAlQa3yEbAeX3s4WM6jJg&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+{{< iframe src="https://www.google.com/maps/d/u/0/embed?mid=15pLWcdx8mcjAlQa3yEbAeX3s4WM6jJg&ehbc=2E312F&noprof=1" title="Carte des points de vente du Joker" height="480" >}}

@@ -6,6 +6,7 @@ showHeader: false
 ---
 
 {{% hero img="img/Logo-joker.jpg" alt="Logo du Joker" %}}
+
 ## Envie de tenter votre chance ?
 
 Achetez un billet à **5 $**, tentez de trouver le Joker et remportez le gros lot — il grossit chaque semaine jusqu'à ce que quelqu'un le remporte !

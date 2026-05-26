@@ -1,0 +1,18 @@
+﻿{{/*
+  Shortcode store-card :
+  Carte visuelle pour un commerce participant.
+  À utiliser à l'intérieur d'un shortcode {{< store-grid >}}.
+
+  Paramètres :
+  - name    : nom du commerce
+  - address : adresse complète
+
+  Utilisation :
+  {{< store-card name="Dépanneur du Cap" address="380 Rte 199, Havre-Aubert, QC G4T 9B9" >}}
+*/}}
+{{- $name    := .Get "name" -}}
+{{- $address := .Get "address" -}}
+<div class="store-card">
+  <p class="store-card__name">🏪 {{ $name }}</p>
+  {{- if $address }}<p class="store-card__address">{{ $address }}</p>{{ end -}}
+</div>

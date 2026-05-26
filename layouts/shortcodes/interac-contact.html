@@ -1,0 +1,38 @@
+﻿{{/*
+  Shortcode interac-contact :
+  Layout : carte verte (contact + instructions) à gauche,
+           image à droite, même hauteur que la carte, proportionnelle.
+
+  Paramètres :
+  - img   : chemin de l'image (depuis assets/)
+  - alt   : texte alternatif de l'image (défaut : "Interac")
+  - name  : nom du vendeur Interac
+  - phone : numéro de téléphone (affiché et lié en sms:)
+
+  Utilisation (raw shortcode {{< >}}) :
+  {{< interac-contact img="img/Interact.jpg" name="Prénom Nom" phone="555-123-4567" >}}
+  Instructions en markdown...
+  {{< /interac-contact >}}
+*/}}
+
+{{- $img    := .Get "img" -}}
+{{- $alt    := .Get "alt" | default "Interac" -}}
+{{- $name   := .Get "name" -}}
+{{- $phone  := .Get "phone" -}}
+{{- $imgRes := resources.Get $img -}}
+
+<div class="interac-layout">
+  <div class="interac-card">
+    <div class="interac-card__contact">
+      {{- if $name -}}<span class="interac-card__name">{{ $name }}</span>{{- end -}}
+      {{- if $phone -}}<a href="sms:{{ $phone }}" class="interac-card__phone">📱 {{ $phone }}</a>{{- end -}}
+    </div>
+    <div class="interac-card__steps">{{ .Inner | markdownify }}</div>
+  </div>
+  {{- if $imgRes -}}
+  {{- $webp := $imgRes.Process "webp" -}}
+  <div class="interac-image">
+    <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+  </div>
+  {{- end -}}
+</div>
