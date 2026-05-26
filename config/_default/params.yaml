@@ -3,7 +3,13 @@
 # Add custom assets relative to /static or via https
 logo_on_white: "img/Logo.png"
 custom_js: []
-custom_css: ["scss/accessibility-improvements.scss", "scss/accessibility-fixes.scss", "scss/bingo-wow.scss"]
+custom_css: ["scss/accessibility-improvements.scss", "scss/accessibility-fixes.scss", "scss/bingo-wow.scss", "scss/evenements.scss"]
+
+######################## billetterie ####################
+
+# URL par défaut de la page billetterie (Le Point de Vente).
+# Peut être surchargée par event avec le champ `billets_url` dans le front matter.
+tickets_url: ""  # ex: "https://lepointdevente.com/billets/votre-page"
 
 ######################## custom config ####################
 

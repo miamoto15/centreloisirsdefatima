@@ -1,0 +1,61 @@
+{{/*
+  Partial: events-list-page.html
+  Works in both section context (list.html) and single-page context (programmation.html).
+  In section context (.Kind == "section"): uses .Pages
+  In single-page context (.Kind == "page"): uses .Parent.RegularPages (siblings in section)
+*/}}
+{{ $lang := .Site.Language.Lang }}
+
+{{ with .Content }}
+<div class="ev-page-intro">{{ . }}</div>
+{{ end }}
+
+{{/* Select the right page set based on context */}}
+{{ $basePages := cond (eq .Kind "section") .RegularPagesRecursive .Parent.RegularPagesRecursive }}
+{{ $allEvents := where $basePages "Params.evenement" true }}
+{{ $upcoming  := slice }}
+{{ $past      := slice }}
+
+{{ range $allEvents.ByDate }}
+  {{ if .Date.After now }}
+    {{ $upcoming = $upcoming | append . }}
+  {{ else }}
+    {{ $past = $past | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* ── Upcoming events ── */}}
+{{ if $upcoming }}
+<section>
+  <span class="ev-section-label">
+    {{ if eq $lang "fr" }}Prochains événements{{ else }}Upcoming Events{{ end }}
+  </span>
+  <div class="ev-grille">
+    {{ range $upcoming }}
+      {{ partial "event-card.html" (dict "page" . "lang" $lang "upcoming" true) }}
+    {{ end }}
+  </div>
+</section>
+{{ else }}
+<p class="ev-vide">
+  {{ if eq $lang "fr" }}
+    Aucun événement à venir pour le moment. Revenez bientôt !
+  {{ else }}
+    No upcoming events at the moment — check back soon!
+  {{ end }}
+</p>
+{{ end }}
+
+{{/* ── Past events ── */}}
+{{ if $past }}
+<section>
+  <div class="ev-separateur-passes">
+    {{ if eq $lang "fr" }}Événements passés{{ else }}Past Events{{ end }}
+  </div>
+  <div class="ev-grille">
+    {{ range collections.Reverse $past }}
+      {{ partial "event-card.html" (dict "page" . "lang" $lang "upcoming" false) }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

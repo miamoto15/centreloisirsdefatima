@@ -1,0 +1,88 @@
+{{/*
+  Partial: event-single-page.html
+  Used by layouts/evenements/single.html and layouts/events/single.html
+*/}}
+{{ $lang := .Site.Language.Lang }}
+
+{{ $moisFr := dict "01" "janvier" "02" "février" "03" "mars" "04" "avril" "05" "mai" "06" "juin" "07" "juillet" "08" "août" "09" "septembre" "10" "octobre" "11" "novembre" "12" "décembre" }}
+{{ $moisEn := dict "01" "January" "02" "February" "03" "March" "04" "April" "05" "May" "06" "June" "07" "July" "08" "August" "09" "September" "10" "October" "11" "November" "12" "December" }}
+{{ $mois := cond (eq $lang "fr") $moisFr $moisEn }}
+
+{{ $moisNum := .Date | time.Format "01" }}
+{{ $jour    := .Date | time.Format "2" }}
+{{ $annee   := .Date | time.Format "2006" }}
+{{ $moisNom := index $mois $moisNum }}
+
+{{/* Build the date label */}}
+{{ $dateLabel := "" }}
+{{ with .Params.dateEnd }}
+  {{ $fin        := time . }}
+  {{ $finJour    := $fin | time.Format "2" }}
+  {{ $finMoisNum := $fin | time.Format "01" }}
+  {{ $finAnnee   := $fin | time.Format "2006" }}
+  {{ $finMois    := index $mois $finMoisNum }}
+  {{ if eq $moisNum $finMoisNum }}
+    {{ if eq $lang "fr" }}
+      {{ $dateLabel = printf "%s et %s %s %s" $jour $finJour $moisNom $annee }}
+    {{ else }}
+      {{ $dateLabel = printf "%s and %s %s, %s" $jour $finJour $moisNom $annee }}
+    {{ end }}
+  {{ else }}
+    {{ if eq $lang "fr" }}
+      {{ $dateLabel = printf "%s %s – %s %s %s" $jour $moisNom $finJour $finMois $annee }}
+    {{ else }}
+      {{ $dateLabel = printf "%s %s – %s %s, %s" $moisNom $jour $finMois $finJour $annee }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ if eq $lang "fr" }}
+    {{ $dateLabel = printf "Le %s %s %s" $jour $moisNom $annee }}
+  {{ else }}
+    {{ $dateLabel = printf "%s %s, %s" $moisNom $jour $annee }}
+  {{ end }}
+{{ end }}
+
+<div class="ev-hero">
+  <p class="ev-hero-nav">
+    <a href="{{ .Site.BaseURL }}{{ if eq $lang "fr" }}fr/evenements/{{ else }}en/events/{{ end }}">
+      ← {{ if eq $lang "fr" }}Tous les événements{{ else }}All Events{{ end }}
+    </a>
+  </p>
+
+  <h1>{{ .Title }}</h1>
+
+  <div class="ev-hero-meta">
+    <span>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+      {{ $dateLabel }}
+    </span>
+    {{ with .Params.lieu }}
+    <span>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      {{ . }}
+    </span>
+    {{ end }}
+    {{ with .Params.prix }}
+    <span>
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      {{ . }}
+    </span>
+    {{ end }}
+  </div>
+
+  {{ if .Params.billets_url }}
+    <a href="{{ .Params.billets_url }}" class="btn-billets btn-billets--hero" target="_blank" rel="noopener noreferrer">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4c1.1 0 2 .9 2 2s-.9 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-2-1.46V18H6V6h12v4.54z"/></svg>
+      {{ if eq $lang "fr" }}Acheter vos billets{{ else }}Buy Tickets{{ end }}
+    </a>
+  {{ else }}
+    <a href="#programme" class="btn-billets btn-billets--hero">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4c1.1 0 2 .9 2 2s-.9 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-2-1.46V18H6V6h12v4.54z"/></svg>
+      {{ if eq $lang "fr" }}Acheter vos billets{{ else }}Buy Tickets{{ end }}
+    </a>
+  {{ end }}
+</div>
+
+<div class="ev-contenu" id="programme">
+  {{ .Content }}
+</div>

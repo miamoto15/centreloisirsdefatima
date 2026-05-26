@@ -1,0 +1,109 @@
+{{/*
+  Partial: event-card.html
+  Params:
+    .page     — the event Page object
+    .lang     — site language code ("fr" or "en")
+    .upcoming — bool, true if event is in the future
+*/}}
+{{ $page := .page }}
+{{ $lang := .lang }}
+{{ $upcoming := .upcoming }}
+
+{{ $moisFr := dict "01" "JAN" "02" "FÉV" "03" "MAR" "04" "AVR" "05" "MAI" "06" "JUIN" "07" "JUIL" "08" "AOÛT" "09" "SEP" "10" "OCT" "11" "NOV" "12" "DÉC" }}
+{{ $moisEn := dict "01" "JAN" "02" "FEB" "03" "MAR" "04" "APR" "05" "MAY" "06" "JUN" "07" "JUL" "08" "AUG" "09" "SEP" "10" "OCT" "11" "NOV" "12" "DEC" }}
+{{ $mois := cond (eq $lang "fr") $moisFr $moisEn }}
+
+{{ $startMoisNum := $page.Date | time.Format "01" }}
+{{ $startJour    := $page.Date | time.Format "2" }}
+{{ $startAnnee   := $page.Date | time.Format "2006" }}
+{{ $startMoisNom := index $mois $startMoisNum }}
+
+{{/* Resolve ticket URL: event-level → site-level default */}}
+{{ $ticketUrl := or $page.Params.billets_url (site.Params.tickets_url) }}
+
+{{/* Free event detection: "Gratuit", "gratuit", "Free", "free", "Entrée gratuite"… */}}
+{{ $isGratuit := strings.Contains (lower ($page.Params.prix | default "")) "gratuit" }}
+{{ $isFree    := strings.Contains (lower ($page.Params.prix | default "")) "free" }}
+{{ $gratuit   := or $isGratuit $isFree }}
+
+<article class="ev-carte{{ if not $upcoming }} ev-carte--passe{{ end }}">
+  <div class="ev-carte-entete">
+    {{ if $page.Params.dateEnd }}
+      {{ $fin        := time $page.Params.dateEnd }}
+      {{ $finJour    := $fin | time.Format "2" }}
+      {{ $finMoisNum := $fin | time.Format "01" }}
+      {{ $finMoisNom := index $mois $finMoisNum }}
+      <div class="ev-date-badge ev-date-badge--multi">
+        {{ if eq $startMoisNum $finMoisNum }}
+          <span class="ev-date-mois">{{ $startMoisNom }}</span>
+        {{ else }}
+          <span class="ev-date-mois">{{ $startMoisNom }}–{{ $finMoisNom }}</span>
+        {{ end }}
+        <span class="ev-date-jour">{{ $startJour }}–{{ $finJour }}</span>
+        <span class="ev-date-annee">{{ $startAnnee }}</span>
+      </div>
+    {{ else }}
+      <div class="ev-date-badge">
+        <span class="ev-date-mois">{{ $startMoisNom }}</span>
+        <span class="ev-date-jour">{{ $startJour }}</span>
+        <span class="ev-date-annee">{{ $startAnnee }}</span>
+      </div>
+    {{ end }}
+
+    <h3 class="ev-carte-titre">{{ $page.Title }}</h3>
+
+    {{ with $page.Params.lieu }}
+    <p class="ev-carte-lieu">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      {{ . }}
+    </p>
+    {{ end }}
+  </div>
+
+  <div class="ev-carte-corps">
+    {{ with $page.Description }}
+    <p class="ev-carte-desc">{{ . }}</p>
+    {{ end }}
+
+    {{ with $page.Params.prix }}
+    <p class="ev-carte-prix">
+      <span class="ev-prix-label">{{ if eq $lang "fr" }}Prix{{ else }}Price{{ end }} : </span>
+      <strong>{{ . }}</strong>
+    </p>
+    {{ end }}
+
+    {{ with $page.Content }}
+    <details class="ev-programme-details">
+      <summary class="ev-programme-toggle">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 17l5-5-5-5v10z"/></svg>
+        {{ if eq $lang "fr" }}Voir le programme{{ else }}View Programme{{ end }}
+      </summary>
+      <div class="ev-programme-content">{{ . }}</div>
+    </details>
+    {{ end }}
+
+    <div class="ev-carte-action">
+      {{ if not $upcoming }}
+        <span class="btn-billets btn-billets--passe">
+          {{ if eq $lang "fr" }}Événement passé{{ else }}Past Event{{ end }}
+        </span>
+      {{ else if $gratuit }}
+        <span class="btn-billets btn-billets--gratuit" aria-disabled="true">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          {{ if eq $lang "fr" }}Entrée gratuite{{ else }}Free Admission{{ end }}
+        </span>
+      {{ else if $ticketUrl }}
+        <a href="{{ $ticketUrl }}" class="btn-billets" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4c1.1 0 2 .9 2 2s-.9 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-2-1.46V18H6V6h12v4.54z"/></svg>
+          {{ if eq $lang "fr" }}Acheter vos billets{{ else }}Buy Tickets{{ end }}
+        </a>
+      {{ else }}
+        <span class="btn-billets btn-billets--soon">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          {{ if eq $lang "fr" }}Billets bientôt disponibles{{ else }}Tickets Coming Soon{{ end }}
+        </span>
+      {{ end }}
+    </div>
+  </div>
+</article>
+

@@ -1,0 +1,447 @@
+// ====================================================================
+// ÉVÉNEMENTS — Grille de cartes et page détail
+// ====================================================================
+
+// ── Page liste ───────────────────────────────────────────────────────
+
+.ev-page-intro {
+  text-align: center;
+  padding: 1rem 0 2.5rem;
+
+  p {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    max-width: 660px;
+    margin: 0 auto;
+  }
+}
+
+.ev-section-label {
+  font-family: var(--condensed-font-family);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--primary-600);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gray-300);
+  display: block;
+}
+
+.ev-vide {
+  text-align: center;
+  color: var(--gray-700);
+  font-style: italic;
+  padding: 2.5rem 1rem;
+  background: var(--gray-200);
+  border-radius: 10px;
+  margin-bottom: 2.5rem;
+}
+
+// Grid of cards
+.ev-grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.ev-separateur-passes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0 1.5rem;
+  color: var(--gray-700);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-300);
+  }
+}
+
+// ── Event card ────────────────────────────────────────────────────────
+
+.ev-carte {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 3px 8px rgba(0, 0, 0, 0.07);
+  }
+
+  &--passe {
+    opacity: 0.68;
+    filter: grayscale(20%);
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Card header — gradient
+.ev-carte-entete {
+  background: linear-gradient(145deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  padding: 1.4rem 1.5rem 1.25rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+}
+
+// Date badge
+.ev-date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem 0.3rem;
+  min-width: 3.2rem;
+  min-height: 4.4rem; // hauteur fixe → toutes les bulles identiques
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  line-height: 1;
+}
+
+.ev-date-mois {
+  font-family: var(--condensed-font-family);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-600);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ev-date-jour {
+  font-family: var(--condensed-font-family);
+  font-size: 1.55rem; // taille unique pour 1 jour ET pour "27–28"
+  font-weight: 700;
+  color: var(--primary-800);
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.ev-date-annee {
+  font-size: 0.6rem;
+  color: var(--gray-700);
+  margin-top: 2px;
+}
+
+// Badge multi-jour : min-width élargi pour "JUIN–JUIL" ou "27–28"
+.ev-date-badge--multi {
+  min-width: 4rem;
+
+  .ev-date-mois {
+    letter-spacing: 0.5px;
+  }
+}
+
+// Card title
+.ev-carte-titre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+// Location line
+.ev-carte-lieu {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  svg { flex-shrink: 0; }
+}
+
+// Card body
+.ev-carte-corps {
+  padding: 1.2rem 1.5rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ev-carte-desc {
+  font-size: 0.88rem;
+  color: var(--gray-800);
+  line-height: 1.6;
+  margin: 0 0 0.85rem;
+  flex: 1;
+}
+
+.ev-carte-prix {
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+  color: var(--gray-800);
+
+  .ev-prix-label {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+}
+
+.ev-carte-action {
+  margin-top: auto;
+}
+
+// ── Ticket button ─────────────────────────────────────────────────────
+
+.btn-billets {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.3rem;
+  border-radius: 50px;
+  background: var(--primary-700);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none !important;
+  letter-spacing: 0.3px;
+  transition: background 0.18s ease, transform 0.12s ease;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: var(--primary-800);
+    color: #fff !important;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &--soon {
+    background: var(--gray-600);
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  &--gratuit {
+    background: var(--primary-600);
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.9;
+
+    &:hover,
+    &:focus {
+      background: var(--primary-600);
+      transform: none;
+    }
+  }
+
+  &--passe {
+    background: var(--gray-600);
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &--hero {
+    font-size: 1.05rem;
+    padding: 0.85rem 2.2rem;
+    width: auto;
+    display: inline-flex;
+    margin-top: 1.5rem;
+    background: #fff;
+    color: var(--primary-800) !important;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--primary-800) !important;
+      transform: scale(1.03);
+    }
+  }
+}
+
+// ── Programme details (collapsible) ──────────────────────────────────
+
+.ev-programme-details {
+  margin: 0.5rem 0 0.85rem;
+  border-top: 1px solid var(--gray-300);
+  padding-top: 0.65rem;
+}
+
+.ev-programme-toggle {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  user-select: none;
+  transition: color 0.15s;
+
+  &::-webkit-details-marker { display: none; }
+
+  svg {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: var(--primary-800);
+  }
+}
+
+.ev-programme-details[open] .ev-programme-toggle svg {
+  transform: rotate(90deg);
+}
+
+.ev-programme-details[open] .ev-programme-toggle {
+  color: var(--primary-700);
+}
+
+.ev-programme-content {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--gray-800);
+  line-height: 1.55;
+
+  h2 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0.7rem 0 0.3rem;
+    color: var(--primary-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  h3 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin: 0.55rem 0 0.25rem;
+    color: var(--gray-800);
+    font-style: italic;
+  }
+
+  p { margin: 0 0 0.4rem; }
+
+  ul {
+    padding-left: 1.1rem;
+    margin: 0.25rem 0 0.4rem;
+  }
+
+  li { margin-bottom: 0.2rem; }
+
+  strong { color: var(--primary-700); }
+
+  a {
+    color: var(--primary-600);
+    &:hover { color: var(--primary-800); }
+  }
+}
+
+// ── Single event page ─────────────────────────────────────────────────
+
+.ev-hero {
+  background: linear-gradient(145deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  color: #fff;
+  padding: 2.5rem 2rem 2.75rem;
+  border-radius: 14px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+}
+
+.ev-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.ev-hero h1 {
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.ev-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}
+
+.ev-hero-nav {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+
+    &:hover { color: #fff; }
+  }
+}
+
+.ev-contenu {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}

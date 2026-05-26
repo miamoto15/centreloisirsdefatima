@@ -1,9 +1,8 @@
 ---
 title: "2026 Programming"
-description: "Upcoming activities page for the Fatima Community Center."
+description: "Shows, festivals and community activities at the Centre des Loisirs de Fatima — full lineup for the Îles-de-la-Madeleine."
 translationKey: "upcoming-activities"
 slug: "2026-programming"
-showHeader: false
+layout: "programmation"
+showHeader: true
 ---
-{{< responsive-img src="img\Site-Anse-aux-baleiniers.png" alt="Description" >}}
-Welcome to the upcoming activities page of the Fatima Community Center.
