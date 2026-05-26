@@ -1,0 +1,14 @@
+{{/*
+  Shortcode prize-grid :
+  Conteneur en grille pour les shortcodes prize-card.
+
+  Utilisation :
+  {{< prize-grid >}}
+    {{< prize-card percent="30 %" label="Billet gagnant" desc="Description" >}}
+    {{< prize-card percent="25 %" label="Gros lot" desc="Description" jackpot=true >}}
+    {{< prize-card percent="45 %" label="Comité" desc="Description" >}}
+  {{< /prize-grid >}}
+*/}}
+<div class="joker-prize-grid">
+  {{ .Inner }}
+</div>

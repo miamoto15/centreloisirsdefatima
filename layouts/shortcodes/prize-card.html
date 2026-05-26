@@ -1,0 +1,25 @@
+{{/*
+  Shortcode prize-card :
+  Carte visuelle pour afficher une part de la répartition des mises.
+  À utiliser à l'intérieur d'un shortcode {{< prize-grid >}}.
+
+  Paramètres :
+  - percent : pourcentage affiché en grand (ex : "30 %")
+  - label   : nom de la part (ex : "Billet gagnant")
+  - desc    : courte description
+  - jackpot : true pour appliquer le style gros lot (couleur dorée), défaut false
+
+  Utilisation :
+  {{< prize-card percent="30 %" label="Billet gagnant" desc="Remis au détenteur du billet tiré au sort" >}}
+*/}}
+
+{{- $percent := .Get "percent" -}}
+{{- $label   := .Get "label" -}}
+{{- $desc    := .Get "desc" -}}
+{{- $jackpot := .Get "jackpot" | default false -}}
+
+<div class="joker-prize-card{{ if $jackpot }} joker-prize-card--jackpot{{ end }}">
+  <div class="joker-prize-percent">{{ $percent }}</div>
+  <div class="joker-prize-label">{{ $label }}</div>
+  <div class="joker-prize-desc">{{ $desc }}</div>
+</div>

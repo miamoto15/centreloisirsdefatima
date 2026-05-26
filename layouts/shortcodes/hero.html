@@ -1,0 +1,34 @@
+{{/*
+  Shortcode hero :
+  Affiche une section hero en deux colonnes : contenu markdown à gauche, image à droite.
+
+  Paramètres :
+  - img     : chemin de l'image (depuis assets/)
+  - alt     : texte alternatif de l'image
+  - imgside : côté de l'image, "left" ou "right" (défaut : "right")
+
+  Utilisation :
+  {{% hero img="img/Logo-joker.jpg" alt="Logo du Joker" %}}
+  ## Titre de la page
+  Courte description d'introduction.
+  {{% /hero %}}
+*/}}
+
+{{- $img     := .Get "img" -}}
+{{- $alt     := .Get "alt" | default "" -}}
+{{- $imgside := .Get "imgside" | default "right" -}}
+{{- $imgRes  := resources.Get $img -}}
+
+<div class="hero-section{{ if eq $imgside "left" }} hero-section--img-left{{ end }}">
+  <div class="hero-section__content">
+    {{ .Inner }}
+  </div>
+  <div class="hero-section__img">
+    {{- if $imgRes -}}
+      {{- $webp := $imgRes.Process "webp" -}}
+      <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+    {{- else -}}
+      <!-- Image introuvable : {{ $img }} (vérifier qu'elle est dans assets/) -->
+    {{- end -}}
+  </div>
+</div>

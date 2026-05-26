@@ -68,3 +68,113 @@
   align-items: center;
   gap: 1rem;
 }
+
+// ── Page Comment Jouer ────────────────────────────────────────────────
+
+// Hero 2 colonnes : contenu à gauche, image à droite
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1rem 0 2rem;
+
+  &--img-left {
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    flex: 1;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__img {
+    flex: 0 0 30%;
+    max-width: 30%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+    }
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+
+    &__content h2 {
+      font-size: clamp(24px, 5.5vw, 26px);
+    }
+
+    &__img {
+      flex: unset;
+      max-width: 55%;
+      margin: 0 auto;
+    }
+  }
+}
+
+// Grille de répartition des mises
+.joker-prize-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 1.5rem 0;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.joker-prize-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #03856f;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+
+  &--jackpot {
+    border-top-color: #f59e0b;
+    background: #fffbeb;
+
+    .joker-prize-percent {
+      color: #b45309;
+    }
+  }
+}
+
+// Justification du texte sur les pages Joker
+.joker {
+  article.content p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+.joker-prize-percent {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #03856f;
+  line-height: 1.1;
+}
+
+.joker-prize-label {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 0.3rem;
+}
+
+.joker-prize-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.2rem;
+}
