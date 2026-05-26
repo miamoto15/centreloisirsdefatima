@@ -1,0 +1,23 @@
+﻿{{/*
+  Shortcode step-card :
+  Carte d'étape numérotée pour les processus en plusieurs étapes.
+
+  Paramètres :
+  - num     : numéro de l'étape (1, 2, 3…)
+  - icon    : emoji ou icône
+  - title   : titre de l'étape
+  - warning : "true" pour le style avertissement (fond jaune)
+*/}}
+
+{{- $num     := .Get "num" -}}
+{{- $icon    := .Get "icon" -}}
+{{- $title   := .Get "title" -}}
+{{- $warning := .Get "warning" | default "false" -}}
+
+<div class="step-card{{ if eq $warning "true" }} step-card--warning{{ end }}">
+  <div class="step-card__badge">{{ $num }}</div>
+  <div class="step-card__content">
+    <p class="step-card__title">{{ $icon }} {{ $title }}</p>
+    <div class="step-card__body">{{ .Inner | markdownify }}</div>
+  </div>
+</div>

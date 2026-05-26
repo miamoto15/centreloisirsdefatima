@@ -236,6 +236,65 @@
   }
 }
 
+// ── Étapes (Comment jouer) ─────────────────────────────────────────────
+
+.step-card {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #03856f;
+  margin-bottom: 0.9rem;
+
+  &__badge {
+    flex: 0 0 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: #03856f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 0.15rem;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.45rem;
+  }
+
+  &__body {
+    font-size: 0.95rem;
+    color: #374151;
+
+    > :first-child { margin-top: 0; }
+    > :last-child  { margin-bottom: 0; }
+
+    strong { color: #111; }
+  }
+
+  &--warning {
+    border-left-color: #d97706;
+    background: #fffbeb;
+
+    .step-card__badge {
+      background: #d97706;
+    }
+  }
+}
+
 // Grille des commerces participants
 .store-grid {
   display: grid;
