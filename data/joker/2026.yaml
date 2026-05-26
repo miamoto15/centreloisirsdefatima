@@ -1,0 +1,52 @@
+# Gagnants du Joker — 2026
+# ──────────────────────────────────────────────
+# Ajouter chaque nouveau gagnant en HAUT de la liste.
+#
+# Champs obligatoires:
+#   nom              : Nom complet du gagnant
+#   tirage           : Numéro du tirage (1, 2, 3…)
+#   date             : Date du tirage (AAAA-MM-JJ)
+#   cartes_restantes : Nombre de cartes restantes
+#   carte            : Carte tirée
+#   gain_total       : Montant total gagné (nombre sans espaces ni $)
+#
+# Champs optionnels:
+#   groupe           : Nombre de membres du groupe (omettre si solo)
+#   gain_par_personne: Gain par personne si groupe (nombre)
+#   youtube          : Identifiant de la vidéo YouTube
+
+- nom: "Marielle Chevarie"
+  groupe: 5
+  tirage: 3
+  date: "2026-01-28"
+  cartes_restantes: 32
+  carte: "Dame de pique"
+  carte_rang: "D"
+  carte_suite: "pique"
+  gain_total: 9282.24
+  gain_par_personne: 1856.24
+  youtube: "52tpY3gK-M4"
+
+- nom: "Chantal Bourgeois"
+  groupe: 6
+  tirage: 2
+  date: "2026-01-21"
+  cartes_restantes: 33
+  carte: "4 de pique"
+  carte_rang: "4"
+  carte_suite: "pique"
+  gain_total: 9126.48
+  gain_par_personne: 1521.08
+  youtube: "DZ3W7f6GkWU"
+
+- nom: "Jeannot Cyr"
+  groupe: 5
+  tirage: 1
+  date: "2026-01-14"
+  cartes_restantes: 34
+  carte: "Dame de trèfle"
+  carte_rang: "D"
+  carte_suite: "trefle"
+  gain_total: 9168.72
+  gain_par_personne: 1833.74
+  youtube: "NRenffPB7M4"

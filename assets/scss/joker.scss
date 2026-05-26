@@ -1,0 +1,70 @@
+// ── Page Gagnants du Joker ────────────────────────────────────────────
+
+// Enveloppe pour empêcher l'étirement dans la cellule de tableau
+.carte-badge-wrap {
+  display: table;  // display:table sur un bloc = shrink-wrap fiable, aucune règle de thème ne l'écrase
+  margin-top: 1rem;
+}
+
+// Badge visuel d'une carte à jouer (proportions réelles ~63×88 mm → ratio 5:7)
+.carte-badge {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 126px;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.22);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1;
+  flex-shrink: 0;
+
+  &--rouge {
+    color: #c0001a;
+  }
+
+  &--noir {
+    color: #111;
+  }
+}
+
+// Rang + symbole en coin (haut-gauche et bas-droit retourné)
+.carte-coin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.1;
+
+  &--haut {
+    top: 6px;
+    left: 8px;
+  }
+
+  &--bas {
+    bottom: 6px;
+    right: 8px;
+    transform: rotate(180deg);
+  }
+}
+
+// Grand symbole central (positionné absolument)
+.carte-symbole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+// Colonne vidéo
+.gagnant-video-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
