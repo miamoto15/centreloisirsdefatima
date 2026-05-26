@@ -45,9 +45,9 @@
 
   {{ $suites := dict "pique" "♠" "coeur" "♥" "carreau" "♦" "trefle" "♣" }}
   {{ $rouges := slice "coeur" "carreau" }}
-  <div style="display:flex; align-items:stretch; margin-bottom:2rem; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.09);">
+  <div class="gagnant-card">
     {{/* Colonne gauche : texte centré verticalement */}}
-    <div style="flex:0 0 44%; display:flex; flex-direction:column; justify-content:center; padding:0px 24px; background:#ffffff; border-left:4px solid #03856f;">
+    <div class="gagnant-card__left">
       <p style="margin:0 0 0.75rem 0;">
         <strong style="font-size:1.1rem;">{{ $nom_complet }}</strong><br>
         <em>{{ $tirage_label }}</em>
@@ -68,7 +68,7 @@
       {{ end }}
     </div>
     {{/* Colonne droite : vidéo centrée verticalement */}}
-    <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:0px 24px; background:#f3f7f6;">
+    <div class="gagnant-card__right">
       {{ if .youtube }}
       {{ $titre  := cond (eq $lang "fr") "Regardez le tirage" "Watch the draw" }}
       {{ $ytTag  := printf `youtube_enhanced id="%s" title="%s" autoload="false"` .youtube $titre }}
