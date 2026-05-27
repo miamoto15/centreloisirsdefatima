@@ -2,6 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/guillaume-prince/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/guillaume-prince/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/guillaume-prince/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/richard-trahan/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/richard-trahan/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/richard-trahan/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/samuel-lefrancois/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/samuel-lefrancois/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/samuel-lefrancois/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/pierre-martin-poirier/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/pierre-martin-poirier/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/pierre-martin-poirier/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/janie-duclos/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/janie-duclos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/janie-duclos/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/francine-thorne/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/francine-thorne/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/francine-thorne/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/jacinthe-thorne/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/jacinthe-thorne/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/jacinthe-thorne/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/roger-chevarie/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/members/roger-chevarie/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/membres/roger-chevarie/"
+                />
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/</loc>
     <lastmod>2026-08-29T13:00:00-03:00</lastmod>
     <xhtml:link
@@ -165,7 +261,7 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/accessibilite/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/</loc>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuilles-couleurs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
@@ -174,7 +270,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuillets-couleurs/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuilles-couleurs/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/joker/gagnants/</loc>
@@ -213,16 +309,16 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/joker/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nos-equipes/</loc>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/conseil-administration/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/our-teams/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/contact/board-of-directors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nos-equipes/"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/contact/conseil-administration/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/contact/nous-joindre/</loc>
@@ -259,6 +355,18 @@
                 rel="alternate"
                 hreflang="fr-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/fr/evenements/programmation-2026/"
+                />
+  </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/projets/a-venir/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/projects/coming-soon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/projets/a-venir/"
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/fr/confidentialite/</loc>
