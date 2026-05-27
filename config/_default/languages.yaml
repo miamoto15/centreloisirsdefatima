@@ -99,7 +99,7 @@ fr:
         url: "/fr/contact/nous-joindre/"
         parent: "contact"
         weight: 1
-      - identifier: "nos-equipes"
+      - identifier: "conseil-administration"
         name: "Conseil d'administration"
         url: "/fr/contact/conseil-administration/"
         parent: "contact"
@@ -203,7 +203,7 @@ en:
         url: "/en/contact/contact-us/"
         parent: "contact"
         weight: 1
-      - identifier: "our-teams"
+      - identifier: "board-of-directors"
         name: "Board of Directors"
         url: "/en/contact/board-of-directors/"
         parent: "contact"

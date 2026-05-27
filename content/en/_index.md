@@ -102,7 +102,7 @@ Our volunteer team funds local initiatives, renovates spaces and strengthens com
 
   Come celebrate local culture, support your community and enjoy unforgettable evenings!
 
-  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Buy your tickets" >}}
+  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2?lang=en text="Buy your tickets" >}}
   {{% /cell %}}
 
   {{< cell align="center" valign="top" >}}

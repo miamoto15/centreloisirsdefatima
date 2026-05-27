@@ -59,17 +59,17 @@ Le **livret standard (7 feuilles)** est requis pour entrer. Sans livret, l'entr�
 
 ## 💰 Tarifs
 
-| Livret/Feuille                                        | Prix |
-|-------------------------------------------------------|------|
+| Livret/Feuille                                          | Prix |
+|---------------------------------------------------------|------|
 | Livret de 7 feuilles à 9 faces ***⚠ (minimum requis)*** | 12 $ |
-| Livret de 7 feuilles à 12 faces                       | 15 $ |
-| Livret de 7 feuilles à 15 faces                       | 18 $ |
-| Livret supplémentaire de 7 feuilles à 6 faces         | 6 $  |
-| Feuille du Bonanza                                    | 1 $  |
-| Feuille du Double-action (2 faces)                    | 4 $  |
-| Feuille pour le Tour cumulatif                        | 2 $  |
-| Feuille du gros lot                                   | 3 $  |
-| Moitié-moitié                                         | 1 $  |
+| Livret de 7 feuilles à 12 faces                         | 15 $ |
+| Livret de 7 feuilles à 15 faces                         | 18 $ |
+| Livret supplémentaire de 7 feuilles à 6 faces           | 6 $  |
+| Feuille du Bonanza                                      | 1 $  |
+| Feuille du Double-action (2 faces)                      | 4 $  |
+| Feuille pour le Tour cumulatif                          | 2 $  |
+| Feuille du gros lot                                     | 3 $  |
+| Moitié-moitié                                           | 1 $  |
 
 {{% callout type="warning" %}}
 ⚠ Achat obligatoire : Le livret standard à 12 $ (7 feuilles, 9 faces) est le minimum requis pour entrer. Aucune entrée sans livret.

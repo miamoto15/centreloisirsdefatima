@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ $isFr := eq .Site.Language.Lang "fr" }}
+
+  {{ $coordTitle    := cond $isFr "Coordonnées" "Coordinates" }}
+  {{ $visitTitle    := cond $isFr "Venez nous visiter" "Come visit us" }}
+  {{ $rentalTitle   := cond $isFr "Louer la salle" "Rent the Hall" }}
+  {{ $rentalDesc    := cond $isFr "Vous souhaitez réserver la salle du Centre des Loisirs de Fatima pour un événement privé ou communautaire ? Communiquez directement avec notre responsable de l'entretien :" "Interested in booking the Centre des Loisirs de Fatima hall for a private or community event? Contact our facilities manager directly:" }}
+  {{ $rentalRole    := cond $isFr "Responsable de l'entretien" "Facilities Manager" }}
+  {{ $imgAlt        := cond $isFr "Bâtiment - Anse aux baleiniers" "Building - Anse aux Baleiniers" }}
+
+  <div class="contact-container">
+    <div class="contact-columns">
+      <div class="contact-info">
+        <h2>{{ $coordTitle }}</h2>
+        <p>
+          146, chemin de l'Hôpital<br>
+          Fatima, G4T 2K3<br>
+          (Québec, Canada)<br>
+          <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
+        </p>
+      </div>
+      <div class="contact-image">
+        {{ $img := resources.Get "img/Bâtiment - Anse aux baleiniers.jpg" }}
+        {{ if $img }}
+          {{ $webp := $img.Process "webp" }}
+          <img src="{{ $webp.RelPermalink }}" alt="{{ $imgAlt }}" loading="lazy">
+        {{ end }}
+      </div>
+    </div>
+
+    <div aria-hidden="true" style="height:10px;"></div>
+
+    <h2>{{ $visitTitle }}</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.6582870352986!2d-61.89589742462337!3d47.418606000941914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b610af444d4b6a7%3A0x45d21fc401075072!2sL'Anse%20aux%20Baleiniers!5e0!3m2!1sfr!2sca!4v1769653966670!5m2!1sfr!2sca"
+      width="100%" height="300" allowfullscreen="" loading="lazy"
+      title="{{ $visitTitle }}">
+    </iframe>
+
+    <div aria-hidden="true" style="height:30px;"></div>
+
+    <div class="location-rental">
+      <h2>{{ $rentalTitle }}</h2>
+      <p>{{ $rentalDesc }}</p>
+      <p class="rental-contact">
+        <strong>Héliodore Lapierre</strong><br>
+        <em>{{ $rentalRole }}</em><br>
+        <a href="tel:+14189371749">418&#8209;937&#8209;1749</a>
+      </p>
+    </div>
+  </div>
+{{ end }}

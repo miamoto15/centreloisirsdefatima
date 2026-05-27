@@ -1,0 +1,265 @@
+{{ $isFr := eq .Site.Language.Lang "fr" }}
+
+{{/* ── Général ───────────────────────────────────────────────────── */}}
+{{ $lead := cond $isFr
+  "Le Centre des Loisirs de Fatima, c'est avant tout une communauté soudée. Nos événements sont rendus possibles grâce à des gens passionnés et à des partenaires engagés. Que vous souhaitiez offrir votre temps ou associer votre organisation à nos activités, il y a une place pour vous ici."
+  "The Fatima Community Center is built on a strong, engaged community. Our events are made possible by passionate people and committed partners. Whether you want to give your time or associate your organization with our activities, there is a place for you here." }}
+{{ $btnVolunteer  := cond $isFr "🙌 Devenir bénévole"    "🙌 Become a Volunteer" }}
+{{ $btnSponsor    := cond $isFr "🤝 Devenir commanditaire" "🤝 Become a Sponsor" }}
+{{ $requiredNote  := cond $isFr `Les champs marqués d'un <span aria-hidden="true">*</span><span class="sr-only">astérisque</span> sont obligatoires.`
+                                `Fields marked with <span aria-hidden="true">*</span><span class="sr-only">an asterisk</span> are required.` }}
+
+{{/* ── Section bénévolat ────────────────────────────────────────── */}}
+{{ $volTitle       := cond $isFr "🙌 Devenez bénévole"      "🙌 Become a Volunteer" }}
+{{ $volWhyTitle    := cond $isFr "Pourquoi donner de votre temps ?" "Why give your time?" }}
+{{ $volFormTitle   := cond $isFr "Formulaire de candidature — Bénévolat" "Volunteer Application Form" }}
+{{ $volSubject     := cond $isFr "Nouvelle candidature bénévole — Centre des Loisirs de Fatima" "New volunteer application — Fatima Community Center" }}
+
+{{ $volBenefits := cond $isFr
+  (slice
+    (slice "❤️" "Faire une vraie différence"       "Votre aide concrète soutient la culture et la vie de quartier. Chaque heure donnée compte.")
+    (slice "🎉" "Vivre les événements de l'intérieur" "Accès privilégié à nos spectacles, fêtes et activités — avant même le public !")
+    (slice "🤝" "Tisser des liens durables"          "Rejoignez une équipe chaleureuse et bâtissez des amitiés authentiques dans votre milieu.")
+    (slice "💪" "Développer vos compétences"         "Organisation, technique, animation, accueil — chaque bénévole apporte sa couleur unique."))
+  (slice
+    (slice "❤️" "Make a Real Difference"          "Your concrete help supports local culture and community life. Every hour you give matters.")
+    (slice "🎉" "Experience Events from the Inside" "Privileged access to our shows, celebrations, and activities — before the general public!")
+    (slice "🤝" "Build Lasting Connections"        "Join a warm, welcoming team and forge genuine friendships within your community.")
+    (slice "💪" "Develop Your Skills"              "Organization, technical work, entertainment, hospitality — every volunteer brings their unique colour.")) }}
+
+{{ $lFirstName    := cond $isFr "Prénom"          "First Name" }}
+{{ $lLastName     := cond $isFr "Nom"             "Last Name" }}
+{{ $lEmail        := cond $isFr "Adresse courriel" "Email Address" }}
+{{ $lPhone        := cond $isFr "Numéro de téléphone" "Phone Number" }}
+{{ $lAvail        := cond $isFr "Disponibilités générales" "General Availability" }}
+{{ $lInterests    := cond $isFr "Domaines d'intérêt" "Areas of Interest" }}
+{{ $lMessage      := cond $isFr "Message ou informations supplémentaires" "Message or Additional Information" }}
+{{ $pFirstName    := cond $isFr "Votre prénom"    "Your first name" }}
+{{ $pLastName     := cond $isFr "Votre nom de famille" "Your last name" }}
+{{ $pEmail        := cond $isFr "exemple@courriel.com" "example@email.com" }}
+{{ $pPhone        := "(418) 555-0000" }}
+{{ $pMessage      := cond $isFr "Parlez-nous de vous, de vos expériences passées ou de ce qui vous attire dans le bénévolat au Centre des Loisirs…" "Tell us about yourself, your past experience, or what draws you to volunteering at the Community Center…" }}
+{{ $optSelect     := cond $isFr "— Sélectionnez —" "— Select —" }}
+{{ $availOpts := cond $isFr
+  (slice (slice "fins-de-semaine" "Fins de semaine seulement") (slice "semaine" "En semaine seulement") (slice "flexible" "Flexible selon les événements") (slice "ete" "Période estivale seulement"))
+  (slice (slice "weekends" "Weekends only") (slice "weekdays" "Weekdays only") (slice "flexible" "Flexible depending on events") (slice "summer" "Summer season only")) }}
+{{ $interestOpts := cond $isFr
+  (slice (slice "Animation" "Animation &amp; divertissement") (slice "Organisation" "Organisation &amp; logistique") (slice "Technique" "Technique (son, lumières, scène)") (slice "Restauration" "Service alimentaire / cantine") (slice "Securite" "Sécurité &amp; premiers soins") (slice "Accueil" "Accueil &amp; billetterie") (slice "Autre" "Autre"))
+  (slice (slice "Entertainment" "Entertainment &amp; animation") (slice "Organization" "Organization &amp; logistics") (slice "Technical" "Technical (sound, lights, stage)") (slice "Food Service" "Food service / canteen") (slice "Security" "Security &amp; first aid") (slice "Hospitality" "Hospitality &amp; ticketing") (slice "Other" "Other")) }}
+{{ $volFieldName  := cond $isFr "prenom"  "first_name" }}
+{{ $volFieldLast  := cond $isFr "nom"     "last_name" }}
+{{ $volAvailName  := cond $isFr "disponibilite" "availability" }}
+{{ $volInterest   := cond $isFr "interet[]"     "interest[]" }}
+{{ $volIdPrefix   := cond $isFr "benv" "vol" }}
+{{ $volSubmit     := cond $isFr "Soumettre ma candidature" "Submit My Application" }}
+
+{{/* ── Section commandite ───────────────────────────────────────── */}}
+{{ $spTitle      := cond $isFr "🤝 Devenez commanditaire" "🤝 Become a Sponsor" }}
+{{ $spWhyTitle   := cond $isFr "Pourquoi nous soutenir ?" "Why support us?" }}
+{{ $spFormTitle  := cond $isFr "Formulaire de partenariat — Commandite" "Sponsorship Partnership Form" }}
+{{ $spSubject    := cond $isFr "Nouvelle demande de commandite — Centre des Loisirs de Fatima" "New sponsorship request — Fatima Community Center" }}
+
+{{ $spBenefits := cond $isFr
+  (slice
+    (slice "📣" "Visibilité publique"       "Logo et mentions lors de nos événements, affiches, bannières, réseaux sociaux et médias locaux.")
+    (slice "🏘️" "Ancrage dans la communauté" "Associez votre marque à des valeurs de rassemblement, de culture et de fierté madelinienne.")
+    (slice "💼" "Réseautage local"           "Rencontrez d'autres partenaires, entrepreneurs et acteurs du milieu lors de nos activités.")
+    (slice "🏆" "Reconnaissance officielle"  "Remerciements publics lors des cérémonies, mentions dans nos communications et sur notre site."))
+  (slice
+    (slice "📣" "Public Visibility"    "Logo and mentions at our events, posters, banners, social media, and local media coverage.")
+    (slice "🏘️" "Community Roots"      "Associate your brand with values of togetherness, culture, and local pride.")
+    (slice "💼" "Local Networking"     "Meet other partners, entrepreneurs, and community stakeholders at our events.")
+    (slice "🏆" "Official Recognition" "Public acknowledgements at ceremonies, thank-you mentions in our communications and on our website.")) }}
+
+{{ $lOrg         := cond $isFr "Organisation / Entreprise" "Organization / Business" }}
+{{ $lRep         := cond $isFr "Nom du représentant"       "Representative Name" }}
+{{ $lSpType      := cond $isFr "Type de commandite envisagé" "Type of Sponsorship" }}
+{{ $lBudget      := cond $isFr "Enveloppe approximative"   "Approximate Budget" }}
+{{ $lDesc        := cond $isFr "Description de votre offre de commandite" "Description of Your Sponsorship Offer" }}
+{{ $pOrg         := cond $isFr "Nom de votre organisation ou entreprise" "Name of your organization or business" }}
+{{ $pRep         := cond $isFr "Prénom et nom" "First and last name" }}
+{{ $pEmailSp     := cond $isFr "exemple@entreprise.com" "example@business.com" }}
+{{ $pDesc        := cond $isFr "Décrivez votre offre, les événements qui vous intéressent, ou toute autre information pertinente…" "Describe your offer, the events you're interested in, or any other relevant information…" }}
+{{ $optOptional  := cond $isFr "— Optionnel —" "— Optional —" }}
+{{ $spTypeOpts := cond $isFr
+  (slice (slice "Financiere" "Financière") (slice "Materielle" "Matérielle (équipement, produits)") (slice "Services" "En services") (slice "Combinee" "Combinée"))
+  (slice (slice "Financial" "Financial") (slice "Material" "Material (equipment, products)") (slice "In-Kind" "In-kind services") (slice "Combined" "Combined")) }}
+{{ $budgetOpts := cond $isFr
+  (slice (slice "moins-500" "Moins de 500 $") (slice "500-1000" "500 $ – 1 000 $") (slice "1000-2500" "1 000 $ – 2 500 $") (slice "2500-5000" "2 500 $ – 5 000 $") (slice "plus-5000" "Plus de 5 000 $"))
+  (slice (slice "under-500" "Under $500") (slice "500-1000" "$500 – $1,000") (slice "1000-2500" "$1,000 – $2,500") (slice "2500-5000" "$2,500 – $5,000") (slice "over-5000" "Over $5,000")) }}
+{{ $spOrgName   := cond $isFr "organisation" "organization" }}
+{{ $spRepName   := cond $isFr "representant"  "representative" }}
+{{ $spTypeName  := cond $isFr "type_commandite" "sponsorship_type" }}
+{{ $spIdPrefix  := cond $isFr "cmd" "sp" }}
+{{ $spSubmit    := cond $isFr "Envoyer ma demande" "Send My Request" }}
+{{ $lang        := .Site.Language.Lang }}
+
+{{/* ── Rendu ────────────────────────────────────────────────────── */}}
+<p class="candidature-lead">{{ $lead }}</p>
+
+<div class="candidature-anchors">
+  <a href="#{{ cond $isFr "benevoles" "volunteers" }}" class="button">{{ $btnVolunteer }}</a>
+  <a href="#{{ cond $isFr "commanditaires" "sponsors" }}" class="button secondary">{{ $btnSponsor }}</a>
+</div>
+
+<hr>
+
+<div id="{{ cond $isFr "benevoles" "volunteers" }}" class="candidature-section benevoles-section">
+
+  <h2>{{ $volTitle }}</h2>
+
+  <h3>{{ $volWhyTitle }}</h3>
+  <div class="benefits-grid">
+    {{ range $volBenefits }}
+    <div class="benefit-card">
+      <span class="benefit-icon">{{ index . 0 }}</span>
+      <div>
+        <h3>{{ index . 1 }}</h3>
+        <p>{{ index . 2 }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <h3>{{ $volFormTitle }}</h3>
+  <form class="candidature-form" action="https://formspree.io/f/mkoeqvlr" method="POST">
+    <input type="hidden" name="_subject" value="{{ $volSubject }}">
+    <input type="hidden" name="_language" value="{{ $lang }}">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+    <p class="required-note">{{ $requiredNote | safeHTML }}</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ $volIdPrefix }}-firstname">{{ $lFirstName }} <span aria-hidden="true">*</span></label>
+        <input type="text" id="{{ $volIdPrefix }}-firstname" name="{{ $volFieldName }}" required autocomplete="given-name" placeholder="{{ $pFirstName }}">
+      </div>
+      <div class="form-group">
+        <label for="{{ $volIdPrefix }}-lastname">{{ $lLastName }} <span aria-hidden="true">*</span></label>
+        <input type="text" id="{{ $volIdPrefix }}-lastname" name="{{ $volFieldLast }}" required autocomplete="family-name" placeholder="{{ $pLastName }}">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ $volIdPrefix }}-email">{{ $lEmail }} <span aria-hidden="true">*</span></label>
+        <input type="email" id="{{ $volIdPrefix }}-email" name="_replyto" required autocomplete="email" placeholder="{{ $pEmail }}">
+      </div>
+      <div class="form-group">
+        <label for="{{ $volIdPrefix }}-phone">{{ $lPhone }}</label>
+        <input type="tel" id="{{ $volIdPrefix }}-phone" name="{{ cond $isFr "telephone" "phone" }}" autocomplete="tel" placeholder="{{ $pPhone }}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ $volIdPrefix }}-avail">{{ $lAvail }}</label>
+      <select id="{{ $volIdPrefix }}-avail" name="{{ $volAvailName }}">
+        <option value="">{{ $optSelect }}</option>
+        {{ range $availOpts }}
+        <option value="{{ index . 0 }}">{{ index . 1 }}</option>
+        {{ end }}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <fieldset style="border:none;padding:0;margin:0">
+        <legend><span class="form-fieldset-legend">{{ $lInterests }}</span></legend>
+        <div class="checkboxes-group">
+          {{ range $interestOpts }}
+          <label><input type="checkbox" name="{{ $volInterest }}" value="{{ index . 0 }}"> {{ index . 1 | safeHTML }}</label>
+          {{ end }}
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ $volIdPrefix }}-message">{{ $lMessage }}</label>
+      <textarea id="{{ $volIdPrefix }}-message" name="message" placeholder="{{ $pMessage }}"></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">{{ $volSubmit }}</button>
+  </form>
+
+</div>
+
+<hr class="form-section-divider">
+
+<div id="{{ cond $isFr "commanditaires" "sponsors" }}" class="candidature-section commanditaires-section">
+
+  <h2>{{ $spTitle }}</h2>
+
+  <h3>{{ $spWhyTitle }}</h3>
+  <div class="benefits-grid">
+    {{ range $spBenefits }}
+    <div class="benefit-card">
+      <span class="benefit-icon">{{ index . 0 }}</span>
+      <div>
+        <h3>{{ index . 1 }}</h3>
+        <p>{{ index . 2 }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <h3>{{ $spFormTitle }}</h3>
+  <form class="candidature-form" action="https://formspree.io/f/mkoeqvlr" method="POST">
+    <input type="hidden" name="_subject" value="{{ $spSubject }}">
+    <input type="hidden" name="_language" value="{{ $lang }}">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+    <p class="required-note">{{ $requiredNote | safeHTML }}</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ $spIdPrefix }}-org">{{ $lOrg }} <span aria-hidden="true">*</span></label>
+        <input type="text" id="{{ $spIdPrefix }}-org" name="{{ $spOrgName }}" required placeholder="{{ $pOrg }}">
+      </div>
+      <div class="form-group">
+        <label for="{{ $spIdPrefix }}-rep">{{ $lRep }} <span aria-hidden="true">*</span></label>
+        <input type="text" id="{{ $spIdPrefix }}-rep" name="{{ $spRepName }}" required autocomplete="name" placeholder="{{ $pRep }}">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="{{ $spIdPrefix }}-email">{{ $lEmail }} <span aria-hidden="true">*</span></label>
+        <input type="email" id="{{ $spIdPrefix }}-email" name="_replyto" required autocomplete="email" placeholder="{{ $pEmailSp }}">
+      </div>
+      <div class="form-group">
+        <label for="{{ $spIdPrefix }}-phone">{{ $lPhone }}</label>
+        <input type="tel" id="{{ $spIdPrefix }}-phone" name="{{ cond $isFr "telephone" "phone" }}" autocomplete="tel" placeholder="{{ $pPhone }}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <fieldset style="border:none;padding:0;margin:0">
+        <legend><span class="form-fieldset-legend">{{ $lSpType }} <span aria-hidden="true">*</span></span></legend>
+        <div class="radios-group">
+          {{ $first := true }}
+          {{ range $spTypeOpts }}
+          <label><input type="radio" name="{{ $spTypeName }}" value="{{ index . 0 }}"{{ if $first }} required{{ end }}> {{ index . 1 }}</label>
+          {{ $first = false }}
+          {{ end }}
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ $spIdPrefix }}-budget">{{ $lBudget }}</label>
+      <select id="{{ $spIdPrefix }}-budget" name="budget">
+        <option value="">{{ $optOptional }}</option>
+        {{ range $budgetOpts }}
+        <option value="{{ index . 0 }}">{{ index . 1 }}</option>
+        {{ end }}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ $spIdPrefix }}-desc">{{ $lDesc }}</label>
+      <textarea id="{{ $spIdPrefix }}-desc" name="description" placeholder="{{ $pDesc }}"></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">{{ $spSubmit }}</button>
+  </form>
+
+</div>

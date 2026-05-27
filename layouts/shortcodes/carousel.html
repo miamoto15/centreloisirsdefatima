@@ -23,13 +23,13 @@
         {{ end }}
     </div>
     
-    <button class="carousel-btn carousel-prev" aria-label="Image précédente">
+    <button class="carousel-btn carousel-prev" aria-label="{{ if eq .Page.Language.Lang "en" }}Previous image{{ else }}Image précédente{{ end }}">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
     
-    <button class="carousel-btn carousel-next" aria-label="Image suivante">
+    <button class="carousel-btn carousel-next" aria-label="{{ if eq .Page.Language.Lang "en" }}Next image{{ else }}Image suivante{{ end }}">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -39,7 +39,7 @@
         {{ range $index, $_ := $images }}
             <button class="carousel-dot {{ if eq $index 0 }}active{{ end }}" 
                     data-slide="{{ $index }}" 
-                    aria-label="Aller à l'image {{ add $index 1 }}"></button>
+                    aria-label="{{ if eq $.Page.Language.Lang "en" }}Go to image {{ add $index 1 }}{{ else }}Aller à l'image {{ add $index 1 }}{{ end }}"></button>
         {{ end }}
     </div>
 </div>

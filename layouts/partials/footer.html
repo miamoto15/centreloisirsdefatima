@@ -103,7 +103,7 @@
         <hr class="footer-hr">
 
         <div class="copyright">
-            <p>Copyright &copy; 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés.</p>
+            <p>Copyright &copy; 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. {{ if eq $.Site.Language.Lang "en" }}All rights reserved.{{ else }}Tous droits réservés.{{ end }}</p>
             <p style="margin-top:0.3em; font-size:0.88em; opacity:0.8;">
                 {{ if eq $.Site.Language.Lang "en" }}
                     Website developed by <a href="mailto:miamoto15_github@outlook.com">Cédric Arseneault</a> · Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GPL-3.0</a>
@@ -128,7 +128,7 @@
         </div>
 
         <div class="footer__language-switcher" style="margin-top:1em; text-align:right;">
-            <nav aria-label="Sélection de langue">
+            <nav aria-label="{{ if eq $.Site.Language.Lang "en" }}Language selection{{ else }}Sélection de langue{{ end }}">
                 {{ range hugo.Sites }}
                     {{ if eq .Language.Lang $.Site.Language.Lang }}
                         {{ $translations := where $.Translations "Language.Lang" .Language.Lang }}
