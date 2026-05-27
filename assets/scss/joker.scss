@@ -132,6 +132,11 @@
     h2 {
       margin-top: 0;
     }
+
+    p {
+      text-align: justify;
+      hyphens: auto;
+    }
   }
 
   &__img {

@@ -1,32 +1,73 @@
----
+﻿---
 title: "Accueil"
 description: "Le Centre des Loisirs de Fatima, Îles-de-la-Madeleine, organise des événements communautaires, des activités pour tous et soutient des initiatives de charité locale. Rejoignez-nous pour participer à la vie active et solidaire de notre communauté !"
 translationKey: "home"
 showHeader: false
 ---
 
-{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Description" width=100% >}}
+{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Anse-aux-Baleiniers, Fatima" width=100% >}}
 
-{{< spacer 80 >}}
+{{< spacer 60 >}}
+
+{{% hero img="img/Baleine-Salle-3.png" alt="Salle du Centre des Loisirs de Fatima" %}}
 
 ## Centre des Loisirs de Fatima
 
-{{< grid cols=2 width="55%,45%" >}}
+Organisme communautaire au cœur de Fatima, nous rassemblons résidents et visiteurs autour d'activités récréatives, culturelles et sportives pour tous les âges — semaine après semaine, depuis des décennies.
 
-  {{% cell valign="middle" %}}
+Géré par une équipe de bénévoles passionnés, le Centre est bien plus qu'un lieu de loisirs : c'est un espace inclusif et vivant où se tissent des liens durables entre résidents et visiteurs.
 
-  Le Centre des Loisirs de Fatima est un organisme à but non lucratif (OBNL) qui joue un rôle central dans la vie communautaire de Fatima.  Grâce à une équipe engagée, il propose des activités sportives, culturelles et récréatives pour tous les âges.
+Que vous veniez pour le bingo du mardi, un grand spectacle estival ou simplement partager un bon moment en famille, vous trouverez toujours une raison de revenir.
 
-  Véritable moteur local, le Centre offre un espace inclusif et animé où résidents et visiteurs peuvent se rencontrer, s’amuser et créer des liens durables.
-  {{% /cell %}}
+{{% /hero %}}
 
-  {{< cell align="center" valign="middle" >}}
-  {{< responsive-img src="img/Baleine-Salle-3.png" alt="Description" width=60% radius="16px" >}}
-  {{< /cell >}}
+{{< spacer 40 >}}
 
-{{< /grid >}}
+## Ce que nous proposons
 
-{{< spacer 90 >}}
+{{< cards count=4 >}}
+{{< card >}}
+<span class="card-icon">🎱</span>
+
+#### Soirées Bingo
+
+Chaque **mardi soir**, rejoignez-nous pour une soirée conviviale : dix tours de jeu, des prix chaque semaine et une ambiance unique.
+
+[En savoir plus →](/fr/bingo/infos-reglements/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🃏</span>
+
+#### Loterie Joker
+
+Billets à **5 $** — tirage hebdomadaire avec un jackpot qui grossit chaque semaine jusqu'à ce que quelqu'un trouve le Joker.
+
+[Acheter un billet →](/fr/joker/points-de-vente/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🎉</span>
+
+#### Événements
+
+Spectacles, fêtes et rassemblements tout au long de l'année. Les recettes soutiennent nos projets communautaires et nos infrastructures.
+
+[Voir les événements →](/fr/evenements/programmation-2026/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🤝</span>
+
+#### Projets communautaires
+
+Notre équipe de bénévoles finance des initiatives locales, rénove des espaces et renforce les liens à Fatima et aux Îles.
+
+[Découvrir →](/fr/projets/a-venir/)
+{{< /card >}}
+{{< /cards >}}
+
+{{< spacer 60 >}}
 
 ## Un coin de paradis
 
@@ -40,55 +81,27 @@ showHeader: false
 
   ### Fatima, cœur vibrant des Îles
 
-  Situé sur l’Île Centrale, Fatima est l’un des villages les plus peuplés de l’archipel. Il offre une gamme complète de services : école primaire, commerces, épicerie, restaurants, coopérative, garderies, port, camping, et un accès privilégié à la plage.
+  Situé sur l'Île Centrale, Fatima est l'un des villages les plus peuplés de l'archipel : école, commerces, épicerie, restaurants, coopérative, garderies, port, camping et accès à la plage — tout y est.
 
-  ### L’Anse-aux-Baleiniers
+  ### L'Anse-aux-Baleiniers
 
-  Ce site emblématique est un lieu clé de la vie communautaire. Récemment réaménagé dans une approche éco-responsable, il accueille les festivités de la fête nationale et des spectacles en plein air, dont le populaire Grand Rassemblement en août, mais également des jeux pour enfants.
+  Site emblématique récemment réaménagé dans une approche éco-responsable. Il accueille la fête nationale, des spectacles en plein air — dont le populaire **Grand Rassemblement** en août — et des jeux pour enfants.
 
   {{% /cell %}}
 
 {{< /grid >}}
 
-{{< spacer 90 >}}
-
-{{< cards count=4 >}}
-{{< card >}}
-
-### Activités
-
-Le Centre des loisirs de Fatima est un lieu incontournable sur l'Île de Fatima, qui fait partie des Îles de la Madeleine. Ce centre joue un rôle essentiel dans la vie de la communauté locale, offrant des activités récréatives et sportives pour les résidents et les visiteurs de tous âges.
-{{< /card >}}
-{{< card >}}
-
-### Installations
-
-Le site dispose de diverses installations, entre autres une salle polyvalente pour des événements communautaires, divers commerces ( restaurant, bar, crèmerie, etc). Pour les enfants, ce site comprend également le parc du Barachois ou ont y retrouve plusieurs jeux extérieurs.
-{{< /card >}}
-{{< card >}}
-
-### Culture et communautaire
-
-En plus de ses activités récréatives, le Centre des loisirs de Fatima est aussi un lieu où se déroulent des événements culturels locaux. Il soutient des initiatives communautaires et favorise l'intégration sociale des différentes générations.
-{{< /card >}}
-{{< card >}}
-
-### Accès et environnement
-
-Le Centre des loisirs de Fatima offre un cadre naturel et paisible, idéal pour profiter du paysage, pratiquer des activités ou simplement se détendre. C’est aussi un point de départ pour découvrir les beautés de l’île et ses environs.
-{{< /card >}}
-{{< /cards >}}
-
-{{< spacer 90 >}}
+{{< spacer 60 >}}
 
 ## Événements
 
 {{< grid cols=2 width="55%,45%" >}}
 
   {{% cell valign="middle" %}}
-  Le Centre des loisirs de Fatima organise chaque année des spectacles et des événements culturels aux Iles de la Madeleine, dont les fonds récoltés sont utilisés pour financer l’entretien des locaux et le financement des activités. Grâce aux recettes générées, le centre contribue à la rénovation des infrastructures locales, à la préservation de l’environnement et à divers projets communautaires.
+  Chaque année, le Centre organise des spectacles et des événements culturels aux Îles-de-la-Madeleine. Les fonds récoltés financent l'entretien de nos locaux, nos activités et la rénovation de nos infrastructures.
 
-  Cette initiative permet non seulement de promouvoir la culture locale, mais aussi de garantir la durabilité et la qualité de vie sur les Îles, tout en rassemblant les habitants et visiteurs autour de valeurs de solidarité et de respect de l’environnement.
+  Venez célébrer la culture locale, soutenir votre communauté et vivre des soirées inoubliables !
+
   {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" >}}
   {{% /cell %}}
 
