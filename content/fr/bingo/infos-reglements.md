@@ -88,7 +88,7 @@ Le **livret standard (7 feuilles)** est requis pour entrer. Sans livret, l'entr�
 - Arrivez **30 min à l'avance** pour vous installer.
 - Achetez vos cartes, débrochez les et appliquez du ruban adhésif si désirez.
 - Plus de faces = plus de cartes = plus de chances.
-- Vous pouvez jouer sur plusieurs feuillets.
+- Vous pouvez jouer sur plusieurs feuilles.
 - N'hésitez pas à utiliser nos services de la cantine !
 {{< /card >}}
 
@@ -110,7 +110,7 @@ Le **livret standard (7 feuilles)** est requis pour entrer. Sans livret, l'entr�
 
 Chaque couleur correspond à un tour distinct avec ses propres règles et son prix.
 
-[Voir les feuillets & couleurs →](/fr/bingo/feuillets-couleurs/)
+[Voir les feuilles & couleurs →](/fr/bingo/feuilles-couleurs/)
 {{< /card >}}
 {{< /cards >}}
 
@@ -118,9 +118,7 @@ Chaque couleur correspond à un tour distinct avec ses propres règles et son pr
 
 ## 🍔 Cantine et services
 
-{{< grid cols=2 width="60%,40%" >}}
-
-{{% cell valign="middle" %}}
+{{< side-photo img="img/bingo/Cantine.png" alt="Cantine" >}}
 🥤 **Cantine sur place** *(prix affichés sur place)*
 
 &emsp;🍫 Chocolat  
@@ -131,13 +129,7 @@ Chaque couleur correspond à un tour distinct avec ses propres règles et son pr
 
 🚫 **Aucun alcool** vendu ni permis sur place.  
 🖍 **Marqueurs** vendus sur place — vous pouvez aussi apporter les vôtres.
-{{% /cell %}}
-
-{{< cell valign="middle" align="middle" >}}
-{{< responsive-img src="img/bingo/Cantine.png" alt="Cantine" width="90%" >}}
-{{< /cell >}}
-
-{{< /grid >}}
+{{< /side-photo >}}
 
 {{< spacer 30 >}}
 

@@ -1,0 +1,50 @@
+{{/*
+  Shortcode tour-card :
+  Carte visuelle pour un tour de bingo avec header coloré, texte et image.
+
+  Paramètres :
+  - num      : numéro du tour (ex: "1er tour") — optionnel pour les cartes spéciales
+  - title    : titre du tour (ex: "Bleu — Régulier")
+  - color    : couleur hex du header (ex: "#1565c0")
+  - prix     : montant du prix (ex: "150 $") — optionnel
+  - img      : chemin de l'image dans assets/ (ex: "img/bingo/1er tour - Bleu.png")
+  - alt      : texte alt de l'image
+  - special  : "true" pour afficher un badge "Optionnel"
+
+  Utilisation :
+  {{< tour-card num="1er tour" title="Bleu — Régulier" color="#1565c0" prix="150 $" img="img/bingo/1er tour - Bleu.png" alt="1er tour Bleu" >}}
+  Texte de description du tour.
+  {{< /tour-card >}}
+*/}}
+
+{{- $num     := .Get "num" -}}
+{{- $title   := .Get "title" -}}
+{{- $color   := .Get "color" | default "#555555" -}}
+{{- $prix    := .Get "prix" -}}
+{{- $img     := .Get "img" -}}
+{{- $alt     := .Get "alt" | default ($title | default "") -}}
+{{- $special   := .Get "special" | default "false" -}}
+{{- $imgwidth  := .Get "imgwidth" -}}
+
+{{- $imgRes := "" -}}
+{{- if $img -}}{{- $imgRes = resources.Get $img -}}{{- end -}}
+
+<div class="tour-card">
+  <div class="tour-card__header" style="background:{{ $color }};">
+    {{ if $num }}<span class="tour-card__num">{{ $num }}</span>{{ end }}
+    <span class="tour-card__title">{{ $title }}</span>
+    <span class="tour-card__chips">
+      {{ if eq $special "true" }}<span class="tour-card__chip tour-card__chip--opt">Optionnel</span>{{ end }}
+      {{ if $prix }}<span class="tour-card__chip tour-card__chip--prix">{{ $prix }}</span>{{ end }}
+    </span>
+  </div>
+  <div class="tour-card__body">
+    <div class="tour-card__text">{{ .Inner | markdownify }}</div>
+    {{ if $imgRes }}
+    <div class="tour-card__image"{{ if $imgwidth }} style="flex-basis:{{ $imgwidth }}; max-width:{{ $imgwidth }};"{{ end }}>
+      {{ $webp := $imgRes.Process "webp" }}
+      <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+    </div>
+    {{ end }}
+  </div>
+</div>

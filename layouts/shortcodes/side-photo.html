@@ -1,0 +1,28 @@
+{{/*
+  Shortcode side-photo :
+  Layout deux colonnes : carte de contenu à gauche, photo à droite (même hauteur).
+  Inspiré de interac-contact.
+
+  Paramètres :
+  - img  : chemin de l'image (depuis assets/)
+  - alt  : texte alternatif
+
+  Utilisation :
+  {{< side-photo img="img/bingo/Cantine.png" alt="Cantine" >}}
+  Contenu markdown...
+  {{< /side-photo >}}
+*/}}
+
+{{- $img    := .Get "img" -}}
+{{- $alt    := .Get "alt" | default "" -}}
+{{- $imgRes := resources.Get $img -}}
+
+<div class="side-photo-layout">
+  <div class="side-photo-card">{{ .Inner | markdownify }}</div>
+  {{- if $imgRes -}}
+  {{- $webp := $imgRes.Process "webp" -}}
+  <div class="side-photo-image">
+    <img src="{{ $webp.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+  </div>
+  {{- end -}}
+</div>
