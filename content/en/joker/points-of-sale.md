@@ -36,7 +36,6 @@ Only **residents of Quebec** can participate in the lottery.
 You can also buy your tickets directly from our official sellers:
 
 - Adélina Thorne
-- Aristide Longuépée
 - Claudette Leblanc
 - Héliodore Lapierre
 - Lucie Leblanc

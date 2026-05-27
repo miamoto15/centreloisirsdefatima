@@ -3,9 +3,11 @@ title: "Rules"
 description: "Rules for Joker at the Centre des Loisirs de Fatima."
 translationKey: "rules-joker"
 ---
-Welcome to the rules page of the Centre des Loisirs de Fatima.
 
-Printable version: [Rules](/static/documents/Règlement%20loterie%20Le%20Joker.pdf)
+{{< callout type="info" >}}
+📄 Printable version: [Rules](/documents/Règlement%20loterie%20Le%20Joker.pdf)  
+⚖️ Rules on lottery systems: [LégisQuébec](https://www.legisquebec.gouv.qc.ca/fr/document/rc/L-6,%20r.%2012.1%20/)
+{{< /callout >}}
 
 ## "Find the Joker" Draw
 

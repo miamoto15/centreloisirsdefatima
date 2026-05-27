@@ -3,8 +3,8 @@ title: "Akadie 2000 Reunion Show"
 date: 2026-08-01T20:30:00
 description: "Celebrate the richness of Acadian culture: infectious music, dance and warm encounters — a vibrant evening bursting with colour and tradition!"
 lieu: "Fatima"
-prix: ""
-billets_url: ""
+prix: "$35"
+billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=en"
 evenement: true
 translationKey: "spectacle-retrouvailles-akadie-2000"
 showHeader: false

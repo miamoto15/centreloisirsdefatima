@@ -3,8 +3,8 @@ title: "Little Whale Festival"
 date: 2026-07-11T11:00:00
 dateEnd: "2026-07-12"
 description: "Two magical days of fun, laughter and creativity for the whole family — dinosaur zones, shows, foam cannons, inflatables and so much more!"
-lieu: "Fatima"
-prix: "Free"
+lieu: "L'Anse-aux-Baleiniers, Fatima"
+prix: "$5"
 billets_url: ""
 evenement: true
 translationKey: "festival-baleineaux-2026"

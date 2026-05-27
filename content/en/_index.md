@@ -5,28 +5,69 @@ translationKey: "home"
 showHeader: false
 ---
 
-{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Description" width=100% >}}
+{{< responsive-img src="img/Site-Anse-aux-baleiniers.png" alt="Anse-aux-Baleiniers, Fatima" width=100% >}}
 
-{{< spacer 80 >}}
+{{< spacer 60 >}}
 
-## Fatima Community Center
+{{% hero img="img/Baleine-Salle-3.png" alt="Hall of the Centre des Loisirs de Fatima" %}}
 
-{{< grid cols=2 width="55%,45%" >}}
+## Centre des Loisirs de Fatima
 
-   {{% cell valign="middle" %}}
+A community organization at the heart of Fatima, we bring together residents and visitors through recreational, cultural and sports activities for all ages — week after week, for decades.
 
-   The Fatima Community Center, in the heart of Central Island of the Magdalen Islands, is a key place for community life. Thanks to a dedicated team, it offers sports, cultural, and recreational activities for all ages.
+Run by a team of passionate volunteers, the Centre is much more than a place for leisure: it is an inclusive and vibrant space where lasting bonds are formed between residents and visitors.
 
-   A true local engine, the Center provides an inclusive and lively space where residents and visitors can meet, have fun, and create lasting bonds.
-   {{% /cell %}}
+Whether you come for Tuesday bingo, a major summer show, or simply to share a good time with family, you will always find a reason to come back.
 
-   {{< cell align="center" valign="middle" >}}
-   {{< responsive-img src="img/Baleine-Salle-3.png" alt="Description" width=60% radius="16px" >}}
-   {{< /cell >}}
+{{% /hero %}}
 
-{{< /grid >}}
+{{< spacer 40 >}}
 
-{{< spacer 90 >}}
+## What we offer
+
+{{< cards count=4 >}}
+{{< card >}}
+<span class="card-icon">🎱</span>
+
+#### Bingo Evenings
+
+Every **Tuesday evening**, join us for a friendly gathering: ten rounds of play, prizes every week and a one-of-a-kind atmosphere.
+
+[Learn more →](/en/bingo/info-rules/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🃏</span>
+
+#### Joker Lottery
+
+Tickets at **$5** — weekly draw with a jackpot that grows every week until someone finds the Joker.
+
+[Buy a ticket →](/en/joker/points-of-sale/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🎉</span>
+
+#### Events
+
+Shows, celebrations and gatherings throughout the year. Proceeds support our community projects and infrastructure.
+
+[See events →](/en/events/2026-programming/)
+{{< /card >}}
+
+{{< card >}}
+<span class="card-icon">🤝</span>
+
+#### Community Projects
+
+Our volunteer team funds local initiatives, renovates spaces and strengthens community ties in Fatima and the Islands.
+
+[Discover →](/en/projects/coming-soon/)
+{{< /card >}}
+{{< /cards >}}
+
+{{< spacer 60 >}}
 
 ## A little paradise
 
@@ -38,67 +79,34 @@ showHeader: false
 
   {{% cell valign="middle" %}}
 
-### Fatima, the vibrant heart of the Islands
+  ### Fatima, vibrant heart of the Islands
 
-Located on Central Island, Fatima is one of the most populated villages of the archipelago. It offers a full range of services: elementary school, shops, grocery store, restaurants, cooperative, daycares, port, camping, and privileged access to the beach.
+  Located on Central Island, Fatima is one of the most populated villages of the archipelago: school, shops, grocery store, restaurants, cooperative, daycares, port, camping and beach access — everything is there.
 
-### L'Anse-aux-Baleiniers
+  ### L'Anse-aux-Baleiniers
 
-This emblematic site, recently redeveloped with an eco-friendly approach, hosts the national holiday festivities and outdoor shows, including the popular Grand Gathering in August, as well as playgrounds for children.
+  An iconic site recently redeveloped with an eco-friendly approach. It hosts the national holiday celebration, outdoor shows — including the popular **Grand Gathering** in August — and playgrounds for children.
 
   {{% /cell %}}
 
 {{< /grid >}}
 
-{{< spacer 90 >}}
-
-{{< cards count=4 >}}
-{{< card >}}
-
-### Activities
-
-The Fatima Community Center is a must-visit place on Fatima Island, part of the Magdalen Islands. This center plays an essential role in the local community, offering recreational and sports activities for residents and visitors of all ages.
-{{< /card >}}
-{{< card >}}
-
-### Facilities
-
-The site has various facilities, including a multipurpose room for community events, various businesses (restaurant, bar, ice cream shop, etc.). For children, the site also includes Barachois Park, where there are several outdoor games.
-{{< /card >}}
-{{< card >}}
-
-### Culture and Community
-
-In addition to its recreational activities, the Fatima Community Center is also a place where local cultural events take place. It supports community initiatives and promotes social integration across generations.
-{{< /card >}}
-{{< card >}}
-
-### Access and Environment
-
-The Fatima Community Center offers a natural and peaceful setting, ideal for enjoying the landscape, engaging in activities, or simply relaxing. It is also a starting point for discovering the island's beauty and its surroundings.
-{{< /card >}}
-{{< /cards >}}
-
-{{< spacer 90 >}}
+{{< spacer 60 >}}
 
 ## Events
 
 {{< grid cols=2 width="55%,45%" >}}
 
   {{% cell valign="middle" %}}
+  Every year, the Centre organizes shows and cultural events in the Magdalen Islands. Funds raised go towards maintaining our facilities, our activities and renovating our infrastructure.
 
-  The Fatima Community Center organizes shows and cultural events every year in the Magdalen Islands, with funds raised used to finance the maintenance of the facilities and activities. Thanks to the revenue generated, the center contributes to the renovation of local infrastructure, environmental preservation, and various community projects.
-
-  This initiative not only promotes local culture but also ensures sustainability and quality of life on the Islands, while bringing together residents and visitors around values of solidarity and respect for the environment.
+  Come celebrate local culture, support your community and enjoy unforgettable evenings!
 
   {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Buy your tickets" >}}
-
   {{% /cell %}}
 
   {{< cell align="center" valign="top" >}}
-
   {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.webp,img/carousel-evenements/Pieuvre.webp,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.png" interval="10" width="90%" radius="16px" >}}
-  
   {{< /cell >}}
 
-  {{< /grid >}}
+{{< /grid >}}

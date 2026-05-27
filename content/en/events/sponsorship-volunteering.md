@@ -3,7 +3,7 @@ title: "Sponsorship & Volunteering"
 description: "Become a volunteer or sponsor of the Fatima Community Center — together, let's make our community shine."
 translationKey: "sponsorship-volunteering"
 slug: "sponsorship-volunteering"
-showHeader: false
+showHeader: true
 ---
 <!-- markdownlint-disable -->
 
@@ -66,7 +66,7 @@ Our shows, celebrations, and activities wouldn't be possible without the volunte
   2. Create a new form and copy your form ID (e.g. xpzvwqab)
   3. Replace YOUR_VOLUNTEERS_ID below with that ID
 -->
-<form class="candidature-form" action="https://formspree.io/f/YOUR_VOLUNTEERS_ID" method="POST">
+<form class="candidature-form" action="https://formspree.io/f/mkoeqvlr" method="POST">
   <input type="hidden" name="_subject" value="New volunteer application — Fatima Community Center">
   <input type="hidden" name="_language" value="en">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
@@ -183,7 +183,7 @@ By sponsoring the Fatima Community Center, your organization partners with gathe
   2. Create a new form and copy your form ID (e.g. xpzvwqab)
   3. Replace YOUR_SPONSORS_ID below with that ID
 -->
-<form class="candidature-form" action="https://formspree.io/f/YOUR_SPONSORS_ID" method="POST">
+<form class="candidature-form" action="https://formspree.io/f/mkoeqvlr" method="POST">
   <input type="hidden" name="_subject" value="New sponsorship request — Fatima Community Center">
   <input type="hidden" name="_language" value="en">
   <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">

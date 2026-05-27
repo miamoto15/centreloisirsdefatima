@@ -3,7 +3,7 @@ title: "Le Grand rassemblement — 6th Edition"
 date: 2026-08-29T13:00:00
 description: "Nestled between sea and cliffs, Anse aux Baleiniers hosts a vibrant end-of-summer festival: silent auction, bonfires, fire sculptures and Éric Lapointe headlining!"
 lieu: "Anse aux Baleiniers, Fatima"
-prix: ""
+prix: "$55"
 billets_url: ""
 evenement: true
 translationKey: "grand-rassemblement-2026"
