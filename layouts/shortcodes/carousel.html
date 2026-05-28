@@ -1,4 +1,21 @@
-{{/* Utilise ce shortcode ainsi -> {{< carousel images="img/photo1.jpg,img/photo2.jpg,img/photo3.jpg" interval="30" width="80%" radius="10px" >}} */}}
+{{/*
+  Utilise ce shortcode ainsi :
+  {{< carousel images="img/photo1.jpg,img/photo2.jpg,img/photo3.jpg" interval="30" width="80%" radius="10px" >}}
+
+  Paramètres :
+    images   : liste de chemins d'images séparés par des virgules (depuis assets/)
+    interval : durée en secondes entre chaque diapo (défaut : 5)
+    width    : largeur max du carrousel, ex. "80%" ou "600px" (défaut : 100%)
+    radius   : arrondi des coins, ex. "12px" (défaut : aucun)
+
+  Dimensions recommandées pour les photos :
+    - Format idéal  : 16:9 (paysage)
+    - Taille cible  : 1200 × 675 px  ← recommandé
+    - Taille minimum: 800 × 450 px
+    - Formats       : JPG, PNG ou WebP
+    ⚠ Les photos carrées ou en portrait seront recadrées (haut/bas coupé)
+       car le carrousel affiche toujours en 16:9.
+*/}}
 
 {{ $images := split (.Get "images") "," }}
 {{ $interval := .Get "interval" | default "5" }}

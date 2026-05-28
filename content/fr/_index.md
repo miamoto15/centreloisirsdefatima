@@ -106,7 +106,7 @@ Notre équipe de bénévoles finance des initiatives locales, rénove des espace
   {{% /cell %}}
 
   {{< cell align="center" valign="top" >}}
-  {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.webp,img/carousel-evenements/Pieuvre.webp,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.png" interval="10" width="90%" radius="16px" >}}
+  {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.png,img/carousel-evenements/Pieuvre.webp,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.png" interval="10" width="90%" radius="16px" >}}
   {{< /cell >}}
 
 {{< /grid >}}
