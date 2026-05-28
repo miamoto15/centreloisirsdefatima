@@ -1,6 +1,6 @@
 ---
 title: "Spectacle retrouvailles Akadie 2000"
-date: 2026-08-01T20:30:00
+date: 2026-08-01
 description: "Venez célébrer la richesse et la chaleur de la culture acadienne : musique entraînante, danse, gastronomie et artistes passionnés — une soirée haute en couleur !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "35 $"
@@ -17,6 +17,6 @@ Que vous soyez acadien ou simplement curieux, venez vivre une soirée haute en c
 
 ## Programmation
 
-- **20h30** — 1re partie : spectacle à déterminer
-- **21h30** — 2e partie : [Lendemain de Veille](https://www.lendemaindeveille.com/)
-- **23h00** — 3e partie : Le Retour d'Akadie 2000
+- **20h30** — Gabriel Leblanc, Marc-Étienne Richard, Simon-Charles Cyr et Anthony Turbide
+- **21h30** — [Lendemain de Veille](https://www.lendemaindeveille.com/)
+- **23h00** — [Le Retour d'Akadie 2000](https://www.facebook.com/profile.php?id=100064985740296)

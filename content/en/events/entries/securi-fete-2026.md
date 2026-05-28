@@ -1,9 +1,9 @@
 ---
 title: "Sécuri-Fête — Canadian Forces Snowbirds"
-date: 2026-06-27T13:00:00
+date: 2026-06-27
 dateEnd: "2026-06-28"
-description: "Two spectacular days with the Canadian Forces Snowbirds: breathtaking aerial demonstrations, public safety exhibitors and family-friendly workshops!"
-lieu: "Fatima"
+description: "Two spectacular days with the Canadian Forces Snowbirds: breathtaking aerial demonstrations, public safety exhibitors and workshops for the whole family!"
+lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
 billets_url: ""
 evenement: true
@@ -16,16 +16,29 @@ On June 27 and 28, 2026, don't miss two spectacular days of safety demonstration
 
 A must-see for aviation enthusiasts, families and anyone who admires Canadian excellence!
 
-## Saturday, June 27 — 1:00 PM to 4:00 PM
+## Saturday, June 27, 2026 — 1:00 p.m. to 4:00 p.m.
 
-Public safety exhibitors including the Sûreté du Québec, fire department, ambulance service, Rangers and marine intervention teams.
+Several exhibitors working in public safety and emergency response will be present:
 
-- **1:00 PM** — Opening ceremony with special guests
-- **2:00 PM** — Snowbirds airshow
-- **3:00 PM** — Rangers parade and presentation of Madelinot members of the Canadian Armed Forces
+- Sûreté du Québec (Quebec Provincial Police)
+- Fire Department (Municipality of the Magdalen Islands)
+- Magdalen Islands Ambulance Service
+- Rangers
+- Marine Response Service
 
-## Sunday, June 28 — 1:00 PM to 4:00 PM
+**Event agenda :**
 
-Exhibitors return, plus themed workshops: drug and alcohol awareness, cybersecurity, fire safety and disaster cleanup.
+- **1:00 p.m.** — Official Ceremony (speeches: Mayor of the Magdalen Islands, Member of Parliament for the Magdalen Islands, Prime Minister of Canada, and Chief of the Defence Staff)
+- **2:00 p.m.** — Snowbirds Air Show
+- **3:00 p.m.** — Rangers Parade and presentation of Magdalen Islands members of the Canadian Armed Forces
 
-**Around 2:00 PM**, a special demonstration is planned featuring the arrival of the **CH-149** search and rescue helicopter.
+## Sunday, June 28, 2026 — 1:00 PM to 4:00 PM
+
+Exhibitors return, with themed workshops offered to the public:
+
+- Drug and alcohol awareness
+- Cybersecurity and online threats
+- Use of fire extinguishers and smoke detectors
+- Post-disaster cleanup
+
+**Around 2:00 PM**, a special demonstration is planned with the arrival of the Canadian Armed Forces' **CH-149** search and rescue helicopter.

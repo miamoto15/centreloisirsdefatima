@@ -1,6 +1,6 @@
 ---
 title: "Sécuri-Fête — Les Snowbirds canadiens"
-date: 2026-06-27T13:00:00
+date: 2026-06-27
 dateEnd: "2026-06-28"
 description: "Deux journées spectaculaires avec les Snowbirds des Forces canadiennes : démonstrations aériennes époustouflantes, exposants en sécurité publique et ateliers pour toute la famille !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"

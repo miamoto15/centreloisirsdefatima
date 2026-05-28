@@ -1,6 +1,6 @@
 ---
 title: "Le Grand rassemblement — 6e édition"
-date: 2026-08-29T13:00:00
+date: 2026-08-29
 description: "Nichée entre mer et falaises, l'Anse aux Baleiniers vous ouvre ses bras pour un festival vibrant de fin d'été : encan chinois, feux, sculptures et Éric Lapointe en tête d'affiche !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "55 $"
@@ -21,5 +21,5 @@ Que vous soyez Madelinot de souche ou visiteur de passage, ce festival est une i
 - **19h30** — Feu de joie avec « Sculpture la mer et le feu »
   *Sculpteurs : Jacques Aucoin, Raynald Chevarie, Jeannot Longuépée, Gilbert Chevarie, Laurent Déraspe, Annie Morin*
 - **21h00** — [Breen, Lebœuf / Offenback](https://www.youtube.com/watch?v=DNHR1BwuYIo)
-- **22h00** — MysterAct *(show de laser et feux d'artifices)*
+- **22h00** — [MysterAct - MZ Laser](https://www.mysteract.com/services/laser) et feux d'artifices
 - **22h15** — [Éric Lapointe](https://ericlapointe.com/)

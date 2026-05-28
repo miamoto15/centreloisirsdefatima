@@ -18,15 +18,15 @@ Profitez également de la présence de notre mascotte, toujours prête à faire 
 
 ## Samedi 11 juillet 2026 — 11h00 à 17h00
 
-- **11h00** — Spectacle [Atchoum](https://www.ppscanada.com/artistes/atchoum/)
-- **13h00** — Spectacle « Rufus le Vélocirator »
-- **13h30 à 17h** — Les mini-Paléontologues : zone thématique dinosaures avec bacs de fouilles archéologiques interactifs
+- **11h00** — [Atchoum](https://www.ppscanada.com/artistes/atchoum/)
+- **13h00** — [« Rufus le Vélocirator »](https://katomix.com/fr/nos-dinosaures#)
+- **13h30 à 17h** — [Les mini-Paléontologues](https://katomix.com/fr/za-mini-paleontologues) : zone thématique dinosaures avec bacs de fouilles archéologiques interactifs
 - Animation déambulatoire avec Hulky le tricératops, les bébés dinosaures et Rufuss le vélociraptor
 - Tatouage temporaire au « Airbrush » thématique dinosaures, canon à mousse et jeux gonflables
 
 ## Dimanche 12 juillet 2026 — 13h00 à 17h00
 
-- **13h00** — Spectacle « Rufus le Vélocirator »
-- **13h30 à 17h** — Les mini-Paléontologues (zone thématique complète sur les dinosaures) avec bacs de fouilles archéologiques interactifs
+- **13h00** — [« Rufus le Vélociraptor »](https://katomix.com/fr/nos-dinosaures#)
+- **13h30 à 17h** — [Les mini-Paléontologues](https://katomix.com/fr/za-mini-paleontologues) (zone thématique complète sur les dinosaures) avec bacs de fouilles archéologiques interactifs
 - Animation déambulatoire avec Hulky le tricératops, les bébés dinosaures et Rufuss le vélociraptor
 - Tatouage temporaire au « Airbrush » thématique dinosaures, canon à mousse et jeux gonflables

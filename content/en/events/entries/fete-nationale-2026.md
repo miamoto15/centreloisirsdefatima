@@ -1,6 +1,6 @@
 ---
 title: "Fête nationale Show in Fatima"
-date: 2026-05-24
+date: 2026-06-23
 description: "A festive evening under the stars with local artists, a bonfire and fireworks — come celebrate Québec's National Holiday!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
@@ -11,11 +11,13 @@ showHeader: false
 draft: false
 ---
 
-Join us for a warm and festive evening celebrating Québec's national holiday! Local artists will take the stage to make you sing, dance and feel the pride of home.
+Join us for a festive and heartwarming evening where music, good vibes, and local pride will be celebrated!
 
-Bring your chair, your flag and your biggest smile — and come share a memorable evening under the stars!
+On stage, discover a lineup of local artists who will have you singing, dancing, and grooving to the rhythm of our greatest hits from yesterday and today.
 
-## Programme
+Bring your chair, your flag, and your biggest smile… and come experience a moment of pride, togetherness, and fun under the stars!
+
+## Event agenda
 
 - **8:45 PM** — Opening ceremony
 - **9:00 PM** — Musical group "Bordasse"
