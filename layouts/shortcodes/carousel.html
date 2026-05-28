@@ -6,7 +6,7 @@
 {{ $radius := .Get "radius" | default "" }}
 {{ $width := .Get "width" | default "" }}
 
-<div class="carousel-container" id="{{ $carouselId }}"{{ if $width }} style="max-width:{{ $width }};"{{ end }}>
+<div class="carousel-container" id="{{ $carouselId }}" role="region" aria-label="{{ if eq .Page.Language.Lang "en" }}Image gallery{{ else }}Galerie d'images{{ end }}"{{ if $width }} style="max-width:{{ $width }};"{{ end }}>
     <div class="carousel-slides">
         {{ range $index, $imagePath := $images }}
             {{ $img := resources.Get (trim $imagePath " ") }}
@@ -37,11 +37,13 @@
     
     <div class="carousel-dots">
         {{ range $index, $_ := $images }}
-            <button class="carousel-dot {{ if eq $index 0 }}active{{ end }}" 
+    <button class="carousel-dot {{ if eq $index 0 }}active{{ end }}" 
                     data-slide="{{ $index }}" 
-                    aria-label="{{ if eq $.Page.Language.Lang "en" }}Go to image {{ add $index 1 }}{{ else }}Aller à l'image {{ add $index 1 }}{{ end }}"></button>
+                    aria-label="{{ if eq $.Page.Language.Lang "en" }}Go to image {{ add $index 1 }}{{ else }}Aller \u00e0 l'image {{ add $index 1 }}{{ end }}"
+                    {{ if eq $index 0 }}aria-current="true"{{ end }}></button>
         {{ end }}
     </div>
+    <div class="carousel-live sr-only" aria-live="polite" aria-atomic="true"></div>
 </div>
 
 <style>
@@ -235,12 +237,18 @@
         
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+            dots.forEach(dot => { dot.classList.remove('active'); dot.removeAttribute('aria-current'); });
             
             currentSlide = (index + slides.length) % slides.length;
             
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
+            dots[currentSlide].setAttribute('aria-current', 'true');
+
+            const liveRegion = carousel.querySelector('.carousel-live');
+            if (liveRegion) {
+                liveRegion.textContent = dots[currentSlide].getAttribute('aria-label') || '';
+            }
         }
         
         function nextSlide() {

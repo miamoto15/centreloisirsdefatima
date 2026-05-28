@@ -223,6 +223,7 @@
         hamburger.classList.toggle('is-active');
         mainMenu.classList.toggle('is-active');
         document.body.classList.toggle('has-menu-active');
+        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('is-active') ? 'true' : 'false');
     };
 
     const handleHeadingClick = (e) => {

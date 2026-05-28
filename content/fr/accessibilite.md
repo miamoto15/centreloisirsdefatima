@@ -27,13 +27,18 @@ Notre site intègre plusieurs fonctionnalités pour améliorer l'accessibilité 
 - **Lien "Aller au contenu"** : Permet de passer directement au contenu principal
 - **Navigation au clavier** : Toutes les fonctionnalités sont accessibles au clavier
 - **Indicateurs de focus** : Les éléments actifs sont clairement identifiés
+- **État du menu mobile** : Le bouton d'ouverture du menu indique son état ouvert/fermé (`aria-expanded`)
+- **Repères de navigation** : La barre de navigation principale est identifiée pour les lecteurs d'écran (`aria-label`)
 
 ### Contenu
 
 - **Titres descriptifs** : Hiérarchie logique des titres pour faciliter la navigation
-- **Textes alternatifs** : Descriptions pour les images informatives
+- **Textes alternatifs** : Descriptions pour les images informatives, incluant le rôle de la personne pour les photos de membres
 - **Liens explicites** : Les textes des liens décrivent clairement leur destination
 - **Contraste suffisant** : Texte et arrière-plans offrent un bon contraste
+- **Galeries d'images accessibles** : Les carrousels sont balisés comme régions (`role="region"`) avec annonces en temps réel pour les lecteurs d'écran (`aria-live`)
+- **Champs obligatoires** : Les formulaires indiquent clairement les champs requis (`aria-required`)
+- **Alertes et notes** : Les blocs d'information importants sont identifiés avec un rôle sémantique approprié (`role="alert"` ou `role="note"`)
 
 ### Technologie
 

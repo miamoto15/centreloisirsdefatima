@@ -4,6 +4,8 @@
 
 Ce document explique les améliorations d'accessibilité mises en place et comment maintenir l'accessibilité lors de l'ajout de nouveau contenu.
 
+> **Version anglaise :** [GUIDE-ACCESSIBILITY.md](GUIDE-ACCESSIBILITY.md)
+
 ## ✅ Améliorations implémentées
 
 ### 1. **Styles CSS d'accessibilité personnalisés**
@@ -24,6 +26,8 @@ Fichier : `assets/scss/accessibility-improvements.scss`
 - Changement de `<section id="content">` en `<main id="content">`
 - Utilisation appropriée de `<header>`, `<nav>`, `<article>`, `<footer>`
 - Liens "Aller au contenu" déjà présents
+- Titres `<h2>` sémantiques pour les sections d'événements (anciennement des `<span>` et `<div>` stylisés)
+- Titre `<h3>` pour le nom de chaque membre du CA (anciennement des `<p>`)
 
 ### 3. **Navigation au clavier**
 
@@ -36,6 +40,21 @@ Fichier : `assets/scss/accessibility-improvements.scss`
 - Ratios de contraste respectant WCAG 2.1 AA (minimum 4.5:1)
 - Liens soulignés pour une meilleure visibilité
 - Couleurs primaires ajustées pour un meilleur contraste
+
+### 5. **Attributs ARIA**
+
+- **Menu mobile** : le bouton hamburger expose son état ouvert/fermé via `aria-expanded` (mis à jour en JavaScript à chaque clic)
+- **Barre de navigation** : `<nav>` porte un `aria-label` bilingue ("Navigation principale" / "Main navigation") pour distinguer les repères de navigation
+- **Carrousel** : balisé comme région (`role="region"`) avec `aria-label` ; une zone `aria-live="polite"` annonce le diapo actif aux lecteurs d'écran ; le bouton de point actif reçoit `aria-current="true"`
+- **Blocs de mise en valeur (callout)** : les callouts de type `warning`/`danger` utilisent `role="alert"`, les autres `role="note"`
+- **Formulaires** : tous les champs obligatoires portent `aria-required="true"` en plus de l'attribut HTML `required`
+- **Textes alternatifs membres** : les photos du CA incluent le titre de la personne (ex. : `alt="Guillaume Prince, Président du CA"`)
+- **Liens vers billetterie** : `aria-label` indique que le lien s'ouvre dans un nouvel onglet
+
+### 6. **Bon usage de `aria-hidden`**
+
+- `aria-hidden="true"` est réservé aux éléments véritablement masqués des technologies d'assistance (icônes SVG décoratives, etc.)
+- Les `<div>` d'espacement purement visuels n'utilisent plus `aria-hidden` — l'espacement est géré par CSS
 
 ## 📝 Bonnes pratiques pour le contenu
 

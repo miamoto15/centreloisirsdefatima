@@ -1,2 +1,3 @@
 {{- $type := .Get "type" | default "info" -}}
-<div class="callout callout-{{ $type }}">{{ .Inner | markdownify }}</div>
+{{- $role := cond (or (eq $type "warning") (eq $type "danger")) "alert" "note" -}}
+<div class="callout callout-{{ $type }}" role="{{ $role }}">{{ .Inner | markdownify }}</div>

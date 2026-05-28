@@ -88,12 +88,13 @@
           {{ if eq $lang "fr" }}Événement passé{{ else }}Past Event{{ end }}
         </span>
       {{ else if $gratuit }}
-        <span class="btn-billets btn-billets--gratuit" aria-disabled="true">
+        <span class="btn-billets btn-billets--gratuit">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
           {{ if eq $lang "fr" }}Entrée gratuite{{ else }}Free Admission{{ end }}
         </span>
       {{ else if $ticketUrl }}
-        <a href="{{ $ticketUrl }}" class="btn-billets" target="_blank" rel="noopener noreferrer">
+        <a href="{{ $ticketUrl }}" class="btn-billets" target="_blank" rel="noopener noreferrer"
+           aria-label="{{ if eq $lang "fr" }}Acheter vos billets pour {{ $page.Title }} (nouvel onglet){{ else }}Buy tickets for {{ $page.Title }} (opens in new tab){{ end }}">
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4c1.1 0 2 .9 2 2s-.9 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2zm-2-1.46V18H6V6h12v4.54z"/></svg>
           {{ if eq $lang "fr" }}Acheter vos billets{{ else }}Buy Tickets{{ end }}
         </a>

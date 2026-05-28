@@ -132,18 +132,18 @@
     <div class="form-row">
       <div class="form-group">
         <label for="{{ $volIdPrefix }}-firstname">{{ $lFirstName }} <span aria-hidden="true">*</span></label>
-        <input type="text" id="{{ $volIdPrefix }}-firstname" name="{{ $volFieldName }}" required autocomplete="given-name" placeholder="{{ $pFirstName }}">
+        <input type="text" id="{{ $volIdPrefix }}-firstname" name="{{ $volFieldName }}" required aria-required="true" autocomplete="given-name" placeholder="{{ $pFirstName }}">
       </div>
       <div class="form-group">
         <label for="{{ $volIdPrefix }}-lastname">{{ $lLastName }} <span aria-hidden="true">*</span></label>
-        <input type="text" id="{{ $volIdPrefix }}-lastname" name="{{ $volFieldLast }}" required autocomplete="family-name" placeholder="{{ $pLastName }}">
+        <input type="text" id="{{ $volIdPrefix }}-lastname" name="{{ $volFieldLast }}" required aria-required="true" autocomplete="family-name" placeholder="{{ $pLastName }}">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="{{ $volIdPrefix }}-email">{{ $lEmail }} <span aria-hidden="true">*</span></label>
-        <input type="email" id="{{ $volIdPrefix }}-email" name="_replyto" required autocomplete="email" placeholder="{{ $pEmail }}">
+        <input type="email" id="{{ $volIdPrefix }}-email" name="_replyto" required aria-required="true" autocomplete="email" placeholder="{{ $pEmail }}">
       </div>
       <div class="form-group">
         <label for="{{ $volIdPrefix }}-phone">{{ $lPhone }}</label>
@@ -212,18 +212,18 @@
     <div class="form-row">
       <div class="form-group">
         <label for="{{ $spIdPrefix }}-org">{{ $lOrg }} <span aria-hidden="true">*</span></label>
-        <input type="text" id="{{ $spIdPrefix }}-org" name="{{ $spOrgName }}" required placeholder="{{ $pOrg }}">
+        <input type="text" id="{{ $spIdPrefix }}-org" name="{{ $spOrgName }}" required aria-required="true" placeholder="{{ $pOrg }}">
       </div>
       <div class="form-group">
         <label for="{{ $spIdPrefix }}-rep">{{ $lRep }} <span aria-hidden="true">*</span></label>
-        <input type="text" id="{{ $spIdPrefix }}-rep" name="{{ $spRepName }}" required autocomplete="name" placeholder="{{ $pRep }}">
+        <input type="text" id="{{ $spIdPrefix }}-rep" name="{{ $spRepName }}" required aria-required="true" autocomplete="name" placeholder="{{ $pRep }}">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="{{ $spIdPrefix }}-email">{{ $lEmail }} <span aria-hidden="true">*</span></label>
-        <input type="email" id="{{ $spIdPrefix }}-email" name="_replyto" required autocomplete="email" placeholder="{{ $pEmailSp }}">
+        <input type="email" id="{{ $spIdPrefix }}-email" name="_replyto" required aria-required="true" autocomplete="email" placeholder="{{ $pEmailSp }}">
       </div>
       <div class="form-group">
         <label for="{{ $spIdPrefix }}-phone">{{ $lPhone }}</label>
@@ -232,7 +232,7 @@
     </div>
 
     <div class="form-group">
-      <fieldset style="border:none;padding:0;margin:0">
+      <fieldset style="border:none;padding:0;margin:0" aria-required="true">
         <legend><span class="form-fieldset-legend">{{ $lSpType }} <span aria-hidden="true">*</span></span></legend>
         <div class="radios-group">
           {{ $first := true }}

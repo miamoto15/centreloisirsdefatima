@@ -27,13 +27,18 @@ Our website incorporates several features to improve accessibility:
 - **"Skip to content" link**: Allows users to jump directly to main content
 - **Keyboard navigation**: All features are accessible via keyboard
 - **Focus indicators**: Active elements are clearly identified
+- **Mobile menu state**: The menu toggle button announces its open/closed state (`aria-expanded`)
+- **Navigation landmarks**: The main navigation bar is identified for screen readers (`aria-label`)
 
 ### Content
 
 - **Descriptive headings**: Logical heading hierarchy for easier navigation
-- **Alternative text**: Descriptions for informative images
+- **Alternative text**: Descriptions for informative images, including the role of the person for member photos
 - **Explicit links**: Link text clearly describes their destination
 - **Sufficient contrast**: Text and backgrounds provide good contrast
+- **Accessible image galleries**: Carousels are marked as regions (`role="region"`) with real-time announcements for screen readers (`aria-live`)
+- **Required fields**: Forms clearly indicate required fields (`aria-required`)
+- **Alerts and notes**: Important information blocks are identified with an appropriate semantic role (`role="alert"` or `role="note"`)
 
 ### Technology
 
