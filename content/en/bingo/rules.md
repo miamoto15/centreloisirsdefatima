@@ -1,5 +1,5 @@
 ---
-title: "The Games"
+title: "Sheets & Colors"
 description: "Games page for the bingo at Centre des Loisirs de Fatima."
 translationKey: "rules-bingo"
 slug: "the-games"

@@ -146,6 +146,12 @@
     color: var(--primary-800);
 }
 
+/* Footer — centrer les titres de section et les liens */
+.footer__menu .column .top-menu-item,
+.footer__menu .column ul {
+    text-align: center;
+}
+
 .benefit-card p {
     margin: 0;
     font-size: 0.875rem;

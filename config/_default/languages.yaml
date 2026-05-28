@@ -174,7 +174,7 @@ en:
         parent: "bingo-en"
         weight: 1
       - identifier: "rules-bingo"
-        name: "The Games"
+        name: "Sheets & Colors"
         url: "/en/bingo/the-games/"
         parent: "bingo-en"
         weight: 2

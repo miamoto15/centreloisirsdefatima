@@ -23,7 +23,7 @@ La loterie: « TROUVEZ LE JOKER » propose des lots cumulatifs, c’est-à-dire 
 * Gros lot du Joker 25%
 * Comité des Loisirs de Fatima 45%
 
-Avec cette loterie, vous avez deux chances de gagner à chaque semaine. La vente des billets se terminera à 23h00 le lundi et le montant des lots respectifs sera connu avant le tirage. Un premier tirage parmi tous les billets vendus durant la semaine, se déroulera à chaque mardi 16h00 à "L'Éveil" (Coop de Fatima).
+Avec cette loterie, vous avez deux chances de gagner à chaque semaine. La vente des billets se terminera à 23h00 le dimanche et le montant des lots respectifs sera connu avant le tirage. Un premier tirage parmi tous les billets vendus durant la semaine, se déroulera à chaque mardi 16h00 à "L'Éveil" (Coop de Fatima).
 
 Le détenteur du billet pigé gagnera automatiquement 30 %. Si le détenteur du billet tiré n’est pas présent sur place, ce dernier sera alors contacté par téléphone (le numéro de téléphone inscrit sur son billet) et le détenteur du billet devra donner suite à l’appel avant mercredi 9h00 A.M., sinon nous devrons procéder au tirage d’un deuxième billet le mercredi A.M. au même endroit désigné pour le tirage.
 
