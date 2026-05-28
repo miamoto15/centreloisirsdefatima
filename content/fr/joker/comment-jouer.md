@@ -9,7 +9,7 @@ showHeader: false
 
 ## Envie de tenter votre chance ?
 
-Achetez un billet à **5 $**, tentez de trouver le Joker et remportez le gros lot — il grossit chaque semaine jusqu'à ce que quelqu'un le remporte ! Chaque mardi, un billet est tiré au sort : son détenteur vient piger une carte parmi **51 cartes… et un Joker**. Trouvez-le et la cagnotte est à vous. Sinon, la carte est retirée du jeu et vos chances augmentent la semaine suivante !
+Achetez un billet à **5 $**, tentez de trouver le Joker et remportez le gros lot — il grossit chaque semaine jusqu'à ce que quelqu'un le remporte ! Chaque mardi, un billet est tiré au sort : son détenteur vient piger une carte parmi **52 cartes… et un Joker**. Trouvez-le et la cagnotte est à vous. Sinon, la carte est retirée du jeu et vos chances augmentent la semaine suivante !
 {{% /hero %}}
 
 {{< spacer 20 >}}

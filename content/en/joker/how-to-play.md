@@ -8,7 +8,7 @@ showHeader: false
 {{% hero img="img/Logo-joker.jpg" alt="Joker Logo" %}}
 ## Want to try your luck?
 
-Buy a ticket for just **$5**, try to find the Joker, and win the grand prize — it grows every week until someone finds it! Every Tuesday, one ticket is drawn at random: the holder comes to pick a card from **51 cards… and a Joker**. Find it and the jackpot is yours. If not, the card is removed from the deck and your odds improve the following week!
+Buy a ticket for just **$5**, try to find the Joker, and win the grand prize — it grows every week until someone finds it! Every Tuesday, one ticket is drawn at random: the holder comes to pick a card from **52 cards… and a Joker**. Find it and the jackpot is yours. If not, the card is removed from the deck and your odds improve the following week!
 {{% /hero %}}
 
 {{< spacer 20 >}}
