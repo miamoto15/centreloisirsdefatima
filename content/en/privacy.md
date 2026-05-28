@@ -8,16 +8,41 @@ translationKey: "privacy"
 
 Centre des Loisirs de Fatima, Î.M., INC. is committed to protecting your privacy and complying with applicable privacy laws, including Quebec's Law 25 and the Personal Information Protection and Electronic Documents Act (PIPEDA).
 
-## No Personal Data Collection
+## Personal Information Collection
 
-**This website does not collect, record, or store any personal information from visitors.**
+Some pages on this website include forms through which you may voluntarily submit information to us, specifically the **Sponsorship & Volunteering** page.
 
-We do not collect:
+### Volunteer Application Form
 
-- Your name, email address, or phone number
-- Your IP address or any other identifying information
-- Your browsing preferences
-- Your location data
+We collect the following information:
+
+- **First and last name** (required)
+- **Email address** (required)
+- **Phone number** (optional)
+- General availability, areas of interest, message (optional)
+
+This information is used solely to review volunteer applications and communicate with interested individuals.
+
+### Sponsorship Form
+
+We collect the following information:
+
+- **Organization name and representative name** (required)
+- **Email address** (required)
+- **Phone number** (optional)
+- Sponsorship type, approximate budget, description of offer (optional)
+
+This information is used solely to review partnership requests and communicate with interested organizations.
+
+### Processing by Formspree
+
+Forms on this website are processed by **Formspree** ([formspree.io](https://formspree.io)), a secure third-party form transmission service. When you submit a form, your data passes through their servers before being forwarded to our email address. This data is not used for advertising or profiling purposes.
+
+For more information: [Formspree Privacy Policy](https://formspree.io/legal/privacy-policy/)
+
+### No Other Data Collection
+
+Outside of the forms described above, **this website does not collect, record, or store any other personal information from visitors.** We do not collect your IP address, browsing preferences, or location data.
 
 ## No Tracking Cookies
 
@@ -33,7 +58,7 @@ We do not use:
 
 ## External Links and Third-Party Sites
 
-This website may contain links or buttons leading to external websites (for example, for donation or registration forms). These third-party sites may have different practices regarding the collection and use of personal information. We recommend that you review their privacy policy before providing any personal information on these platforms. Centre des Loisirs de Fatima is not responsible for the practices of these external sites.
+This website may contain links or buttons leading to external websites (for example, for donation or registration forms). These third-party sites, including **Formspree** for processing our forms, may have different practices regarding the collection and use of personal information. We recommend that you review their privacy policy before providing any personal information on these platforms. Centre des Loisirs de Fatima is not responsible for the practices of these external sites.
 
 ## Website Hosting
 
@@ -54,5 +79,5 @@ We reserve the right to modify this privacy policy at any time. Any changes will
 
 ---
 
-**Last updated: January 27, 2026**  
+**Last updated: May 27, 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved.

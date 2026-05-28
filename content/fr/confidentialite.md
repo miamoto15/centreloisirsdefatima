@@ -8,16 +8,41 @@ translationKey: "privacy"
 
 Le Centre des Loisirs de Fatima, Î.M., INC. s'engage à protéger votre vie privée et à respecter les lois applicables en matière de protection des renseignements personnels, notamment la Loi 25 du Québec et la Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE).
 
-## Aucune collecte de données personnelles
+## Collecte de renseignements personnels
 
-**Ce site web ne collecte, n'enregistre et ne conserve aucun renseignement personnel des visiteurs.**
+Certaines pages de ce site contiennent des formulaires par lesquels vous pouvez nous transmettre volontairement des informations, notamment la page **Commandite & Bénévolat**.
 
-Nous ne recueillons pas :
+### Formulaire de bénévolat
 
-- Vos nom, adresse courriel ou numéro de téléphone
-- Votre adresse IP ou toute autre information d'identification
-- Vos préférences de navigation
-- Vos données de localisation
+Nous collectons les renseignements suivants :
+
+- **Prénom et nom** (obligatoires)
+- **Adresse courriel** (obligatoire)
+- **Numéro de téléphone** (optionnel)
+- Disponibilités générales, domaines d'intérêt, message (optionnels)
+
+Ces renseignements sont utilisés uniquement pour évaluer les candidatures bénévoles et communiquer avec les personnes intéressées.
+
+### Formulaire de commandite
+
+Nous collectons les renseignements suivants :
+
+- **Nom de l'organisation et du représentant** (obligatoires)
+- **Adresse courriel** (obligatoire)
+- **Numéro de téléphone** (optionnel)
+- Type de commandite, enveloppe budgétaire, description de l'offre (optionnels)
+
+Ces renseignements sont utilisés uniquement pour évaluer les demandes de partenariat et communiquer avec les organisations intéressées.
+
+### Traitement par Formspree
+
+Les formulaires de ce site sont traités par **Formspree** ([formspree.io](https://formspree.io)), un service tiers sécurisé de transmission de formulaires. Lorsque vous soumettez un formulaire, vos données transitent par leurs serveurs avant d'être transmises à notre adresse courriel. Ces données ne sont pas utilisées à des fins publicitaires ou de profilage.
+
+Pour plus d'informations : [Politique de confidentialité de Formspree](https://formspree.io/legal/privacy-policy/)
+
+### Aucune autre collecte de données
+
+En dehors des formulaires ci-dessus, **ce site ne collecte, n'enregistre et ne conserve aucun autre renseignement personnel des visiteurs.** Nous ne recueillons pas votre adresse IP, vos préférences de navigation ni vos données de localisation.
 
 ## Aucun cookie de suivi
 
@@ -33,7 +58,7 @@ Nous n'utilisons pas :
 
 ## Liens externes et sites tiers
 
-Le site peut contenir des liens ou des boutons menant vers des sites web externes (par exemple, pour des formulaires de dons ou d’inscription). Ces sites tiers peuvent avoir des pratiques différentes en matière de collecte et d’utilisation des renseignements personnels. Nous vous recommandons de consulter leur politique de confidentialité avant de fournir des renseignements personnels sur ces plateformes. Le Centre des Loisirs de Fatima n’est pas responsable des pratiques de ces sites externes.
+Le site peut contenir des liens ou des boutons menant vers des sites web externes (par exemple, pour des formulaires de dons ou d'inscription). Ces sites tiers, incluant **Formspree** pour le traitement de nos formulaires, peuvent avoir des pratiques différentes en matière de collecte et d'utilisation des renseignements personnels. Nous vous recommandons de consulter leur politique de confidentialité avant de fournir des renseignements personnels sur ces plateformes. Le Centre des Loisirs de Fatima n'est pas responsable des pratiques de ces sites externes.
 
 ## Hébergement du site
 
@@ -54,5 +79,5 @@ Nous nous réservons le droit de modifier cette politique de confidentialité à
 
 ---
 
-**Dernière mise à jour : 27 janvier 2026**  
+**Dernière mise à jour : 27 mai 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés.
