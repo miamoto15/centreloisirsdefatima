@@ -146,8 +146,10 @@ Vous pouvez aussi lancer manuellement le workflow depuis l’onglet “Actions�
 
 Ce projet est distribué sous licence **GNU Affero General Public License v3.0 (AGPL-3.0)**. Voir le fichier [LICENSE](LICENSE).
 
-Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.  
-Copyright © 2026 Cédric Arseneault
+| Titulaire | Périmètre |
+|---|---|
+| Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. | Contenu : textes, images, données, marque et logo |
+| Copyright © 2026 Cédric Arseneault | Code source : gabarits Hugo, feuilles de style, scripts et structure du site |
 
 Vous pouvez :
 

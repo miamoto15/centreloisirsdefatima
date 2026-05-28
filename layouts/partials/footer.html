@@ -102,29 +102,32 @@
 
         <hr class="footer-hr">
 
-        <div class="copyright">
-            <p>Copyright &copy; 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. {{ if eq $.Site.Language.Lang "en" }}All rights reserved.{{ else }}Tous droits réservés.{{ end }}</p>
-            <p style="margin-top:0.3em;">
-                {{ if eq $.Site.Language.Lang "en" }}
-                    Copyright &copy; 2026 <a href="mailto:miamoto15_github@outlook.com">Cédric Arseneault</a>, Website Developer · Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
-                {{ else }}
-                    Copyright &copy; 2026 <a href="mailto:miamoto15_github@outlook.com">Cédric Arseneault</a>, Développeur web · Distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
+        <div class="copyright" style="display:flex; flex-direction:row; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5em;">
+            <div style="text-align:left;">
+                <p style=>Copyright &copy; 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.</p>
+                <p style="margin-top:0;">
+                    {{ if eq $.Site.Language.Lang "en" }}
+                        Copyright &copy; 2026 Cédric Arseneault &mdash; Website Developer · <a href="mailto:miamoto15_github@outlook.com">miamoto15_github@outlook.com</a><br>
+                        Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
+                    {{ else }}
+                        Copyright &copy; 2026 Cédric Arseneault &mdash; Développeur web · <a href="mailto:miamoto15_github@outlook.com">miamoto15_github@outlook.com</a><br>
+                        Distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
+                    {{ end }}
+                </p>
+            </div>
+            <div style="text-align:right;" class="copyright__accessibility-git-wrapper">
+                {{ if .Site.Params.accessibility.help_url }}
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
+                    "Accessibility Statement" }}</a>
                 {{ end }}
-            </p>
-        </div>
 
-        <div class="copyright__accessibility-git-wrapper">
-            {{ if .Site.Params.accessibility.help_url }}
-            <a href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
-                "Accessibility Statement" }}</a>
-            {{ end }}
+                {{ if .Site.Params.privacy.help_url }}
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.privacy.help_url | absURL }}" class="nowrap">{{ .Site.Params.privacy.help_text | default
+                    "Privacy Policy" }}</a>
+                {{ end }}
 
-            {{ if .Site.Params.privacy.help_url }}
-            <a href="{{ strings.TrimPrefix "/" .Site.Params.privacy.help_url | absURL }}" class="nowrap">{{ .Site.Params.privacy.help_text | default
-                "Privacy Policy" }}</a>
-            {{ end }}
-
-            {{- partial "footer/github.html" . -}}
+                {{- partial "footer/github.html" . -}}
+            </div>
         </div>
 
         <div class="footer__language-switcher" style="margin-top:1em; text-align:right;">
