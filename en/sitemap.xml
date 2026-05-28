@@ -177,7 +177,7 @@
                 />
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/entries/fete-nationale-2026/</loc>
-    <lastmod>2026-05-24T00:00:00-03:00</lastmod>
+    <lastmod>2026-06-23T00:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-CA"
@@ -321,8 +321,6 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/"
                 />
   </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/photo-gallery/</loc>
-  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/points-of-sale/</loc>
     <xhtml:link
                 rel="alternate"
@@ -359,6 +357,18 @@
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/joker/rules/"
                 />
   </url><url>
+    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuilles-couleurs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/"
+                />
+  </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/events/sponsorship-volunteering/</loc>
     <xhtml:link
                 rel="alternate"
@@ -382,20 +392,6 @@
                 hreflang="en-CA"
                 href="https://miamoto15.github.io/centreloisirsdefatima/en/tags/"
                 />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/fr/bingo/feuilles-couleurs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://miamoto15.github.io/centreloisirsdefatima/en/bingo/the-games/"
-                />
-  </url><url>
-    <loc>https://miamoto15.github.io/centreloisirsdefatima/en/bingo/winners/</loc>
   </url><url>
     <loc>https://miamoto15.github.io/centreloisirsdefatima/en/joker/winners/</loc>
     <xhtml:link
