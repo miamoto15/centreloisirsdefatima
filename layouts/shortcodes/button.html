@@ -1,0 +1,8 @@
+{{ $style := .Get "style" }}
+{{ $center := .Get "center" }}
+{{ $btn := printf `<a href="%s" class="%s">%s</a>` (.Get "link") (cond (eq $style "secondary") "button secondary" (cond (eq $style "tertiary") "button tertiary" "button")) (.Get "text") }}
+{{ if eq $center "true" -}}
+<div style="text-align:center">{{ $btn | safeHTML }}</div>
+{{- else -}}
+{{ $btn | safeHTML }}
+{{- end }}

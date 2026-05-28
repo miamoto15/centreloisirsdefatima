@@ -99,10 +99,10 @@ Notre équipe de bénévoles finance des initiatives locales, rénove des espace
 
   {{% cell valign="middle" %}}
   Chaque année, le Centre organise des spectacles et des événements culturels aux Îles-de-la-Madeleine. Les fonds récoltés financent l'entretien de nos locaux, nos activités et la rénovation de nos infrastructures.
+  
+  Chaque soirée est aussi l'occasion de retrouver voisins et amis dans une atmosphère conviviale propre aux Îles. Venez célébrer la culture locale, soutenir votre communauté et vivre des soirées inoubliables !
 
-  Venez célébrer la culture locale, soutenir votre communauté et vivre des soirées inoubliables !
-
-  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" >}}
+  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2 text="Acheter vos billets" center="true" >}}
   {{% /cell %}}
 
   {{< cell align="center" valign="top" >}}

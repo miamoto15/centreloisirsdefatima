@@ -98,15 +98,15 @@ Our volunteer team funds local initiatives, renovates spaces and strengthens com
 {{< grid cols=2 width="55%,45%" >}}
 
   {{% cell valign="middle" %}}
-  Every year, the Centre organizes shows and cultural events in the Magdalen Islands. Funds raised go towards maintaining our facilities, our activities and renovating our infrastructure.
+  Every year, the Centre organizes shows and cultural events in the Magdalen Islands. Funds raised go towards maintaining our facilities, our activities and renovating our infrastructure. 
+  
+  Each evening is also a chance to reconnect with neighbours and friends in the warm, welcoming spirit of the Islands. Come celebrate local culture, support your community and enjoy unforgettable evenings!
 
-  Come celebrate local culture, support your community and enjoy unforgettable evenings!
-
-  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2?lang=en text="Buy your tickets" >}}
+  {{< button link=https://lepointdevente.com/centredesloisirsdefatima-2?lang=en text="Buy your tickets" center="true" >}}
   {{% /cell %}}
 
   {{< cell align="center" valign="top" >}}
-  {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.webp,img/carousel-evenements/Pieuvre.webp,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.png" interval="10" width="90%" radius="16px" >}}
+  {{< carousel images="img/carousel-evenements/Boum.jpg,img/carousel-evenements/Feu.png,img/carousel-evenements/Pieuvre.webp,img/carousel-evenements/Show.jpg,img/carousel-evenements/Site.png" interval="10" width="90%" radius="16px" >}}
   {{< /cell >}}
 
 {{< /grid >}}
