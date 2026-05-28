@@ -6,3 +6,5 @@ slug: "2026-programming"
 layout: "programmation"
 showHeader: true
 ---
+
+{{< responsive-img src="img/programmation/Visuel - Aéroport.png" alt="2026 event lineup poster — Centre des Loisirs de Fatima" width=100% >}}

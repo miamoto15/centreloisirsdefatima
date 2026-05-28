@@ -6,3 +6,5 @@ slug: "programmation-2026"
 layout: "programmation"
 showHeader: true
 ---
+
+{{< responsive-img src="img/programmation/Visuel - Aéroport.png" alt="Affiche de la programmation 2026 du Centre des Loisirs de Fatima" width=100% >}}

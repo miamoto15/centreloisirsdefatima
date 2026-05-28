@@ -7,6 +7,7 @@ slug: "infos-reglements"
 
 {{% callout type="info" %}}
 Bienvenue à la soirée bingo du Centre des Loisirs de Fatima !  
+
 Chaque mardi, notre salle s’anime d’une ambiance conviviale où plaisir, rires et suspense se rencontrent. Que vous soyez un habitué ou un nouveau joueur, vous serez accueilli dans une atmosphère chaleureuse avec dix tours de jeu et une communauté enthousiaste.  
 
 Venez vivre une soirée divertissante où chaque numéro fait monter l’excitation. Installez-vous confortablement, profitez de nos services sur place et laissez-vous porter par l’énergie du bingo. Que ce soit pour tenter votre chance ou simplement passer un bon moment, vous trouverez toujours une raison de revenir.

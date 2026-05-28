@@ -7,6 +7,7 @@ slug: "info-rules"
 
 {{% callout type="info" %}}
 Welcome to bingo night at the Centre des Loisirs de Fatima!  
+
 Every Tuesday, our hall comes alive with a friendly atmosphere where fun, laughter and suspense meet. Whether you're a regular or a first-time player, you'll be welcomed in a warm setting with ten rounds of play and an enthusiastic community.  
 
 Come enjoy an entertaining evening where every number raises the excitement. Get comfortable, take advantage of our on-site services, and let yourself be carried away by the energy of bingo. Whether you're here to try your luck or simply have a good time, you'll always find a reason to come back.
