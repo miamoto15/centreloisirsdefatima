@@ -1,7 +1,7 @@
 
 # Centre Des Loisirs De Fatima
 
-![Licence MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Licence AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)
 ![Statut du build](https://img.shields.io/github/actions/workflow/status/miamoto15/centreloisirsdefatima/deploy.yml?branch=main)
 ![Dernier commit](https://img.shields.io/github/last-commit/miamoto15/centreloisirsdefatima)
 ![Issues ouvertes](https://img.shields.io/github/issues/miamoto15/centreloisirsdefatima)
@@ -144,17 +144,20 @@ Vous pouvez aussi lancer manuellement le workflow depuis l’onglet “Actions�
 
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE).
+Ce projet est distribué sous licence **GNU Affero General Public License v3.0 (AGPL-3.0)**. Voir le fichier [LICENSE](LICENSE).
+
+Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.  
+Copyright © 2026 Cédric Arseneault
 
 Vous pouvez :
 
 - Utiliser, copier et modifier le code
-- Redistribuer, même à des fins commerciales
-- Intégrer le code dans d’autres projets
+- Redistribuer et déployer le code, y compris sur un serveur web
 
 Sous réserve de :
 
 - Conserver la mention du copyright et la licence dans toutes les copies
+- Publier vos modifications sous AGPL-3.0 si vous redistribuez ou déployez le code publiquement (y compris via réseau)
 
 Le fichier LICENSE reste la référence légale.
 

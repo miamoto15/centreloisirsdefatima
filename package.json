@@ -27,7 +27,7 @@
     "Anse aux Baleiniers"
   ],
   "author": "info@centreloisirsfatima.com",
-  "license": "ISC",
+  "license": "AGPL-3.0-only",
   "bugs": {
     "url": "https://github.com/cncf/dot-org-hugo-theme/issues"
   },
