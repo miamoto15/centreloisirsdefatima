@@ -51,15 +51,26 @@
 </head>
 <body>
     <div class="container">
-        <img src="/centreloisirsdefatima/Logo.png" alt="Centre des Loisirs de Fatima" class="logo" onerror="this.style.display='none'">
+        <img src="/Logo.png" alt="Centre des Loisirs de Fatima" class="logo" onerror="this.style.display='none'">
         <h1>404</h1>
         <h2>Page Not Found | Page non trouvée</h2>
         <p>We're sorry, but the page you were trying to view does not exist.</p>
         <p>Nous sommes désolés, mais la page que vous recherchez n'existe pas.</p>
         <p>
-            <a href="/centreloisirsdefatima/en/">Go to English homepage</a> | 
-            <a href="/centreloisirsdefatima/fr/">Aller à l'accueil français</a>
+            <a id="link-en" href="/en/">Go to English homepage</a> | 
+            <a id="link-fr" href="/fr/">Aller à l'accueil français</a>
         </p>
     </div>
+    <script>
+        // Détecte le basePath dynamiquement (fonctionne sur / et sur /sous-repertoire/)
+        var base = window.location.pathname.split('/').slice(0, -1).join('/');
+        // Remonte jusqu'à la racine du site en cherchant /en/ ou /fr/ dans l'URL
+        var path = window.location.pathname;
+        var root = '/';
+        var match = path.match(/^(\/[^/]+\/)(en|fr)\//);
+        if (match) root = match[1];
+        document.getElementById('link-en').href = root + 'en/';
+        document.getElementById('link-fr').href = root + 'fr/';
+    </script>
 </body>
 </html>
