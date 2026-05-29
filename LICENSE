@@ -1,6 +1,14 @@
 Copyright (C) 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.
 Copyright (C) 2026 Cédric Arseneault <miamoto15_github@outlook.com>
 
+IMPORTANT — PROPRIETARY CONTENT:
+
+This repository contains content (photos, images, logos, texts and event data)
+exclusively owned by Le Centre Des Loisirs de Fatima, Î.M., Inc. This content is
+NOT covered by the AGPL-3.0 license below. Anyone wishing to fork this repository
+to create their own website must remove all such content before any publication
+or redistribution.
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
 by the Free Software Foundation, either version 3 of the License, or

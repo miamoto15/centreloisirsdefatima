@@ -17,6 +17,8 @@ On stage, discover a lineup of local artists who will have you singing, dancing,
 
 Bring your chair, your flag, and your biggest smile… and come experience a moment of pride, togetherness, and fun under the stars!
 
+**🚐 RVs and campervans are welcome on site.**
+
 ## Event agenda
 
 - **8:45 PM** — Opening ceremony

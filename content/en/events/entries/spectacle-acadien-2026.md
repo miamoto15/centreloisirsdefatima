@@ -15,6 +15,8 @@ Come celebrate the richness and warmth of Acadian culture at our show in Fatima!
 
 Whether you're Acadian or simply curious, come experience a colourful evening filled with infectious rhythms, regional flavours and warm encounters!
 
+**🚐 RV and campervan access on site is yet to be confirmed.**
+
 ## Event agenda
 
 - **8:30 PM** — Gabriel Leblanc, Marc-Étienne Richard, Simon-Charles Cyr et Anthony Turbide

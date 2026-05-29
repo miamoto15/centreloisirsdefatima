@@ -8,3 +8,9 @@ showHeader: true
 ---
 
 {{< responsive-img src="img/programmation/Visuel - Aéroport.png" alt="2026 event lineup poster — Centre des Loisirs de Fatima" width=100% >}}
+
+{{< spacer 30 >}}
+
+{{< callout type="info" >}}
+🎟️ In addition to online sales, ***physical tickets*** for all paid events are available at ***Dépanneur du Village*** and ***Stations Deli***. Please bring ***cash*** for your purchase.
+{{< /callout >}}

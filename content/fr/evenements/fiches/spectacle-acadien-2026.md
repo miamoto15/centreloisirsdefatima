@@ -15,8 +15,10 @@ Venez célébrer la richesse et la chaleur de la culture acadienne lors de notre
 
 Que vous soyez acadien ou simplement curieux, venez vivre une soirée haute en couleur, pleine de rythmes entraînants, de saveurs typiques et de rencontres chaleureuses. Laissez-vous emporter par la fête !
 
+**🚐 La permission des roulottes sur le site reste à confirmer.**
+
 ## Programmation
 
 - **20h30** — Gabriel Leblanc, Marc-Étienne Richard, Simon-Charles Cyr et Anthony Turbide
-- **21h30** — [Lendemain de Veille](https://www.lendemaindeveille.com/)
+- **21h30** — [Lendemain de Veille](https://www.lendemaindeveille.ca/)
 - **23h00** — [Le Retour d'Akadie 2000](https://www.facebook.com/profile.php?id=100064985740296)

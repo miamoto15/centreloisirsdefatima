@@ -1,6 +1,6 @@
 ---
 name: "Richard Trahan"
-titre: "Vice-président et secrétaire"
+titre: "Vice-président"
 description: ""
 photo: "img/equipe/Richard Trahan.jpg"
 weight: 2

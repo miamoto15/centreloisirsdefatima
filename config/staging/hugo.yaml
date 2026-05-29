@@ -1,0 +1,6 @@
+######################## staging configuration ####################
+# GitHub Pages preview — miamoto15.github.io/centreloisirsdefatima
+baseURL: "https://miamoto15.github.io/centreloisirsdefatima/"
+enableRobotsTXT: false
+build:
+  writeStats: true

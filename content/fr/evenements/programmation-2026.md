@@ -8,3 +8,9 @@ showHeader: true
 ---
 
 {{< responsive-img src="img/programmation/Visuel - Aéroport.png" alt="Affiche de la programmation 2026 du Centre des Loisirs de Fatima" width=100% >}}
+
+{{< spacer 30 >}}
+
+{{< callout type="info" >}}
+🎟️ En plus de la vente en ligne, des ***billets physiques*** sont disponibles pour tous les événements payants au ***Dépanneur du Village*** et aux ***Stations Deli***. Prévoyez de l’***argent comptant*** pour l’achat.
+{{< /callout >}}

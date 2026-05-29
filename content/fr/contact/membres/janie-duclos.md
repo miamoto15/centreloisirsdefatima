@@ -1,6 +1,6 @@
 ---
 name: "Janie Duclos"
-titre: "Administratrice"
+titre: "Sécrétaire & Trésorière"
 description: ""
 photo: "img/equipe/Janie Duclos.jpg"
 weight: 5

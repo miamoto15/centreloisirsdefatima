@@ -1,6 +1,6 @@
 ---
 name: "Janie Duclos"
-titre: "Board Member"
+titre: "Secretary & Treasurer"
 description: ""
 photo: "img/equipe/Janie Duclos.jpg"
 weight: 5

@@ -17,6 +17,8 @@ Sur scène, découvrez une brochette d'artistes locaux qui vous feront chanter, 
 
 Apportez votre chaise, votre drapeau et votre plus beau sourire… et venez vivre un moment de fierté, de partage et de plaisir sous les étoiles !
 
+**🚐 Les roulottes sont permises sur le site.**
+
 ## Programmation
 
 - **20h45** — Partie protocolaire

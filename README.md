@@ -22,6 +22,7 @@
     - [GitHub Pages](#github-pages)
     - [GitHub Actions](#github-actions)
   - [Contribuer](#contribuer)
+  - [Forker ce dépôt](#forker-ce-dépôt)
   - [Licence](#licence)
   - [Support](#support)
   - [Ressources](#ressources)
@@ -141,6 +142,17 @@ Vous pouvez aussi lancer manuellement le workflow depuis l’onglet “Actions�
 3. Commitez vos changements (`git commit -am 'Ajout d'une fonctionnalité'`)
 4. Poussez la branche (`git push origin feature/ma-fonctionnalite`)
 5. Ouvrez une Pull Request
+
+## Forker ce dépôt
+
+Si vous souhaitez utiliser ce dépôt comme base pour créer votre propre site web, vous devez **retirer tout le contenu appartenant au Centre Des Loisirs de Fatima** avant de publier votre site. Cela inclut, sans s'y limiter :
+
+- Les photos et images
+- Les logos et marques de commerce
+- Les informations sur les événements
+- Les textes et descriptions propres à l'organisme
+
+Ce contenu est la propriété exclusive du **Centre Des Loisirs de Fatima, Î.M., Inc.** et n'est **pas** couvert par la licence AGPL-3.0, qui s'applique uniquement au code source.
 
 ## Licence
 
