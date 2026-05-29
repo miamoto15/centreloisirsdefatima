@@ -20,9 +20,9 @@ fr:
     privacy:
       help_text: "Confidentialité"
       help_url: "/fr/confidentialite/"
-    main_cta:
-      text: "Nous joindre"
-      link: "/fr/contact/"
+    # main_cta:  # Bouton header temporairement caché — décommenter pour réafficher
+    #   text: "Nous joindre"
+    #   link: "/fr/contact/"
     footer_cta:
       text: "Nous joindre"
       link: "/fr/contact/"
@@ -124,9 +124,9 @@ en:
     privacy:
       help_text: "Privacy Policy"
       help_url: "/en/privacy/"
-    main_cta:
-      text: "Contact us"
-      link: "/en/contact/"
+    # main_cta:  # Header button temporarily hidden — uncomment to re-enable
+    #   text: "Contact us"
+    #   link: "/en/contact/"
     footer_cta:
       text: "Contact us"
       link: "/en/contact/"

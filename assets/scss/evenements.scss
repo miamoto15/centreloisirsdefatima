@@ -445,3 +445,51 @@
   max-width: var(--content-width);
   margin: 0 auto;
 }
+
+// ── Section partenaires ───────────────────────────────────────────────
+
+.partenaires-section {
+  margin: 3rem 0 1rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--gray-700);
+    margin-bottom: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gray-300);
+    }
+  }
+
+  .custom-grid {
+    align-items: center;
+
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  .grid-cell {
+    padding: 0.5rem;
+
+    img {
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      transition: opacity 0.2s;
+
+      &:hover { opacity: 0.8; }
+    }
+  }
+}

@@ -59,3 +59,11 @@
   </div>
 </section>
 {{ end }}
+
+{{/* ── Section partenaires ── */}}
+{{ if eq .Kind "page" }}
+<div class="partenaires-section">
+  <h2>{{ if eq $lang "fr" }}Nos partenaires{{ else }}Our Partners{{ end }}</h2>
+  <img src="{{ "/img/partenaires/banderolle-partenaires.jpg" | relURL }}" alt="{{ if eq $lang "fr" }}Municipalité des Îles-de-la-Madeleine, Desjardins, Coop IGA L'Éveil, Solutions Distributions LM inc., PAL Airlines{{ else }}Municipality of the Îles-de-la-Madeleine, Desjardins, Coop IGA L'Éveil, Solutions Distributions LM inc., PAL Airlines{{ end }}" style="width:100%;height:auto;" loading="lazy">
+</div>
+{{ end }}
