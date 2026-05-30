@@ -14,6 +14,166 @@
 #   groupe           : Nombre de membres du groupe (omettre si solo)
 #   gain_par_personne: Gain par personne si groupe (nombre)
 #   youtube          : Identifiant de la vidéo YouTube
+#   photo            : Chemin vers une photo (ex: img/joker/tirage-17.jpg) — affiché si pas de vidéo YouTube
+
+- nom: "Bruno Déraspe"
+  groupe: 2
+  tirage: 16
+  date: "2026-04-27"
+  cartes_restantes: 19
+  carte: "Joker"
+  carte_rang: "J"
+  carte_suite: "joker"
+  gain_total: 287322.20
+  gain_par_personne: 143661.10
+  youtube: "NUdPhACjQJM"
+
+- nom: "Denis Jomphe"
+  groupe: 4
+  tirage: 15
+  date: "2026-04-22"
+  cartes_restantes: 20
+  carte: "6 de coeur"
+  carte_rang: "6"
+  carte_suite: "coeur"
+  gain_total: 17913.72
+  gain_par_personne: 4478.43
+  youtube: "zT4wdWaUWmc"
+
+- nom: "Évangéline Harvie"
+  groupe: 2
+  tirage: 14
+  date: "2026-04-15"
+  cartes_restantes: 21
+  carte: "6 de pique"
+  carte_rang: "6"
+  carte_suite: "pique"
+  gain_total: 17434.56
+  gain_par_personne: 8717.28
+  youtube: "JpnkEEjfpN0"
+
+- nom: "Andrée Delaney"
+  groupe: 1
+  tirage: 13
+  date: "2026-04-08"
+  cartes_restantes: 22
+  carte: "7 de carreau"
+  carte_rang: "7"
+  carte_suite: "carreau"
+  gain_total: 16206.96
+  gain_par_personne: 16206.96
+  youtube: ""
+  photo: "img/joker/tirage-13.png"
+
+- nom: "Albert Poirier"
+  groupe: 2
+  tirage: 12
+  date: "2026-04-01"
+  cartes_restantes: 23
+  carte: "8 de pique"
+  carte_rang: "8"
+  carte_suite: "pique"
+  gain_total: 16942.20
+  gain_par_personne: 8471.10
+  youtube: ""
+  photo: "img/joker/tirage-12.png"
+
+- nom: "Édouard Leblanc"
+  groupe: 1
+  tirage: 11
+  date: "2026-03-25"
+  cartes_restantes: 24
+  carte: "3 de carreau"
+  carte_rang: "3"
+  carte_suite: "carreau"
+  gain_total: 14685.00
+  gain_par_personne: 14685.00
+  youtube: ""
+  photo: "img/joker/tirage-11.png" 
+
+- nom: "Jérémie Chiasson"
+  groupe: 1
+  tirage: 10
+  date: "2026-03-18"
+  cartes_restantes: 25
+  carte: "10 de coeur"
+  carte_rang: "10"
+  carte_suite: "coeur"
+  gain_total: 13085.16
+  gain_par_personne: 13085.16
+  youtube: "ikzOEkduqj4"
+
+- nom: "Freddy Leblanc"
+  groupe: 7
+  tirage: 9
+  date: "2026-03-11"
+  cartes_restantes: 26
+  carte: "As de pique"
+  carte_rang: "A"
+  carte_suite: "pique"
+  gain_total: 12802.68
+  gain_par_personne: 1828.95
+  youtube: "wZCGAAfyjm4"
+
+- nom: "André Arseneault"
+  groupe: 4
+  tirage: 8
+  date: "2026-03-04"
+  cartes_restantes: 27
+  carte: "7 de trefle"
+  carte_rang: "7"
+  carte_suite: "trefle"
+  gain_total: 12633.72
+  gain_par_personne: 3158.43
+  youtube: "05U55QCWxnU"
+
+- nom: "Solange Pealey"
+  groupe: 13
+  tirage: 7
+  date: "2026-02-25"
+  cartes_restantes: 28
+  carte: "5 de coeur"
+  carte_rang: "5"
+  carte_suite: "coeur"
+  gain_total: 11816.64
+  gain_par_personne: 908.97
+  youtube: "li2ih98TkY4"
+
+- nom: "Sylvie Vigneault"
+  groupe: 2
+  tirage: 6
+  date: "2026-02-18"
+  cartes_restantes: 29
+  carte: "10 de trefle"
+  carte_rang: "10"
+  carte_suite: "trefle"
+  gain_total: 11011.44
+  gain_par_personne: 5505.72
+  youtube: "7tjRWZCmmlk"
+
+- nom: "Gilberte Arseneau"
+  groupe: 1
+  tirage: 5
+  date: "2026-02-11"
+  cartes_restantes: 30
+  carte: "4 de carreau"
+  carte_rang: "4"
+  carte_suite: "carreau"
+  gain_total: 10673.52
+  gain_par_personne: 10673.52
+  youtube: "JRMLLmDrB40"
+
+- nom: "Jean-Claude Chevarie"
+  groupe: 6
+  tirage: 4
+  date: "2026-02-04"
+  cartes_restantes: 31
+  carte: "As de trefle"
+  carte_rang: "A"
+  carte_suite: "trefle"
+  gain_total: 10443.84
+  gain_par_personne: 1740.64
+  youtube: "kT0J-CjYq1Y"
 
 - nom: "Marielle Chevarie"
   groupe: 5

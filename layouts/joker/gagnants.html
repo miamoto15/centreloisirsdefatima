@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{ $suites := dict "pique" "♠" "coeur" "♥" "carreau" "♦" "trefle" "♣" }}
+  {{ $suites := dict "pique" "♠" "coeur" "♥" "carreau" "♦" "trefle" "♣" "joker" "🃏" }}
   {{ $rouges := slice "coeur" "carreau" }}
   <div class="gagnant-card">
     {{/* Colonne gauche : texte centré verticalement */}}
@@ -67,12 +67,17 @@
       </div>
       {{ end }}
     </div>
-    {{/* Colonne droite : vidéo centrée verticalement */}}
+    {{/* Colonne droite : vidéo ou photo centrée verticalement */}}
     <div class="gagnant-card__right">
       {{ if .youtube }}
       {{ $titre  := cond (eq $lang "fr") "Regardez le tirage" "Watch the draw" }}
       {{ $ytTag  := printf `youtube_enhanced id="%s" title="%s" autoload="false"` .youtube $titre }}
       <div style="width:90%;">{{ $.RenderString (printf "{{< %s >}}" $ytTag) }}</div>
+      {{ else if .photo }}
+      {{ $alt := cond (eq $lang "fr") (printf "Photo du tirage — %s" $w.nom) (printf "Draw photo — %s" $w.nom) }}
+      <div style="width:90%; aspect-ratio:16/9; overflow:hidden; border-radius:8px; background:#111;">
+        <img src="{{ .photo | relURL }}" alt="{{ $alt }}" style="width:100%; height:100%; object-fit:cover;" loading="lazy">
+      </div>
       {{ end }}
     </div>
   </div>
