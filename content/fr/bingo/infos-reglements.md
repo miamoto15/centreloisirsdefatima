@@ -87,7 +87,7 @@ Le **livret standard (7 feuilles)** est requis pour entrer. Sans livret, l'entr�
 #### Avant de jouer
 
 - Arrivez **30 min à l'avance** pour vous installer.
-- Achetez vos cartes, débrochez les et appliquez du ruban adhésif si désirez.
+- Achetez vos cartes.
 - Plus de faces = plus de cartes = plus de chances.
 - Vous pouvez jouer sur plusieurs feuilles.
 - N'hésitez pas à utiliser nos services de la cantine !
