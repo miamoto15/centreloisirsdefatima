@@ -42,29 +42,46 @@ Pour plus d'informations : [Politique de confidentialité de Formspree](https://
 
 ### Aucune autre collecte de données
 
-En dehors des formulaires ci-dessus, **ce site ne collecte, n'enregistre et ne conserve aucun autre renseignement personnel des visiteurs.** Nous ne recueillons pas votre adresse IP, vos préférences de navigation ni vos données de localisation.
+En dehors des formulaires ci-dessus, **ce site ne collecte, n'enregistre et ne conserve aucun renseignement personnel identifiable des visiteurs.** Pour les statistiques de performance du site, nous utilisons Cloudflare Web Analytics (voir la section suivante).
 
-## Aucun cookie de suivi
+## Analytique, cookies et services tiers
 
-**Ce site n'utilise aucun cookie de suivi, d'analyse ou de publicité.**
+### Cloudflare Web Analytics
+
+Ce site utilise **Cloudflare Web Analytics** pour mesurer les performances et l'utilisation du site. Ce service est conçu dans le respect de la vie privée :
+
+- **Aucun cookie** n'est déposé sur votre appareil
+- Aucune donnée personnelle identifiable n'est collectée
+- Les statistiques sont agrégées et anonymisées (pages vues, temps de chargement, pays approximatif)
+- Cloudflare ne vous suit pas sur d'autres sites
+
+Pour plus d'informations : [Politique de confidentialité de Cloudflare](https://www.cloudflare.com/privacypolicy/)
+
+### Google Maps
+
+Certaines pages de ce site intègrent des cartes **Google Maps** (page de contact et page des points de vente du Joker). Lors du chargement de ces pages, Google Maps peut déposer des cookies et collecter des données conformément à sa [politique de confidentialité](https://policies.google.com/privacy). Ces données sont traitées par Google et ne sont pas accessibles par le Centre des Loisirs de Fatima.
+
+### Ce que nous n'utilisons pas
 
 Nous n'utilisons pas :
 
-- Google Analytics ou tout autre outil d'analyse web
+- Google Analytics ou tout autre outil d'analyse web traditionnel
 - Cookies publicitaires ou de marketing
 - Pixels de suivi
 - Scripts de profilage comportemental
 - Réseaux sociaux intégrés qui collectent des données
 
-## Liens externes et sites tiers
-
-Le site peut contenir des liens ou des boutons menant vers des sites web externes (par exemple, pour des formulaires de dons ou d'inscription). Ces sites tiers, incluant **Formspree** pour le traitement de nos formulaires, peuvent avoir des pratiques différentes en matière de collecte et d'utilisation des renseignements personnels. Nous vous recommandons de consulter leur politique de confidentialité avant de fournir des renseignements personnels sur ces plateformes. Le Centre des Loisirs de Fatima n'est pas responsable des pratiques de ces sites externes.
-
 ## Hébergement du site
 
-Ce site est hébergé sur GitHub Pages. GitHub peut collecter des journaux techniques (logs) pour des raisons de sécurité et de maintenance de leur infrastructure. Ces données ne sont pas accessibles par le Centre des Loisirs de Fatima et ne sont pas utilisées à des fins de suivi des visiteurs.
+Ce site est hébergé sur **GitHub Pages**. GitHub peut collecter des journaux techniques (logs) pour des raisons de sécurité et de maintenance de leur infrastructure. Ces données ne sont pas accessibles par le Centre des Loisirs de Fatima et ne sont pas utilisées à des fins de suivi des visiteurs.
 
-Pour plus d'informations sur les pratiques de confidentialité de GitHub, consultez : [GitHub Privacy Statement](https://docs.github.com/fr/site-policy/privacy-policies/github-privacy-statement)
+Pour plus d'informations : [GitHub Privacy Statement](https://docs.github.com/fr/site-policy/privacy-policies/github-privacy-statement)
+
+Le trafic du site transite également par le réseau **Cloudflare**, qui agit comme fournisseur DNS et réseau de diffusion de contenu (CDN). Cloudflare peut traiter des adresses IP à des fins de routage et de sécurité réseau. Ces données ne sont pas accessibles par le Centre des Loisirs de Fatima et ne sont pas utilisées à des fins de suivi des visiteurs. Pour plus d'informations : [Politique de confidentialité de Cloudflare](https://www.cloudflare.com/privacypolicy/).
+
+## Liens externes et sites tiers
+
+Le site peut contenir des liens ou des boutons menant vers des sites web externes (par exemple, un site de billeterie, des formulaires de dons ou d'inscription). Ces sites tiers, incluant **Formspree** pour le traitement de nos formulaires, peuvent avoir des pratiques différentes en matière de collecte et d'utilisation des renseignements personnels. Nous vous recommandons de consulter leur politique de confidentialité avant de fournir des renseignements personnels sur ces plateformes. Le Centre des Loisirs de Fatima n'est pas responsable des pratiques de ces sites externes.
 
 ## Contact
 
@@ -79,5 +96,5 @@ Nous nous réservons le droit de modifier cette politique de confidentialité à
 
 ---
 
-**Dernière mise à jour : 27 mai 2026**  
+**Dernière mise à jour : 31 mai 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. Tous droits réservés.

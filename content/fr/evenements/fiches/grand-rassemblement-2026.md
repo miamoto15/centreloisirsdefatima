@@ -23,6 +23,6 @@ Que vous soyez Madelinot de souche ou visiteur de passage, ce festival est une i
 - **19h30** — Feu de joie avec « Sculpture la mer et le feu »
   *Sculpteurs : Jacques Aucoin, Raynald Chevarie, Jeannot Longuépée, Gilbert Chevarie, Laurent Déraspe, Annie Morin*
 - **19h35** — [Breen, Lebœuf / Offenback](https://www.youtube.com/watch?v=DNHR1BwuYIo)
-- **21h10** — [MysterAct - MZ Laser](https://www.mysteract.com/services/laser) et feux d'artifices
+- **21h10** — [MysterAct - MZ Laser](https://www.mysteract.com/services/laser)
 - **21h20** — Feux d'artifice
 - **21h30** — [Éric Lapointe](https://ericlapointe.com/)

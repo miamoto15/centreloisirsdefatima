@@ -42,29 +42,46 @@ For more information: [Formspree Privacy Policy](https://formspree.io/legal/priv
 
 ### No Other Data Collection
 
-Outside of the forms described above, **this website does not collect, record, or store any other personal information from visitors.** We do not collect your IP address, browsing preferences, or location data.
+Outside of the forms described above, **this website does not collect, record, or store any personally identifiable information from visitors.** For site performance statistics, we use Cloudflare Web Analytics (see next section).
 
-## No Tracking Cookies
+## Analytics, Cookies, and Third-Party Services
 
-**This website does not use any tracking, analytics, or advertising cookies.**
+### Cloudflare Web Analytics
+
+This website uses **Cloudflare Web Analytics** to measure site performance and usage. This service is designed with privacy in mind:
+
+- **No cookies** are placed on your device
+- No personally identifiable data is collected
+- Statistics are aggregated and anonymized (page views, load times, approximate country)
+- Cloudflare does not track you across other websites
+
+For more information: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+
+### Google Maps
+
+Some pages on this website include **Google Maps** embeds (contact page and Joker points-of-sale page). When these pages load, Google Maps may place cookies and collect data in accordance with its [Privacy Policy](https://policies.google.com/privacy). This data is processed by Google and is not accessible to Centre des Loisirs de Fatima.
+
+### What We Do Not Use
 
 We do not use:
 
-- Google Analytics or any other web analytics tools
+- Google Analytics or any other traditional web analytics tools
 - Advertising or marketing cookies
 - Tracking pixels
 - Behavioral profiling scripts
 - Integrated social media platforms that collect data
 
-## External Links and Third-Party Sites
-
-This website may contain links or buttons leading to external websites (for example, for donation or registration forms). These third-party sites, including **Formspree** for processing our forms, may have different practices regarding the collection and use of personal information. We recommend that you review their privacy policy before providing any personal information on these platforms. Centre des Loisirs de Fatima is not responsible for the practices of these external sites.
-
 ## Website Hosting
 
-This website is hosted on GitHub Pages. GitHub may collect technical logs for security and infrastructure maintenance purposes. This data is not accessible to Centre des Loisirs de Fatima and is not used to track visitors.
+This website is hosted on **GitHub Pages**. GitHub may collect technical logs for security and infrastructure maintenance purposes. This data is not accessible to Centre des Loisirs de Fatima and is not used to track visitors.
 
-For more information about GitHub's privacy practices, please visit: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+For more information: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+
+Site traffic also passes through the **Cloudflare** network, which acts as a DNS provider and content delivery network (CDN). Cloudflare may process IP addresses for routing and network security purposes. This data is not accessible to Centre des Loisirs de Fatima and is not used to track visitors. For more information: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+
+## External Links and Third-Party Sites
+
+This website may contain links or buttons leading to external websites (for example, a ticketing website, donation or registration forms). These third-party sites, including **Formspree** for processing our forms, may have different practices regarding the collection and use of personal information. We recommend that you review their privacy policy before providing any personal information on these platforms. Centre des Loisirs de Fatima is not responsible for the practices of these external sites.
 
 ## Contact
 
@@ -79,5 +96,5 @@ We reserve the right to modify this privacy policy at any time. Any changes will
 
 ---
 
-**Last updated: May 27, 2026**  
+**Last updated: May 31, 2026**  
 © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. All rights reserved.

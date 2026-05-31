@@ -3,6 +3,14 @@
         text-align: center;
     }
 }
+
+/* ============================================
+   Typographie — justification du texte
+   ============================================ */
+.content p {
+    text-align: justify;
+    hyphens: auto;
+}
 // Styles pour la page Nous joindre
 .contact-container {
     max-width: 800px;

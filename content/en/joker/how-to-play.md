@@ -26,7 +26,7 @@ If your ticket is drawn, you will be contacted. You have **less than 24 hours** 
 {{< /step-card >}}
 
 {{< step-card num="4" icon="🃏" title="Try to find the Joker" >}}
-The next day (**Wednesday**), the winner is invited to draw a card from a deck of **51 cards… and one Joker**! If you find the Joker, you win the grand prize. If not, the drawn card is removed from the deck, increasing your chances the following week.
+The next day (**Wednesday**), the winner is invited to draw a card from a deck of **52 cards… and one Joker**! If you find the Joker, you win the grand prize. If not, the drawn card is removed from the deck, increasing your chances the following week.
 {{< /step-card >}}
 
 {{< step-card num="5" icon="📈" title="A jackpot that grows every week" >}}

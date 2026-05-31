@@ -27,7 +27,7 @@ Si votre billet est tiré, vous serez contacté. Vous avez **moins de 24 heures*
 {{< /step-card >}}
 
 {{< step-card num="4" icon="🃏" title="Tentez de trouver le Joker" >}}
-Le jour suivant (le **mercredi**), le gagnant est invité à venir piger une carte parmi un jeu de **51 cartes… et un Joker** ! Si vous trouvez le Joker, vous remportez le gros lot. Sinon, la carte pigée est retirée du jeu, augmentant vos chances la semaine suivante.
+Le jour suivant (le **mercredi**), le gagnant est invité à venir piger une carte parmi un jeu de **52 cartes… et un Joker** ! Si vous trouvez le Joker, vous remportez le gros lot. Sinon, la carte pigée est retirée du jeu, augmentant vos chances la semaine suivante.
 {{< /step-card >}}
 
 {{< step-card num="5" icon="📈" title="Une cagnotte qui grossit chaque semaine" >}}
