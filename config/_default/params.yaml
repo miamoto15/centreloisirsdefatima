@@ -1,3 +1,9 @@
+######################## Cloudflare Web Analytics & RUM ####################
+
+# Token Cloudflare Web Analytics (Browser Insights / RUM)
+# Trouvez-le dans : Cloudflare Dashboard → Analytics & Logs → Web Analytics → votre site → Manage site
+cloudflare_analytics_token: "fe205cf85e43413abcf1f8da9ff4f13a"
+
 ######################## custom scripts & styles ####################
 
 # Add custom assets relative to /static or via https

@@ -1,0 +1,5 @@
+{{/* Cloudflare Web Analytics & RUM — injecté uniquement en production */}}
+{{ if and (eq hugo.Environment "production") .Site.Params.cloudflare_analytics_token }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "{{ .Site.Params.cloudflare_analytics_token }}", "spa": true}'></script>
+{{ end }}
