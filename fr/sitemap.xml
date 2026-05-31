@@ -26,6 +26,18 @@
                 href="https://centreloisirsfatima.com/fr/contact/membres/richard-trahan/"
                 />
   </url><url>
+    <loc>https://centreloisirsfatima.com/fr/contact/membres/janie-duclos/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-CA"
+                href="https://centreloisirsfatima.com/en/contact/members/janie-duclos/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-CA"
+                href="https://centreloisirsfatima.com/fr/contact/membres/janie-duclos/"
+                />
+  </url><url>
     <loc>https://centreloisirsfatima.com/fr/contact/membres/samuel-lefrancois/</loc>
     <xhtml:link
                 rel="alternate"
@@ -48,18 +60,6 @@
                 rel="alternate"
                 hreflang="fr-CA"
                 href="https://centreloisirsfatima.com/fr/contact/membres/pierre-martin-poirier/"
-                />
-  </url><url>
-    <loc>https://centreloisirsfatima.com/fr/contact/membres/janie-duclos/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-CA"
-                href="https://centreloisirsfatima.com/en/contact/members/janie-duclos/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-CA"
-                href="https://centreloisirsfatima.com/fr/contact/membres/janie-duclos/"
                 />
   </url><url>
     <loc>https://centreloisirsfatima.com/fr/contact/membres/francine-thorne/</loc>
