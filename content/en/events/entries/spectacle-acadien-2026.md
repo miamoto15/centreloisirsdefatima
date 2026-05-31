@@ -1,7 +1,7 @@
 ---
 title: "Akadie 2000 Reunion Show"
 date: 2026-08-01
-description: "Celebrate the richness of Acadian culture: infectious music, dance and warm encounters — a vibrant evening bursting with colour and tradition!"
+description: "Celebrate the richness of Acadian culture: infectious music, dance, warm encounters and passionate artists — a vibrant evening bursting with colour and tradition!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$35"
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=en"

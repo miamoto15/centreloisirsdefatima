@@ -1,7 +1,7 @@
 ---
 title: "Spectacle de la fête nationale à Fatima"
 date: 2026-06-23
-description: "Une soirée festive sous les étoiles avec artistes locaux, feu de joie et feux d'artifices — venez célébrer la fierté d'ici !"
+description: "Une soirée festive sous les étoiles avec artistes locaux, feu de joie et feux d'artifices — venez chanter, danser et partager un grand moment de fierté québécoise en famille ou entre amis !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
 billets_url: ""

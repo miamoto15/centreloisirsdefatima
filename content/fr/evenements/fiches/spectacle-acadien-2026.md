@@ -1,7 +1,7 @@
 ---
 title: "Spectacle retrouvailles Akadie 2000"
 date: 2026-08-01
-description: "Venez célébrer la richesse et la chaleur de la culture acadienne : musique entraînante, danse, gastronomie et artistes passionnés — une soirée haute en couleur !"
+description: "Venez célébrer la richesse et la chaleur de la culture acadienne : musique entraînante, danse, gastronomie et artistes passionnés — une soirée haute en couleur et en émotion !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "35 $"
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=fr"

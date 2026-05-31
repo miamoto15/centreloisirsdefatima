@@ -1,7 +1,7 @@
 ---
 title: "Little Whale Festival"
 date: 2026-07-11
-description: "A magical day of fun, laughter and creativity for the whole family — dinosaur zones, shows, foam cannons, inflatables and so much more!"
+description: "A magical day of fun, laughter and creativity for the whole family — dinosaur zones, live shows, foam cannons, interactive activities, inflatables and so much more!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$5"
 billets_url: "https://lepointdevente.com/billets/samedi-festival-baleineaux-2026?lang=en"

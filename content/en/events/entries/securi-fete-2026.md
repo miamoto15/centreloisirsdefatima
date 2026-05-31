@@ -1,5 +1,5 @@
 ---
-title: "Sécuri-Fête — Canadian Forces Snowbirds"
+title: "Sécuri-Fête — Canadian Snowbirds"
 date: 2026-06-27
 dateEnd: "2026-06-28"
 description: "Two spectacular days with the Canadian Forces Snowbirds: breathtaking aerial demonstrations, public safety exhibitors and workshops for the whole family!"
@@ -18,7 +18,7 @@ A must-see for aviation enthusiasts, families and anyone who admires Canadian ex
 
 **🚐 RVs and campervans are not permitted on site.**
 
-**🚌 A free shuttle is available from the Fatima community hall.** Departure at **1:00 PM** toward the site, return at approximately **5:00 PM**.
+**🚌 A free shuttle is available from the Fatima community hall (4, chemin Ernest, Fatima). Departure at 1:00 PM toward the site, return at approximately 5:00 PM**.
 
 ## Saturday, June 27, 2026 — 1:00 p.m. to 4:00 p.m.
 
@@ -44,4 +44,4 @@ Exhibitors return, with themed workshops offered to the public:
 - Cybersecurity and online threats
 - Use of fire extinguishers and smoke detectors
 
-**Around 2:00 PM**, a special demonstration is planned with the arrival of the Canadian Armed Forces' **CH-149** search and rescue helicopter.
+**Around 2:00 PM**, a special demonstration is planned with the arrival of the Canadian Armed Forces' CH-149 search and rescue helicopter.

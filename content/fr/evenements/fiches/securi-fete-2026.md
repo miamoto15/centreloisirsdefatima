@@ -18,7 +18,7 @@ Un rendez-vous à ne pas manquer pour les passionnés d'aviation, les familles e
 
 **🚐 Les roulottes ne sont pas permises sur le site.**
 
-**🚌 Une navette gratuite est prévue depuis la salle communautaire de Fatima.** Départ à **13h00** vers le site, retour vers **17h00**.
+**🚌 Une navette gratuite est prévue depuis la salle communautaire de Fatima (4, chemin Ernest, Fatima). Départ à 13h00 vers le site, retour vers 17h00**.
 
 ## Samedi 27 juin 2026 — 13h00 à 16h00
 
@@ -44,4 +44,4 @@ Retour des exposants, avec des ateliers thématiques offerts au public :
 - Cybersécurité et menaces en ligne
 - Utilisation des extincteurs et des détecteurs de fumée
 
-**Vers 14h**, une démonstration spéciale est prévue avec l'arrivée de l'hélicoptère de recherche et sauvetage **CH-149** des Forces armées canadiennes.
+**Vers 14h**, une démonstration spéciale est prévue avec l'arrivée de l'hélicoptère de recherche et sauvetage CH-149 des Forces armées canadiennes.
