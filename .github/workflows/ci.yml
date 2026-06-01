@@ -1,0 +1,89 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# CI — Validation de la PR
+#
+# Déclenché sur chaque PR ciblant `main`. Construit le site en mode production
+# et vérifie que la sortie est cohérente. Ce job est le "required status check"
+# configuré dans la règle de protection de branche.
+#
+# Si ce job échoue, la PR ne peut pas être fusionnée.
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: CI — Validation de la PR
+
+on:
+  pull_request:
+    branches: [main]
+
+# Annuler les runs précédents du même PR quand un nouveau commit arrive.
+# Évite de gaspiller des minutes d'Actions sur des builds devenus obsolètes.
+concurrency:
+  group: ci-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+# Permissions minimales — ce workflow ne modifie rien.
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: "0.161.1"
+
+jobs:
+  build:
+    name: Build Hugo (production)
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Code source ──────────────────────────────────────────────────────
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive   # Charge le thème s'il est un sous-module git
+          fetch-depth: 0          # Historique complet → dates Git exactes dans Hugo
+
+      # ── 2. Node.js + cache npm ──────────────────────────────────────────────
+      - name: Configurer Node.js (LTS) avec cache npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Installer les dépendances npm
+        run: npm ci
+
+      # ── 3. Hugo ─────────────────────────────────────────────────────────────
+      - name: Installer Hugo Extended v${{ env.HUGO_VERSION }}
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo version
+
+      # ── 4. Cache des ressources générées (images traitées, SCSS compilé) ───
+      - name: Restaurer le cache Hugo
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources-${{ hashFiles('assets/**', 'layouts/**') }}
+          restore-keys: hugo-resources-
+
+      # ── 5. Build ─────────────────────────────────────────────────────────────
+      - name: Construire le site (production)
+        env:
+          TZ: America/Halifax
+        run: hugo --environment=production --minify --gc
+
+      # ── 6. Vérification de sanité ────────────────────────────────────────────
+      - name: Vérifier l'intégrité du build
+        run: |
+          html_count=$(find public -name "*.html" | wc -l)
+          css_count=$(find public -name "*.css" | wc -l)
+          echo "### Résultat du build Hugo" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Métrique | Valeur |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichiers HTML | $html_count |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichiers CSS  | $css_count |" >> "$GITHUB_STEP_SUMMARY"
+          echo "Fichiers HTML générés : $html_count"
+          if [ "$html_count" -lt 10 ]; then
+            echo "::error::Build défaillant — moins de 10 fichiers HTML générés."
+            exit 1
+          fi

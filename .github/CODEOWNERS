@@ -1,1 +1,11 @@
+# CODEOWNERS — Propriétaires du code
+#
+# Toute PR modifiant ce dépôt requiert une revue de @miamoto15.
+# Ce fichier est utilisé par GitHub pour les suggestions de relecteurs
+# et peut être combiné à la règle de protection de branche
+# "Require review from Code Owners".
+#
+# Pour un projet solo, ce fichier est informatif.
+# Référence : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
 * @miamoto15

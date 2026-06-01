@@ -1,0 +1,118 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Déploiement — Build Hugo → gh-pages
+#
+# Déclenché après chaque push sur `main` (i.e. après un merge de PR squash).
+# Construit le site en mode production et pousse le résultat dans `gh-pages`.
+#
+# GitHub Pages est configuré pour servir depuis la branche `gh-pages`.
+# Le domaine custom (centreloisirsfatima.com) est géré par le fichier
+# static/CNAME, copié automatiquement par Hugo dans public/.
+#
+# NE PAS annuler un déploiement en cours — on attend toujours la fin du
+# déploiement précédent pour éviter de publier un état incohérent.
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Déploiement — gh-pages
+
+on:
+  push:
+    branches: [main]
+  # Déclenchement manuel depuis l'onglet Actions (ex. : rollback ou fix urgent)
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Raison du déploiement manuel"
+        required: false
+        default: "Déploiement manuel"
+
+# Un seul déploiement de production à la fois — les suivants attendent.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+# Droit d'écriture sur le dépôt pour pousser vers gh-pages.
+permissions:
+  contents: write
+
+env:
+  HUGO_VERSION: "0.161.1"
+
+jobs:
+  deploy:
+    name: Build & déployer sur gh-pages
+    runs-on: ubuntu-latest
+
+    # L'environnement "production" permet d'ajouter une approbation manuelle
+    # optionnelle dans GitHub (Settings → Environments) et d'y voir l'URL live.
+    environment:
+      name: production
+      url: https://centreloisirsfatima.com
+
+    steps:
+      # ── 1. Code source ──────────────────────────────────────────────────────
+      - name: Récupérer le code source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # ── 2. Node.js + cache npm ──────────────────────────────────────────────
+      - name: Configurer Node.js (LTS) avec cache npm
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Installer les dépendances npm
+        run: npm ci
+
+      # ── 3. Hugo ─────────────────────────────────────────────────────────────
+      - name: Installer Hugo Extended v${{ env.HUGO_VERSION }}
+        run: |
+          wget -q -O "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+          hugo version
+
+      # ── 4. Cache des ressources générées ────────────────────────────────────
+      - name: Restaurer le cache Hugo
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources-${{ hashFiles('assets/**', 'layouts/**') }}
+          restore-keys: hugo-resources-
+
+      # ── 5. Build ─────────────────────────────────────────────────────────────
+      - name: Construire le site (production)
+        env:
+          TZ: America/Halifax
+        run: hugo --environment=production --minify --gc
+
+      # ── 6. Résumé observable ─────────────────────────────────────────────────
+      - name: Résumé du build
+        run: |
+          html_count=$(find public -name "*.html" | wc -l)
+          size_kb=$(du -sk public | cut -f1)
+          echo "### Déploiement — build #${{ github.run_number }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Métrique | Valeur |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Commit | \`${{ github.sha }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Fichiers HTML | $html_count |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Taille totale | ${size_kb} Ko |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| URL | https://centreloisirsfatima.com |" >> "$GITHUB_STEP_SUMMARY"
+
+      # ── 7. Déploiement ───────────────────────────────────────────────────────
+      - name: Publier sur la branche gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          # Message de commit traçable dans l'historique de gh-pages
+          commit_message: "deploy: build ${{ github.run_number }} · ${{ github.sha }}"
+          # Ne pas écraser l'historique — permet de voir l'évolution des déploiements
+          force_orphan: false
+          keep_files: false
+          user_name: "github-actions[bot]"
+          user_email: "41898282+github-actions[bot]@users.noreply.github.com"

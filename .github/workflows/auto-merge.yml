@@ -1,0 +1,69 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Auto-merge — Squash automatique quand le CI passe
+#
+# Sur chaque PR ciblant `main`, active le "squash auto-merge" natif de GitHub.
+# Dès que tous les required status checks sont verts (ci.yml), GitHub fusionne
+# automatiquement la PR en squash commit — sans intervention manuelle.
+#
+# Prérequis (à configurer une seule fois dans les paramètres du dépôt) :
+#   Settings → General → ✅ Allow auto-merge
+#   Settings → Branches → règle "main" → ✅ Require status checks to pass
+#                                       → status check requis : "Build Hugo (production)"
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Auto-merge — Squash sur validation CI
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches: [main]
+
+# Droits pour lire les PRs et activer l'auto-merge.
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  activer-auto-merge:
+    name: Activer le squash auto-merge
+    runs-on: ubuntu-latest
+    # Ignorer les bots externes (Dependabot, Renovate, etc.)
+    # pour ne pas auto-merger des mises à jour de dépendances sans revue.
+    if: github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'
+
+    steps:
+      - name: Activer l'auto-merge (squash) via l'API GitHub
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+
+            try {
+              await github.graphql(`
+                mutation($prId: ID!) {
+                  enablePullRequestAutoMerge(input: {
+                    pullRequestId: $prId,
+                    mergeMethod: SQUASH
+                  }) {
+                    pullRequest {
+                      number
+                      title
+                      autoMergeRequest { mergeMethod }
+                    }
+                  }
+                }
+              `, { prId: pr.node_id });
+
+              core.info(`✅ Squash auto-merge activé sur PR #${pr.number} : "${pr.title}"`);
+              core.info("La PR sera fusionnée automatiquement dès que le CI sera vert.");
+
+            } catch (err) {
+              // Ne pas faire échouer le workflow — l'auto-merge est un confort,
+              // pas un bloquant. Le développeur peut fusionner manuellement.
+              core.warning(`Impossible d'activer l'auto-merge : ${err.message}`);
+              core.warning(
+                "Vérifiez que l'option 'Allow auto-merge' est activée dans " +
+                "Settings → General du dépôt GitHub."
+              );
+            }
