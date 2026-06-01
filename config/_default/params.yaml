@@ -1,53 +1,59 @@
-######################## Cloudflare Web Analytics & RUM ####################
+######################## Analytique ####################
 
 # Token Cloudflare Web Analytics (Browser Insights / RUM)
 # Trouvez-le dans : Cloudflare Dashboard → Analytics & Logs → Web Analytics → votre site → Manage site
 cloudflare_analytics_token: "fe205cf85e43413abcf1f8da9ff4f13a"
 
-######################## custom scripts & styles ####################
+######################## Logo & styles personnalisés ####################
 
-# Add custom assets relative to /static or via https
+# Chemin du logo (depuis /static)
 logo_on_white: "img/Logo.png"
+
+# Scripts JS supplémentaires (chemins relatifs à /static ou URL absolues)
 custom_js: []
-custom_css: ["scss/accessibility-improvements.scss", "scss/accessibility-fixes.scss", "scss/bingo-wow.scss", "scss/evenements.scss", "scss/equipe.scss", "scss/joker.scss"]
 
-######################## billetterie ####################
+# Feuilles de style SCSS supplémentaires (chemins relatifs à /assets)
+custom_css:
+  - "scss/accessibility-improvements.scss"
+  - "scss/accessibility-fixes.scss"
+  - "scss/bingo-wow.scss"
+  - "scss/evenements.scss"
+  - "scss/equipe.scss"
+  - "scss/joker.scss"
 
-# URL par défaut de la page billetterie (Le Point de Vente).
-# Peut être surchargée par event avec le champ `billets_url` dans le front matter.
+######################## Billetterie ####################
+
+# URL par défaut de la page de billetterie (Le Point de Vente).
+# Peut être surchargée par événement via le champ `billets_url` dans le front matter.
 tickets_url: ""  # ex: "https://lepointdevente.com/billets/votre-page"
 
-######################## custom config ####################
+######################## Partage et réseaux sociaux ####################
 
-### default social share image (can also be set per lang) ###
+# Image de partage par défaut (OpenGraph / Twitter Card)
 images: ["/img/Logo.png"]
+
+# Réseaux sociaux actifs — supprimer ou commenter les entrées inutilisées
+social_links:
+  facebook: "https://www.facebook.com/profile.php?id=61558108406588"
+  youtube: "https://www.youtube.com/@CentredesLoisirsdeFatima"
+  github: "https://github.com/miamoto15/centreloisirsdefatima"
+
+######################## Dépôt GitHub ####################
 
 github:
   repo_url: "https://github.com/miamoto15/centreloisirsdefatima"
   show_edit_link: true
 
-social_links:
-  facebook: "https://www.facebook.com/profile.php?id=61558108406588"
-  youtube: "https://www.youtube.com/@CentredesLoisirsdeFatima"
-  github: "https://github.com/miamoto15/centreloisirsdefatima"
-  devstats: ""
-  discord: ""
-  flickr: ""
-  instagram: ""
-  landscape: ""
-  linkedin: ""
-  mastodon: ""
-  pinterest: ""
-  rss: ""
-  slack: ""
-  stackoverflow: ""
-  threads: ""
-  twitter: ""
-  x: ""
+######################## Interface ####################
 
-# Makes the header sticky on tall screens
+# En-tête fixe sur les grands écrans
 sticky_header: true
-# Enable search in header UI
+
+# Activer la recherche dans l'en-tête
 show_search: false
+
+######################## Gros lots (mise à jour manuelle) ####################
+
+# Mis à jour manuellement à chaque tirage
 jokerJackpotAmount: "10 000 $"
 bingoJackpotAmount: "400 $"

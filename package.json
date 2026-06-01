@@ -1,37 +1,33 @@
 {
-  "name": "dot-org-hugo-theme",
+  "name": "centreloisirsdefatima",
   "version": "1.0.0",
-  "description": "Site web statique vitrine pour le Centre des loisirs de Fatima, un OBNL dédié à la promotion d’événements récréatifs et communautaires dans le village de Fatima. Le site présente les activités, événements, informations pratiques et ressources pour les habitants et visiteurs, favorisant la vie sociale et le dynamisme local.",
-  "main": "none.js",
+  "description": "Site web statique vitrine pour le Centre des loisirs de Fatima, un OBNL dedié à la promotion d'événements récréatifs et communautaires dans le village de Fatima.",
+  "private": true,
   "scripts": {
-    "build": "hugo --theme=dot-org-hugo-theme",
-    "build:production": "hugo --environment=production",
-    "start": "hugo serve --logLevel info --configDir=config --buildDrafts --buildFuture --disableFastRender --gc  --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints",
-    "dev": "npm run dev:start",
-    "dev:start": "hugo serve --logLevel info --configDir=config --themesDir=../.. --buildDrafts --buildFuture --ignoreCache --disableFastRender --gc  --printI18nWarnings --printMemoryUsage --printPathWarnings --printUnusedTemplates --templateMetrics --templateMetricsHints",
-    "dev:start:with-pagefind": "hugo --baseURL=/ --themesDir=../.. --theme=dot-org-hugo-theme && npm_config_yes=true npx pagefind --site 'public' --output-subdir '../static/pagefind' && npm run dev:start",
-    "dev:build": "hugo --themesDir=../.. --theme=dot-org-hugo-theme"
-  ,
-  "deploy": "npm run build && npx gh-pages -d public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cncf/dot-org-hugo-theme"
+    "build": "hugo --environment=production",
+    "build:staging": "hugo --environment=staging",
+    "start": "hugo serve --logLevel info --configDir=config --buildDrafts --buildFuture --disableFastRender --gc --printI18nWarnings --printUnusedTemplates --templateMetrics",
+    "dev": "npm run start",
+    "deploy": "npm run build && npx gh-pages -d public"
   },
   "keywords": [
     "loisirs",
     "fatima",
-    "événements",
+    "evenements",
     "site statique",
     "OBNL",
-    "Anse aux Baleiniers"
+    "Iles-de-la-Madeleine"
   ],
   "author": "info@centreloisirsfatima.com",
   "license": "AGPL-3.0-only",
-  "bugs": {
-    "url": "https://github.com/cncf/dot-org-hugo-theme/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miamoto15/centreloisirsdefatima"
   },
-  "homepage": "https://github.com/cncf/dot-org-hugo-theme#readme",
+  "bugs": {
+    "url": "https://github.com/miamoto15/centreloisirsdefatima/issues"
+  },
+  "homepage": "https://centreloisirsfatima.com",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",

@@ -1,4 +1,57 @@
-// ── Page Gagnants du Joker ────────────────────────────────────────────
+// ════════════════════════════════════════════════════════════════════════
+// Bannière gros lot (visible sur toutes les pages — partial jackpot-banner.html)
+// ════════════════════════════════════════════════════════════════════════
+
+.jackpot-banner {
+  width: 100%;
+  background: linear-gradient(135deg, #ffe066 0%, #ffd700 100%);
+  color: #1a1a1a;
+  text-align: center;
+  padding: 0.8em 0.5em;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 9999;
+}
+
+.jackpot-banner__joker {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.jackpot-banner__bingo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  flex-wrap: wrap;
+  font-size: 1em;
+
+  > span[aria-hidden] {
+    font-size: 1.3em;
+    line-height: 1;
+  }
+}
+
+.jackpot-banner__card-svg {
+  height: 1.7em;
+  width: 1.7em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.jackpot-banner__amount {
+  color: #c41230;
+  font-size: 1.15em;
+  white-space: nowrap;
+}
+
+// ════════════════════════════════════════════════════════════════════════
+// Page Gagnants du Joker
+// ════════════════════════════════════════════════════════════════════════
 
 // Enveloppe pour empêcher l'étirement dans la cellule de tableau
 .carte-badge-wrap {

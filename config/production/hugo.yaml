@@ -1,7 +1,6 @@
-######################## production configuration ####################
-# The base URL of your site (required). This will be prepended to all relative URLs.
+######################## Configuration de production ####################
+# L'URL de base est obligatoire — elle est préfixée à toutes les URLs relatives.
 baseURL: "https://centreloisirsfatima.com/"
-googleAnalytics:
 enableRobotsTXT: true
 build:
   writeStats: true

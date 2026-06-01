@@ -14,7 +14,7 @@
 #   groupe           : Nombre de membres du groupe (omettre si solo)
 #   gain_par_personne: Gain par personne si groupe (nombre)
 #   youtube          : Identifiant de la vidéo YouTube
-#   photo            : Chemin vers une photo (ex: img/joker/tirage-17.jpg) — affiché si pas de vidéo YouTube
+#   photo            : Chemin vers une photo (ex: images/Joker/tirage-17.jpg) — affiché si pas de vidéo YouTube
 
 - nom: "Bruno Déraspe"
   groupe: 2
@@ -63,7 +63,7 @@
   gain_total: 16206.96
   gain_par_personne: 16206.96
   youtube: ""
-  photo: "img/joker/tirage-13.png"
+  photo: "images/Joker/tirage-13.png"
 
 - nom: "Albert Poirier"
   groupe: 2
@@ -76,7 +76,7 @@
   gain_total: 16942.20
   gain_par_personne: 8471.10
   youtube: ""
-  photo: "img/joker/tirage-12.png"
+  photo: "images/Joker/tirage-12.png"
 
 - nom: "Édouard Leblanc"
   groupe: 1
@@ -89,7 +89,7 @@
   gain_total: 14685.00
   gain_par_personne: 14685.00
   youtube: ""
-  photo: "img/joker/tirage-11.png" 
+  photo: "images/Joker/tirage-11.png"
 
 - nom: "Jérémie Chiasson"
   groupe: 1

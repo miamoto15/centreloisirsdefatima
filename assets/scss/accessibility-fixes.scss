@@ -1,4 +1,108 @@
-/* Affichage vertical des colonnes de .custom-grid sur mobile */
+// ============================================================
+// accessibility-fixes.scss
+// Corrections ciblées : layout footer, grille responsive,
+// sous-menus, formulaires de candidature, sr-only, etc.
+// ============================================================
+
+/* =====================================================
+   Layout du pied de page (footer)
+   — Remplace les styles inline de footer.html
+   ===================================================== */
+
+.footer__main-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer__menu-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    min-width: 220px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.footer__contact-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right;
+    min-width: 220px;
+}
+
+.footer__contact-licence {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+.footer__licences {
+    margin-top: 0.5em;
+    font-size: 0.92em;
+    line-height: 1.7;
+}
+
+.footer__logo-social-wrapper {
+    margin-top: 0.2em;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.copyright__info {
+    text-align: left;
+}
+
+.copyright__developer {
+    margin-top: 0;
+}
+
+.footer__language-switcher {
+    margin-top: 1em;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .footer__main-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1.2em !important;
+    }
+
+    .footer__menu-col {
+        display: none !important;
+    }
+
+    .footer__contact-col {
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin-top: 0.5em;
+    }
+}
+
+/* =====================================================
+   Grille responsive (.custom-grid) sur mobile
+   ===================================================== */
 @media (max-width: 768px) {
     .custom-grid {
         grid-template-columns: 1fr !important;

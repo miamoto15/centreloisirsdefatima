@@ -1,12 +1,14 @@
 <footer class="footer">
     <div class="container wrap">
 
-
-        <div class="footer__main-row" style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 3em; width: 100%; flex-wrap: wrap;">
-            <div class="footer__menu-col" style="flex:1; display:flex; justify-content:flex-start; min-width:220px;">
-                <div class="footer__menu" style="display: flex; justify-content: flex-start; gap: 2rem;">
+        {{/* ── Navigation principale + coordonnées ── */}}
+        <div class="footer__main-row">
+            <div class="footer__menu-col">
+                <div class="footer__menu">
                     {{ with .Site.Menus.main }}
                         {{ $homeId := cond (eq $.Site.Language.Lang "en") "home" "accueil" }}
+
+                        {{/* Accueil en première colonne */}}
                         {{ $homeList := where . "Identifier" $homeId }}
                         {{ if gt (len $homeList) 0 }}
                             {{ $home := index $homeList 0 }}
@@ -19,6 +21,8 @@
                                 </ul>
                             </div>
                         {{ end }}
+
+                        {{/* Rubriques avec sous-menus */}}
                         {{ range . }}
                             {{ if and .HasChildren (ne .Identifier $homeId) }}
                                 <div class="column">
@@ -33,9 +37,10 @@
                                 </div>
                             {{ end }}
                         {{ end }}
-                        {{ $allItems := . }}
+
+                        {{/* Liens sans sous-menus (colonne orpheline) */}}
                         {{ $noChildren := slice }}
-                        {{ range $allItems }}
+                        {{ range . }}
                           {{ if and (not .HasChildren) (ne .Identifier $homeId) }}
                             {{ $noChildren = $noChildren | append . }}
                           {{ end }}
@@ -55,46 +60,27 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="footer__contact-col" style="flex:1; display:flex; flex-direction:column; align-items:flex-end; justify-content:flex-start; text-align:right; min-width:220px;">
-                                <style>
-                                @media (max-width: 900px) {
-                                    .footer__main-row {
-                                        flex-direction: column !important;
-                                        align-items: center !important;
-                                        gap: 1.2em !important;
-                                    }
-                                    .footer__menu-col {
-                                        display: none !important;
-                                    }
-                                    .footer__contact-col {
-                                        justify-content: center !important;
-                                        align-items: center !important;
-                                        text-align: center !important;
-                                        width: 100% !important;
-                                        min-width: 0 !important;
-                                        margin-top: 0.5em;
-                                    }
-                                }
-                                </style>
-                <div class="footer__contact-licence" style="margin-bottom:0.5em; font-size:1.1em;">
+
+            <div class="footer__contact-col">
+                <div class="footer__contact-licence">
                     <div>
                         {{ if eq $.Site.Language.Lang "en" }}
                             Contact us: <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
                         {{ else }}
-                            Nous joindre : <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
+                            Nous joindre&nbsp;: <a href="mailto:info@centreloisirsfatima.com">info@centreloisirsfatima.com</a>
                         {{ end }}
                     </div>
-                    <div style="margin-top:0.5em; font-size:0.92em; line-height:1.7;">
+                    <div class="footer__licences">
                         {{ if eq $.Site.Language.Lang "en" }}
-                            <span title="Joker lottery licence">🃏 Joker — Licence RACJ : L-02004</span><br>
-                            <span title="Bingo licence">🎱 Bingo — Licence RACJ : L-02612</span>
+                            <span title="Joker lottery licence">🃏 Joker — Licence RACJ&nbsp;: L-02004</span><br>
+                            <span title="Bingo licence">🎱 Bingo — Licence RACJ&nbsp;: L-02612</span>
                         {{ else }}
-                            <span title="Licence loterie Joker">🃏 Joker — Licence RACJ : L-02004</span><br>
-                            <span title="Licence bingo">🎱 Bingo — Licence RACJ : L-02612</span>
+                            <span title="Licence loterie Joker">🃏 Joker — Licence RACJ&nbsp;: L-02004</span><br>
+                            <span title="Licence bingo">🎱 Bingo — Licence RACJ&nbsp;: L-02612</span>
                         {{ end }}
                     </div>
                 </div>
-                <div class="footer__logo-social-wrapper" style="margin-top:0.2em;">
+                <div class="footer__logo-social-wrapper">
                     {{- partial "footer/social-links.html" . -}}
                 </div>
             </div>
@@ -102,44 +88,45 @@
 
         <hr class="footer-hr">
 
-        <div class="copyright" style="display:flex; flex-direction:row; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5em;">
-            <div style="text-align:left;">
-                <p style=>Copyright &copy; 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.</p>
-                <p style="margin-top:0;">
+        {{/* ── Droits d'auteur + liens légaux ── */}}
+        <div class="copyright">
+            <div class="copyright__info">
+                <p>Copyright &copy; {{ now.Year }} LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC.</p>
+                <p class="copyright__developer">
                     {{ if eq $.Site.Language.Lang "en" }}
-                        Copyright &copy; 2026 Cédric Arseneault &mdash; Website Developer · <a href="mailto:cedric_github@outlook.com">cedric_github@outlook.com</a><br>
+                        Copyright &copy; {{ now.Year }} Cédric Arseneault &mdash; Website Developer &middot; <a href="mailto:cedric_github@outlook.com">cedric_github@outlook.com</a><br>
                         Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
                     {{ else }}
-                        Copyright &copy; 2026 Cédric Arseneault &mdash; Développeur web · <a href="mailto:cedric_github@outlook.com">cedric_github@outlook.com</a><br>
+                        Copyright &copy; {{ now.Year }} Cédric Arseneault &mdash; Développeur web &middot; <a href="mailto:cedric_github@outlook.com">cedric_github@outlook.com</a><br>
                         Distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">AGPL-3.0</a>
                     {{ end }}
                 </p>
             </div>
-            <div style="text-align:right;" class="copyright__accessibility-git-wrapper">
+            <div class="copyright__accessibility-git-wrapper">
                 {{ if .Site.Params.accessibility.help_url }}
-                <a href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}" class="nowrap">{{ .Site.Params.accessibility.help_text | default
-                    "Accessibility Statement" }}</a>
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.accessibility.help_url | absURL }}" class="nowrap">
+                    {{- .Site.Params.accessibility.help_text | default "Accessibility Statement" -}}
+                </a>
                 {{ end }}
-
                 {{ if .Site.Params.privacy.help_url }}
-                <a href="{{ strings.TrimPrefix "/" .Site.Params.privacy.help_url | absURL }}" class="nowrap">{{ .Site.Params.privacy.help_text | default
-                    "Privacy Policy" }}</a>
+                <a href="{{ strings.TrimPrefix "/" .Site.Params.privacy.help_url | absURL }}" class="nowrap">
+                    {{- .Site.Params.privacy.help_text | default "Privacy Policy" -}}
+                </a>
                 {{ end }}
-
                 {{- partial "footer/github.html" . -}}
             </div>
         </div>
 
-        <div class="footer__language-switcher" style="margin-top:1em; text-align:right;">
+        {{/* ── Sélecteur de langue ── */}}
+        <div class="footer__language-switcher">
             <nav aria-label="{{ if eq $.Site.Language.Lang "en" }}Language selection{{ else }}Sélection de langue{{ end }}">
                 {{ range hugo.Sites }}
                     {{ if eq .Language.Lang $.Site.Language.Lang }}
-                        {{ $translations := where $.Translations "Language.Lang" .Language.Lang }}
                         <a href="{{ $.Permalink }}" lang="{{ .Language.Lang }}" class="footer-lang-link active-lang" aria-current="page">{{ upper .Language.Lang }}</a>
                     {{ else }}
-                        {{ $translations := where $.Translations "Language.Lang" .Language.Lang }}
-                        {{ if gt (len $translations) 0 }}
-                            <a href="{{ (index $translations 0).Permalink }}" lang="{{ .Language.Lang }}" class="footer-lang-link">{{ upper .Language.Lang }}</a>
+                        {{ $altTranslations := where $.Translations "Language.Lang" .Language.Lang }}
+                        {{ if gt (len $altTranslations) 0 }}
+                            <a href="{{ (index $altTranslations 0).Permalink }}" lang="{{ .Language.Lang }}" class="footer-lang-link">{{ upper .Language.Lang }}</a>
                         {{ else }}
                             <a href="{{ printf "%s/" .Language.Lang | absURL }}" lang="{{ .Language.Lang }}" class="footer-lang-link">{{ upper .Language.Lang }}</a>
                         {{ end }}
@@ -147,36 +134,31 @@
                 {{ end }}
             </nav>
         </div>
+
     </div>
 </footer>
 
-{{/* Theme: Hover Intent */}}
-{{ $js := resources.Get "js/hoverintent.min.js" }}
-<script defer src="{{ $js.Permalink }}"></script>
+{{/* Scripts du thème */}}
+{{ $jsHover := resources.Get "js/hoverintent.min.js" }}
+<script defer src="{{ $jsHover.Permalink }}"></script>
 
-{{/* Theme: FAQ */}}
 {{ if and (eq .Type "faq") (eq .Kind "section") }}
-{{ $js := resources.Get "js/accordion.js" }}
-<script defer src="{{ $js.Permalink }}"></script>
-<script>
-    var stickyHeader = "{{ if .Site.Params.sticky_header }}true{{ else }}false{{ end }}" === "true";
-  </script>
+{{ $jsAccordion := resources.Get "js/accordion.js" }}
+<script defer src="{{ $jsAccordion.Permalink }}"></script>
+<script>var stickyHeader = {{ .Site.Params.sticky_header | default false }};</script>
 {{ end }}
 
-{{/* Theme: Scripts */}}
-{{ $js := resources.Get "js/scripts.js" }}
-{{ if eq (getenv "HUGO_ENV") "production" }}
-{{ $js = $js | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ $jsMain := resources.Get "js/scripts.js" }}
+{{ if eq hugo.Environment "production" }}
+{{ $jsMain = $jsMain | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $jsMain.Permalink }}" integrity="{{ $jsMain.Data.Integrity }}"></script>
 {{ else }}
-<script defer src="{{ $js.Permalink }}"></script>
+<script defer src="{{ $jsMain.Permalink }}"></script>
 {{ end }}
 
-{{/* Shortcode: YouTube Enhanced */}}
 {{ if .HasShortcode "youtube_enhanced" }}
-{{ $js := resources.Get "js/youtube-lite.js" | resources.Minify }}
-<script type="module" src="{{ $js.Permalink }}"></script>
+{{ $jsYt := resources.Get "js/youtube-lite.js" | resources.Minify }}
+<script type="module" src="{{ $jsYt.Permalink }}"></script>
 {{ end }}
 
-{{/* User: Custom JS */}}
 {{- partial "footer/custom-js.html" . -}}

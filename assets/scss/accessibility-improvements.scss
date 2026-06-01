@@ -1,58 +1,69 @@
+// ============================================================
+// accessibility-improvements.scss
+// Améliorations d'accessibilité et styles de mise en page
+// généraux (Nous joindre, focus, typographie, formulaires…)
+// ============================================================
+
+// ── Typographie : centrage des titres h2 sur mobile ──────────
+
 @media (max-width: 600px) {
     h2 {
         text-align: center;
     }
 }
 
-/* ============================================
-   Typographie — justification du texte
-   ============================================ */
+// ── Typographie : justification du texte dans le contenu ─────
+
 .content p {
     text-align: justify;
     hyphens: auto;
 }
-// Styles pour la page Nous joindre
+
+// ── Page Nous joindre ─────────────────────────────────────────
+
 .contact-container {
     max-width: 800px;
     margin: 2em auto;
     padding: 1em;
-    /* background: #fafbfc; */
     border-radius: 12px;
-    /* box-shadow: 0 2px 8px #0001; */
 }
+
 .contact-columns {
     display: flex;
     gap: 2em;
     align-items: center;
     margin-bottom: 2em;
 }
+
 .contact-info {
     flex: 1.1;
 }
+
 .contact-image {
     flex: 1.8;
-    /* text-align: right; */
 }
+
 .contact-image img {
     max-width: 100%;
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
-.icon {
-    margin-right: 0.5em;
-}
+
 @media (max-width: 600px) {
     .contact-columns {
         flex-direction: column;
         gap: 1em;
         text-align: center;
     }
+
     .contact-image {
         text-align: center;
     }
 }
-// Section location de salle
+
+// ── Section location de salle ─────────────────────────────────
+
 .location-rental {
     margin-top: 2rem;
     padding: 1.5rem 2rem;
@@ -85,11 +96,8 @@
     }
 }
 
-/* ============================================
-   Améliorations d'accessibilité personnalisées
-   ============================================ */
+// ── Indicateurs de focus (accessibilité) ─────────────────────
 
-/* Indicateurs de focus améliorés */
 a:focus,
 button:focus,
 input:focus,
@@ -101,7 +109,7 @@ textarea:focus,
     border-radius: 2px;
 }
 
-/* Focus visible pour les navigateurs modernes */
+// :focus-visible pour les navigateurs qui le supportent
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -112,7 +120,6 @@ textarea:focus-visible,
     outline-offset: 2px;
 }
 
-/* Amélioration des boutons au focus */
 .button:focus,
 .button:focus-visible {
     outline: 3px solid var(--primary-800);
@@ -120,18 +127,22 @@ textarea:focus-visible,
     box-shadow: 0 0 0 1px var(--white), 0 0 0 4px var(--primary-800);
 }
 
-/* Amélioration des liens dans le menu au focus */
 .main-menu a:focus,
-.main-menu a:focus-visible,
-.footer a:focus,
-.footer a:focus-visible {
+.main-menu a:focus-visible {
     outline: 2px solid var(--primary-600);
     outline-offset: 2px;
     background-color: rgba(3, 133, 111, 0.1);
     border-radius: 3px;
 }
 
-/* Amélioration du lien "Aller au contenu" */
+.footer a:focus,
+.footer a:focus-visible {
+    outline: 2px solid var(--primary-400);
+    outline-offset: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
 .skip-link {
     background-color: var(--primary-600);
     color: var(--white);
@@ -139,14 +150,15 @@ textarea:focus-visible,
     padding: 15px 25px;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    &:focus {
+        outline: 3px solid var(--primary-800);
+        outline-offset: 2px;
+    }
 }
 
-.skip-link:focus {
-    outline: 3px solid var(--primary-800);
-    outline-offset: 2px;
-}
+// ── Couleur et contraste des liens ───────────────────────────
 
-/* Amélioration du contraste pour les liens */
 a {
     color: var(--primary-700);
     text-decoration: underline;
@@ -159,12 +171,12 @@ a:hover {
     text-decoration-thickness: 2px;
 }
 
-/* Contraste amélioré pour le texte sur fond clair */
 body {
     color: #1a1a1a;
 }
 
-/* Amélioration de la lisibilité des formulaires */
+// ── Formulaires ──────────────────────────────────────────────
+
 label {
     display: block;
     font-weight: 600;
@@ -195,7 +207,6 @@ textarea:focus {
     box-shadow: 0 0 0 2px rgba(3, 133, 111, 0.2);
 }
 
-/* Messages d'erreur accessibles */
 .error-message,
 .form-error {
     color: #b00020;
@@ -206,7 +217,6 @@ textarea:focus {
     gap: 0.5rem;
 }
 
-/* État désactivé visible */
 button:disabled,
 input:disabled,
 select:disabled,
@@ -216,7 +226,8 @@ textarea:disabled {
     background-color: #e5e5e5;
 }
 
-/* Amélioration de la zone cliquable des éléments interactifs */
+// ── Zones de clic minimales (44×44 px selon WCAG 2.5.5) ──────
+
 .menu-link,
 .button,
 a.button {
@@ -227,14 +238,27 @@ a.button {
     justify-content: center;
 }
 
-/* Amélioration du contraste du hamburger menu */
 .hamburger-icon {
     padding: 8px;
     min-width: 44px;
     min-height: 44px;
 }
 
-/* Indicateurs visuels pour les éléments actifs */
+@media (max-width: 999px) {
+    .mobile-cta-btn {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+    }
+
+    .menu-link {
+        padding: 12px 16px;
+        min-height: 44px;
+    }
+}
+
+// ── Indicateurs visuels pour les éléments actifs ─────────────
+
 .menu-item.active a,
 .main-menu .active {
     font-weight: 700;
@@ -242,7 +266,8 @@ a.button {
     padding-left: 1rem;
 }
 
-/* Amélioration de la visibilité des tableaux */
+// ── Tableaux ─────────────────────────────────────────────────
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -262,40 +287,8 @@ td {
     border: 1px solid var(--gray-400);
 }
 
-/* Amélioration des liens du footer (sans changer la couleur de fond) */
-.footer a:focus,
-.footer a:focus-visible {
-    outline: 2px solid var(--primary-400);
-    outline-offset: 2px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-}
+// ── Typographie globale ───────────────────────────────────────
 
-/* Support pour les préférences de mouvement réduit */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Support pour le mode contraste élevé */
-@media (prefers-contrast: high) {
-    a:focus,
-    button:focus,
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline-width: 4px;
-        outline-color: currentColor;
-    }
-}
-
-/* Amélioration de l'espacement pour la lisibilité */
 p,
 li,
 dd {
@@ -309,7 +302,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
 }
 
-/* Amélioration pour les listes */
 ul, ol {
     padding-left: 2rem;
     margin-bottom: 1rem;
@@ -319,7 +311,6 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Support des sous-titres et légendes */
 figcaption,
 caption {
     font-style: italic;
@@ -328,7 +319,8 @@ caption {
     text-align: left;
 }
 
-/* Amélioration de la visibilité des éléments sélectionnés */
+// ── Sélection de texte ───────────────────────────────────────
+
 ::selection {
     background-color: var(--primary-400);
     color: var(--white);
@@ -339,16 +331,26 @@ caption {
     color: var(--white);
 }
 
-/* Zones de clic suffisantes pour mobile */
-@media (max-width: 999px) {
-    .mobile-cta-btn {
-        min-width: 44px;
-        min-height: 44px;
-        padding: 10px;
+// ── Préférences système ───────────────────────────────────────
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-    
-    .menu-link {
-        padding: 12px 16px;
-        min-height: 44px;
+}
+
+@media (prefers-contrast: high) {
+    a:focus,
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline-width: 4px;
+        outline-color: currentColor;
     }
 }
