@@ -1,4 +1,4 @@
-
+﻿
 # Centre Des Loisirs De Fatima
 
 ![Licence AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)
@@ -7,161 +7,234 @@
 ![Issues ouvertes](https://img.shields.io/github/issues/miamoto15/centreloisirsdefatima)
 ![Contributeurs](https://img.shields.io/github/contributors/miamoto15/centreloisirsdefatima)
 
-*Ajoutez ici une capture d’écran du site une fois en ligne.*
+![Site web - Centre des Loisirs de Fatima](static/Site%20web%20-%20Centre%20des%20Loisirs%20de%20Fatima.jpg)
 
 ## Table des matières
 
-- [Centre Des Loisirs De Fatima](#centre-des-loisirs-de-fatima)
-  - [Table des matières](#table-des-matières)
-  - [À propos](#à-propos)
-  - [Fonctionnalités](#fonctionnalités)
-  - [Prérequis](#prérequis)
-  - [Installation](#installation)
-  - [Structure du projet](#structure-du-projet)
-  - [Déploiement](#déploiement)
-    - [GitHub Pages](#github-pages)
-    - [GitHub Actions](#github-actions)
-  - [Contribuer](#contribuer)
-  - [Forker ce dépôt](#forker-ce-dépôt)
-  - [Licence](#licence)
-  - [Support](#support)
-  - [Ressources](#ressources)
+- [À propos](#à-propos)
+- [Fonctionnalités](#fonctionnalités)
+- [Stack technique](#stack-technique)
+- [Configuration Windows (débutant)](#configuration-windows-débutant)
+- [Démarrage local du projet](#démarrage-local-du-projet)
+- [Commandes utiles](#commandes-utiles)
+- [Contribuer (workflow recommandé)](#contribuer-workflow-recommandé)
+- [Structure du projet (dossiers clés)](#structure-du-projet-dossiers-clés)
+- [Déploiement](#déploiement)
+- [Forker ce dépôt](#forker-ce-dépôt)
+- [Licence](#licence)
+- [Support](#support)
+- [Ressources](#ressources)
 
 ## À propos
 
-Le Centre des Loisirs de Fatima est un OBNL qui dynamise la vie communautaire du village de Fatima aux Îles-de-la-Madeleine. Ce site web statique, développé avec Hugo et le thème Dot Org, présente les événements, projets et informations du centre.
+Le Centre des Loisirs de Fatima est un OBNL qui dynamise la vie communautaire du village de Fatima aux Îles-de-la-Madeleine.
+
+Ce dépôt contient le site web statique officiel de l'organisme, construit avec Hugo.
 
 ## Fonctionnalités
 
-- Présentation des événements à venir
-- Pages projets et actualités
-- Multilingue (français/anglais)
-- Responsive design
-- Facile à déployer
+- Présentation des événements et activités
+- Pages de projets et d'information
+- Site bilingue (français/anglais)
+- Design responsive (mobile et bureau)
+- Génération statique rapide et déploiement automatisé
 
-Le Centre des Loisirs de Fatima est un organisme à but non lucratif (OBNL) qui œuvre pour dynamiser la vie communautaire du village de Fatima aux Îles-de-la-Madeleine. L’association organise divers événements, entretient des bâtiments importants, propose des initiatives comme des petits-déjeuners dans les écoles et finance ses activités grâce à des loteries, bingos, soirées dansantes, etc.
+## Stack technique
 
-Pour accroître sa visibilité et promouvoir ses actions, le comité des loisirs a mis en place une vitrine web. Ce site statique, développé avec le générateur (SSG) Hugo et le thème Dot Org Hugo Theme, présente les événements, les projets et les informations essentielles du centre à l’aide de technologies HTML, CSS et JavaScript.
+- [Hugo Extended](https://gohugo.io/) (générateur statique)
+- [Node.js](https://nodejs.org/) + npm (outillage front-end)
+- [Dart Sass](https://sass-lang.com/dart-sass/) (compilation SCSS)
+- Git + GitHub (versionnement et collaboration)
 
-## Prérequis
+## Configuration Windows (débutant)
 
-- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.154+)
-- [Node.js](https://nodejs.org/) (v25+)
-- Windows
+Cette section est faite pour une première installation complète sur Windows.
 
-Pour installer Hugo Extended et Node.js sous Windows :
+### 1. Installer les outils requis
 
-```shell
-winget install Hugo.Hugo.Extended
-winget install OpenJS.NodeJS
+Ouvrir **PowerShell en mode administrateur** et exécuter :
+
+```powershell
+winget install --id Git.Git -e
+winget install --id Hugo.Hugo.Extended -e
+winget install --id OpenJS.NodeJS.LTS -e
+winget install --id Google.dart-sdk -e
 ```
 
-## Installation
+Si `winget` n'est pas reconnu, installer d'abord **App Installer** depuis le Microsoft Store, puis relancer PowerShell.
 
-1. Clonez le dépôt Git :
+### 2. Vérifier les versions installées
 
-   ```shell
-   git clone https://github.com/miamoto15/centreloisirsdefatima.git
-   cd centreloisirsdefatima
-   ```
+Dans un nouveau terminal PowerShell :
 
-2. Installez les dépendances Node.js :
+```powershell
+git --version
+hugo version
+node -v
+npm -v
+sass --version
+```
 
-   ```shell
-   npm install
-   ```
+Versions minimales recommandées :
 
-3. Lancez le serveur de développement Hugo :
+- Hugo Extended: v0.161.1+
+- Node.js: v20 LTS+
 
-   ```shell
-   npm run start
-   ```
+### 3. Configurer Git (une seule fois)
 
-## Structure du projet
+```powershell
+git config --global user.name "Votre Nom"
+git config --global user.email "votre.email@example.com"
+```
 
-Voici la structure complète du projet :
+### 4. Installer VS Code (recommandé)
 
-- `archetypes/` : Modèles de contenu Hugo
-- `assets/` : Fichiers d’assets (CSS, JS, images, etc.)
-- `config/` : Fichiers de configuration Hugo
-  - `_default/` : Configurations par défaut
-  - `development/` : Configurations pour le développement
-  - `production/` : Configurations pour la production
-- `content/` : Contenu du site (pages, articles, etc.)
-- `data/` : Fichiers de données YAML/JSON utilisés par Hugo
-- `i18n/` : Fichiers de traduction pour le multilingue
-- `layouts/` : Templates et mises en page Hugo
-- `public/` : Site généré prêt à être déployé
-- `resources/` : Fichiers générés et optimisés par Hugo
-- `static/` : Fichiers statiques accessibles tels quels (images, fonts, etc.)
-- `themes/` : Thèmes Hugo (ex : Dot Org Hugo Theme)
-  - `dot-org-hugo-theme/` : Thème principal utilisé
-    - `archetypes/` : Modèles spécifiques au thème
-    - `assets/` : Assets du thème (JS, SCSS)
-    - `layouts/` : Templates du thème
-    - `static/` : Fichiers statiques du thème
-    - `exampleSite/` : Exemple de site pour le thème
-- `package.json` : Dépendances Node.js
-- `postcss.config.js` : Configuration PostCSS
-- `README.md` : Documentation du projet
+- Installer [Visual Studio Code](https://code.visualstudio.com/)
+- Installer l'extension **EditorConfig for VS Code** (optionnel mais utile)
+
+## Démarrage local du projet
+
+### 1. Cloner le dépôt
+
+```powershell
+git clone https://github.com/miamoto15/centreloisirsdefatima.git
+cd centreloisirsdefatima
+```
+
+### 2. Installer les dépendances
+
+```powershell
+npm install
+```
+
+### 3. Lancer le serveur de développement
+
+```powershell
+npm run start
+```
+
+Puis ouvrir l'adresse locale affichée dans le terminal (habituellement `http://localhost:1313`).
+
+### Dépannage rapide (Windows)
+
+- `hugo` non reconnu : fermer/réouvrir PowerShell après installation, puis refaire `hugo version`.
+- `sass` non reconnu : vérifier l'installation de Dart Sass avec `sass --version`.
+- `npm install` échoue : vérifier `node -v` et `npm -v`, puis relancer dans un nouveau terminal.
+- Port 1313 occupé : arrêter l'autre instance Hugo ou redémarrer le terminal.
+
+## Commandes utiles
+
+```powershell
+# Serveur local (drafts + contenus futurs activés)
+npm run start
+
+# Build production local (sans déploiement)
+npm run build
+
+# Build staging local
+npm run build:staging
+```
+
+Important : ne pas utiliser `npm run deploy` en contribution normale. Le déploiement est géré par GitHub Actions.
+
+## Contribuer (workflow recommandé)
+
+### 1. Créer une branche
+
+```powershell
+git checkout -b feature/ma-fonctionnalite
+```
+
+### 2. Développer et vérifier localement
+
+- Modifier le code
+- Vérifier le rendu avec `npm run start`
+- Vérifier le build avec `npm run build`
+
+### 3. Committer et pousser
+
+```powershell
+git add .
+git commit -m "feat: ajouter ma fonctionnalite"
+git push origin feature/ma-fonctionnalite
+```
+
+### 4. Ouvrir une Pull Request
+
+- Créer une PR vers `main`
+- Attendre le pipeline CI
+- Corriger si le build échoue
+
+## Structure du projet (dossiers clés)
+
+- `archetypes/` : modèles de contenu Hugo
+- `assets/` : SCSS, images et autres assets transformés
+- `config/` : configuration Hugo par environnement
+- `content/` : contenus éditoriaux (fr/en)
+- `data/` : données YAML/JSON utilisées dans les pages
+- `layouts/` : gabarits et partiels Hugo
+- `static/` : fichiers servis tels quels
+- `themes/dot-org-hugo-theme/` : thème Hugo utilisé
+- `public/` : site généré (build output)
 
 ## Déploiement
 
-### GitHub Pages
+### Flux CI/CD automatique (recommandé)
 
-Ce projet est conçu pour être déployé sur GitHub Pages.
+Le déploiement est automatisé via GitHub Actions.
 
-**Statut :** La configuration GitHub Pages sera documentée prochainement.
-
-En attendant, vous pouvez générer le site statique avec `npm run build` et déployer le contenu du dossier `public/` manuellement ou via une action GitHub.
-
-Pour générer le site statique en production :
-
-```shell
-npm run build
+```text
+git push origin feature/ma-branche
+  ↓
+Pull Request vers main
+  ↓
+CI (build) doit passer
+  ↓
+Merge dans main
+  ↓
+Déploiement gh-pages automatique
+  ↓
+centreloisirsfatima.com mis à jour (~1 min)
 ```
 
-Les fichiers générés seront dans le dossier `public/`.
+### Pipelines GitHub Actions
 
-### GitHub Actions
+| Fichier | Déclencheur | Rôle |
+|---|---|---|
+| `.github/workflows/ci.yml` | Chaque PR vers `main` | Build Hugo + vérification, bloque le merge si échec |
+| `.github/workflows/deploy.yml` | Push sur `main` | Build production + publication sur `gh-pages` |
+| `.github/workflows/auto-merge.yml` | Ouverture/mise à jour d'une PR | Active l'auto-merge squash quand la CI est verte |
 
-Un pipeline d’intégration et de déploiement continus (CI/CD) est mis en place avec GitHub Actions afin d’automatiser la construction et la mise en ligne du site.
+### Déploiement manuel (urgence seulement)
 
-**Pour lancer le pipeline** :
+Le workflow est déclenchable manuellement parce que `.github/workflows/deploy.yml` contient `workflow_dispatch`.
 
-- Ouvrez une pull request vers la branche principale (`main`).
-- Après l’approbation du propriétaire du dépôt, le pipeline GitHub Actions se lancera automatiquement et exécutera le workflow défini dans `.github/workflows/deploy.yml`.
-- Le statut du build est visible dans l’onglet “Actions” du dépôt ou via le badge en haut du README.
+Chemin GitHub : **Actions -> Déploiement — gh-pages -> Run workflow**
 
-Vous pouvez aussi lancer manuellement le workflow depuis l’onglet “Actions” sur GitHub si besoin.
+Attention : ne pas utiliser le workflow **pages-build-deployment** pour cette action.
+Ce workflow est géré automatiquement par GitHub Pages et n'est pas celui du dépôt.
 
-## Contribuer
-
-1. Forkez le projet
-2. Créez une branche (`git checkout -b feature/ma-fonctionnalite`)
-3. Commitez vos changements (`git commit -am 'Ajout d'une fonctionnalité'`)
-4. Poussez la branche (`git push origin feature/ma-fonctionnalite`)
-5. Ouvrez une Pull Request
+Important : ce bouton est visible/utilisable seulement pour les membres ayant les permissions adéquates sur le dépôt (généralement `Write`, `Maintain` ou `Admin`).
 
 ## Forker ce dépôt
 
-Si vous souhaitez utiliser ce dépôt comme base pour créer votre propre site web, vous devez **retirer tout le contenu appartenant au Centre Des Loisirs de Fatima** avant de publier votre site. Cela inclut, sans s'y limiter :
+Si vous réutilisez ce dépôt comme base, vous devez **retirer tout le contenu propre au Centre Des Loisirs de Fatima** avant publication, incluant notamment :
 
-- Les photos et images
-- Les logos et marques de commerce
-- Les informations sur les événements
-- Les textes et descriptions propres à l'organisme
+- Photos et images
+- Logos et marques de commerce
+- Informations d'événements
+- Textes et descriptions propres à l'organisme
 
-Ce contenu est la propriété exclusive du **Centre Des Loisirs de Fatima, Î.M., Inc.** et n'est **pas** couvert par la licence AGPL-3.0, qui s'applique uniquement au code source.
+Ce contenu est la propriété exclusive du **Centre Des Loisirs de Fatima, Î.M., Inc.** et n'est **pas** couvert par l'AGPL-3.0 (qui s'applique au code source seulement).
 
 ## Licence
 
-Ce projet est distribué sous licence **GNU Affero General Public License v3.0 (AGPL-3.0)**. Voir le fichier [LICENSE](LICENSE).
+Ce projet est distribué sous licence **GNU Affero General Public License v3.0 (AGPL-3.0)**. Voir [LICENSE](LICENSE).
 
 | Titulaire | Périmètre |
 |---|---|
 | Copyright © 2026 LE CENTRE DES LOISIRS DE FATIMA, Î.M., INC. | Contenu : textes, images, données, marque et logo |
-| Copyright © 2026 Cédric Arseneault | Code source : gabarits Hugo, feuilles de style, scripts et structure du site |
+| Copyright © 2026 Cédric Arseneault | Code source : gabarits Hugo, styles, scripts, structure du site |
 
 Vous pouvez :
 
@@ -170,17 +243,17 @@ Vous pouvez :
 
 Sous réserve de :
 
-- Conserver la mention du copyright et la licence dans toutes les copies
-- Publier vos modifications sous AGPL-3.0 si vous redistribuez ou déployez le code publiquement (y compris via réseau)
+- Conserver les mentions de copyright et la licence
+- Publier vos modifications sous AGPL-3.0 en cas de redistribution ou déploiement public
 
 Le fichier LICENSE reste la référence légale.
 
 ## Support
 
-Pour toute question ou problème :
+Pour toute question ou problème :
 
-1. Veuillez d’abord créer un billet (issue) sur GitHub dans l’onglet “Issues” du dépôt.
-2. Si besoin, contactez-nous par courriel à : [info@centreloisirsfatima.com](mailto:support@centreloisirsfatima.org)
+1. Ouvrir d'abord un ticket dans l'onglet **Issues** du dépôt GitHub.
+2. Si besoin, contacter : [info@centreloisirsfatima.com](mailto:info@centreloisirsfatima.com)
 
 ## Ressources
 
