@@ -66,13 +66,17 @@ jobs:
       - name: Installer les dépendances npm
         run: npm ci
 
-      # ── 3. Hugo ─────────────────────────────────────────────────────────────
+      # ── 3. Hugo + Dart Sass ─────────────────────────────────────────────────
+      # Hugo Extended v0.114+ requiert Dart Sass (LibSass embarqué supprimé).
       - name: Installer Hugo Extended v${{ env.HUGO_VERSION }}
         run: |
           wget -q -O "${{ runner.temp }}/hugo.deb" \
             "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb"
           sudo dpkg -i "${{ runner.temp }}/hugo.deb"
           hugo version
+
+      - name: Installer Dart Sass
+        run: sudo snap install dart-sass
 
       # ── 4. Cache des ressources générées ────────────────────────────────────
       - name: Restaurer le cache Hugo
