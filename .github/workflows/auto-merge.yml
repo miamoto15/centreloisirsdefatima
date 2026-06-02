@@ -35,7 +35,9 @@ jobs:
       - name: Activer l'auto-merge (squash) via l'API GitHub
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # Utilise un PAT au lieu de GITHUB_TOKEN pour que le merge déclenche
+          # le workflow de déploiement (GITHUB_TOKEN ne déclenche pas d'autres workflows)
+          github-token: ${{ secrets.WORKFLOW_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
 
