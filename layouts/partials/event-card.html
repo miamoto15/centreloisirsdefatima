@@ -80,6 +80,10 @@
     </p>
     {{ end }}
 
+    {{ with $page.Params.gratuites }}
+    <p class="ev-carte-gratuites" style="margin-top: 0.25rem;"><strong><em>{{ . }}</em></strong></p>
+    {{ end }}
+
     {{ with $page.Content }}
     <details class="ev-programme-details">
       <summary class="ev-programme-toggle">

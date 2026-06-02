@@ -68,6 +68,10 @@
       {{ . }}
     </span>
     {{ end }}
+
+    {{ with .Params.gratuites }}
+    <div style="margin-top: 0.25rem;"><strong><em>{{ . }}</em></strong></div>
+    {{ end }}
   </div>
 
   {{ if .Params.billets_url }}

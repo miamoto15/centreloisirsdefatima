@@ -4,6 +4,7 @@ date: 2026-06-23
 description: "Une soirée festive sous les étoiles avec artistes locaux, feu de joie et feux d'artifices — venez chanter, danser et partager un grand moment de fierté québécoise en famille ou entre amis !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
+gratuites: "Gratuit pour tous."
 billets_url: ""
 image: "img/programmation/Fête nationale.png"
 evenement: true

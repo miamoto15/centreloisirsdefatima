@@ -4,6 +4,7 @@ date: 2026-07-11
 description: "Une journée magique placée sous le signe du jeu, du rire et de la créativité pour toute la famille — dinosaures, spectacles, animations interactives, jeux gonflables et bien plus !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "5 $"
+gratuites: "Gratuit pour les tout-petits de 0 à 12 mois."
 billets_url: "https://lepointdevente.com/billets/samedi-festival-baleineaux-2026?lang=fr"
 image: "img/programmation/Les petits baleineaux.png"
 evenement: true

@@ -4,6 +4,7 @@ date: 2026-06-23
 description: "A festive evening under the stars with local artists, a bonfire and fireworks — come sing, dance and celebrate Québec's National Holiday with family and friends!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
+gratuites: "Free for everybody."
 billets_url: ""
 image: "img/programmation/Fête nationale.png"
 evenement: true
