@@ -6,6 +6,7 @@ description: "Two spectacular days with the Canadian Forces Snowbirds: breathtak
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
 billets_url: ""
+image: "img/programmation/Sécuri-fête.png"
 evenement: true
 translationKey: "securi-fete-2026"
 showHeader: false

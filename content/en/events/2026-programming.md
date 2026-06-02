@@ -7,7 +7,7 @@ layout: "programmation"
 showHeader: true
 ---
 
-{{< responsive-img src="img/programmation/Visuel - Aéroport.png" alt="2026 event lineup poster — Centre des Loisirs de Fatima" width=100% >}}
+{{< responsive-img src="img/programmation/Bannière des événements.png" alt="Bannière festive de l'Anse-Aux-Baleiniers" width=100% >}}
 
 {{< spacer 30 >}}
 

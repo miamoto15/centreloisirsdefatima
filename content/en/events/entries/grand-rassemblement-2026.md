@@ -5,6 +5,7 @@ description: "Nestled between sea and cliffs, Anse aux Baleiniers hosts a vibran
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$55"
 billets_url: "https://lepointdevente.com/billets/grandrassemblement2026?lang=en"
+image: "img/programmation/Le grand rassemblement.png"
 evenement: true
 translationKey: "grand-rassemblement-2026"
 showHeader: false

@@ -5,6 +5,7 @@ description: "A magical day of fun, laughter and creativity for the whole family
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$5"
 billets_url: "https://lepointdevente.com/billets/dimanche-festival-baleineaux-2026?lang=en"
+image: "img/programmation/Les petits baleineaux.png"
 evenement: true
 translationKey: "festival-baleineaux-2026-j2"
 showHeader: false

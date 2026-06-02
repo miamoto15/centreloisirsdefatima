@@ -5,6 +5,7 @@ description: "A festive evening under the stars with local artists, a bonfire an
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
 billets_url: ""
+image: "img/programmation/Fête nationale.png"
 evenement: true
 translationKey: "fete-nationale-2026"
 showHeader: false
