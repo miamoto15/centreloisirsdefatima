@@ -65,6 +65,14 @@
     <p class="ev-carte-desc">{{ . }}</p>
     {{ end }}
 
+    {{ with $page.Params.image }}
+      {{ $img := resources.Get . }}
+      {{ if $img }}
+        {{ $webp := $img.Process "webp" }}
+        <img src="{{ $webp.RelPermalink }}" alt="{{ $page.Title }}" style="width:100%;height:auto;display:block;margin:10px 0;" loading="lazy">
+      {{ end }}
+    {{ end }}
+
     {{ with $page.Params.prix }}
     <p class="ev-carte-prix">
       <span class="ev-prix-label">{{ if eq $lang "fr" }}Prix{{ else }}Price{{ end }} : </span>

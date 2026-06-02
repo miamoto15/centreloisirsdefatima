@@ -5,6 +5,7 @@ description: "Nichée entre mer et falaises, l'Anse aux Baleiniers vous ouvre se
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "55 $"
 billets_url: "https://lepointdevente.com/billets/grandrassemblement2026?lang=fr"
+image: "img/programmation/Le grand rassemblement.png"
 evenement: true
 translationKey: "grand-rassemblement-2026"
 showHeader: false

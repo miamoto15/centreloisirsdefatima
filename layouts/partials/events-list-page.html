@@ -62,13 +62,15 @@
 
 {{/* ── Section partenaires ── */}}
 {{ if eq .Kind "page" }}
-{{ $imgPath := "img/partenaires/banderolle-partenaires.jpg" }}
-{{ $img := resources.Get $imgPath }}
-{{ if $img }}
-{{ $webp := $img.Process "webp" }}
 <div class="partenaires-section">
   <h2>{{ if eq $lang "fr" }}Nos partenaires{{ else }}Our Partners{{ end }}</h2>
-  <img src="{{ $webp.RelPermalink }}" alt="{{ if eq $lang "fr" }}Municipalité des Îles-de-la-Madeleine, Desjardins, Coop IGA L'Éveil, Solutions Distributions LM inc., PAL Airlines{{ else }}Municipality of the Îles-de-la-Madeleine, Desjardins, Coop IGA L'Éveil, Solutions Distributions LM inc., PAL Airlines{{ end }}" style="width:100%;height:auto;" loading="lazy">
+  <div style="max-width: 100%; margin: 0 auto;">
+    {{ $imgPath := "img/partenaires/Partenaire.png" }}
+    {{ $img := resources.Get $imgPath }}
+    {{ if $img }}
+      {{ $webp := $img.Process "webp" }}
+      <img src="{{ $webp.RelPermalink }}" alt="{{ if eq $lang "fr" }}Partenaires du Centre des Loisirs de Fatima{{ else }}Centre des Loisirs de Fatima Partners{{ end }}" style="width:100%;height:auto;" loading="lazy">
+    {{ end }}
+  </div>
 </div>
-{{ end }}
 {{ end }}

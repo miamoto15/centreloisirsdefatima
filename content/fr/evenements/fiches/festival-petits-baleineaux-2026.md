@@ -5,6 +5,7 @@ description: "Une journée magique placée sous le signe du jeu, du rire et de l
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "5 $"
 billets_url: "https://lepointdevente.com/billets/samedi-festival-baleineaux-2026?lang=fr"
+image: "img/programmation/Les petits baleineaux.png"
 evenement: true
 translationKey: "festival-baleineaux-2026-j1"
 showHeader: false
