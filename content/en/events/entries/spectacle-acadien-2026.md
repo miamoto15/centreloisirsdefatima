@@ -5,6 +5,7 @@ description: "Celebrate the richness of Acadian culture: infectious music, dance
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$35"
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=en"
+image: "img/programmation/Akadie2000.png"
 evenement: true
 translationKey: "spectacle-retrouvailles-akadie-2000"
 showHeader: false
