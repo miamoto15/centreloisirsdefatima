@@ -5,6 +5,7 @@ description: "Venez célébrer la richesse et la chaleur de la culture acadienne
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "35 $"
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=fr"
+image: "img/programmation/Akadie2000.png"
 evenement: true
 translationKey: "spectacle-retrouvailles-akadie-2000"
 showHeader: false

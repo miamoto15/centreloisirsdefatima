@@ -5,6 +5,7 @@ description: "Une soirée festive sous les étoiles avec artistes locaux, feu de
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
 billets_url: ""
+image: "img/programmation/Fête nationale.png"
 evenement: true
 translationKey: "fete-nationale-2026"
 showHeader: false

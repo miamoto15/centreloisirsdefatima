@@ -6,6 +6,7 @@ description: "Deux journées spectaculaires avec les Snowbirds des Forces canadi
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
 billets_url: ""
+image: "img/programmation/Sécuri-fête.png"
 evenement: true
 translationKey: "securi-fete-2026"
 showHeader: false
