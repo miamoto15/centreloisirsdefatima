@@ -4,6 +4,7 @@ date: 2026-08-01
 description: "Venez célébrer la richesse et la chaleur de la culture acadienne : musique entraînante, danse, gastronomie et artistes passionnés — une soirée haute en couleur et en émotion !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "35 $"
+gratuites: "Entrée gratuite pour les 12 ans et moins."
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=fr"
 image: "img/programmation/Akadie2000.png"
 evenement: true

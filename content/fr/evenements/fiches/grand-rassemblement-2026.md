@@ -4,6 +4,7 @@ date: 2026-08-29
 description: "Nichée entre mer et falaises, l'Anse aux Baleiniers vous ouvre ses bras pour un festival vibrant de fin d'été : encan chinois, feux, sculptures et Éric Lapointe en tête d'affiche !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "55 $"
+gratuites: "Entrée gratuite pour les 12 ans et moins."
 billets_url: "https://lepointdevente.com/billets/grandrassemblement2026?lang=fr"
 image: "img/programmation/Le grand rassemblement.png"
 evenement: true

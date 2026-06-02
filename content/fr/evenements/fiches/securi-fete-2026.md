@@ -5,6 +5,7 @@ dateEnd: "2026-06-28"
 description: "Deux journées spectaculaires avec les Snowbirds des Forces canadiennes : démonstrations aériennes époustouflantes, exposants en sécurité publique et ateliers pour toute la famille !"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Gratuit"
+gratuites: "Gratuit pour tous."
 billets_url: ""
 image: "img/programmation/Sécuri-fête.png"
 evenement: true

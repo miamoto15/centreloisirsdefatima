@@ -4,6 +4,7 @@ date: 2026-08-01
 description: "Celebrate the richness of Acadian culture: infectious music, dance, warm encounters and passionate artists — a vibrant evening bursting with colour and tradition!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$35"
+gratuites: "Free for children aged 12 and under."
 billets_url: "https://lepointdevente.com/billets/les-retrouvailles-d-akadie-2000?lang=en"
 image: "img/programmation/Akadie2000.png"
 evenement: true

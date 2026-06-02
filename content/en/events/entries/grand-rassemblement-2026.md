@@ -4,6 +4,7 @@ date: 2026-08-29
 description: "Nestled between sea and cliffs, Anse aux Baleiniers hosts a vibrant end-of-summer festival: silent auction, bonfires, fire sculptures and Éric Lapointe headlining!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$55"
+gratuites: "Free for children aged 12 and under."
 billets_url: "https://lepointdevente.com/billets/grandrassemblement2026?lang=en"
 image: "img/programmation/Le grand rassemblement.png"
 evenement: true

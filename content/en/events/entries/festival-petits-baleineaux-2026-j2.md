@@ -4,6 +4,7 @@ date: 2026-07-12
 description: "A magical day of fun, laughter and creativity for the whole family — dinosaur zones, live shows, foam cannons, interactive activities, inflatables and so much more!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "$5"
+gratuites: "Free for toddlers aged 0 to 12 months."
 billets_url: "https://lepointdevente.com/billets/dimanche-festival-baleineaux-2026?lang=en"
 image: "img/programmation/Les petits baleineaux.png"
 evenement: true
