@@ -31,6 +31,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update-jackpots:
@@ -42,7 +43,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Créer une branche pour la mise à jour
+        id: branch
+        run: |
+          BRANCH_NAME="update-jackpots-$(date +%Y%m%d-%H%M%S)"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          git checkout -b "$BRANCH_NAME"
       
       - name: Mise à jour des montants dans params.yaml
         run: |
@@ -57,22 +64,40 @@ jobs:
           grep -A1 "Gros lots" config/_default/params.yaml
           echo "─────────────────────────────────────────────────"
       
-      - name: Commit et push des changements
+      - name: Commit et push vers la nouvelle branche
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           
           git add config/_default/params.yaml
           git commit -m "🎰 Mise à jour des cagnottes - Joker: ${{ inputs.joker_amount }}, Bingo: ${{ inputs.bingo_amount }}"
-          git push origin main
+          git push origin "${{ steps.branch.outputs.branch_name }}"
       
-      - name: Confirmation
+      - name: Créer et merger la Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "✅ Les montants ont été mis à jour avec succès !"
+          # Créer la PR
+          PR_URL=$(gh pr create \
+            --title "🎰 Mise à jour des cagnottes" \
+            --body "**Mise à jour automatique des montants**
+
+          📊 Nouveaux montants :
+          - Gros lot Joker : ${{ inputs.joker_amount }}
+          - Lot cumulatif Bingo : ${{ inputs.bingo_amount }}
+
+          🤖 Cette PR a été créée automatiquement par le workflow \`update-jackpots\`.
+          Elle sera mergée automatiquement une fois que tous les checks auront passé." \
+            --base main \
+            --head "${{ steps.branch.outputs.branch_name }}")
+          
+          echo "✅ Pull Request créée : $PR_URL"
+          
+          # Activer l'auto-merge (squash)
+          gh pr merge "$PR_URL" --auto --squash --delete-branch
+          
           echo ""
-          echo "📊 Nouveaux montants :"
-          echo "   • Gros lot Joker : ${{ inputs.joker_amount }}"
-          echo "   • Lot cumulatif Bingo : ${{ inputs.bingo_amount }}"
+          echo "🚀 La PR sera automatiquement mergée dès que les checks passeront."
+          echo "   Le déploiement démarrera ensuite automatiquement."
           echo ""
-          echo "🚀 Le déploiement automatique va démarrer dans quelques secondes..."
-          echo "   Suivez la progression dans l'onglet Actions → Déploiement — gh-pages"
+          echo "📋 Suivez la progression ici : $PR_URL"
