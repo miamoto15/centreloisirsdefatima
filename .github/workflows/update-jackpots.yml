@@ -1,0 +1,78 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Mise à jour des montants des cagnottes
+#
+# Workflow manuel permettant de mettre à jour les montants du Joker et du Bingo
+# directement depuis l'interface GitHub Actions, sans besoin de créer une branche
+# ou de cloner le repo.
+#
+# Usage :
+#   1. Aller sur GitHub.com → Actions → "Mettre à jour les cagnottes"
+#   2. Cliquer sur "Run workflow"
+#   3. Entrer les nouveaux montants (format: "10 000 $")
+#   4. Cliquer sur "Run workflow" (bouton vert)
+#
+# Le workflow met à jour config/_default/params.yaml et commit directement sur
+# main, ce qui déclenche automatiquement le déploiement.
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Mettre à jour les cagnottes
+
+on:
+  workflow_dispatch:
+    inputs:
+      joker_amount:
+        description: 'Montant du gros lot Joker (ex: "12 345 $")'
+        required: true
+        type: string
+      bingo_amount:
+        description: 'Montant du lot cumulatif Bingo (ex: "500 $")'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-jackpots:
+    name: Mettre à jour les montants
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Mise à jour des montants dans params.yaml
+        run: |
+          # Mise à jour du fichier params.yaml avec les nouveaux montants
+          sed -i 's/^jokerJackpotAmount: ".*"$/jokerJackpotAmount: "${{ inputs.joker_amount }}"/' config/_default/params.yaml
+          sed -i 's/^bingoJackpotAmount: ".*"$/bingoJackpotAmount: "${{ inputs.bingo_amount }}"/' config/_default/params.yaml
+          
+          # Vérifier que les changements ont été appliqués
+          echo "─────────────────────────────────────────────────"
+          echo "Nouveaux montants dans params.yaml :"
+          echo "─────────────────────────────────────────────────"
+          grep -A1 "Gros lots" config/_default/params.yaml
+          echo "─────────────────────────────────────────────────"
+      
+      - name: Commit et push des changements
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          
+          git add config/_default/params.yaml
+          git commit -m "🎰 Mise à jour des cagnottes - Joker: ${{ inputs.joker_amount }}, Bingo: ${{ inputs.bingo_amount }}"
+          git push origin main
+      
+      - name: Confirmation
+        run: |
+          echo "✅ Les montants ont été mis à jour avec succès !"
+          echo ""
+          echo "📊 Nouveaux montants :"
+          echo "   • Gros lot Joker : ${{ inputs.joker_amount }}"
+          echo "   • Lot cumulatif Bingo : ${{ inputs.bingo_amount }}"
+          echo ""
+          echo "🚀 Le déploiement automatique va démarrer dans quelques secondes..."
+          echo "   Suivez la progression dans l'onglet Actions → Déploiement — gh-pages"
