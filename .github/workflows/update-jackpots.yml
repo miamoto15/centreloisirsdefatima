@@ -1,0 +1,103 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Mise à jour des montants des cagnottes
+#
+# Workflow manuel permettant de mettre à jour les montants du Joker et du Bingo
+# directement depuis l'interface GitHub Actions, sans besoin de créer une branche
+# ou de cloner le repo.
+#
+# Usage :
+#   1. Aller sur GitHub.com → Actions → "Mettre à jour les cagnottes"
+#   2. Cliquer sur "Run workflow"
+#   3. Entrer les nouveaux montants (format: "10 000 $")
+#   4. Cliquer sur "Run workflow" (bouton vert)
+#
+# Le workflow met à jour config/_default/params.yaml et commit directement sur
+# main, ce qui déclenche automatiquement le déploiement.
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Mettre à jour les cagnottes
+
+on:
+  workflow_dispatch:
+    inputs:
+      joker_amount:
+        description: 'Montant du gros lot Joker (ex: "12 345 $")'
+        required: true
+        type: string
+      bingo_amount:
+        description: 'Montant du lot cumulatif Bingo (ex: "500 $")'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-jackpots:
+    name: Mettre à jour les montants
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      
+      - name: Créer une branche pour la mise à jour
+        id: branch
+        run: |
+          BRANCH_NAME="update-jackpots-$(date +%Y%m%d-%H%M%S)"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          git checkout -b "$BRANCH_NAME"
+      
+      - name: Mise à jour des montants dans params.yaml
+        run: |
+          # Mise à jour du fichier params.yaml avec les nouveaux montants
+          sed -i 's/^jokerJackpotAmount: ".*"$/jokerJackpotAmount: "${{ inputs.joker_amount }}"/' config/_default/params.yaml
+          sed -i 's/^bingoJackpotAmount: ".*"$/bingoJackpotAmount: "${{ inputs.bingo_amount }}"/' config/_default/params.yaml
+          
+          # Vérifier que les changements ont été appliqués
+          echo "─────────────────────────────────────────────────"
+          echo "Nouveaux montants dans params.yaml :"
+          echo "─────────────────────────────────────────────────"
+          grep -A1 "Gros lots" config/_default/params.yaml
+          echo "─────────────────────────────────────────────────"
+      
+      - name: Commit et push vers la nouvelle branche
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          
+          git add config/_default/params.yaml
+          git commit -m "🎰 Mise à jour des cagnottes - Joker: ${{ inputs.joker_amount }}, Bingo: ${{ inputs.bingo_amount }}"
+          git push origin "${{ steps.branch.outputs.branch_name }}"
+      
+      - name: Créer et merger la Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Créer la PR
+          PR_URL=$(gh pr create \
+            --title "🎰 Mise à jour des cagnottes" \
+            --body "**Mise à jour automatique des montants**
+
+          📊 Nouveaux montants :
+          - Gros lot Joker : ${{ inputs.joker_amount }}
+          - Lot cumulatif Bingo : ${{ inputs.bingo_amount }}
+
+          🤖 Cette PR a été créée automatiquement par le workflow \`update-jackpots\`.
+          Elle sera mergée automatiquement une fois que tous les checks auront passé." \
+            --base main \
+            --head "${{ steps.branch.outputs.branch_name }}")
+          
+          echo "✅ Pull Request créée : $PR_URL"
+          
+          # Activer l'auto-merge (squash)
+          gh pr merge "$PR_URL" --auto --squash --delete-branch
+          
+          echo ""
+          echo "🚀 La PR sera automatiquement mergée dès que les checks passeront."
+          echo "   Le déploiement démarrera ensuite automatiquement."
+          echo ""
+          echo "📋 Suivez la progression ici : $PR_URL"
