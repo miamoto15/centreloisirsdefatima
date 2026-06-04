@@ -1,4 +1,11 @@
-<link rel="icon" type="image/png" href="{{ "/Logo.png" | absURL }}" sizes="64x64">
-<link rel="shortcut icon" type="image/png" href="{{ "/Logo.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ "/Logo.png" | absURL }}" />
-<!-- ...autres balises existantes si besoin... -->
+{{- $favicon := .Site.Params.favicon | default "img/Logo.png" }}
+{{- $faviconPath := resources.Get $favicon }}
+{{- if $faviconPath }}
+  {{- if eq $faviconPath.MediaType.SubType "svg" }}
+<link rel="icon" type="image/svg+xml" href="{{ $faviconPath.RelPermalink }}">
+  {{- else }}
+<link rel="icon" type="{{ $faviconPath.MediaType }}" href="{{ $faviconPath.RelPermalink }}" sizes="64x64">
+  {{- end }}
+<link rel="shortcut icon" href="{{ $faviconPath.RelPermalink }}">
+<link rel="apple-touch-icon" href="{{ $faviconPath.RelPermalink }}" />
+{{- end }}

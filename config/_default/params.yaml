@@ -9,6 +9,9 @@ cloudflare_analytics_token: "fe205cf85e43413abcf1f8da9ff4f13a"
 # Chemin du logo (depuis /static)
 logo_on_white: "img/Logo.png"
 
+# Chemin du favicon (depuis /assets)
+favicon: "img/Loisirs_Fatima.svg"
+
 # Scripts JS supplémentaires (chemins relatifs à /static ou URL absolues)
 custom_js: []
 
