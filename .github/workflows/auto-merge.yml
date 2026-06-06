@@ -1,17 +1,20 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# Auto-merge — Squash automatique quand le CI passe
+# Auto-merge — Squash APRÈS approbation manuelle
 #
-# Sur chaque PR ciblant `main`, active le "squash auto-merge" natif de GitHub.
-# Dès que tous les required status checks sont verts (ci.yml), GitHub fusionne
-# automatiquement la PR en squash commit — sans intervention manuelle.
+# Sur chaque PR ciblant `main`, active le "squash auto-merge" natif de GitHub,
+# MAIS la PR ne sera mergée QU'APRÈS :
+#   1. ✅ CI vert (required status checks)
+#   2. ✅ Approbation manuelle d'un reviewer
 #
 # Prérequis (à configurer une seule fois dans les paramètres du dépôt) :
 #   Settings → General → ✅ Allow auto-merge
-#   Settings → Branches → règle "main" → ✅ Require status checks to pass
+#   Settings → Branches → règle "main" → ✅ Require a pull request before merging
+#                                       → ✅ Require approvals (minimum: 1)
+#                                       → ✅ Require status checks to pass
 #                                       → status check requis : "Build Hugo (production)"
 # ──────────────────────────────────────────────────────────────────────────────
 
-name: Auto-merge — Squash sur validation CI
+name: Auto-merge — Squash après approbation
 
 on:
   pull_request:
@@ -25,7 +28,7 @@ permissions:
 
 jobs:
   activer-auto-merge:
-    name: Activer le squash auto-merge
+    name: Activer le squash auto-merge (après approbation)
     runs-on: ubuntu-latest
     # Ignorer les bots externes (Dependabot, Renovate, etc.)
     # pour ne pas auto-merger des mises à jour de dépendances sans revue.
@@ -58,7 +61,9 @@ jobs:
               `, { prId: pr.node_id });
 
               core.info(`✅ Squash auto-merge activé sur PR #${pr.number} : "${pr.title}"`);
-              core.info("La PR sera fusionnée automatiquement dès que le CI sera vert.");
+              core.info("⏳ La PR sera fusionnée automatiquement après:");
+              core.info("   1. ✅ CI vert");
+              core.info("   2. ✅ Approbation manuelle d'un reviewer");
 
             } catch (err) {
               // Ne pas faire échouer le workflow — l'auto-merge est un confort,
@@ -68,4 +73,41 @@ jobs:
                 "Vérifiez que l'option 'Allow auto-merge' est activée dans " +
                 "Settings → General du dépôt GitHub."
               );
+            }
+      
+      - name: Ajouter un commentaire de rappel
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+            
+            // Vérifier si un commentaire existe déjà
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number
+            });
+            
+            const botComment = comments.find(c => 
+              c.user.login === 'github-actions[bot]' && 
+              c.body.includes('🔄 Auto-merge configuré')
+            );
+            
+            if (!botComment) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: `## 🔄 Auto-merge configuré
+                
+Cette PR sera automatiquement fusionnée (squash) dès que :
+1. ✅ Les tests CI passent
+2. ✅ **Un reviewer approuve la PR**
+
+👉 **Action requise :** Demandez une revue ou approuvez vous-même si vous n'êtes pas l'auteur.
+
+---
+*Workflow: ${context.workflow} • Run: [#${context.runNumber}](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})*`
+              });
             }

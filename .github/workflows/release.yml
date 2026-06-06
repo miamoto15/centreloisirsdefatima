@@ -1,0 +1,208 @@
+name: 🏷️ Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Type de version (major, minor, patch)'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - '.gitignore'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Créer une release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout du code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🔧 Configuration de Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Installation des dépendances
+        run: npm ci
+
+      - name: 🏗️ Installation de Hugo
+        uses: peaceiris/actions-github-pages@v3
+        with:
+          hugo_version: 'latest'
+          extended: true
+
+      - name: 🔖 Déterminer la nouvelle version (Conventional Commits)
+        id: version
+        run: |
+          # Récupérer la dernière tag
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          echo "Dernière tag: $LATEST_TAG"
+          
+          # Extraire les numéros de version
+          VERSION=${LATEST_TAG#v}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          
+          # Déterminer le type de bump
+          # 1. Si déclenché manuellement, utiliser l'input
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            BUMP_TYPE="${{ github.event.inputs.version_bump }}"
+            echo "Mode manuel: bump=$BUMP_TYPE"
+          else
+            # 2. Sinon, analyser les commits depuis la dernière tag
+            echo "Analyse des commits depuis $LATEST_TAG..."
+            
+            # Récupérer tous les messages de commit depuis la dernière tag
+            COMMITS=$(git log ${LATEST_TAG}..HEAD --pretty=format:"%s" 2>/dev/null || echo "")
+            
+            # Détecter le type de version basé sur Conventional Commits
+            BUMP_TYPE="patch"  # Par défaut
+            
+            if echo "$COMMITS" | grep -qE "^(feat|feature)(\(.+\))?!:|^BREAKING CHANGE:|^[a-z]+(\(.+\))?!:"; then
+              BUMP_TYPE="major"
+              echo "✨ BREAKING CHANGE détecté → MAJOR version"
+            elif echo "$COMMITS" | grep -qE "^(feat|feature)(\(.+\))?:"; then
+              BUMP_TYPE="minor"
+              echo "✨ feat: détecté → MINOR version"
+            elif echo "$COMMITS" | grep -qE "^(fix|bugfix)(\(.+\))?:"; then
+              BUMP_TYPE="patch"
+              echo "🐛 fix: détecté → PATCH version"
+            else
+              echo "📝 Commits standards → PATCH version par défaut"
+            fi
+          fi
+          
+          # Incrémenter la version
+          case $BUMP_TYPE in
+            major)
+              MAJOR=$((MAJOR + 1))
+              MINOR=0
+              PATCH=0
+              ;;
+            minor)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          NEW_TAG="v$NEW_VERSION"
+          
+          echo "Nouvelle version: $NEW_TAG (bump: $BUMP_TYPE)"
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
+          echo "bump_type=$BUMP_TYPE" >> $GITHUB_OUTPUT
+
+      - name: 📝 Mise à jour du fichier VERSION
+        run: |
+          echo "${{ steps.version.outputs.version }}" > VERSION
+          echo "📌 Version mise à jour: ${{ steps.version.outputs.tag }}"
+
+      - name: 🏗️ Build du site Hugo
+        run: |
+          hugo --minify --environment production
+        env:
+          HUGO_ENVIRONMENT: production
+
+      - name: 📦 Création de l'archive des artefacts
+        run: |
+          tar -czf site-${{ steps.version.outputs.tag }}.tar.gz -C public .
+          zip -r site-${{ steps.version.outputs.tag }}.zip public/
+
+      - name: 🏷️ Création du tag Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VERSION
+          git commit -m "chore: bump version to ${{ steps.version.outputs.tag }}" || echo "Aucun changement à commiter"
+          git tag -a ${{ steps.version.outputs.tag }} -m "Release ${{ steps.version.outputs.tag }}"
+          git push origin main --tags
+
+      - name: 📋 Génération des release notes
+        id: release_notes
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: commits } = await github.rest.repos.compareCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              base: '${{ steps.version.outputs.tag }}^',
+              head: 'main'
+            });
+            
+            const features = [];
+            const fixes = [];
+            const others = [];
+            
+            commits.commits.forEach(commit => {
+              const msg = commit.commit.message.split('\n')[0];
+              if (msg.startsWith('feat:') || msg.startsWith('✨')) {
+                features.push(`- ${msg}`);
+              } else if (msg.startsWith('fix:') || msg.startsWith('🐛')) {
+                fixes.push(`- ${msg}`);
+              } else if (!msg.startsWith('chore:')) {
+                others.push(`- ${msg}`);
+              }
+            });
+            
+            let notes = `## 🎉 Version ${{ steps.version.outputs.tag }}\n\n`;
+            
+            if (features.length > 0) {
+              notes += `### ✨ Nouvelles fonctionnalités\n${features.join('\n')}\n\n`;
+            }
+            
+            if (fixes.length > 0) {
+              notes += `### 🐛 Corrections\n${fixes.join('\n')}\n\n`;
+            }
+            
+            if (others.length > 0) {
+              notes += `### 📝 Autres changements\n${others.join('\n')}\n\n`;
+            }
+            
+            notes += `\n---\n**Date:** ${new Date().toLocaleDateString('fr-CA')}\n`;
+            notes += `**Commits:** ${commits.commits.length}`;
+            
+            core.setOutput('notes', notes);
+            return notes;
+
+      - name: 🚀 Création de la GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Release ${{ steps.version.outputs.tag }}
+          body: ${{ steps.release_notes.outputs.notes }}
+          draft: false
+          prerelease: false
+          files: |
+            site-${{ steps.version.outputs.tag }}.tar.gz
+            site-${{ steps.version.outputs.tag }}.zip
+            VERSION
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ✅ Release créée avec succès
+        run: |
+          echo "::notice::Release ${{ steps.version.outputs.tag }} créée avec succès!"
+          echo "::notice::URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }}"
