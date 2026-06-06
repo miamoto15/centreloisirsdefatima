@@ -54,12 +54,20 @@ jobs:
             hugo-resources-preview-
             hugo-resources-
 
-      - name: 🔨 Build du site Hugo (Preview)
+      - name: 🔧 Créer config preview avec le bon baseURL
         run: |
-          hugo --minify --gc
-        env:
-          HUGO_BASEURL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
-          HUGO_ENVIRONMENT: staging
+          mkdir -p config/preview
+          cat > config/preview/hugo.yaml << EOF
+          # Configuration pour les previews de PR
+          baseURL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
+          enableRobotsTXT: false
+          build:
+            writeStats: true
+          EOF
+          echo "📝 Config preview créée avec baseURL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
+
+      - name: 🔨 Build du site Hugo (Preview)
+        run: hugo --environment=preview --minify --gc
 
       - name: � Bloquer l'indexation SEO
         run: |
