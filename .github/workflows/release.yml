@@ -46,9 +46,9 @@ jobs:
         run: npm ci
 
       - name: 🏗️ Installation de Hugo
-        uses: peaceiris/actions-github-pages@v3
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo_version: 'latest'
+          hugo-version: 'latest'
           extended: true
 
       - name: 🔖 Déterminer la nouvelle version (Conventional Commits)
