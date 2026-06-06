@@ -51,6 +51,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: 🎨 Installation de Dart Sass
+        run: sudo snap install dart-sass
+
       - name: 🔖 Déterminer la nouvelle version (Conventional Commits)
         id: version
         run: |

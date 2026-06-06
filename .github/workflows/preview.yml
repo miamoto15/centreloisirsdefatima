@@ -38,6 +38,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: 🎨 Installation de Dart Sass
+        run: sudo snap install dart-sass
+
       - name: 🔨 Build du site Hugo (Preview)
         run: |
           hugo --minify --environment staging --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
