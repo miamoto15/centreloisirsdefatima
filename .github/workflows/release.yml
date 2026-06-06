@@ -24,6 +24,9 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  HUGO_VERSION: "0.161.1"
+
 jobs:
   release:
     name: Créer une release
@@ -48,11 +51,20 @@ jobs:
       - name: 🏗️ Installation de Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: 🎨 Installation de Dart Sass
         run: sudo snap install dart-sass
+
+      - name: 💾 Cache des ressources Hugo
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources-release-${{ hashFiles('assets/**', 'layouts/**') }}
+          restore-keys: |
+            hugo-resources-release-
+            hugo-resources-
 
       - name: 🔖 Déterminer la nouvelle version (Conventional Commits)
         id: version

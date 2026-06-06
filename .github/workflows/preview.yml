@@ -11,6 +11,9 @@ permissions:
   pull-requests: write
   deployments: write
 
+env:
+  HUGO_VERSION: "0.161.1"
+
 jobs:
   preview:
     name: Déploiement de prévisualisation
@@ -35,11 +38,20 @@ jobs:
       - name: 🏗️ Installation de Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: 🎨 Installation de Dart Sass
         run: sudo snap install dart-sass
+
+      - name: 💾 Cache des ressources Hugo
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: hugo-resources-preview-${{ hashFiles('assets/**', 'layouts/**') }}
+          restore-keys: |
+            hugo-resources-preview-
+            hugo-resources-
 
       - name: 🔨 Build du site Hugo (Preview)
         run: |
