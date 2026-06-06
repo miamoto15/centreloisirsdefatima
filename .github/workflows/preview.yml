@@ -29,8 +29,8 @@ jobs:
       - name: 🔧 Configuration de Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: lts/*
+          cache: npm
 
       - name: 📦 Installation des dépendances
         run: npm ci
@@ -58,7 +58,18 @@ jobs:
         run: |
           hugo --environment=production --minify --gc --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
 
-      - name: 📝 Ajout d'un bandeau de preview
+      - name: � Bloquer l'indexation SEO
+        run: |
+          # Ajouter meta robots noindex dans toutes les pages HTML
+          find public -name "*.html" -type f -exec sed -i 's|<head>|<head>\n  <meta name="robots" content="noindex, nofollow">|' {} \;
+          
+          # Créer un robots.txt qui bloque tout
+          cat > public/robots.txt << 'EOF'
+          User-agent: *
+          Disallow: /
+          EOF
+
+      - name: �📝 Ajout d'un bandeau de preview
         run: |
           cat > public/preview-banner.html << 'EOF'
           <style>
@@ -204,27 +215,52 @@ jobs:
     if: github.event.action == 'closed'
     
     steps:
-      - name: 🗑️ Suppression de l'environnement de preview
+      - name: � Checkout de gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🗑️ Suppression du dossier PR
+        run: |
+          if [ -d "pr-${{ github.event.pull_request.number }}" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git rm -rf "pr-${{ github.event.pull_request.number }}"
+            git commit -m "chore: cleanup preview for PR #${{ github.event.pull_request.number }}"
+            git push origin gh-pages
+            echo "✅ Preview supprimé avec succès"
+          else
+            echo "ℹ️ Aucun preview à supprimer"
+          fi
+      
+      - name: 🗑️ Désactivation des déploiements GitHub
         uses: actions/github-script@v7
         with:
           script: |
             // Désactiver tous les déploiements pour cet environnement
             const envName = `preview-pr-${context.payload.pull_request.number}`;
             
-            const { data: deployments } = await github.rest.repos.listDeployments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              environment: envName
-            });
-            
-            for (const deployment of deployments) {
-              await github.rest.repos.createDeploymentStatus({
+            try {
+              const { data: deployments } = await github.rest.repos.listDeployments({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                deployment_id: deployment.id,
-                state: 'inactive',
-                description: 'PR fermée - environnement nettoyé'
+                environment: envName
               });
+              
+              for (const deployment of deployments) {
+                await github.rest.repos.createDeploymentStatus({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  deployment_id: deployment.id,
+                  state: 'inactive',
+                  description: 'PR fermée - environnement nettoyé'
+                });
+              }
+              
+              core.info(`✅ ${deployments.length} déploiement(s) désactivé(s)`);
+            } catch (error) {
+              core.warning(`Impossible de désactiver les déploiements: ${error.message}`);
             }
             
             // Commenter sur la PR
@@ -232,7 +268,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
-              body: `🧹 L'environnement de prévisualisation \`${envName}\` a été nettoyé.`
+              body: `🧹 L'environnement de prévisualisation \`${envName}\` a été nettoyé et supprimé de gh-pages.`
             });
 
       - name: ✅ Nettoyage terminé
