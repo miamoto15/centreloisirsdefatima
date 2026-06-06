@@ -44,7 +44,12 @@ jobs:
       - name: 🎨 Installation de Dart Sass
         run: sudo snap install dart-sass
 
-      - name: 💾 Cache des ressources Hugo
+      - name: � Configuration du PATH
+        run: |
+          echo "${{ github.workspace }}/node_modules/.bin" >> $GITHUB_PATH
+          echo "/snap/bin" >> $GITHUB_PATH
+
+      - name: �💾 Cache des ressources Hugo
         uses: actions/cache@v4
         with:
           path: resources
@@ -58,7 +63,6 @@ jobs:
           hugo --minify --environment staging --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
         env:
           HUGO_ENVIRONMENT: staging
-          PATH: ${{ github.workspace }}/node_modules/.bin:${{ env.PATH }}
 
       - name: 📝 Ajout d'un bandeau de preview
         run: |
