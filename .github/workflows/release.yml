@@ -66,10 +66,81 @@ jobs:
             hugo-resources-release-
             hugo-resources-
 
-      - name: � Configurer le PATH pour PostCSS
-        run: echo "${{ github.workspace }}/node_modules/.bin" >> $GITHUB_PATH
+      - name: � Déterminer la nouvelle version (Conventional Commits)
+        id: version
+        run: |
+          # Récupérer la dernière tag
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          echo "Dernière tag: $LATEST_TAG"
+          
+          # Extraire les numéros de version
+          VERSION=${LATEST_TAG#v}
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          
+          # Déterminer le type de bump
+          # 1. Si déclenché manuellement, utiliser l'input
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            BUMP_TYPE="${{ github.event.inputs.version_bump }}"
+            echo "Mode manuel: bump=$BUMP_TYPE"
+          else
+            # 2. Sinon, analyser les commits depuis la dernière tag
+            echo "Analyse des commits depuis $LATEST_TAG..."
+            
+            # Récupérer tous les messages de commit depuis la dernière tag
+            COMMITS=$(git log ${LATEST_TAG}..HEAD --pretty=format:"%s" 2>/dev/null || echo "")
+            
+            # Détecter le type de version basé sur Conventional Commits
+            BUMP_TYPE="patch"  # Par défaut
+            
+            if echo "$COMMITS" | grep -qE "^(feat|feature)(\(.+\))?!:|^BREAKING CHANGE:|^[a-z]+(\(.+\))?!:"; then
+              BUMP_TYPE="major"
+              echo "✨ BREAKING CHANGE détecté → MAJOR version"
+            elif echo "$COMMITS" | grep -qE "^(feat|feature)(\(.+\))?:"; then
+              BUMP_TYPE="minor"
+              echo "✨ feat: détecté → MINOR version"
+            elif echo "$COMMITS" | grep -qE "^(fix|bugfix)(\(.+\))?:"; then
+              BUMP_TYPE="patch"
+              echo "🐛 fix: détecté → PATCH version"
+            else
+              echo "📝 Commits standards → PATCH version par défaut"
+            fi
+          fi
+          
+          # Incrémenter la version
+          case $BUMP_TYPE in
+            major)
+              MAJOR=$((MAJOR + 1))
+              MINOR=0
+              PATCH=0
+              ;;
+            minor)
+              MINOR=$((MINOR + 1))
+              PATCH=0
+              ;;
+            patch)
+              PATCH=$((PATCH + 1))
+              ;;
+          esac
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          NEW_TAG="v$NEW_VERSION"
+          
+          echo "Nouvelle version: $NEW_TAG (bump: $BUMP_TYPE)"
+          echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
+          echo "bump_type=$BUMP_TYPE" >> $GITHUB_OUTPUT
 
-      - name: �🔖 Déterminer la nouvelle version (Conventional Commits)
+      - name: �📝 Mise à jour du fichier VERSION
+        run: |
+          echo "${{ steps.version.outputs.version }}" > VERSION
+          echo "📌 Version mise à jour: ${{ steps.version.outputs.tag }}"
+
+      - name: 🏗️ Build du site Hugo
+        run: |
+          hugo --minify --environment production
+        env:
+          HUGO_ENVIRONMENT: production
+          PATH: ${{ github.workspace }}/node_modules/.bin:${{ env.PATH }}
         id: version
         run: |
           # Récupérer la dernière tag
@@ -143,6 +214,7 @@ jobs:
           hugo --minify --environment production
         env:
           HUGO_ENVIRONMENT: production
+          PATH: ${{ github.workspace }}/node_modules/.bin:${{ env.PATH }}
 
       - name: 📦 Création de l'archive des artefacts
         run: |

@@ -53,14 +53,12 @@ jobs:
             hugo-resources-preview-
             hugo-resources-
 
-      - name: � Configurer le PATH pour PostCSS
-        run: echo "${{ github.workspace }}/node_modules/.bin" >> $GITHUB_PATH
-
-      - name: �🔨 Build du site Hugo (Preview)
+      - name: 🔨 Build du site Hugo (Preview)
         run: |
           hugo --minify --environment staging --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
         env:
           HUGO_ENVIRONMENT: staging
+          PATH: ${{ github.workspace }}/node_modules/.bin:${{ env.PATH }}
 
       - name: 📝 Ajout d'un bandeau de preview
         run: |
