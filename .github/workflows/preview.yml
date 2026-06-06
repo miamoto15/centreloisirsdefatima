@@ -56,7 +56,10 @@ jobs:
 
       - name: 🔨 Build du site Hugo (Preview)
         run: |
-          hugo --environment=production --minify --gc --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
+          hugo --minify --gc
+        env:
+          HUGO_BASEURL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
+          HUGO_ENVIRONMENT: staging
 
       - name: � Bloquer l'indexation SEO
         run: |
