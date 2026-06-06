@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Page non trouvée</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        h1 { 
+            color: #333;
+            font-size: 72px;
+            margin: 0;
+        }
+        h2 {
+            color: #666;
+            font-weight: normal;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        a {
+            color: #5aa100;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover { 
+            text-decoration: underline;
+            color: #4d8307;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/Logo.png" alt="Centre des Loisirs de Fatima" class="logo" onerror="this.style.display='none'">
+        <h1>404</h1>
+        <h2>Page Not Found | Page non trouvée</h2>
+        <p>We're sorry, but the page you were trying to view does not exist.</p>
+        <p>Nous sommes désolés, mais la page que vous recherchez n'existe pas.</p>
+        <p>
+            <a id="link-en" href="/en/">Go to English homepage</a> | 
+            <a id="link-fr" href="/fr/">Aller à l'accueil français</a>
+        </p>
+    </div>
+    <script>
+        // Détecte le basePath dynamiquement (fonctionne sur / et sur /sous-repertoire/)
+        var base = window.location.pathname.split('/').slice(0, -1).join('/');
+        // Remonte jusqu'à la racine du site en cherchant /en/ ou /fr/ dans l'URL
+        var path = window.location.pathname;
+        var root = '/';
+        var match = path.match(/^(\/[^/]+\/)(en|fr)\//);
+        if (match) root = match[1];
+        document.getElementById('link-en').href = root + 'en/';
+        document.getElementById('link-fr').href = root + 'fr/';
+    </script>
+</body>
+</html>
