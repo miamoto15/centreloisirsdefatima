@@ -137,10 +137,7 @@ jobs:
           echo "📌 Version mise à jour: ${{ steps.version.outputs.tag }}"
 
       - name: 🏗️ Build du site Hugo
-        run: |
-          hugo --minify --environment production
-        env:
-          HUGO_ENVIRONMENT: production
+        run: hugo --environment=production --minify --gc
 
       - name: 📦 Création de l'archive des artefacts
         run: |

@@ -56,9 +56,7 @@ jobs:
 
       - name: 🔨 Build du site Hugo (Preview)
         run: |
-          hugo --minify --environment staging --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
-        env:
-          HUGO_ENVIRONMENT: staging
+          hugo --environment=production --minify --gc --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
 
       - name: 📝 Ajout d'un bandeau de preview
         run: |
