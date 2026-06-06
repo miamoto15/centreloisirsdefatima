@@ -66,7 +66,10 @@ jobs:
             hugo-resources-release-
             hugo-resources-
 
-      - name: 🔖 Déterminer la nouvelle version (Conventional Commits)
+      - name: � Configurer le PATH pour PostCSS
+        run: echo "${{ github.workspace }}/node_modules/.bin" >> $GITHUB_PATH
+
+      - name: �🔖 Déterminer la nouvelle version (Conventional Commits)
         id: version
         run: |
           # Récupérer la dernière tag
