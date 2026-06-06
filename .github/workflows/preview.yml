@@ -25,6 +25,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+          submodules: recursive
+          fetch-depth: 0
 
       - name: 🔧 Configuration de Node.js
         uses: actions/setup-node@v4
@@ -67,7 +69,7 @@ jobs:
           echo "📝 Config preview créée avec baseURL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
 
       - name: 🔨 Build du site Hugo (Preview)
-        run: hugo --environment=preview --minify --gc
+        run: hugo --minify --gc --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
 
       - name: � Bloquer l'indexation SEO
         run: |
