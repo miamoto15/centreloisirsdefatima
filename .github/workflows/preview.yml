@@ -1,198 +1,96 @@
-name: 🧩 Preview Environment
+# ──────────────────────────────────────────────────────────────────────────────
+# Preview — Build Hugo → gh-pages/pr-XX
+#
+# Déclenché sur chaque PR. Construit le site et le déploie dans un sous-dossier
+# de gh-pages pour prévisualisation.
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Preview
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+concurrency:
+  group: preview-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
   pull-requests: write
-  deployments: write
 
 env:
   HUGO_VERSION: "0.161.1"
 
 jobs:
   preview:
-    name: Déploiement de prévisualisation
+    name: Build & déployer preview
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
-    
+
     steps:
-      - name: 📥 Checkout du code
+      # ── 1. Code source ──────────────────────────────────────────────────────
+      - name: Récupérer le code source
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
           fetch-depth: 0
 
-      - name: 🔧 Configuration de Node.js
+      # ── 2. Node.js + cache npm ──────────────────────────────────────────────
+      - name: Configurer Node.js (LTS) avec cache npm
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: npm
 
-      - name: 📦 Installation des dépendances
+      - name: Installer les dépendances npm
         run: npm ci
 
-      - name: 🏗️ Installation de Hugo Extended v${{ env.HUGO_VERSION }}
+      # ── 3. Hugo + Dart Sass ─────────────────────────────────────────────────
+      - name: Installer Hugo Extended v${{ env.HUGO_VERSION }}
         run: |
           wget -q -O "${{ runner.temp }}/hugo.deb" \
             "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb"
           sudo dpkg -i "${{ runner.temp }}/hugo.deb"
           hugo version
 
-      - name: 🎨 Installation de Dart Sass
+      - name: Installer Dart Sass
         run: sudo snap install dart-sass
 
-      - name: �💾 Cache des ressources Hugo
+      # ── 4. Cache des ressources générées ────────────────────────────────────
+      - name: Restaurer le cache Hugo
         uses: actions/cache@v4
         with:
           path: resources
           key: hugo-resources-preview-${{ hashFiles('assets/**', 'layouts/**') }}
-          restore-keys: |
-            hugo-resources-preview-
-            hugo-resources-
+          restore-keys: hugo-resources-
 
-      - name: 🔧 Créer config preview avec le bon baseURL
-        run: |
-          mkdir -p config/preview
-          cat > config/preview/hugo.yaml << EOF
-          # Configuration pour les previews de PR
-          baseURL: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
-          enableRobotsTXT: false
-          build:
-            writeStats: true
-          EOF
-          echo "📝 Config preview créée avec baseURL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
-
-      - name: 🔨 Build du site Hugo (Preview)
+      # ── 5. Build ─────────────────────────────────────────────────────────────
+      - name: Construire le site (preview)
+        env:
+          TZ: America/Halifax
         run: hugo --minify --gc --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/"
 
-      - name: � Bloquer l'indexation SEO
-        run: |
-          # Ajouter meta robots noindex dans toutes les pages HTML
-          find public -name "*.html" -type f -exec sed -i 's|<head>|<head>\n  <meta name="robots" content="noindex, nofollow">|' {} \;
-          
-          # Créer un robots.txt qui bloque tout
-          cat > public/robots.txt << 'EOF'
-          User-agent: *
-          Disallow: /
-          EOF
-
-      - name: �📝 Ajout d'un bandeau de preview
-        run: |
-          cat > public/preview-banner.html << 'EOF'
-          <style>
-            .preview-banner {
-              position: fixed;
-              top: 0;
-              left: 0;
-              right: 0;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              color: white;
-              padding: 12px 20px;
-              text-align: center;
-              z-index: 9999;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-              font-size: 14px;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            }
-            .preview-banner strong {
-              font-weight: 600;
-            }
-            .preview-banner a {
-              color: #fff;
-              text-decoration: underline;
-              margin-left: 10px;
-            }
-            body {
-              margin-top: 48px !important;
-            }
-          </style>
-          <div class="preview-banner">
-            🚧 <strong>Environnement de prévisualisation</strong> — PR #${{ github.event.pull_request.number }} — 
-            <a href="${{ github.event.pull_request.html_url }}" target="_blank">Voir la PR</a>
-          </div>
-          EOF
-          
-          # Injecter le bandeau dans toutes les pages HTML
-          find public -name "*.html" -type f -exec sh -c '
-            if grep -q "<body" "$1"; then
-              sed -i "s|<body[^>]*>|&\n$(cat public/preview-banner.html)|" "$1"
-            fi
-          ' _ {} \;
-
-      - name: 🚀 Déploiement sur GitHub Pages (PR Preview)
+      # ── 6. Déploiement ───────────────────────────────────────────────────────
+      - name: Publier sur gh-pages (sous-dossier PR)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: pr-${{ github.event.pull_request.number }}
           keep_files: false
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          user_name: "github-actions[bot]"
+          user_email: "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: 🔗 Création du deployment GitHub
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const deployment = await github.rest.repos.createDeployment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: context.payload.pull_request.head.sha,
-              environment: `preview-pr-${context.payload.pull_request.number}`,
-              auto_merge: false,
-              required_contexts: [],
-              description: `Preview pour la PR #${context.payload.pull_request.number}`,
-              transient_environment: true,
-              production_environment: false
-            });
-            
-            const previewUrl = `https://${context.repo.owner}.github.io/${context.repo.repo}/pr-${context.payload.pull_request.number}/`;
-            
-            await github.rest.repos.createDeploymentStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              deployment_id: deployment.data.id,
-              state: 'success',
-              environment_url: previewUrl,
-              description: 'Preview déployé avec succès',
-              log_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
-            });
-
-      - name: 💬 Commentaire avec l'URL de preview
+      # ── 7. Commentaire avec URL ──────────────────────────────────────────────
+      - name: Commenter la PR avec l'URL
         uses: actions/github-script@v7
         with:
           script: |
             const previewUrl = `https://${context.repo.owner}.github.io/${context.repo.repo}/pr-${context.payload.pull_request.number}/`;
             
-            const body = `## 🎨 Prévisualisation disponible!
+            const body = `## ✅ Preview disponible\n\n**${previewUrl}**`;
             
-            Votre environnement de prévisualisation est prêt! 🚀
-            
-            ### 🔗 URL de prévisualisation
-            **${previewUrl}**
-            
-            ### 📝 Informations
-            - **PR:** #${context.payload.pull_request.number}
-            - **Commit:** \`${context.payload.pull_request.head.sha.substring(0, 7)}\`
-            - **Branch:** \`${context.payload.pull_request.head.ref}\`
-            - **Environnement:** \`preview-pr-${context.payload.pull_request.number}\`
-            
-            ### ✅ Prochaines étapes
-            1. Testez les modifications sur l'URL de prévisualisation
-            2. Vérifiez l'accessibilité et le responsive
-            3. Validez le contenu en français et en anglais
-            4. Une fois satisfait, approuvez la PR pour merge
-            
-            ---
-            
-            *🤖 Ce commentaire est généré automatiquement et sera mis à jour à chaque nouveau commit.*`;
-            
-            // Chercher un commentaire existant
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -200,12 +98,10 @@ jobs:
             });
             
             const botComment = comments.find(comment => 
-              comment.user.type === 'Bot' && 
-              comment.body.includes('🎨 Prévisualisation disponible')
+              comment.user.type === 'Bot' && comment.body.includes('Preview disponible')
             );
             
             if (botComment) {
-              // Mettre à jour le commentaire existant
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -213,7 +109,6 @@ jobs:
                 body: body
               });
             } else {
-              // Créer un nouveau commentaire
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -223,66 +118,22 @@ jobs:
             }
 
   cleanup:
-    name: Nettoyage de la prévisualisation
+    name: Nettoyer la preview
     runs-on: ubuntu-latest
     if: github.event.action == 'closed'
     
     steps:
-      - name: � Checkout de gh-pages
+      - name: Checkout gh-pages
         uses: actions/checkout@v4
         with:
           ref: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🗑️ Suppression du dossier PR
+      - name: Supprimer le dossier PR
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -d "pr-${{ github.event.pull_request.number }}" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
             git rm -rf "pr-${{ github.event.pull_request.number }}"
-            git commit -m "chore: cleanup preview for PR #${{ github.event.pull_request.number }}"
-            git push origin gh-pages
-            echo "✅ Preview supprimé avec succès"
-          else
-            echo "ℹ️ Aucun preview à supprimer"
+            git commit -m "cleanup: supprimer preview PR #${{ github.event.pull_request.number }}"
+            git push
           fi
-      
-      - name: 🗑️ Désactivation des déploiements GitHub
-        uses: actions/github-script@v7
-        with:
-          script: |
-            // Désactiver tous les déploiements pour cet environnement
-            const envName = `preview-pr-${context.payload.pull_request.number}`;
-            
-            try {
-              const { data: deployments } = await github.rest.repos.listDeployments({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                environment: envName
-              });
-              
-              for (const deployment of deployments) {
-                await github.rest.repos.createDeploymentStatus({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  deployment_id: deployment.id,
-                  state: 'inactive',
-                  description: 'PR fermée - environnement nettoyé'
-                });
-              }
-              
-              core.info(`✅ ${deployments.length} déploiement(s) désactivé(s)`);
-            } catch (error) {
-              core.warning(`Impossible de désactiver les déploiements: ${error.message}`);
-            }
-            
-            // Commenter sur la PR
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: `🧹 L'environnement de prévisualisation \`${envName}\` a été nettoyé et supprimé de gh-pages.`
-            });
-
-      - name: ✅ Nettoyage terminé
-        run: echo "Preview environment cleaned up successfully"
