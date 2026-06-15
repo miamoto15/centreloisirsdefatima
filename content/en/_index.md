@@ -81,7 +81,7 @@ Our volunteer team funds local initiatives, renovates spaces and strengthens com
 
   Thank you for being part of our community! 🙏
 
-  {{< button link="/fr/dons/" text="Make a donation" center="true" >}}
+  {{< button link=https://www.zeffy.com/en-CA/donation-form/soutenez-notre-mission-399 text="Make a donation" center="true" >}}
 
   {{% /cell %}}
 

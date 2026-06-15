@@ -81,7 +81,7 @@ Notre équipe de bénévoles finance des initiatives locales, rénove des espace
 
   Merci de faire partie de notre communauté ! 🙏
 
-  {{< button link="/fr/dons/" text="Faire un don" center="true" >}}
+  {{< button link=https://www.zeffy.com/fr-CA/donation-form/soutenez-notre-mission-399 text="Faire un don" center="true" >}}
 
   {{% /cell %}}
 
