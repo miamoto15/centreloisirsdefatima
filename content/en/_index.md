@@ -69,6 +69,30 @@ Our volunteer team funds local initiatives, renovates spaces and strengthens com
 
 {{< spacer 60 >}}
 
+## Support our mission
+
+{{< grid cols=2 width="45%,55%" >}}
+
+  {{% cell valign="middle" %}}
+
+  You’ll notice a button with a ❤️ in the site header, as well as the “MAKE A DONATION” button just below. These links give you direct access to support our initiatives financially.
+
+  As a non‑profit organization, we are legally required to reinvest **100% of our profits into our community projects**. Every donation, big or small, directly supports the events, renovations, and activities that bring life to Fatima and the Îles‑de‑la‑Madeleine.
+
+  Thank you for being part of our community! 🙏
+
+  {{< button link="/fr/dons/" text="Make a donation" center="true" >}}
+
+  {{% /cell %}}
+
+  {{< cell align="center" valign="top" >}}
+  {{< responsive-img src="img/Dons.JPG" alt="Building a structure for the bonfire." width=80% >}}
+  {{< /cell >}}
+
+{{< /grid >}}
+
+{{< spacer 40 >}}
+
 ## A little paradise
 
 {{< grid cols=2 width="45%,55%" >}}

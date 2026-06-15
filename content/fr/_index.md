@@ -69,6 +69,30 @@ Notre équipe de bénévoles finance des initiatives locales, rénove des espace
 
 {{< spacer 60 >}}
 
+## Soutenir notre mission
+
+{{< grid cols=2 width="45%,55%" >}}
+
+  {{% cell valign="middle" %}}
+
+  Vous remarquerez un bouton avec un ❤️ dans l’en‑tête du site, ainsi que le bouton “FAIRE UN DON” un peu plus bas. Ces accès vous permettent de contribuer financièrement à nos initiatives.
+
+  En tant qu'organisme à but non lucratif, nous avons l'obligation légale de rediriger **100 % de nos profits vers nos projets communautaires**. Chaque don, petit ou grand, soutient directement les événements, les rénovations et les activités qui animent Fatima et les Îles-de-la-Madeleine.
+
+  Merci de faire partie de notre communauté ! 🙏
+
+  {{< button link="/fr/dons/" text="Faire un don" center="true" >}}
+
+  {{% /cell %}}
+
+  {{< cell align="center" valign="top" >}}
+  {{< responsive-img src="img/Dons.JPG" alt="Construction d'une structure pour le feu." width=80% >}}
+  {{< /cell >}}
+
+{{< /grid >}}
+
+{{< spacer 40 >}}
+
 ## Un coin de paradis
 
 {{< grid cols=2 width="45%,55%" >}}
