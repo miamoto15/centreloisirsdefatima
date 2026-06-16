@@ -138,4 +138,4 @@ Each colour corresponds to a distinct round with its own rules and prize.
 
 ---
 
-*Regulated activity — Licence L-02612 · [Rules on bingo — LégisQuébec](https://www.legisquebec.gouv.qc.ca/fr/document/rc/L-6,%20r.%205?langCont=en)*
+*Valid bingo licence from December 1, 2024 to November 30, 2027 for Le centre des Loisirs de Fatima, I.M., inc. · [Rules on bingo — LégisQuébec](https://www.legisquebec.gouv.qc.ca/fr/document/rc/L-6,%20r.%205?langCont=en)*

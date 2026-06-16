@@ -136,4 +136,4 @@ Chaque couleur correspond à un tour distinct avec ses propres règles et son pr
 
 ---
 
-*Activité réglementée — Licence L-02612 · [Règles sur les bingos — LégisQuébec](https://www.legisquebec.gouv.qc.ca/fr/document/rc/l-6,%20r.%205)*
+*Licence de bingo valide du 1er décembre 2024 au 30 novembre 2027 pour Le centre des Loisirs de Fatima, I.M., inc. · [Règles sur les bingos — LégisQuébec](https://www.legisquebec.gouv.qc.ca/fr/document/rc/l-6,%20r.%205)*
