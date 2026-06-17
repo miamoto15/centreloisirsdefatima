@@ -26,5 +26,5 @@ Apportez votre chaise, votre drapeau et votre plus beau sourire… et venez vivr
 - **20h45** — Partie protocolaire
 - **21h00** — Groupe musical « Bordasse »
 - **21h30** — Feu de joie
-- **21h50** — Feux d'artifices
-- **22h00** — [100% Québécois](https://www.ppscanada.com/artistes/100-quebecois/)
+- **22h20** — Feux d'artifices
+- **22h30** — [100% Québécois](https://www.ppscanada.com/artistes/100-quebecois/)

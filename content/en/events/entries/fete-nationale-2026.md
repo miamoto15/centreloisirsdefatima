@@ -26,5 +26,5 @@ Bring your chair, your flag, and your biggest smile… and come experience a mom
 - **8:45 PM** — Opening ceremony
 - **9:00 PM** — Musical group "Bordasse"
 - **9:30 PM** — Bonfire
-- **9:50 PM** — Fireworks display
-- **10:00 PM** — [100% Québécois](https://www.ppscanada.com/artistes/100-quebecois/)
+- **10:20 PM** — Fireworks display
+- **10:30 PM** — [100% Québécois](https://www.ppscanada.com/artistes/100-quebecois/)
