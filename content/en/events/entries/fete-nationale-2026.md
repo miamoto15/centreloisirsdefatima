@@ -1,12 +1,12 @@
 ---
 title: "Fête nationale Show in Fatima"
-date: 2026-06-23
+date: 2026-06-25
 description: "A festive evening under the stars with local artists, a bonfire and fireworks — come sing, dance and celebrate Québec's National Holiday with family and friends!"
 lieu: "L'Anse-aux-Baleiniers, Fatima"
 prix: "Free"
 gratuites: "Free for everybody."
 billets_url: ""
-image: "img/programmation/Fête nationale.png"
+image: "img/programmation/Fête nationale - Report au 25.png"
 evenement: true
 translationKey: "fete-nationale-2026"
 showHeader: false
